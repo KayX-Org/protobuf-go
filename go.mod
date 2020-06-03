@@ -1,4 +1,4 @@
-module github.com/kayx-org/protobufs
+module github.com/kayx-org/protobuf-go
 
 go 1.14
 
