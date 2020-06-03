@@ -1,0 +1,59 @@
+syntax = "proto3";
+
+package access_token;
+option go_package = "user/authpb;authpb";
+
+message VerifyAccessTokenRequest {
+  string token = 1;
+}
+
+message VerifyAccessTokenResponse {
+  string user_uuid = 1;
+}
+
+message RefreshTokenRequest {
+  string token = 1;
+}
+
+message RefreshTokenResponse {
+  string access_token = 1;
+  string refresh_token = 2;
+}
+
+message SendVerificationCodeRequest {
+  string phone_number = 1;
+  string app_secret = 2;
+}
+
+message SendVerificationCodeResponse {
+  bool success = 1;
+}
+
+message VerifyCodeRequest {
+  string phone_number = 1;
+  string code = 2;
+}
+
+message VerifyCodeResponse {
+  string access_token = 1;
+  string refresh_token = 2;
+}
+
+message LogoutRequest {
+  string token = 1;
+}
+
+message LogoutResponse {
+  bool success = 1;
+}
+
+service AuthService{
+  rpc VerifyAccessToken(VerifyAccessTokenRequest) returns (VerifyAccessTokenResponse) {};
+  rpc RefreshToken(RefreshTokenRequest) returns (RefreshTokenResponse) {};
+
+  rpc SendVerificationCode(SendVerificationCodeRequest) returns (SendVerificationCodeResponse) {}
+  rpc VerifyCode(VerifyCodeRequest) returns (VerifyCodeResponse) {}
+
+  rpc Logout(LogoutRequest) returns (LogoutResponse) {}
+}
+
