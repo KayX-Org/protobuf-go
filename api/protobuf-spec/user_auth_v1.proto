@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package access_token;
+package user.auth;
 option go_package = "user/authpb;authpb";
 
 message VerifyAccessTokenRequest {
