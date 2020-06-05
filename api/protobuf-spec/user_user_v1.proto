@@ -48,7 +48,16 @@ message GetUsersResponse {
   repeated User user = 1;
 }
 
+message UpdateProfileRequest {
+  Profile profile = 1;
+}
+
+message UpdateProfileResponse {
+  bool success = 1;
+}
+
 service UserService{
   rpc GetUser(GetUserRequest) returns (GetUserResponse) {};
   rpc GetUsers(GetUsersRequest) returns (GetUsersResponse) {};
+  rpc UpdateProfile(UpdateProfileRequest) returns (UpdateProfileResponse) {};
 }
