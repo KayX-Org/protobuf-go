@@ -50,6 +50,7 @@ message GetUsersResponse {
 
 message UpdateProfileRequest {
   Profile profile = 1;
+  string user_id = 2;
 }
 
 message UpdateProfileResponse {
