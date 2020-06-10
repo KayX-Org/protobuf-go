@@ -1,0 +1,39 @@
+syntax = "proto3";
+
+package user.auth;
+option go_package = "config/configpb;configpb";
+import "google/protobuf/empty.proto";
+
+message Config {
+  string latest_app_version = 1;
+  string min_compatible_app_version = 2;
+  string support_email = 3;
+  string api_base_url = 4;
+  string avatar_push_base_url = 5;
+  string ios_update_url = 6;
+  string android_update_url = 7;
+  string invite_code_base_url = 8;
+  repeated string invite_code_base_urls = 9;
+  repeated string onboarding_images = 10;
+  repeated string supported_countries =  11;
+}
+
+message Language {
+  string code = 1;
+  string english_name = 2;
+  string native_name = 3;
+}
+
+message GetAppConfigResponse {
+  Config config = 1;
+}
+
+message GetLanguagesResponse {
+  repeated Language languages = 1;
+}
+
+service AuthService{
+  rpc GetAppConfig(google.protobuf.Empty) returns (GetAppConfigResponse) {};
+  rpc GetLanguagesSupported(google.protobuf.Empty) returns (GetLanguagesResponse) {};
+}
+

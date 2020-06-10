@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+set -e
+
+# TODO: Add docker for this
+protoc  api/protobuf-spec/* --go_out=plugins=grpc:.

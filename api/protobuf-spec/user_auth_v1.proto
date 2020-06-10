@@ -47,7 +47,7 @@ message LogoutResponse {
   bool success = 1;
 }
 
-service AuthService{
+service ConfigService{
   rpc VerifyAccessToken(VerifyAccessTokenRequest) returns (VerifyAccessTokenResponse) {};
   rpc RefreshToken(RefreshTokenRequest) returns (RefreshTokenResponse) {};
 
