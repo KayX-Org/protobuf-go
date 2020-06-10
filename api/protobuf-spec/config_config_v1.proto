@@ -32,7 +32,7 @@ message GetLanguagesResponse {
   repeated Language languages = 1;
 }
 
-service AuthService{
+service ConfigService{
   rpc GetAppConfig(google.protobuf.Empty) returns (GetAppConfigResponse) {};
   rpc GetLanguagesSupported(google.protobuf.Empty) returns (GetLanguagesResponse) {};
 }

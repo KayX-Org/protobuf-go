@@ -369,20 +369,20 @@ var file_api_protobuf_spec_config_config_v1_proto_rawDesc = []byte{
 	0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x31, 0x0a, 0x09, 0x6c, 0x61, 0x6e, 0x67, 0x75, 0x61, 0x67,
 	0x65, 0x73, 0x18, 0x01, 0x20, 0x03, 0x28, 0x0b, 0x32, 0x13, 0x2e, 0x75, 0x73, 0x65, 0x72, 0x2e,
 	0x61, 0x75, 0x74, 0x68, 0x2e, 0x4c, 0x61, 0x6e, 0x67, 0x75, 0x61, 0x67, 0x65, 0x52, 0x09, 0x6c,
-	0x61, 0x6e, 0x67, 0x75, 0x61, 0x67, 0x65, 0x73, 0x32, 0xac, 0x01, 0x0a, 0x0b, 0x41, 0x75, 0x74,
-	0x68, 0x53, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x12, 0x49, 0x0a, 0x0c, 0x47, 0x65, 0x74, 0x41,
-	0x70, 0x70, 0x43, 0x6f, 0x6e, 0x66, 0x69, 0x67, 0x12, 0x16, 0x2e, 0x67, 0x6f, 0x6f, 0x67, 0x6c,
-	0x65, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x62, 0x75, 0x66, 0x2e, 0x45, 0x6d, 0x70, 0x74, 0x79,
-	0x1a, 0x1f, 0x2e, 0x75, 0x73, 0x65, 0x72, 0x2e, 0x61, 0x75, 0x74, 0x68, 0x2e, 0x47, 0x65, 0x74,
-	0x41, 0x70, 0x70, 0x43, 0x6f, 0x6e, 0x66, 0x69, 0x67, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73,
-	0x65, 0x22, 0x00, 0x12, 0x52, 0x0a, 0x15, 0x47, 0x65, 0x74, 0x4c, 0x61, 0x6e, 0x67, 0x75, 0x61,
-	0x67, 0x65, 0x73, 0x53, 0x75, 0x70, 0x70, 0x6f, 0x72, 0x74, 0x65, 0x64, 0x12, 0x16, 0x2e, 0x67,
-	0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x62, 0x75, 0x66, 0x2e, 0x45,
-	0x6d, 0x70, 0x74, 0x79, 0x1a, 0x1f, 0x2e, 0x75, 0x73, 0x65, 0x72, 0x2e, 0x61, 0x75, 0x74, 0x68,
-	0x2e, 0x47, 0x65, 0x74, 0x4c, 0x61, 0x6e, 0x67, 0x75, 0x61, 0x67, 0x65, 0x73, 0x52, 0x65, 0x73,
-	0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00, 0x42, 0x1a, 0x5a, 0x18, 0x63, 0x6f, 0x6e, 0x66, 0x69,
-	0x67, 0x2f, 0x63, 0x6f, 0x6e, 0x66, 0x69, 0x67, 0x70, 0x62, 0x3b, 0x63, 0x6f, 0x6e, 0x66, 0x69,
-	0x67, 0x70, 0x62, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
+	0x61, 0x6e, 0x67, 0x75, 0x61, 0x67, 0x65, 0x73, 0x32, 0xae, 0x01, 0x0a, 0x0d, 0x43, 0x6f, 0x6e,
+	0x66, 0x69, 0x67, 0x53, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x12, 0x49, 0x0a, 0x0c, 0x47, 0x65,
+	0x74, 0x41, 0x70, 0x70, 0x43, 0x6f, 0x6e, 0x66, 0x69, 0x67, 0x12, 0x16, 0x2e, 0x67, 0x6f, 0x6f,
+	0x67, 0x6c, 0x65, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x62, 0x75, 0x66, 0x2e, 0x45, 0x6d, 0x70,
+	0x74, 0x79, 0x1a, 0x1f, 0x2e, 0x75, 0x73, 0x65, 0x72, 0x2e, 0x61, 0x75, 0x74, 0x68, 0x2e, 0x47,
+	0x65, 0x74, 0x41, 0x70, 0x70, 0x43, 0x6f, 0x6e, 0x66, 0x69, 0x67, 0x52, 0x65, 0x73, 0x70, 0x6f,
+	0x6e, 0x73, 0x65, 0x22, 0x00, 0x12, 0x52, 0x0a, 0x15, 0x47, 0x65, 0x74, 0x4c, 0x61, 0x6e, 0x67,
+	0x75, 0x61, 0x67, 0x65, 0x73, 0x53, 0x75, 0x70, 0x70, 0x6f, 0x72, 0x74, 0x65, 0x64, 0x12, 0x16,
+	0x2e, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x62, 0x75, 0x66,
+	0x2e, 0x45, 0x6d, 0x70, 0x74, 0x79, 0x1a, 0x1f, 0x2e, 0x75, 0x73, 0x65, 0x72, 0x2e, 0x61, 0x75,
+	0x74, 0x68, 0x2e, 0x47, 0x65, 0x74, 0x4c, 0x61, 0x6e, 0x67, 0x75, 0x61, 0x67, 0x65, 0x73, 0x52,
+	0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00, 0x42, 0x1a, 0x5a, 0x18, 0x63, 0x6f, 0x6e,
+	0x66, 0x69, 0x67, 0x2f, 0x63, 0x6f, 0x6e, 0x66, 0x69, 0x67, 0x70, 0x62, 0x3b, 0x63, 0x6f, 0x6e,
+	0x66, 0x69, 0x67, 0x70, 0x62, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
 }
 
 var (
@@ -408,10 +408,10 @@ var file_api_protobuf_spec_config_config_v1_proto_goTypes = []interface{}{
 var file_api_protobuf_spec_config_config_v1_proto_depIdxs = []int32{
 	0, // 0: user.auth.GetAppConfigResponse.config:type_name -> user.auth.Config
 	1, // 1: user.auth.GetLanguagesResponse.languages:type_name -> user.auth.Language
-	4, // 2: user.auth.AuthService.GetAppConfig:input_type -> google.protobuf.Empty
-	4, // 3: user.auth.AuthService.GetLanguagesSupported:input_type -> google.protobuf.Empty
-	2, // 4: user.auth.AuthService.GetAppConfig:output_type -> user.auth.GetAppConfigResponse
-	3, // 5: user.auth.AuthService.GetLanguagesSupported:output_type -> user.auth.GetLanguagesResponse
+	4, // 2: user.auth.ConfigService.GetAppConfig:input_type -> google.protobuf.Empty
+	4, // 3: user.auth.ConfigService.GetLanguagesSupported:input_type -> google.protobuf.Empty
+	2, // 4: user.auth.ConfigService.GetAppConfig:output_type -> user.auth.GetAppConfigResponse
+	3, // 5: user.auth.ConfigService.GetLanguagesSupported:output_type -> user.auth.GetLanguagesResponse
 	4, // [4:6] is the sub-list for method output_type
 	2, // [2:4] is the sub-list for method input_type
 	2, // [2:2] is the sub-list for extension type_name
@@ -502,108 +502,108 @@ var _ grpc.ClientConnInterface
 // is compatible with the grpc package it is being compiled against.
 const _ = grpc.SupportPackageIsVersion6
 
-// AuthServiceClient is the client API for AuthService service.
+// ConfigServiceClient is the client API for ConfigService service.
 //
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://godoc.org/google.golang.org/grpc#ClientConn.NewStream.
-type AuthServiceClient interface {
+type ConfigServiceClient interface {
 	GetAppConfig(ctx context.Context, in *empty.Empty, opts ...grpc.CallOption) (*GetAppConfigResponse, error)
 	GetLanguagesSupported(ctx context.Context, in *empty.Empty, opts ...grpc.CallOption) (*GetLanguagesResponse, error)
 }
 
-type authServiceClient struct {
+type configServiceClient struct {
 	cc grpc.ClientConnInterface
 }
 
-func NewAuthServiceClient(cc grpc.ClientConnInterface) AuthServiceClient {
-	return &authServiceClient{cc}
+func NewConfigServiceClient(cc grpc.ClientConnInterface) ConfigServiceClient {
+	return &configServiceClient{cc}
 }
 
-func (c *authServiceClient) GetAppConfig(ctx context.Context, in *empty.Empty, opts ...grpc.CallOption) (*GetAppConfigResponse, error) {
+func (c *configServiceClient) GetAppConfig(ctx context.Context, in *empty.Empty, opts ...grpc.CallOption) (*GetAppConfigResponse, error) {
 	out := new(GetAppConfigResponse)
-	err := c.cc.Invoke(ctx, "/user.auth.AuthService/GetAppConfig", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/user.auth.ConfigService/GetAppConfig", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *authServiceClient) GetLanguagesSupported(ctx context.Context, in *empty.Empty, opts ...grpc.CallOption) (*GetLanguagesResponse, error) {
+func (c *configServiceClient) GetLanguagesSupported(ctx context.Context, in *empty.Empty, opts ...grpc.CallOption) (*GetLanguagesResponse, error) {
 	out := new(GetLanguagesResponse)
-	err := c.cc.Invoke(ctx, "/user.auth.AuthService/GetLanguagesSupported", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/user.auth.ConfigService/GetLanguagesSupported", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-// AuthServiceServer is the server API for AuthService service.
-type AuthServiceServer interface {
+// ConfigServiceServer is the server API for ConfigService service.
+type ConfigServiceServer interface {
 	GetAppConfig(context.Context, *empty.Empty) (*GetAppConfigResponse, error)
 	GetLanguagesSupported(context.Context, *empty.Empty) (*GetLanguagesResponse, error)
 }
 
-// UnimplementedAuthServiceServer can be embedded to have forward compatible implementations.
-type UnimplementedAuthServiceServer struct {
+// UnimplementedConfigServiceServer can be embedded to have forward compatible implementations.
+type UnimplementedConfigServiceServer struct {
 }
 
-func (*UnimplementedAuthServiceServer) GetAppConfig(context.Context, *empty.Empty) (*GetAppConfigResponse, error) {
+func (*UnimplementedConfigServiceServer) GetAppConfig(context.Context, *empty.Empty) (*GetAppConfigResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetAppConfig not implemented")
 }
-func (*UnimplementedAuthServiceServer) GetLanguagesSupported(context.Context, *empty.Empty) (*GetLanguagesResponse, error) {
+func (*UnimplementedConfigServiceServer) GetLanguagesSupported(context.Context, *empty.Empty) (*GetLanguagesResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetLanguagesSupported not implemented")
 }
 
-func RegisterAuthServiceServer(s *grpc.Server, srv AuthServiceServer) {
-	s.RegisterService(&_AuthService_serviceDesc, srv)
+func RegisterConfigServiceServer(s *grpc.Server, srv ConfigServiceServer) {
+	s.RegisterService(&_ConfigService_serviceDesc, srv)
 }
 
-func _AuthService_GetAppConfig_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _ConfigService_GetAppConfig_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(empty.Empty)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(AuthServiceServer).GetAppConfig(ctx, in)
+		return srv.(ConfigServiceServer).GetAppConfig(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/user.auth.AuthService/GetAppConfig",
+		FullMethod: "/user.auth.ConfigService/GetAppConfig",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(AuthServiceServer).GetAppConfig(ctx, req.(*empty.Empty))
+		return srv.(ConfigServiceServer).GetAppConfig(ctx, req.(*empty.Empty))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _AuthService_GetLanguagesSupported_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _ConfigService_GetLanguagesSupported_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(empty.Empty)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(AuthServiceServer).GetLanguagesSupported(ctx, in)
+		return srv.(ConfigServiceServer).GetLanguagesSupported(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/user.auth.AuthService/GetLanguagesSupported",
+		FullMethod: "/user.auth.ConfigService/GetLanguagesSupported",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(AuthServiceServer).GetLanguagesSupported(ctx, req.(*empty.Empty))
+		return srv.(ConfigServiceServer).GetLanguagesSupported(ctx, req.(*empty.Empty))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-var _AuthService_serviceDesc = grpc.ServiceDesc{
-	ServiceName: "user.auth.AuthService",
-	HandlerType: (*AuthServiceServer)(nil),
+var _ConfigService_serviceDesc = grpc.ServiceDesc{
+	ServiceName: "user.auth.ConfigService",
+	HandlerType: (*ConfigServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
 			MethodName: "GetAppConfig",
-			Handler:    _AuthService_GetAppConfig_Handler,
+			Handler:    _ConfigService_GetAppConfig_Handler,
 		},
 		{
 			MethodName: "GetLanguagesSupported",
-			Handler:    _AuthService_GetLanguagesSupported_Handler,
+			Handler:    _ConfigService_GetLanguagesSupported_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
