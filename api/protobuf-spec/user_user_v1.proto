@@ -61,6 +61,7 @@ message UpdateProfileResponse {
 message UpdateAvatarRequest {
   string key = 1;
   string url = 2;
+  string user_id = 3;
 }
 
 service UserService{
