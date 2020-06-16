@@ -2,6 +2,7 @@ syntax = "proto3";
 
 package user.auth;
 option go_package = "user/authpb;authpb";
+import "google/protobuf/empty.proto";
 
 message VerifyAccessTokenRequest {
   string token = 1;
@@ -23,6 +24,11 @@ message RefreshTokenResponse {
 message SendVerificationCodeRequest {
   string phone_number = 1;
   string app_secret = 2;
+}
+
+message VerifyUpdatedNumberRequest {
+  string phone_number = 1;
+  string user_uuid = 2;
 }
 
 message SendVerificationCodeResponse {
@@ -47,12 +53,13 @@ message LogoutResponse {
   bool success = 1;
 }
 
-service AuthService{
+service AuthService {
   rpc VerifyAccessToken(VerifyAccessTokenRequest) returns (VerifyAccessTokenResponse) {};
   rpc RefreshToken(RefreshTokenRequest) returns (RefreshTokenResponse) {};
 
   rpc SendVerificationCode(SendVerificationCodeRequest) returns (SendVerificationCodeResponse) {}
   rpc VerifyCode(VerifyCodeRequest) returns (VerifyCodeResponse) {}
+  rpc VerifyUpdatedNumber(VerifyUpdatedNumberRequest) returns (google.protobuf.Empty) {}
 
   rpc Logout(LogoutRequest) returns (LogoutResponse) {}
 }
