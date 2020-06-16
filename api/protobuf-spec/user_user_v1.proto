@@ -2,6 +2,7 @@ syntax = "proto3";
 
 package user.user;
 option go_package = "user/userpb;userpb";
+import "google/protobuf/empty.proto";
 
 message Birthday {
   int32 day = 1;
@@ -57,8 +58,14 @@ message UpdateProfileResponse {
   bool success = 1;
 }
 
+message UpdateAvatarRequest {
+  string key = 1;
+  string url = 2;
+}
+
 service UserService{
   rpc GetUser(GetUserRequest) returns (GetUserResponse) {};
   rpc GetUsers(GetUsersRequest) returns (GetUsersResponse) {};
   rpc UpdateProfile(UpdateProfileRequest) returns (UpdateProfileResponse) {};
+  rpc UpdateAvatar(UpdateProfileRequest) returns (google.protobuf.Empty) {};
 }
