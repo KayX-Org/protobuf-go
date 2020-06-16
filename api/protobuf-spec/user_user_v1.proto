@@ -67,5 +67,5 @@ service UserService{
   rpc GetUser(GetUserRequest) returns (GetUserResponse) {};
   rpc GetUsers(GetUsersRequest) returns (GetUsersResponse) {};
   rpc UpdateProfile(UpdateProfileRequest) returns (UpdateProfileResponse) {};
-  rpc UpdateAvatar(UpdateProfileRequest) returns (google.protobuf.Empty) {};
+  rpc UpdateAvatar(UpdateAvatarRequest) returns (google.protobuf.Empty) {};
 }
