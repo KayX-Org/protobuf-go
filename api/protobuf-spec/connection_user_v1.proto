@@ -22,7 +22,7 @@ message GetLocationResponse {
   Location location = 1;
 }
 
-service ConfigService{
+service UserConnectionService {
   rpc UpdateLocation(UpdateLocationRequest) returns (google.protobuf.Empty) {};
   rpc GetLanguagesSupported(GetLocationRequest) returns (GetLocationResponse) {};
 }

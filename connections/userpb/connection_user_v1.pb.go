@@ -260,22 +260,22 @@ var file_api_protobuf_spec_connection_user_v1_proto_rawDesc = []byte{
 	0x6f, 0x63, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x1a, 0x2e,
 	0x63, 0x6f, 0x6e, 0x6e, 0x65, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x2e, 0x75, 0x73, 0x65, 0x72,
 	0x2e, 0x4c, 0x6f, 0x63, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x52, 0x08, 0x6c, 0x6f, 0x63, 0x61, 0x74,
-	0x69, 0x6f, 0x6e, 0x32, 0xcc, 0x01, 0x0a, 0x0d, 0x43, 0x6f, 0x6e, 0x66, 0x69, 0x67, 0x53, 0x65,
-	0x72, 0x76, 0x69, 0x63, 0x65, 0x12, 0x53, 0x0a, 0x0e, 0x55, 0x70, 0x64, 0x61, 0x74, 0x65, 0x4c,
-	0x6f, 0x63, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x12, 0x27, 0x2e, 0x63, 0x6f, 0x6e, 0x6e, 0x65, 0x63,
-	0x74, 0x69, 0x6f, 0x6e, 0x73, 0x2e, 0x75, 0x73, 0x65, 0x72, 0x2e, 0x55, 0x70, 0x64, 0x61, 0x74,
-	0x65, 0x4c, 0x6f, 0x63, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74,
-	0x1a, 0x16, 0x2e, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x62,
-	0x75, 0x66, 0x2e, 0x45, 0x6d, 0x70, 0x74, 0x79, 0x22, 0x00, 0x12, 0x66, 0x0a, 0x15, 0x47, 0x65,
-	0x74, 0x4c, 0x61, 0x6e, 0x67, 0x75, 0x61, 0x67, 0x65, 0x73, 0x53, 0x75, 0x70, 0x70, 0x6f, 0x72,
-	0x74, 0x65, 0x64, 0x12, 0x24, 0x2e, 0x63, 0x6f, 0x6e, 0x6e, 0x65, 0x63, 0x74, 0x69, 0x6f, 0x6e,
-	0x73, 0x2e, 0x75, 0x73, 0x65, 0x72, 0x2e, 0x47, 0x65, 0x74, 0x4c, 0x6f, 0x63, 0x61, 0x74, 0x69,
-	0x6f, 0x6e, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x25, 0x2e, 0x63, 0x6f, 0x6e, 0x6e,
-	0x65, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x2e, 0x75, 0x73, 0x65, 0x72, 0x2e, 0x47, 0x65, 0x74,
-	0x4c, 0x6f, 0x63, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65,
-	0x22, 0x00, 0x42, 0x1b, 0x5a, 0x19, 0x63, 0x6f, 0x6e, 0x6e, 0x65, 0x63, 0x74, 0x69, 0x6f, 0x6e,
-	0x73, 0x2f, 0x75, 0x73, 0x65, 0x72, 0x70, 0x62, 0x3b, 0x75, 0x73, 0x65, 0x72, 0x70, 0x62, 0x62,
-	0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
+	0x69, 0x6f, 0x6e, 0x32, 0xd4, 0x01, 0x0a, 0x15, 0x55, 0x73, 0x65, 0x72, 0x43, 0x6f, 0x6e, 0x6e,
+	0x65, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x53, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x12, 0x53, 0x0a,
+	0x0e, 0x55, 0x70, 0x64, 0x61, 0x74, 0x65, 0x4c, 0x6f, 0x63, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x12,
+	0x27, 0x2e, 0x63, 0x6f, 0x6e, 0x6e, 0x65, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x2e, 0x75, 0x73,
+	0x65, 0x72, 0x2e, 0x55, 0x70, 0x64, 0x61, 0x74, 0x65, 0x4c, 0x6f, 0x63, 0x61, 0x74, 0x69, 0x6f,
+	0x6e, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x16, 0x2e, 0x67, 0x6f, 0x6f, 0x67, 0x6c,
+	0x65, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x62, 0x75, 0x66, 0x2e, 0x45, 0x6d, 0x70, 0x74, 0x79,
+	0x22, 0x00, 0x12, 0x66, 0x0a, 0x15, 0x47, 0x65, 0x74, 0x4c, 0x61, 0x6e, 0x67, 0x75, 0x61, 0x67,
+	0x65, 0x73, 0x53, 0x75, 0x70, 0x70, 0x6f, 0x72, 0x74, 0x65, 0x64, 0x12, 0x24, 0x2e, 0x63, 0x6f,
+	0x6e, 0x6e, 0x65, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x2e, 0x75, 0x73, 0x65, 0x72, 0x2e, 0x47,
+	0x65, 0x74, 0x4c, 0x6f, 0x63, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73,
+	0x74, 0x1a, 0x25, 0x2e, 0x63, 0x6f, 0x6e, 0x6e, 0x65, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x2e,
+	0x75, 0x73, 0x65, 0x72, 0x2e, 0x47, 0x65, 0x74, 0x4c, 0x6f, 0x63, 0x61, 0x74, 0x69, 0x6f, 0x6e,
+	0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00, 0x42, 0x1b, 0x5a, 0x19, 0x63, 0x6f,
+	0x6e, 0x6e, 0x65, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x2f, 0x75, 0x73, 0x65, 0x72, 0x70, 0x62,
+	0x3b, 0x75, 0x73, 0x65, 0x72, 0x70, 0x62, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
 }
 
 var (
@@ -301,10 +301,10 @@ var file_api_protobuf_spec_connection_user_v1_proto_goTypes = []interface{}{
 var file_api_protobuf_spec_connection_user_v1_proto_depIdxs = []int32{
 	0, // 0: connections.user.UpdateLocationRequest.location:type_name -> connections.user.Location
 	0, // 1: connections.user.GetLocationResponse.location:type_name -> connections.user.Location
-	1, // 2: connections.user.ConfigService.UpdateLocation:input_type -> connections.user.UpdateLocationRequest
-	2, // 3: connections.user.ConfigService.GetLanguagesSupported:input_type -> connections.user.GetLocationRequest
-	4, // 4: connections.user.ConfigService.UpdateLocation:output_type -> google.protobuf.Empty
-	3, // 5: connections.user.ConfigService.GetLanguagesSupported:output_type -> connections.user.GetLocationResponse
+	1, // 2: connections.user.UserConnectionService.UpdateLocation:input_type -> connections.user.UpdateLocationRequest
+	2, // 3: connections.user.UserConnectionService.GetLanguagesSupported:input_type -> connections.user.GetLocationRequest
+	4, // 4: connections.user.UserConnectionService.UpdateLocation:output_type -> google.protobuf.Empty
+	3, // 5: connections.user.UserConnectionService.GetLanguagesSupported:output_type -> connections.user.GetLocationResponse
 	4, // [4:6] is the sub-list for method output_type
 	2, // [2:4] is the sub-list for method input_type
 	2, // [2:2] is the sub-list for extension type_name
@@ -395,108 +395,108 @@ var _ grpc.ClientConnInterface
 // is compatible with the grpc package it is being compiled against.
 const _ = grpc.SupportPackageIsVersion6
 
-// ConfigServiceClient is the client API for ConfigService service.
+// UserConnectionServiceClient is the client API for UserConnectionService service.
 //
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://godoc.org/google.golang.org/grpc#ClientConn.NewStream.
-type ConfigServiceClient interface {
+type UserConnectionServiceClient interface {
 	UpdateLocation(ctx context.Context, in *UpdateLocationRequest, opts ...grpc.CallOption) (*empty.Empty, error)
 	GetLanguagesSupported(ctx context.Context, in *GetLocationRequest, opts ...grpc.CallOption) (*GetLocationResponse, error)
 }
 
-type configServiceClient struct {
+type userConnectionServiceClient struct {
 	cc grpc.ClientConnInterface
 }
 
-func NewConfigServiceClient(cc grpc.ClientConnInterface) ConfigServiceClient {
-	return &configServiceClient{cc}
+func NewUserConnectionServiceClient(cc grpc.ClientConnInterface) UserConnectionServiceClient {
+	return &userConnectionServiceClient{cc}
 }
 
-func (c *configServiceClient) UpdateLocation(ctx context.Context, in *UpdateLocationRequest, opts ...grpc.CallOption) (*empty.Empty, error) {
+func (c *userConnectionServiceClient) UpdateLocation(ctx context.Context, in *UpdateLocationRequest, opts ...grpc.CallOption) (*empty.Empty, error) {
 	out := new(empty.Empty)
-	err := c.cc.Invoke(ctx, "/connections.user.ConfigService/UpdateLocation", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/connections.user.UserConnectionService/UpdateLocation", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *configServiceClient) GetLanguagesSupported(ctx context.Context, in *GetLocationRequest, opts ...grpc.CallOption) (*GetLocationResponse, error) {
+func (c *userConnectionServiceClient) GetLanguagesSupported(ctx context.Context, in *GetLocationRequest, opts ...grpc.CallOption) (*GetLocationResponse, error) {
 	out := new(GetLocationResponse)
-	err := c.cc.Invoke(ctx, "/connections.user.ConfigService/GetLanguagesSupported", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/connections.user.UserConnectionService/GetLanguagesSupported", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-// ConfigServiceServer is the server API for ConfigService service.
-type ConfigServiceServer interface {
+// UserConnectionServiceServer is the server API for UserConnectionService service.
+type UserConnectionServiceServer interface {
 	UpdateLocation(context.Context, *UpdateLocationRequest) (*empty.Empty, error)
 	GetLanguagesSupported(context.Context, *GetLocationRequest) (*GetLocationResponse, error)
 }
 
-// UnimplementedConfigServiceServer can be embedded to have forward compatible implementations.
-type UnimplementedConfigServiceServer struct {
+// UnimplementedUserConnectionServiceServer can be embedded to have forward compatible implementations.
+type UnimplementedUserConnectionServiceServer struct {
 }
 
-func (*UnimplementedConfigServiceServer) UpdateLocation(context.Context, *UpdateLocationRequest) (*empty.Empty, error) {
+func (*UnimplementedUserConnectionServiceServer) UpdateLocation(context.Context, *UpdateLocationRequest) (*empty.Empty, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method UpdateLocation not implemented")
 }
-func (*UnimplementedConfigServiceServer) GetLanguagesSupported(context.Context, *GetLocationRequest) (*GetLocationResponse, error) {
+func (*UnimplementedUserConnectionServiceServer) GetLanguagesSupported(context.Context, *GetLocationRequest) (*GetLocationResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetLanguagesSupported not implemented")
 }
 
-func RegisterConfigServiceServer(s *grpc.Server, srv ConfigServiceServer) {
-	s.RegisterService(&_ConfigService_serviceDesc, srv)
+func RegisterUserConnectionServiceServer(s *grpc.Server, srv UserConnectionServiceServer) {
+	s.RegisterService(&_UserConnectionService_serviceDesc, srv)
 }
 
-func _ConfigService_UpdateLocation_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _UserConnectionService_UpdateLocation_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(UpdateLocationRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(ConfigServiceServer).UpdateLocation(ctx, in)
+		return srv.(UserConnectionServiceServer).UpdateLocation(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/connections.user.ConfigService/UpdateLocation",
+		FullMethod: "/connections.user.UserConnectionService/UpdateLocation",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(ConfigServiceServer).UpdateLocation(ctx, req.(*UpdateLocationRequest))
+		return srv.(UserConnectionServiceServer).UpdateLocation(ctx, req.(*UpdateLocationRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _ConfigService_GetLanguagesSupported_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _UserConnectionService_GetLanguagesSupported_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(GetLocationRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(ConfigServiceServer).GetLanguagesSupported(ctx, in)
+		return srv.(UserConnectionServiceServer).GetLanguagesSupported(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/connections.user.ConfigService/GetLanguagesSupported",
+		FullMethod: "/connections.user.UserConnectionService/GetLanguagesSupported",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(ConfigServiceServer).GetLanguagesSupported(ctx, req.(*GetLocationRequest))
+		return srv.(UserConnectionServiceServer).GetLanguagesSupported(ctx, req.(*GetLocationRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-var _ConfigService_serviceDesc = grpc.ServiceDesc{
-	ServiceName: "connections.user.ConfigService",
-	HandlerType: (*ConfigServiceServer)(nil),
+var _UserConnectionService_serviceDesc = grpc.ServiceDesc{
+	ServiceName: "connections.user.UserConnectionService",
+	HandlerType: (*UserConnectionServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
 			MethodName: "UpdateLocation",
-			Handler:    _ConfigService_UpdateLocation_Handler,
+			Handler:    _UserConnectionService_UpdateLocation_Handler,
 		},
 		{
 			MethodName: "GetLanguagesSupported",
-			Handler:    _ConfigService_GetLanguagesSupported_Handler,
+			Handler:    _UserConnectionService_GetLanguagesSupported_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
