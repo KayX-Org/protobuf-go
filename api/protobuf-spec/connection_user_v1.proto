@@ -10,7 +10,7 @@ message Location {
 }
 
 message UpdateLocationRequest {
-  Location config = 1;
+  Location location = 1;
   string userId = 2;
 }
 
@@ -19,7 +19,7 @@ message GetLocationRequest {
 }
 
 message GetLocationResponse {
-  Location config = 1;
+  Location location = 1;
 }
 
 service ConfigService{
