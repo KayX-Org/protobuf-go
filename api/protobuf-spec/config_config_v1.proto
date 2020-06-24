@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package user.auth;
+package config.config;
 option go_package = "config/configpb;configpb";
 import "google/protobuf/empty.proto";
 

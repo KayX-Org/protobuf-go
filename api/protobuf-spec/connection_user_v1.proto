@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+package connections.user;
+option go_package = "connections/userpb;userpb";
+import "google/protobuf/empty.proto";
+
+message Location {
+  string lat = 1;
+  string long = 2;
+}
+
+message UpdateLocationRequest {
+  Location config = 1;
+  string userId = 2;
+}
+
+message GetLocationRequest {
+  string userId = 2;
+}
+
+message GetLocationResponse {
+  Location config = 1;
+}
+
+service ConfigService{
+  rpc UpdateLocation(UpdateLocationRequest) returns (google.protobuf.Empty) {};
+  rpc GetLanguagesSupported(GetLocationRequest) returns (GetLocationResponse) {};
+}
+
