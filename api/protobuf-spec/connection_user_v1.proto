@@ -5,8 +5,8 @@ option go_package = "connections/userpb;userpb";
 import "google/protobuf/empty.proto";
 
 message Location {
-  string lat = 1;
-  string long = 2;
+  float lat = 1;
+  float long = 2;
 }
 
 message UpdateLocationRequest {
