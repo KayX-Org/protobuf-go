@@ -64,9 +64,19 @@ message UpdateAvatarRequest {
   string user_id = 3;
 }
 
+message UserExistsResponse {
+  bool exists = 1;
+}
+
+message UserExistsRequest {
+  string app_secret = 1;
+  string number = 2;
+}
+
 service UserService{
   rpc GetUser(GetUserRequest) returns (GetUserResponse) {};
   rpc GetUsers(GetUsersRequest) returns (GetUsersResponse) {};
   rpc UpdateProfile(UpdateProfileRequest) returns (UpdateProfileResponse) {};
   rpc UpdateAvatar(UpdateAvatarRequest) returns (google.protobuf.Empty) {};
+  rpc UserExists(UserExistsRequest) returns (UserExistsResponse) {};
 }
