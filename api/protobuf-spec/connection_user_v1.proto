@@ -29,7 +29,7 @@ message GetLocationResponse {
 
 message FindNearestUsersRequest {
   string userId = 1;
-  string limit = 2;
+  int32 limit = 2;
 }
 
 message FindNearestUsersResponse {
