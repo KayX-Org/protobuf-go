@@ -62,7 +62,7 @@ message CreateConnectionResponse {
 
 service UserConnectionService {
   rpc UpdateLocation(UpdateLocationRequest) returns (google.protobuf.Empty) {};
-  rpc GetLanguagesSupported(GetLocationRequest) returns (GetLocationResponse) {};
+  rpc GetLocation(GetLocationRequest) returns (GetLocationResponse) {};
   rpc FindNearestUsers(FindNearestUsersRequest) returns (FindNearestUsersResponse) {};
   rpc IgnoreUser(IgnoreUserRequest) returns (google.protobuf.Empty) {};
   rpc BlockUser(BlockUserRequest) returns (google.protobuf.Empty) {};
