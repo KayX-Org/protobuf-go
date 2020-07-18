@@ -85,6 +85,61 @@ func (x *Location) GetLong() float32 {
 	return 0
 }
 
+type UserDistance struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	UserId   string  `protobuf:"bytes,1,opt,name=userId,proto3" json:"userId,omitempty"`
+	Distance float32 `protobuf:"fixed32,2,opt,name=distance,proto3" json:"distance,omitempty"`
+}
+
+func (x *UserDistance) Reset() {
+	*x = UserDistance{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_api_protobuf_spec_connection_user_v1_proto_msgTypes[1]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *UserDistance) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*UserDistance) ProtoMessage() {}
+
+func (x *UserDistance) ProtoReflect() protoreflect.Message {
+	mi := &file_api_protobuf_spec_connection_user_v1_proto_msgTypes[1]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use UserDistance.ProtoReflect.Descriptor instead.
+func (*UserDistance) Descriptor() ([]byte, []int) {
+	return file_api_protobuf_spec_connection_user_v1_proto_rawDescGZIP(), []int{1}
+}
+
+func (x *UserDistance) GetUserId() string {
+	if x != nil {
+		return x.UserId
+	}
+	return ""
+}
+
+func (x *UserDistance) GetDistance() float32 {
+	if x != nil {
+		return x.Distance
+	}
+	return 0
+}
+
 type UpdateLocationRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -97,7 +152,7 @@ type UpdateLocationRequest struct {
 func (x *UpdateLocationRequest) Reset() {
 	*x = UpdateLocationRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_api_protobuf_spec_connection_user_v1_proto_msgTypes[1]
+		mi := &file_api_protobuf_spec_connection_user_v1_proto_msgTypes[2]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -110,7 +165,7 @@ func (x *UpdateLocationRequest) String() string {
 func (*UpdateLocationRequest) ProtoMessage() {}
 
 func (x *UpdateLocationRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_api_protobuf_spec_connection_user_v1_proto_msgTypes[1]
+	mi := &file_api_protobuf_spec_connection_user_v1_proto_msgTypes[2]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -123,7 +178,7 @@ func (x *UpdateLocationRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use UpdateLocationRequest.ProtoReflect.Descriptor instead.
 func (*UpdateLocationRequest) Descriptor() ([]byte, []int) {
-	return file_api_protobuf_spec_connection_user_v1_proto_rawDescGZIP(), []int{1}
+	return file_api_protobuf_spec_connection_user_v1_proto_rawDescGZIP(), []int{2}
 }
 
 func (x *UpdateLocationRequest) GetLocation() *Location {
@@ -151,7 +206,7 @@ type GetLocationRequest struct {
 func (x *GetLocationRequest) Reset() {
 	*x = GetLocationRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_api_protobuf_spec_connection_user_v1_proto_msgTypes[2]
+		mi := &file_api_protobuf_spec_connection_user_v1_proto_msgTypes[3]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -164,7 +219,7 @@ func (x *GetLocationRequest) String() string {
 func (*GetLocationRequest) ProtoMessage() {}
 
 func (x *GetLocationRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_api_protobuf_spec_connection_user_v1_proto_msgTypes[2]
+	mi := &file_api_protobuf_spec_connection_user_v1_proto_msgTypes[3]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -177,7 +232,7 @@ func (x *GetLocationRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetLocationRequest.ProtoReflect.Descriptor instead.
 func (*GetLocationRequest) Descriptor() ([]byte, []int) {
-	return file_api_protobuf_spec_connection_user_v1_proto_rawDescGZIP(), []int{2}
+	return file_api_protobuf_spec_connection_user_v1_proto_rawDescGZIP(), []int{3}
 }
 
 func (x *GetLocationRequest) GetUserId() string {
@@ -198,7 +253,7 @@ type GetLocationResponse struct {
 func (x *GetLocationResponse) Reset() {
 	*x = GetLocationResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_api_protobuf_spec_connection_user_v1_proto_msgTypes[3]
+		mi := &file_api_protobuf_spec_connection_user_v1_proto_msgTypes[4]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -211,7 +266,7 @@ func (x *GetLocationResponse) String() string {
 func (*GetLocationResponse) ProtoMessage() {}
 
 func (x *GetLocationResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_api_protobuf_spec_connection_user_v1_proto_msgTypes[3]
+	mi := &file_api_protobuf_spec_connection_user_v1_proto_msgTypes[4]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -224,7 +279,7 @@ func (x *GetLocationResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetLocationResponse.ProtoReflect.Descriptor instead.
 func (*GetLocationResponse) Descriptor() ([]byte, []int) {
-	return file_api_protobuf_spec_connection_user_v1_proto_rawDescGZIP(), []int{3}
+	return file_api_protobuf_spec_connection_user_v1_proto_rawDescGZIP(), []int{4}
 }
 
 func (x *GetLocationResponse) GetLocation() *Location {
@@ -232,6 +287,375 @@ func (x *GetLocationResponse) GetLocation() *Location {
 		return x.Location
 	}
 	return nil
+}
+
+type FindNearestUsersRequest struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	UserId string `protobuf:"bytes,1,opt,name=userId,proto3" json:"userId,omitempty"`
+	Limit  string `protobuf:"bytes,2,opt,name=limit,proto3" json:"limit,omitempty"`
+}
+
+func (x *FindNearestUsersRequest) Reset() {
+	*x = FindNearestUsersRequest{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_api_protobuf_spec_connection_user_v1_proto_msgTypes[5]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *FindNearestUsersRequest) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*FindNearestUsersRequest) ProtoMessage() {}
+
+func (x *FindNearestUsersRequest) ProtoReflect() protoreflect.Message {
+	mi := &file_api_protobuf_spec_connection_user_v1_proto_msgTypes[5]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use FindNearestUsersRequest.ProtoReflect.Descriptor instead.
+func (*FindNearestUsersRequest) Descriptor() ([]byte, []int) {
+	return file_api_protobuf_spec_connection_user_v1_proto_rawDescGZIP(), []int{5}
+}
+
+func (x *FindNearestUsersRequest) GetUserId() string {
+	if x != nil {
+		return x.UserId
+	}
+	return ""
+}
+
+func (x *FindNearestUsersRequest) GetLimit() string {
+	if x != nil {
+		return x.Limit
+	}
+	return ""
+}
+
+type FindNearestUsersResponse struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	UserDistance []*UserDistance `protobuf:"bytes,1,rep,name=userDistance,proto3" json:"userDistance,omitempty"`
+}
+
+func (x *FindNearestUsersResponse) Reset() {
+	*x = FindNearestUsersResponse{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_api_protobuf_spec_connection_user_v1_proto_msgTypes[6]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *FindNearestUsersResponse) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*FindNearestUsersResponse) ProtoMessage() {}
+
+func (x *FindNearestUsersResponse) ProtoReflect() protoreflect.Message {
+	mi := &file_api_protobuf_spec_connection_user_v1_proto_msgTypes[6]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use FindNearestUsersResponse.ProtoReflect.Descriptor instead.
+func (*FindNearestUsersResponse) Descriptor() ([]byte, []int) {
+	return file_api_protobuf_spec_connection_user_v1_proto_rawDescGZIP(), []int{6}
+}
+
+func (x *FindNearestUsersResponse) GetUserDistance() []*UserDistance {
+	if x != nil {
+		return x.UserDistance
+	}
+	return nil
+}
+
+type IgnoreUserRequest struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	UserId   string `protobuf:"bytes,1,opt,name=userId,proto3" json:"userId,omitempty"`
+	IgnoreId string `protobuf:"bytes,2,opt,name=ignoreId,proto3" json:"ignoreId,omitempty"`
+}
+
+func (x *IgnoreUserRequest) Reset() {
+	*x = IgnoreUserRequest{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_api_protobuf_spec_connection_user_v1_proto_msgTypes[7]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *IgnoreUserRequest) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*IgnoreUserRequest) ProtoMessage() {}
+
+func (x *IgnoreUserRequest) ProtoReflect() protoreflect.Message {
+	mi := &file_api_protobuf_spec_connection_user_v1_proto_msgTypes[7]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use IgnoreUserRequest.ProtoReflect.Descriptor instead.
+func (*IgnoreUserRequest) Descriptor() ([]byte, []int) {
+	return file_api_protobuf_spec_connection_user_v1_proto_rawDescGZIP(), []int{7}
+}
+
+func (x *IgnoreUserRequest) GetUserId() string {
+	if x != nil {
+		return x.UserId
+	}
+	return ""
+}
+
+func (x *IgnoreUserRequest) GetIgnoreId() string {
+	if x != nil {
+		return x.IgnoreId
+	}
+	return ""
+}
+
+type BlockUserRequest struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	UserId  string `protobuf:"bytes,1,opt,name=userId,proto3" json:"userId,omitempty"`
+	BlockId string `protobuf:"bytes,2,opt,name=blockId,proto3" json:"blockId,omitempty"`
+}
+
+func (x *BlockUserRequest) Reset() {
+	*x = BlockUserRequest{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_api_protobuf_spec_connection_user_v1_proto_msgTypes[8]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *BlockUserRequest) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*BlockUserRequest) ProtoMessage() {}
+
+func (x *BlockUserRequest) ProtoReflect() protoreflect.Message {
+	mi := &file_api_protobuf_spec_connection_user_v1_proto_msgTypes[8]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use BlockUserRequest.ProtoReflect.Descriptor instead.
+func (*BlockUserRequest) Descriptor() ([]byte, []int) {
+	return file_api_protobuf_spec_connection_user_v1_proto_rawDescGZIP(), []int{8}
+}
+
+func (x *BlockUserRequest) GetUserId() string {
+	if x != nil {
+		return x.UserId
+	}
+	return ""
+}
+
+func (x *BlockUserRequest) GetBlockId() string {
+	if x != nil {
+		return x.BlockId
+	}
+	return ""
+}
+
+type PauseUserRequest struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	UserId  string `protobuf:"bytes,1,opt,name=userId,proto3" json:"userId,omitempty"`
+	PauseId string `protobuf:"bytes,2,opt,name=pauseId,proto3" json:"pauseId,omitempty"`
+}
+
+func (x *PauseUserRequest) Reset() {
+	*x = PauseUserRequest{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_api_protobuf_spec_connection_user_v1_proto_msgTypes[9]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *PauseUserRequest) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*PauseUserRequest) ProtoMessage() {}
+
+func (x *PauseUserRequest) ProtoReflect() protoreflect.Message {
+	mi := &file_api_protobuf_spec_connection_user_v1_proto_msgTypes[9]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use PauseUserRequest.ProtoReflect.Descriptor instead.
+func (*PauseUserRequest) Descriptor() ([]byte, []int) {
+	return file_api_protobuf_spec_connection_user_v1_proto_rawDescGZIP(), []int{9}
+}
+
+func (x *PauseUserRequest) GetUserId() string {
+	if x != nil {
+		return x.UserId
+	}
+	return ""
+}
+
+func (x *PauseUserRequest) GetPauseId() string {
+	if x != nil {
+		return x.PauseId
+	}
+	return ""
+}
+
+type CreateConnectionRequest struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	UserId    string `protobuf:"bytes,1,opt,name=userId,proto3" json:"userId,omitempty"`
+	ConnectId string `protobuf:"bytes,2,opt,name=connectId,proto3" json:"connectId,omitempty"`
+}
+
+func (x *CreateConnectionRequest) Reset() {
+	*x = CreateConnectionRequest{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_api_protobuf_spec_connection_user_v1_proto_msgTypes[10]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *CreateConnectionRequest) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*CreateConnectionRequest) ProtoMessage() {}
+
+func (x *CreateConnectionRequest) ProtoReflect() protoreflect.Message {
+	mi := &file_api_protobuf_spec_connection_user_v1_proto_msgTypes[10]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use CreateConnectionRequest.ProtoReflect.Descriptor instead.
+func (*CreateConnectionRequest) Descriptor() ([]byte, []int) {
+	return file_api_protobuf_spec_connection_user_v1_proto_rawDescGZIP(), []int{10}
+}
+
+func (x *CreateConnectionRequest) GetUserId() string {
+	if x != nil {
+		return x.UserId
+	}
+	return ""
+}
+
+func (x *CreateConnectionRequest) GetConnectId() string {
+	if x != nil {
+		return x.ConnectId
+	}
+	return ""
+}
+
+type CreateConnectionResponse struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	Connected bool `protobuf:"varint,1,opt,name=connected,proto3" json:"connected,omitempty"`
+}
+
+func (x *CreateConnectionResponse) Reset() {
+	*x = CreateConnectionResponse{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_api_protobuf_spec_connection_user_v1_proto_msgTypes[11]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *CreateConnectionResponse) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*CreateConnectionResponse) ProtoMessage() {}
+
+func (x *CreateConnectionResponse) ProtoReflect() protoreflect.Message {
+	mi := &file_api_protobuf_spec_connection_user_v1_proto_msgTypes[11]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use CreateConnectionResponse.ProtoReflect.Descriptor instead.
+func (*CreateConnectionResponse) Descriptor() ([]byte, []int) {
+	return file_api_protobuf_spec_connection_user_v1_proto_rawDescGZIP(), []int{11}
+}
+
+func (x *CreateConnectionResponse) GetConnected() bool {
+	if x != nil {
+		return x.Connected
+	}
+	return false
 }
 
 var File_api_protobuf_spec_connection_user_v1_proto protoreflect.FileDescriptor
@@ -245,37 +669,102 @@ var file_api_protobuf_spec_connection_user_v1_proto_rawDesc = []byte{
 	0x65, 0x6d, 0x70, 0x74, 0x79, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x22, 0x30, 0x0a, 0x08, 0x4c,
 	0x6f, 0x63, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x12, 0x10, 0x0a, 0x03, 0x6c, 0x61, 0x74, 0x18, 0x01,
 	0x20, 0x01, 0x28, 0x02, 0x52, 0x03, 0x6c, 0x61, 0x74, 0x12, 0x12, 0x0a, 0x04, 0x6c, 0x6f, 0x6e,
-	0x67, 0x18, 0x02, 0x20, 0x01, 0x28, 0x02, 0x52, 0x04, 0x6c, 0x6f, 0x6e, 0x67, 0x22, 0x67, 0x0a,
-	0x15, 0x55, 0x70, 0x64, 0x61, 0x74, 0x65, 0x4c, 0x6f, 0x63, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x52,
-	0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x12, 0x36, 0x0a, 0x08, 0x6c, 0x6f, 0x63, 0x61, 0x74, 0x69,
-	0x6f, 0x6e, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x1a, 0x2e, 0x63, 0x6f, 0x6e, 0x6e, 0x65,
-	0x63, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x2e, 0x75, 0x73, 0x65, 0x72, 0x2e, 0x4c, 0x6f, 0x63, 0x61,
-	0x74, 0x69, 0x6f, 0x6e, 0x52, 0x08, 0x6c, 0x6f, 0x63, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x12, 0x16,
-	0x0a, 0x06, 0x75, 0x73, 0x65, 0x72, 0x49, 0x64, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52, 0x06,
-	0x75, 0x73, 0x65, 0x72, 0x49, 0x64, 0x22, 0x2c, 0x0a, 0x12, 0x47, 0x65, 0x74, 0x4c, 0x6f, 0x63,
-	0x61, 0x74, 0x69, 0x6f, 0x6e, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x12, 0x16, 0x0a, 0x06,
-	0x75, 0x73, 0x65, 0x72, 0x49, 0x64, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52, 0x06, 0x75, 0x73,
-	0x65, 0x72, 0x49, 0x64, 0x22, 0x4d, 0x0a, 0x13, 0x47, 0x65, 0x74, 0x4c, 0x6f, 0x63, 0x61, 0x74,
-	0x69, 0x6f, 0x6e, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x36, 0x0a, 0x08, 0x6c,
-	0x6f, 0x63, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x1a, 0x2e,
-	0x63, 0x6f, 0x6e, 0x6e, 0x65, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x2e, 0x75, 0x73, 0x65, 0x72,
-	0x2e, 0x4c, 0x6f, 0x63, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x52, 0x08, 0x6c, 0x6f, 0x63, 0x61, 0x74,
-	0x69, 0x6f, 0x6e, 0x32, 0xd4, 0x01, 0x0a, 0x15, 0x55, 0x73, 0x65, 0x72, 0x43, 0x6f, 0x6e, 0x6e,
-	0x65, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x53, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x12, 0x53, 0x0a,
-	0x0e, 0x55, 0x70, 0x64, 0x61, 0x74, 0x65, 0x4c, 0x6f, 0x63, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x12,
-	0x27, 0x2e, 0x63, 0x6f, 0x6e, 0x6e, 0x65, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x2e, 0x75, 0x73,
-	0x65, 0x72, 0x2e, 0x55, 0x70, 0x64, 0x61, 0x74, 0x65, 0x4c, 0x6f, 0x63, 0x61, 0x74, 0x69, 0x6f,
-	0x6e, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x16, 0x2e, 0x67, 0x6f, 0x6f, 0x67, 0x6c,
-	0x65, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x62, 0x75, 0x66, 0x2e, 0x45, 0x6d, 0x70, 0x74, 0x79,
-	0x22, 0x00, 0x12, 0x66, 0x0a, 0x15, 0x47, 0x65, 0x74, 0x4c, 0x61, 0x6e, 0x67, 0x75, 0x61, 0x67,
-	0x65, 0x73, 0x53, 0x75, 0x70, 0x70, 0x6f, 0x72, 0x74, 0x65, 0x64, 0x12, 0x24, 0x2e, 0x63, 0x6f,
-	0x6e, 0x6e, 0x65, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x2e, 0x75, 0x73, 0x65, 0x72, 0x2e, 0x47,
-	0x65, 0x74, 0x4c, 0x6f, 0x63, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73,
-	0x74, 0x1a, 0x25, 0x2e, 0x63, 0x6f, 0x6e, 0x6e, 0x65, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x2e,
-	0x75, 0x73, 0x65, 0x72, 0x2e, 0x47, 0x65, 0x74, 0x4c, 0x6f, 0x63, 0x61, 0x74, 0x69, 0x6f, 0x6e,
-	0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00, 0x42, 0x1b, 0x5a, 0x19, 0x63, 0x6f,
-	0x6e, 0x6e, 0x65, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x2f, 0x75, 0x73, 0x65, 0x72, 0x70, 0x62,
-	0x3b, 0x75, 0x73, 0x65, 0x72, 0x70, 0x62, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
+	0x67, 0x18, 0x02, 0x20, 0x01, 0x28, 0x02, 0x52, 0x04, 0x6c, 0x6f, 0x6e, 0x67, 0x22, 0x42, 0x0a,
+	0x0c, 0x55, 0x73, 0x65, 0x72, 0x44, 0x69, 0x73, 0x74, 0x61, 0x6e, 0x63, 0x65, 0x12, 0x16, 0x0a,
+	0x06, 0x75, 0x73, 0x65, 0x72, 0x49, 0x64, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x06, 0x75,
+	0x73, 0x65, 0x72, 0x49, 0x64, 0x12, 0x1a, 0x0a, 0x08, 0x64, 0x69, 0x73, 0x74, 0x61, 0x6e, 0x63,
+	0x65, 0x18, 0x02, 0x20, 0x01, 0x28, 0x02, 0x52, 0x08, 0x64, 0x69, 0x73, 0x74, 0x61, 0x6e, 0x63,
+	0x65, 0x22, 0x67, 0x0a, 0x15, 0x55, 0x70, 0x64, 0x61, 0x74, 0x65, 0x4c, 0x6f, 0x63, 0x61, 0x74,
+	0x69, 0x6f, 0x6e, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x12, 0x36, 0x0a, 0x08, 0x6c, 0x6f,
+	0x63, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x1a, 0x2e, 0x63,
+	0x6f, 0x6e, 0x6e, 0x65, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x2e, 0x75, 0x73, 0x65, 0x72, 0x2e,
+	0x4c, 0x6f, 0x63, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x52, 0x08, 0x6c, 0x6f, 0x63, 0x61, 0x74, 0x69,
+	0x6f, 0x6e, 0x12, 0x16, 0x0a, 0x06, 0x75, 0x73, 0x65, 0x72, 0x49, 0x64, 0x18, 0x02, 0x20, 0x01,
+	0x28, 0x09, 0x52, 0x06, 0x75, 0x73, 0x65, 0x72, 0x49, 0x64, 0x22, 0x2c, 0x0a, 0x12, 0x47, 0x65,
+	0x74, 0x4c, 0x6f, 0x63, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74,
+	0x12, 0x16, 0x0a, 0x06, 0x75, 0x73, 0x65, 0x72, 0x49, 0x64, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09,
+	0x52, 0x06, 0x75, 0x73, 0x65, 0x72, 0x49, 0x64, 0x22, 0x4d, 0x0a, 0x13, 0x47, 0x65, 0x74, 0x4c,
+	0x6f, 0x63, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12,
+	0x36, 0x0a, 0x08, 0x6c, 0x6f, 0x63, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x18, 0x01, 0x20, 0x01, 0x28,
+	0x0b, 0x32, 0x1a, 0x2e, 0x63, 0x6f, 0x6e, 0x6e, 0x65, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x2e,
+	0x75, 0x73, 0x65, 0x72, 0x2e, 0x4c, 0x6f, 0x63, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x52, 0x08, 0x6c,
+	0x6f, 0x63, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x22, 0x47, 0x0a, 0x17, 0x46, 0x69, 0x6e, 0x64, 0x4e,
+	0x65, 0x61, 0x72, 0x65, 0x73, 0x74, 0x55, 0x73, 0x65, 0x72, 0x73, 0x52, 0x65, 0x71, 0x75, 0x65,
+	0x73, 0x74, 0x12, 0x16, 0x0a, 0x06, 0x75, 0x73, 0x65, 0x72, 0x49, 0x64, 0x18, 0x01, 0x20, 0x01,
+	0x28, 0x09, 0x52, 0x06, 0x75, 0x73, 0x65, 0x72, 0x49, 0x64, 0x12, 0x14, 0x0a, 0x05, 0x6c, 0x69,
+	0x6d, 0x69, 0x74, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52, 0x05, 0x6c, 0x69, 0x6d, 0x69, 0x74,
+	0x22, 0x5e, 0x0a, 0x18, 0x46, 0x69, 0x6e, 0x64, 0x4e, 0x65, 0x61, 0x72, 0x65, 0x73, 0x74, 0x55,
+	0x73, 0x65, 0x72, 0x73, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x42, 0x0a, 0x0c,
+	0x75, 0x73, 0x65, 0x72, 0x44, 0x69, 0x73, 0x74, 0x61, 0x6e, 0x63, 0x65, 0x18, 0x01, 0x20, 0x03,
+	0x28, 0x0b, 0x32, 0x1e, 0x2e, 0x63, 0x6f, 0x6e, 0x6e, 0x65, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x73,
+	0x2e, 0x75, 0x73, 0x65, 0x72, 0x2e, 0x55, 0x73, 0x65, 0x72, 0x44, 0x69, 0x73, 0x74, 0x61, 0x6e,
+	0x63, 0x65, 0x52, 0x0c, 0x75, 0x73, 0x65, 0x72, 0x44, 0x69, 0x73, 0x74, 0x61, 0x6e, 0x63, 0x65,
+	0x22, 0x47, 0x0a, 0x11, 0x49, 0x67, 0x6e, 0x6f, 0x72, 0x65, 0x55, 0x73, 0x65, 0x72, 0x52, 0x65,
+	0x71, 0x75, 0x65, 0x73, 0x74, 0x12, 0x16, 0x0a, 0x06, 0x75, 0x73, 0x65, 0x72, 0x49, 0x64, 0x18,
+	0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x06, 0x75, 0x73, 0x65, 0x72, 0x49, 0x64, 0x12, 0x1a, 0x0a,
+	0x08, 0x69, 0x67, 0x6e, 0x6f, 0x72, 0x65, 0x49, 0x64, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52,
+	0x08, 0x69, 0x67, 0x6e, 0x6f, 0x72, 0x65, 0x49, 0x64, 0x22, 0x44, 0x0a, 0x10, 0x42, 0x6c, 0x6f,
+	0x63, 0x6b, 0x55, 0x73, 0x65, 0x72, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x12, 0x16, 0x0a,
+	0x06, 0x75, 0x73, 0x65, 0x72, 0x49, 0x64, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x06, 0x75,
+	0x73, 0x65, 0x72, 0x49, 0x64, 0x12, 0x18, 0x0a, 0x07, 0x62, 0x6c, 0x6f, 0x63, 0x6b, 0x49, 0x64,
+	0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52, 0x07, 0x62, 0x6c, 0x6f, 0x63, 0x6b, 0x49, 0x64, 0x22,
+	0x44, 0x0a, 0x10, 0x50, 0x61, 0x75, 0x73, 0x65, 0x55, 0x73, 0x65, 0x72, 0x52, 0x65, 0x71, 0x75,
+	0x65, 0x73, 0x74, 0x12, 0x16, 0x0a, 0x06, 0x75, 0x73, 0x65, 0x72, 0x49, 0x64, 0x18, 0x01, 0x20,
+	0x01, 0x28, 0x09, 0x52, 0x06, 0x75, 0x73, 0x65, 0x72, 0x49, 0x64, 0x12, 0x18, 0x0a, 0x07, 0x70,
+	0x61, 0x75, 0x73, 0x65, 0x49, 0x64, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52, 0x07, 0x70, 0x61,
+	0x75, 0x73, 0x65, 0x49, 0x64, 0x22, 0x4f, 0x0a, 0x17, 0x43, 0x72, 0x65, 0x61, 0x74, 0x65, 0x43,
+	0x6f, 0x6e, 0x6e, 0x65, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74,
+	0x12, 0x16, 0x0a, 0x06, 0x75, 0x73, 0x65, 0x72, 0x49, 0x64, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09,
+	0x52, 0x06, 0x75, 0x73, 0x65, 0x72, 0x49, 0x64, 0x12, 0x1c, 0x0a, 0x09, 0x63, 0x6f, 0x6e, 0x6e,
+	0x65, 0x63, 0x74, 0x49, 0x64, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52, 0x09, 0x63, 0x6f, 0x6e,
+	0x6e, 0x65, 0x63, 0x74, 0x49, 0x64, 0x22, 0x38, 0x0a, 0x18, 0x43, 0x72, 0x65, 0x61, 0x74, 0x65,
+	0x43, 0x6f, 0x6e, 0x6e, 0x65, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e,
+	0x73, 0x65, 0x12, 0x1c, 0x0a, 0x09, 0x63, 0x6f, 0x6e, 0x6e, 0x65, 0x63, 0x74, 0x65, 0x64, 0x18,
+	0x01, 0x20, 0x01, 0x28, 0x08, 0x52, 0x09, 0x63, 0x6f, 0x6e, 0x6e, 0x65, 0x63, 0x74, 0x65, 0x64,
+	0x32, 0x96, 0x05, 0x0a, 0x15, 0x55, 0x73, 0x65, 0x72, 0x43, 0x6f, 0x6e, 0x6e, 0x65, 0x63, 0x74,
+	0x69, 0x6f, 0x6e, 0x53, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x12, 0x53, 0x0a, 0x0e, 0x55, 0x70,
+	0x64, 0x61, 0x74, 0x65, 0x4c, 0x6f, 0x63, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x12, 0x27, 0x2e, 0x63,
+	0x6f, 0x6e, 0x6e, 0x65, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x2e, 0x75, 0x73, 0x65, 0x72, 0x2e,
+	0x55, 0x70, 0x64, 0x61, 0x74, 0x65, 0x4c, 0x6f, 0x63, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x52, 0x65,
+	0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x16, 0x2e, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x2e, 0x70,
+	0x72, 0x6f, 0x74, 0x6f, 0x62, 0x75, 0x66, 0x2e, 0x45, 0x6d, 0x70, 0x74, 0x79, 0x22, 0x00, 0x12,
+	0x66, 0x0a, 0x15, 0x47, 0x65, 0x74, 0x4c, 0x61, 0x6e, 0x67, 0x75, 0x61, 0x67, 0x65, 0x73, 0x53,
+	0x75, 0x70, 0x70, 0x6f, 0x72, 0x74, 0x65, 0x64, 0x12, 0x24, 0x2e, 0x63, 0x6f, 0x6e, 0x6e, 0x65,
+	0x63, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x2e, 0x75, 0x73, 0x65, 0x72, 0x2e, 0x47, 0x65, 0x74, 0x4c,
+	0x6f, 0x63, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x25,
+	0x2e, 0x63, 0x6f, 0x6e, 0x6e, 0x65, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x2e, 0x75, 0x73, 0x65,
+	0x72, 0x2e, 0x47, 0x65, 0x74, 0x4c, 0x6f, 0x63, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x52, 0x65, 0x73,
+	0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00, 0x12, 0x6b, 0x0a, 0x10, 0x46, 0x69, 0x6e, 0x64, 0x4e,
+	0x65, 0x61, 0x72, 0x65, 0x73, 0x74, 0x55, 0x73, 0x65, 0x72, 0x73, 0x12, 0x29, 0x2e, 0x63, 0x6f,
+	0x6e, 0x6e, 0x65, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x2e, 0x75, 0x73, 0x65, 0x72, 0x2e, 0x46,
+	0x69, 0x6e, 0x64, 0x4e, 0x65, 0x61, 0x72, 0x65, 0x73, 0x74, 0x55, 0x73, 0x65, 0x72, 0x73, 0x52,
+	0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x2a, 0x2e, 0x63, 0x6f, 0x6e, 0x6e, 0x65, 0x63, 0x74,
+	0x69, 0x6f, 0x6e, 0x73, 0x2e, 0x75, 0x73, 0x65, 0x72, 0x2e, 0x46, 0x69, 0x6e, 0x64, 0x4e, 0x65,
+	0x61, 0x72, 0x65, 0x73, 0x74, 0x55, 0x73, 0x65, 0x72, 0x73, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e,
+	0x73, 0x65, 0x22, 0x00, 0x12, 0x4b, 0x0a, 0x0a, 0x49, 0x67, 0x6e, 0x6f, 0x72, 0x65, 0x55, 0x73,
+	0x65, 0x72, 0x12, 0x23, 0x2e, 0x63, 0x6f, 0x6e, 0x6e, 0x65, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x73,
+	0x2e, 0x75, 0x73, 0x65, 0x72, 0x2e, 0x49, 0x67, 0x6e, 0x6f, 0x72, 0x65, 0x55, 0x73, 0x65, 0x72,
+	0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x16, 0x2e, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65,
+	0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x62, 0x75, 0x66, 0x2e, 0x45, 0x6d, 0x70, 0x74, 0x79, 0x22,
+	0x00, 0x12, 0x49, 0x0a, 0x09, 0x42, 0x6c, 0x6f, 0x63, 0x6b, 0x55, 0x73, 0x65, 0x72, 0x12, 0x22,
+	0x2e, 0x63, 0x6f, 0x6e, 0x6e, 0x65, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x2e, 0x75, 0x73, 0x65,
+	0x72, 0x2e, 0x42, 0x6c, 0x6f, 0x63, 0x6b, 0x55, 0x73, 0x65, 0x72, 0x52, 0x65, 0x71, 0x75, 0x65,
+	0x73, 0x74, 0x1a, 0x16, 0x2e, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x2e, 0x70, 0x72, 0x6f, 0x74,
+	0x6f, 0x62, 0x75, 0x66, 0x2e, 0x45, 0x6d, 0x70, 0x74, 0x79, 0x22, 0x00, 0x12, 0x49, 0x0a, 0x09,
+	0x50, 0x61, 0x75, 0x73, 0x65, 0x55, 0x73, 0x65, 0x72, 0x12, 0x22, 0x2e, 0x63, 0x6f, 0x6e, 0x6e,
+	0x65, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x2e, 0x75, 0x73, 0x65, 0x72, 0x2e, 0x50, 0x61, 0x75,
+	0x73, 0x65, 0x55, 0x73, 0x65, 0x72, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x16, 0x2e,
+	0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x62, 0x75, 0x66, 0x2e,
+	0x45, 0x6d, 0x70, 0x74, 0x79, 0x22, 0x00, 0x12, 0x70, 0x0a, 0x15, 0x43, 0x6f, 0x6e, 0x6e, 0x65,
+	0x63, 0x74, 0x69, 0x6f, 0x6e, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x55, 0x73, 0x65, 0x72,
+	0x12, 0x29, 0x2e, 0x63, 0x6f, 0x6e, 0x6e, 0x65, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x2e, 0x75,
+	0x73, 0x65, 0x72, 0x2e, 0x43, 0x72, 0x65, 0x61, 0x74, 0x65, 0x43, 0x6f, 0x6e, 0x6e, 0x65, 0x63,
+	0x74, 0x69, 0x6f, 0x6e, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x2a, 0x2e, 0x63, 0x6f,
+	0x6e, 0x6e, 0x65, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x2e, 0x75, 0x73, 0x65, 0x72, 0x2e, 0x43,
+	0x72, 0x65, 0x61, 0x74, 0x65, 0x43, 0x6f, 0x6e, 0x6e, 0x65, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x52,
+	0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00, 0x42, 0x1b, 0x5a, 0x19, 0x63, 0x6f, 0x6e,
+	0x6e, 0x65, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x2f, 0x75, 0x73, 0x65, 0x72, 0x70, 0x62, 0x3b,
+	0x75, 0x73, 0x65, 0x72, 0x70, 0x62, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
 }
 
 var (
@@ -290,26 +779,45 @@ func file_api_protobuf_spec_connection_user_v1_proto_rawDescGZIP() []byte {
 	return file_api_protobuf_spec_connection_user_v1_proto_rawDescData
 }
 
-var file_api_protobuf_spec_connection_user_v1_proto_msgTypes = make([]protoimpl.MessageInfo, 4)
+var file_api_protobuf_spec_connection_user_v1_proto_msgTypes = make([]protoimpl.MessageInfo, 12)
 var file_api_protobuf_spec_connection_user_v1_proto_goTypes = []interface{}{
-	(*Location)(nil),              // 0: connections.user.Location
-	(*UpdateLocationRequest)(nil), // 1: connections.user.UpdateLocationRequest
-	(*GetLocationRequest)(nil),    // 2: connections.user.GetLocationRequest
-	(*GetLocationResponse)(nil),   // 3: connections.user.GetLocationResponse
-	(*empty.Empty)(nil),           // 4: google.protobuf.Empty
+	(*Location)(nil),                 // 0: connections.user.Location
+	(*UserDistance)(nil),             // 1: connections.user.UserDistance
+	(*UpdateLocationRequest)(nil),    // 2: connections.user.UpdateLocationRequest
+	(*GetLocationRequest)(nil),       // 3: connections.user.GetLocationRequest
+	(*GetLocationResponse)(nil),      // 4: connections.user.GetLocationResponse
+	(*FindNearestUsersRequest)(nil),  // 5: connections.user.FindNearestUsersRequest
+	(*FindNearestUsersResponse)(nil), // 6: connections.user.FindNearestUsersResponse
+	(*IgnoreUserRequest)(nil),        // 7: connections.user.IgnoreUserRequest
+	(*BlockUserRequest)(nil),         // 8: connections.user.BlockUserRequest
+	(*PauseUserRequest)(nil),         // 9: connections.user.PauseUserRequest
+	(*CreateConnectionRequest)(nil),  // 10: connections.user.CreateConnectionRequest
+	(*CreateConnectionResponse)(nil), // 11: connections.user.CreateConnectionResponse
+	(*empty.Empty)(nil),              // 12: google.protobuf.Empty
 }
 var file_api_protobuf_spec_connection_user_v1_proto_depIdxs = []int32{
-	0, // 0: connections.user.UpdateLocationRequest.location:type_name -> connections.user.Location
-	0, // 1: connections.user.GetLocationResponse.location:type_name -> connections.user.Location
-	1, // 2: connections.user.UserConnectionService.UpdateLocation:input_type -> connections.user.UpdateLocationRequest
-	2, // 3: connections.user.UserConnectionService.GetLanguagesSupported:input_type -> connections.user.GetLocationRequest
-	4, // 4: connections.user.UserConnectionService.UpdateLocation:output_type -> google.protobuf.Empty
-	3, // 5: connections.user.UserConnectionService.GetLanguagesSupported:output_type -> connections.user.GetLocationResponse
-	4, // [4:6] is the sub-list for method output_type
-	2, // [2:4] is the sub-list for method input_type
-	2, // [2:2] is the sub-list for extension type_name
-	2, // [2:2] is the sub-list for extension extendee
-	0, // [0:2] is the sub-list for field type_name
+	0,  // 0: connections.user.UpdateLocationRequest.location:type_name -> connections.user.Location
+	0,  // 1: connections.user.GetLocationResponse.location:type_name -> connections.user.Location
+	1,  // 2: connections.user.FindNearestUsersResponse.userDistance:type_name -> connections.user.UserDistance
+	2,  // 3: connections.user.UserConnectionService.UpdateLocation:input_type -> connections.user.UpdateLocationRequest
+	3,  // 4: connections.user.UserConnectionService.GetLanguagesSupported:input_type -> connections.user.GetLocationRequest
+	5,  // 5: connections.user.UserConnectionService.FindNearestUsers:input_type -> connections.user.FindNearestUsersRequest
+	7,  // 6: connections.user.UserConnectionService.IgnoreUser:input_type -> connections.user.IgnoreUserRequest
+	8,  // 7: connections.user.UserConnectionService.BlockUser:input_type -> connections.user.BlockUserRequest
+	9,  // 8: connections.user.UserConnectionService.PauseUser:input_type -> connections.user.PauseUserRequest
+	10, // 9: connections.user.UserConnectionService.ConnectionRequestUser:input_type -> connections.user.CreateConnectionRequest
+	12, // 10: connections.user.UserConnectionService.UpdateLocation:output_type -> google.protobuf.Empty
+	4,  // 11: connections.user.UserConnectionService.GetLanguagesSupported:output_type -> connections.user.GetLocationResponse
+	6,  // 12: connections.user.UserConnectionService.FindNearestUsers:output_type -> connections.user.FindNearestUsersResponse
+	12, // 13: connections.user.UserConnectionService.IgnoreUser:output_type -> google.protobuf.Empty
+	12, // 14: connections.user.UserConnectionService.BlockUser:output_type -> google.protobuf.Empty
+	12, // 15: connections.user.UserConnectionService.PauseUser:output_type -> google.protobuf.Empty
+	11, // 16: connections.user.UserConnectionService.ConnectionRequestUser:output_type -> connections.user.CreateConnectionResponse
+	10, // [10:17] is the sub-list for method output_type
+	3,  // [3:10] is the sub-list for method input_type
+	3,  // [3:3] is the sub-list for extension type_name
+	3,  // [3:3] is the sub-list for extension extendee
+	0,  // [0:3] is the sub-list for field type_name
 }
 
 func init() { file_api_protobuf_spec_connection_user_v1_proto_init() }
@@ -331,7 +839,7 @@ func file_api_protobuf_spec_connection_user_v1_proto_init() {
 			}
 		}
 		file_api_protobuf_spec_connection_user_v1_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*UpdateLocationRequest); i {
+			switch v := v.(*UserDistance); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -343,7 +851,7 @@ func file_api_protobuf_spec_connection_user_v1_proto_init() {
 			}
 		}
 		file_api_protobuf_spec_connection_user_v1_proto_msgTypes[2].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*GetLocationRequest); i {
+			switch v := v.(*UpdateLocationRequest); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -355,7 +863,103 @@ func file_api_protobuf_spec_connection_user_v1_proto_init() {
 			}
 		}
 		file_api_protobuf_spec_connection_user_v1_proto_msgTypes[3].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*GetLocationRequest); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_api_protobuf_spec_connection_user_v1_proto_msgTypes[4].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*GetLocationResponse); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_api_protobuf_spec_connection_user_v1_proto_msgTypes[5].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*FindNearestUsersRequest); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_api_protobuf_spec_connection_user_v1_proto_msgTypes[6].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*FindNearestUsersResponse); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_api_protobuf_spec_connection_user_v1_proto_msgTypes[7].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*IgnoreUserRequest); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_api_protobuf_spec_connection_user_v1_proto_msgTypes[8].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*BlockUserRequest); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_api_protobuf_spec_connection_user_v1_proto_msgTypes[9].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*PauseUserRequest); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_api_protobuf_spec_connection_user_v1_proto_msgTypes[10].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*CreateConnectionRequest); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_api_protobuf_spec_connection_user_v1_proto_msgTypes[11].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*CreateConnectionResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -373,7 +977,7 @@ func file_api_protobuf_spec_connection_user_v1_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: file_api_protobuf_spec_connection_user_v1_proto_rawDesc,
 			NumEnums:      0,
-			NumMessages:   4,
+			NumMessages:   12,
 			NumExtensions: 0,
 			NumServices:   1,
 		},
@@ -401,6 +1005,11 @@ const _ = grpc.SupportPackageIsVersion6
 type UserConnectionServiceClient interface {
 	UpdateLocation(ctx context.Context, in *UpdateLocationRequest, opts ...grpc.CallOption) (*empty.Empty, error)
 	GetLanguagesSupported(ctx context.Context, in *GetLocationRequest, opts ...grpc.CallOption) (*GetLocationResponse, error)
+	FindNearestUsers(ctx context.Context, in *FindNearestUsersRequest, opts ...grpc.CallOption) (*FindNearestUsersResponse, error)
+	IgnoreUser(ctx context.Context, in *IgnoreUserRequest, opts ...grpc.CallOption) (*empty.Empty, error)
+	BlockUser(ctx context.Context, in *BlockUserRequest, opts ...grpc.CallOption) (*empty.Empty, error)
+	PauseUser(ctx context.Context, in *PauseUserRequest, opts ...grpc.CallOption) (*empty.Empty, error)
+	ConnectionRequestUser(ctx context.Context, in *CreateConnectionRequest, opts ...grpc.CallOption) (*CreateConnectionResponse, error)
 }
 
 type userConnectionServiceClient struct {
@@ -429,10 +1038,60 @@ func (c *userConnectionServiceClient) GetLanguagesSupported(ctx context.Context,
 	return out, nil
 }
 
+func (c *userConnectionServiceClient) FindNearestUsers(ctx context.Context, in *FindNearestUsersRequest, opts ...grpc.CallOption) (*FindNearestUsersResponse, error) {
+	out := new(FindNearestUsersResponse)
+	err := c.cc.Invoke(ctx, "/connections.user.UserConnectionService/FindNearestUsers", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *userConnectionServiceClient) IgnoreUser(ctx context.Context, in *IgnoreUserRequest, opts ...grpc.CallOption) (*empty.Empty, error) {
+	out := new(empty.Empty)
+	err := c.cc.Invoke(ctx, "/connections.user.UserConnectionService/IgnoreUser", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *userConnectionServiceClient) BlockUser(ctx context.Context, in *BlockUserRequest, opts ...grpc.CallOption) (*empty.Empty, error) {
+	out := new(empty.Empty)
+	err := c.cc.Invoke(ctx, "/connections.user.UserConnectionService/BlockUser", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *userConnectionServiceClient) PauseUser(ctx context.Context, in *PauseUserRequest, opts ...grpc.CallOption) (*empty.Empty, error) {
+	out := new(empty.Empty)
+	err := c.cc.Invoke(ctx, "/connections.user.UserConnectionService/PauseUser", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *userConnectionServiceClient) ConnectionRequestUser(ctx context.Context, in *CreateConnectionRequest, opts ...grpc.CallOption) (*CreateConnectionResponse, error) {
+	out := new(CreateConnectionResponse)
+	err := c.cc.Invoke(ctx, "/connections.user.UserConnectionService/ConnectionRequestUser", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // UserConnectionServiceServer is the server API for UserConnectionService service.
 type UserConnectionServiceServer interface {
 	UpdateLocation(context.Context, *UpdateLocationRequest) (*empty.Empty, error)
 	GetLanguagesSupported(context.Context, *GetLocationRequest) (*GetLocationResponse, error)
+	FindNearestUsers(context.Context, *FindNearestUsersRequest) (*FindNearestUsersResponse, error)
+	IgnoreUser(context.Context, *IgnoreUserRequest) (*empty.Empty, error)
+	BlockUser(context.Context, *BlockUserRequest) (*empty.Empty, error)
+	PauseUser(context.Context, *PauseUserRequest) (*empty.Empty, error)
+	ConnectionRequestUser(context.Context, *CreateConnectionRequest) (*CreateConnectionResponse, error)
 }
 
 // UnimplementedUserConnectionServiceServer can be embedded to have forward compatible implementations.
@@ -444,6 +1103,21 @@ func (*UnimplementedUserConnectionServiceServer) UpdateLocation(context.Context,
 }
 func (*UnimplementedUserConnectionServiceServer) GetLanguagesSupported(context.Context, *GetLocationRequest) (*GetLocationResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetLanguagesSupported not implemented")
+}
+func (*UnimplementedUserConnectionServiceServer) FindNearestUsers(context.Context, *FindNearestUsersRequest) (*FindNearestUsersResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method FindNearestUsers not implemented")
+}
+func (*UnimplementedUserConnectionServiceServer) IgnoreUser(context.Context, *IgnoreUserRequest) (*empty.Empty, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method IgnoreUser not implemented")
+}
+func (*UnimplementedUserConnectionServiceServer) BlockUser(context.Context, *BlockUserRequest) (*empty.Empty, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method BlockUser not implemented")
+}
+func (*UnimplementedUserConnectionServiceServer) PauseUser(context.Context, *PauseUserRequest) (*empty.Empty, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method PauseUser not implemented")
+}
+func (*UnimplementedUserConnectionServiceServer) ConnectionRequestUser(context.Context, *CreateConnectionRequest) (*CreateConnectionResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method ConnectionRequestUser not implemented")
 }
 
 func RegisterUserConnectionServiceServer(s *grpc.Server, srv UserConnectionServiceServer) {
@@ -486,6 +1160,96 @@ func _UserConnectionService_GetLanguagesSupported_Handler(srv interface{}, ctx c
 	return interceptor(ctx, in, info, handler)
 }
 
+func _UserConnectionService_FindNearestUsers_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(FindNearestUsersRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(UserConnectionServiceServer).FindNearestUsers(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/connections.user.UserConnectionService/FindNearestUsers",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(UserConnectionServiceServer).FindNearestUsers(ctx, req.(*FindNearestUsersRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _UserConnectionService_IgnoreUser_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(IgnoreUserRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(UserConnectionServiceServer).IgnoreUser(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/connections.user.UserConnectionService/IgnoreUser",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(UserConnectionServiceServer).IgnoreUser(ctx, req.(*IgnoreUserRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _UserConnectionService_BlockUser_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(BlockUserRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(UserConnectionServiceServer).BlockUser(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/connections.user.UserConnectionService/BlockUser",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(UserConnectionServiceServer).BlockUser(ctx, req.(*BlockUserRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _UserConnectionService_PauseUser_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(PauseUserRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(UserConnectionServiceServer).PauseUser(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/connections.user.UserConnectionService/PauseUser",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(UserConnectionServiceServer).PauseUser(ctx, req.(*PauseUserRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _UserConnectionService_ConnectionRequestUser_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(CreateConnectionRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(UserConnectionServiceServer).ConnectionRequestUser(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/connections.user.UserConnectionService/ConnectionRequestUser",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(UserConnectionServiceServer).ConnectionRequestUser(ctx, req.(*CreateConnectionRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 var _UserConnectionService_serviceDesc = grpc.ServiceDesc{
 	ServiceName: "connections.user.UserConnectionService",
 	HandlerType: (*UserConnectionServiceServer)(nil),
@@ -497,6 +1261,26 @@ var _UserConnectionService_serviceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "GetLanguagesSupported",
 			Handler:    _UserConnectionService_GetLanguagesSupported_Handler,
+		},
+		{
+			MethodName: "FindNearestUsers",
+			Handler:    _UserConnectionService_FindNearestUsers_Handler,
+		},
+		{
+			MethodName: "IgnoreUser",
+			Handler:    _UserConnectionService_IgnoreUser_Handler,
+		},
+		{
+			MethodName: "BlockUser",
+			Handler:    _UserConnectionService_BlockUser_Handler,
+		},
+		{
+			MethodName: "PauseUser",
+			Handler:    _UserConnectionService_PauseUser_Handler,
+		},
+		{
+			MethodName: "ConnectionRequestUser",
+			Handler:    _UserConnectionService_ConnectionRequestUser_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},

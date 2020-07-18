@@ -9,6 +9,11 @@ message Location {
   float long = 2;
 }
 
+message UserDistance {
+  string userId = 1;
+  float distance = 2;
+}
+
 message UpdateLocationRequest {
   Location location = 1;
   string userId = 2;
@@ -22,8 +27,46 @@ message GetLocationResponse {
   Location location = 1;
 }
 
+message FindNearestUsersRequest {
+  string userId = 1;
+  string limit = 2;
+}
+
+message FindNearestUsersResponse {
+  repeated UserDistance userDistance = 1;
+}
+
+message IgnoreUserRequest {
+  string userId = 1;
+  string ignoreId = 2;
+}
+
+message BlockUserRequest {
+  string userId = 1;
+  string blockId = 2;
+}
+
+message PauseUserRequest {
+  string userId = 1;
+  string pauseId = 2;
+}
+
+message CreateConnectionRequest {
+  string userId = 1;
+  string connectId = 2;
+}
+
+message CreateConnectionResponse {
+  bool connected = 1;
+}
+
 service UserConnectionService {
   rpc UpdateLocation(UpdateLocationRequest) returns (google.protobuf.Empty) {};
   rpc GetLanguagesSupported(GetLocationRequest) returns (GetLocationResponse) {};
+  rpc FindNearestUsers(FindNearestUsersRequest) returns (FindNearestUsersResponse) {};
+  rpc IgnoreUser(IgnoreUserRequest) returns (google.protobuf.Empty) {};
+  rpc BlockUser(BlockUserRequest) returns (google.protobuf.Empty) {};
+  rpc PauseUser(PauseUserRequest) returns (google.protobuf.Empty) {};
+  rpc ConnectionRequestUser(CreateConnectionRequest) returns (CreateConnectionResponse) {};
 }
 
