@@ -2,6 +2,7 @@ syntax = "proto3";
 
 package connections.tribe;
 option go_package = "connections/tribepb;tribepb";
+import "google/protobuf/empty.proto";
 
 message Tribe {
   string id = 1;
@@ -19,6 +20,11 @@ message Tribe {
   string twitter_url = 13;
 }
 
+message TribeInviteCode {
+  string tribe_id = 1;
+  string code = 2;
+}
+
 message GetTribeRequest {
   string id = 1;
 }
@@ -27,7 +33,53 @@ message GetTribeResponse {
   Tribe tribe = 1;
 }
 
+message SendInviteRequest {
+  string sender_id = 1;
+  string receiver_id = 2;
+  string tribe_id = 3;
+}
+
+message AcceptInviteRequest {
+  string user_id = 1;
+  string code = 2;
+}
+
+message ConnectToTribeWithCodeRequest {
+  string user_id = 1;
+  string code = 2;
+}
+
+message GetTribesPerUserRequest {
+  string user_id = 1;
+}
+
+message GetTribesPerUserResponse {
+  repeated string tribe_id = 1;
+}
+
+message GetTribeMembersRequest {
+  string tribe_id = 1;
+}
+
+message GetTribeMembersResponse {
+  repeated string user_id = 1;
+}
+
+message GetInvitesRequest {
+  string user_id = 1;
+}
+
+message GetInvitesResponse {
+  TribeInviteCode tribe_invite_code = 1;
+}
+
 service TribeService {
   rpc GetTribe(GetTribeRequest) returns (GetTribeResponse) {};
+  rpc SendInvite(SendInviteRequest) returns (google.protobuf.Empty) {};
+  rpc AcceptInvite(AcceptInviteRequest) returns (google.protobuf.Empty) {};
+  rpc ConnectToTribeWithCode(ConnectToTribeWithCodeRequest) returns (google.protobuf.Empty) {};
+  rpc GetTribesPerUser(GetTribesPerUserRequest) returns (GetTribesPerUserResponse) {};
+  rpc GetTribeMembers(GetTribeMembersRequest) returns (GetTribeMembersResponse) {};
+  rpc GetInvites(GetInvitesRequest) returns (GetInvitesResponse) {};
 }
 
