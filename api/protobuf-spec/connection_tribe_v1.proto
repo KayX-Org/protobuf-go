@@ -1,0 +1,33 @@
+syntax = "proto3";
+
+package connections.tribe;
+option go_package = "connections/tribepb;tribepb";
+
+message Tribe {
+  string id = 1;
+  string name = 2;
+  string code = 3;
+  string logo_url = 4;
+  string type = 5;
+  string tag_line = 6;
+  string description = 7;
+  string language = 8;
+  string headquarters = 9;
+  string website_url = 10;
+  string youtube_url = 11;
+  string facebook_url = 12;
+  string twitter_url = 13;
+}
+
+message GetTribeRequest {
+  string id = 1;
+}
+
+message GetTribeResponse {
+  Tribe tribe = 1;
+}
+
+service TribeService {
+  rpc GetTribe(GetTribeRequest) returns (GetTribeResponse) {};
+}
+
