@@ -62,15 +62,15 @@ message GetTribeMembersRequest {
 }
 
 message GetTribeMembersResponse {
-  repeated string user_id = 1;
+  repeated string user_ids = 1;
 }
 
 message GetInvitesRequest {
-  string user_id = 1;
+  string user_ids = 1;
 }
 
 message GetInvitesResponse {
-  TribeInviteCode tribe_invite_code = 1;
+  repeated TribeInviteCode tribe_invite_codes = 1;
 }
 
 service TribeService {
