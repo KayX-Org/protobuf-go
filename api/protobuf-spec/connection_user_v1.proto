@@ -33,7 +33,7 @@ message FindNearestUsersRequest {
 }
 
 message FindNearestUsersResponse {
-  repeated UserDistance userDistance = 1;
+  repeated string userId = 2;
 }
 
 message IgnoreUserRequest {
