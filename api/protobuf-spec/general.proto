@@ -1,6 +1,6 @@
 syntax = "proto3";
 package general;
-option go_package = "general/generalpb;generalpb";
+option go_package = "github.com/kayx-org/protobuf-go/general/generalpb";
 
 message Pagination {
   int32 limit = 1;

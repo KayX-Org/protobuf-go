@@ -3,3 +3,5 @@ set -e
 
 # TODO: Add docker for this
 protoc  api/protobuf-spec/* --go_out=plugins=grpc:.
+cp -rp ./github.com/kayx-org/protobuf-go/* .
+rm -rf ./github.com
