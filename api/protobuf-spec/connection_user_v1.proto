@@ -60,6 +60,15 @@ message CreateConnectionResponse {
   bool connected = 1;
 }
 
+message UserDistanceRequest {
+  string userFromId = 1;
+  string userToId = 2;
+}
+
+message UserDistanceResponse {
+  float distance = 1;
+}
+
 service UserConnectionService {
   rpc UpdateLocation(UpdateLocationRequest) returns (google.protobuf.Empty) {};
   rpc GetLocation(GetLocationRequest) returns (GetLocationResponse) {};
@@ -68,5 +77,6 @@ service UserConnectionService {
   rpc BlockUser(BlockUserRequest) returns (google.protobuf.Empty) {};
   rpc PauseUser(PauseUserRequest) returns (google.protobuf.Empty) {};
   rpc ConnectionRequestUser(CreateConnectionRequest) returns (CreateConnectionResponse) {};
+  rpc UserDistance(UserDistanceRequest) returns (UserDistanceResponse) {};
 }
 
