@@ -3,6 +3,7 @@ syntax = "proto3";
 package connections.tribe;
 option go_package = "connections/tribepb;tribepb";
 import "google/protobuf/empty.proto";
+import "api/protobuf-spec/general.proto";
 
 message Tribe {
   string id = 1;
@@ -51,6 +52,7 @@ message ConnectToTribeWithCodeRequest {
 
 message GetTribesPerUserRequest {
   string user_id = 1;
+  general.Pagination pagination = 2;
 }
 
 message GetTribesPerUserResponse {
@@ -59,6 +61,7 @@ message GetTribesPerUserResponse {
 
 message GetTribeMembersRequest {
   string tribe_id = 1;
+  general.Pagination pagination = 2;
 }
 
 message GetTribeMembersResponse {
@@ -67,6 +70,7 @@ message GetTribeMembersResponse {
 
 message GetInvitesRequest {
   string user_id = 1;
+  general.Pagination pagination = 2;
 }
 
 message GetInvitesResponse {

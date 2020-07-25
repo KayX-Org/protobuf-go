@@ -3,6 +3,7 @@ syntax = "proto3";
 package connections.user;
 option go_package = "connections/userpb;userpb";
 import "google/protobuf/empty.proto";
+import "api/protobuf-spec/general.proto";
 
 message Location {
   float lat = 1;
@@ -29,11 +30,20 @@ message GetLocationResponse {
 
 message FindNearestUsersRequest {
   string userId = 1;
-  int32 limit = 2;
+  general.Pagination pagination = 3;
 }
 
 message FindNearestUsersResponse {
   repeated string userId = 2;
+}
+
+message FetchConnectionsRequest {
+  string userId = 1;
+  general.Pagination pagination = 2;
+}
+
+message FetchConnectionsResponse {
+  repeated string userId = 1;
 }
 
 message IgnoreUserRequest {
@@ -73,6 +83,7 @@ service UserConnectionService {
   rpc UpdateLocation(UpdateLocationRequest) returns (google.protobuf.Empty) {};
   rpc GetLocation(GetLocationRequest) returns (GetLocationResponse) {};
   rpc FindNearestUsers(FindNearestUsersRequest) returns (FindNearestUsersResponse) {};
+  rpc FetchConnections(FetchConnectionsRequest) returns (FetchConnectionsResponse) {};
   rpc IgnoreUser(IgnoreUserRequest) returns (google.protobuf.Empty) {};
   rpc BlockUser(BlockUserRequest) returns (google.protobuf.Empty) {};
   rpc PauseUser(PauseUserRequest) returns (google.protobuf.Empty) {};
