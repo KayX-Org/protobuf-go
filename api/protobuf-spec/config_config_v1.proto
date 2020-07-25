@@ -24,6 +24,12 @@ message Language {
   string native_name = 3;
 }
 
+message CodeOfConduct {
+  string headline = 1;
+  string description = 2;
+  string icon_url = 3;
+}
+
 message GetAppConfigResponse {
   Config config = 1;
 }
@@ -32,8 +38,13 @@ message GetLanguagesResponse {
   repeated Language languages = 1;
 }
 
+message GetCodeOfConductResponse {
+  repeated CodeOfConduct codes = 1;
+}
+
 service ConfigService{
   rpc GetAppConfig(google.protobuf.Empty) returns (GetAppConfigResponse) {};
   rpc GetLanguagesSupported(google.protobuf.Empty) returns (GetLanguagesResponse) {};
+  rpc GetCodeOfConduct(google.protobuf.Empty) returns (GetCodeOfConductResponse) {};
 }
 
