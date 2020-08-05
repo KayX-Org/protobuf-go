@@ -1,0 +1,96 @@
+syntax = "proto3";
+
+package connections.resource;
+option go_package = "connections/resourcepb;resourcepb";
+import "google/protobuf/empty.proto";
+
+message Interest {
+  string name = 1;
+  string color = 2;
+  string emoji = 3;
+}
+
+message Service {
+  string name = 1;
+  string color = 2;
+  string emoji = 3;
+}
+
+message GetInterestsRequests {
+  repeated string interests_id = 1;
+}
+
+message GetInterestsResponse {
+  repeated Interest interests = 1;
+}
+
+message GetAllInterestsResponse {
+  repeated string interests_id = 1;
+}
+
+message GetUserInterestsRequests {
+  string user_id = 1;
+}
+
+message GetUserInterestsResponse {
+  repeated string interests_id = 1;
+}
+
+message ConnectUserInterestsRequests {
+  string user_id = 1;
+  repeated string interests_id = 2;
+}
+
+message GetServicesRequests {
+  repeated string services_id = 1;
+}
+
+message GetServicesResponse {
+  repeated Service services = 1;
+}
+
+message GetAllServicesResponse {
+  repeated string services_id = 1;
+}
+
+message UserOfferServicesRequests {
+  string user_id = 1;
+}
+
+message UserOfferServicesResponse {
+  repeated string services_id = 1;
+}
+
+message UserRequestedServicesRequests {
+  string user_id = 1;
+}
+
+message UserRequestedServicesResponse {
+  repeated string services_id = 1;
+}
+
+message ConnectUserOfferServicesRequests {
+  string user_id = 1;
+  repeated string services_id = 2;
+}
+
+message ConnectUserRequestedServicesRequests {
+  string user_id = 1;
+  repeated string services_id = 2;
+}
+
+service UserConnectionService {
+  rpc GetInterests(GetInterestsRequests) returns (GetInterestsResponse) {};
+  rpc GetAllInterests(google.protobuf.Empty) returns (GetAllInterestsResponse) {};
+  rpc GetUserInterests(GetUserInterestsRequests) returns (GetUserInterestsResponse) {};
+  rpc ConnectUserInterests(ConnectUserInterestsRequests) returns (google.protobuf.Empty) {};
+
+
+  rpc GetServices(GetServicesRequests) returns (GetServicesResponse) {};
+  rpc GetAllServices(google.protobuf.Empty) returns (GetAllServicesResponse) {};
+  rpc GetUserOfferServices(UserOfferServicesRequests) returns (UserOfferServicesResponse) {};
+  rpc GetUserRequestedServices(UserRequestedServicesRequests) returns (UserRequestedServicesResponse) {};
+  rpc ConnectUserOfferServices(ConnectUserOfferServicesRequests) returns (google.protobuf.Empty) {};
+  rpc ConnectUserRequestedServices(ConnectUserRequestedServicesRequests) returns (google.protobuf.Empty) {};
+}
+
