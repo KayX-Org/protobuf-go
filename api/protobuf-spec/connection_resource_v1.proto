@@ -8,12 +8,14 @@ message Interest {
   string name = 1;
   string color = 2;
   string emoji = 3;
+  string id = 4;
 }
 
 message Service {
   string name = 1;
   string color = 2;
   string emoji = 3;
+  string id = 4;
 }
 
 message GetInterestsRequests {
