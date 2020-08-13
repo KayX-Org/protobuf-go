@@ -31,6 +31,7 @@ message GetLocationResponse {
 message FindNearestUsersRequest {
   string userId = 1;
   general.Pagination pagination = 3;
+  Location location = 4;
 }
 
 message FindNearestUsersResponse {
