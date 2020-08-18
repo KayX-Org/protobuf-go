@@ -1,0 +1,153 @@
+syntax = "proto3";
+
+package connections.meeting;
+option go_package = "connections/meetingpb;meetingpb";
+import "google/protobuf/empty.proto";
+import "google/protobuf/timestamp.proto";
+
+message Meeting {
+  string id = 1;
+  string description = 2;
+  string location = 3;
+  google.protobuf.Timestamp beginning = 4;
+  google.protobuf.Timestamp accepted = 5;
+  google.protobuf.Timestamp created = 6;
+  google.protobuf.Timestamp updated = 7;
+  google.protobuf.Timestamp canceled = 8;
+  google.protobuf.Timestamp declined = 9;
+  google.protobuf.Timestamp ending = 10;
+}
+
+message MeetingVibe {
+  string id = 1;
+  float feeling_close = 3;
+  float relationship_nature = 4;
+  float helpful_for_journey = 5;
+  string personal_notes = 6;
+  bool value_a = 7;
+  bool value_b = 8;
+  bool value_c = 9;
+  google.protobuf.Timestamp created = 10;
+  google.protobuf.Timestamp updated = 11;
+}
+
+message GetMeetingRequest {
+  string id = 1;
+}
+
+message GetMeetingResponse {
+  Meeting meeting = 1;
+}
+
+message SendMeetingInviteRequest {
+  google.protobuf.Timestamp beginning = 1;
+  google.protobuf.Timestamp ending = 2;
+  string description = 3;
+  string location = 4;
+  string user_from = 5;
+  string user_to = 6;
+}
+
+message SendMeetingInviteResponse {
+  string id = 1;
+}
+
+message UpdateMeetingInviteRequest {
+  google.protobuf.Timestamp beginning = 1;
+  google.protobuf.Timestamp ending = 2;
+  string description = 3;
+  string location = 4;
+}
+
+message AcceptMeetingInviteRequest {
+  string meeting_id = 1;
+  string user_id = 2;
+}
+
+message CancelMeetingInviteRequest {
+  string meeting_id = 1;
+  string user_id = 2;
+}
+
+message DeclineMeetingInviteRequest {
+  string meeting_id = 1;
+  string user_id = 2;
+}
+
+message GetUpcomingMeetingsRequest {
+  string user_id = 1;
+}
+
+message GetUpcomingMeetingsResponse {
+  repeated string meeting_ids = 1;
+}
+
+message GetPendingMeetingsRequest {
+  string user_id = 1;
+}
+
+message GetPendingMeetingsResponse {
+  repeated string meeting_ids = 1;
+}
+
+message SendMeetingVibeRequest {
+  string meeting_id = 1;
+  string from_user_id = 2;
+  string to_user_id = 3;
+  MeetingVibe meeting_vibe = 4;
+}
+
+message SendMeetingVibeResponse {
+  string id = 1;
+}
+
+message GetMeetingVibeRequest {
+  string vibe_id = 1;
+}
+
+message GetMeetingVibeResponse {
+  MeetingVibe vibe = 1;
+}
+
+message GetMeetingVibesSentRequest {
+  string user_id = 1;
+}
+
+message GetMeetingVibesSentResponse {
+  repeated string vibe_ids = 1;
+}
+
+message GetMeetingVibesReceivedRequest {
+  string user_id = 1;
+}
+
+message GetMeetingVibesReceivedResponse {
+  repeated string vibe_ids = 1;
+}
+
+message GetMeetingVibesFromMeetingRequest {
+  string meeting_id = 1;
+}
+
+message GetMeetingVibesFromMeetingResponse {
+  repeated string vibe_ids = 1;
+}
+
+
+service UserMeetingService {
+  rpc GetMeeting(GetMeetingRequest) returns (GetMeetingResponse) {};
+  rpc SendMeetingInvite(SendMeetingInviteRequest) returns (SendMeetingInviteResponse) {};
+  rpc UpdateMeetingInvite(SendMeetingInviteRequest) returns (google.protobuf.Empty) {};
+  rpc AcceptMeetingInvite(AcceptMeetingInviteRequest) returns (google.protobuf.Empty) {};
+  rpc CancelMeetingInvite(CancelMeetingInviteRequest) returns (google.protobuf.Empty) {};
+  rpc DeclineMeetingInvite(DeclineMeetingInviteRequest) returns (google.protobuf.Empty) {};
+  rpc GetUpcomingMeetings(GetUpcomingMeetingsRequest) returns (GetUpcomingMeetingsResponse) {};
+  rpc GetPendingMeetings(GetPendingMeetingsRequest) returns (GetPendingMeetingsResponse) {};
+
+  rpc GetMeetingVibe(GetMeetingVibeRequest) returns (GetMeetingVibeResponse) {};
+  rpc SendMeetingVibe(SendMeetingVibeRequest) returns (SendMeetingVibeResponse) {};
+  rpc GetMeetingVibesSent(GetMeetingVibesSentRequest) returns (GetMeetingVibesSentResponse) {};
+  rpc GetMeetingVibesReceived(GetMeetingVibesReceivedRequest) returns (GetMeetingVibesReceivedResponse) {};
+  rpc GetMeetingVibesFromMeeting(GetMeetingVibesFromMeetingRequest) returns (GetMeetingVibesFromMeetingResponse) {};
+}
+
