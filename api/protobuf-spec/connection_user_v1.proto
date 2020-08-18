@@ -10,11 +10,6 @@ message Location {
   float long = 2;
 }
 
-message UserDistance {
-  string userId = 1;
-  string distance = 2;
-}
-
 message UpdateLocationRequest {
   Location location = 1;
   string userId = 2;
@@ -77,7 +72,7 @@ message UserDistanceRequest {
 }
 
 message UserDistanceResponse {
-  float distance = 1;
+  string distance = 1;
 }
 
 service UserConnectionService {
