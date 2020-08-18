@@ -16,6 +16,7 @@ message Config {
   repeated string invite_code_base_urls = 9;
   repeated string onboarding_images = 10;
   repeated string supported_countries =  11;
+  string latest_app_updated = 12;
 }
 
 message Language {
