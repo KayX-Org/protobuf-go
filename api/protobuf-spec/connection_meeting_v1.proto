@@ -137,7 +137,7 @@ message GetMeetingVibesFromMeetingResponse {
 service MeetingService {
   rpc GetMeeting(GetMeetingRequest) returns (GetMeetingResponse) {};
   rpc SendMeetingInvite(SendMeetingInviteRequest) returns (SendMeetingInviteResponse) {};
-  rpc UpdateMeetingInvite(SendMeetingInviteRequest) returns (google.protobuf.Empty) {};
+  rpc UpdateMeetingInvite(UpdateMeetingInviteRequest) returns (google.protobuf.Empty) {};
   rpc AcceptMeetingInvite(AcceptMeetingInviteRequest) returns (google.protobuf.Empty) {};
   rpc CancelMeetingInvite(CancelMeetingInviteRequest) returns (google.protobuf.Empty) {};
   rpc DeclineMeetingInvite(DeclineMeetingInviteRequest) returns (google.protobuf.Empty) {};
