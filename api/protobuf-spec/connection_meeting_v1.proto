@@ -57,6 +57,8 @@ message UpdateMeetingInviteRequest {
   google.protobuf.Timestamp ending = 2;
   string description = 3;
   string location = 4;
+  string id = 5;
+  string userFrom = 6;
 }
 
 message AcceptMeetingInviteRequest {
