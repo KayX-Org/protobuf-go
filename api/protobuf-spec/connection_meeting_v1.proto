@@ -29,6 +29,7 @@ message MeetingVibe {
   bool value_c = 9;
   google.protobuf.Timestamp created = 10;
   google.protobuf.Timestamp updated = 11;
+  string meeting_id = 12;
 }
 
 message GetMeetingRequest {
