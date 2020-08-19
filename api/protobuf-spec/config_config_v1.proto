@@ -17,6 +17,7 @@ message Config {
   repeated string onboarding_images = 10;
   repeated string supported_countries =  11;
   string latest_app_updated = 12;
+  repeated string tour_swipe_guide = 13;
 }
 
 message Language {
