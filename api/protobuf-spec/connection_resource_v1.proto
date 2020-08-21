@@ -34,6 +34,15 @@ message GetUserInterestsRequests {
   string user_id = 1;
 }
 
+message SharedInterestsResponse {
+  repeated string interest_ids = 1;
+}
+
+message SharedInterestsRequests {
+  string user_from_id = 1;
+  string user_to_id = 2;
+}
+
 message GetUserInterestsResponse {
   repeated string interests_id = 1;
 }
@@ -83,6 +92,7 @@ message ConnectUserRequestedServicesRequests {
 
 service ResourceService {
   rpc GetInterests(GetInterestsRequests) returns (GetInterestsResponse) {};
+  rpc SharedInterests(SharedInterestsRequests) returns (SharedInterestsResponse) {};
   rpc GetAllInterests(google.protobuf.Empty) returns (GetAllInterestsResponse) {};
   rpc GetUserInterests(GetUserInterestsRequests) returns (GetUserInterestsResponse) {};
   rpc ConnectUserInterests(ConnectUserInterestsRequests) returns (google.protobuf.Empty) {};

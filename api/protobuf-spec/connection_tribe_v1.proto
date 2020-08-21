@@ -55,8 +55,21 @@ message GetTribesPerUserRequest {
   general.Pagination pagination = 2;
 }
 
+message TribesPerUserResponse {
+  repeated string tribe_id = 1;
+}
+
+message SharedTribesRequest {
+  string user_from_id = 1;
+  string user_to_id = 2;
+}
+
 message GetTribesPerUserResponse {
   repeated string tribe_id = 1;
+}
+
+message SharedTribesResponse {
+  repeated string tribe_ids = 1;
 }
 
 message GetTribeMembersRequest {
@@ -79,6 +92,7 @@ message GetInvitesResponse {
 
 service TribeService {
   rpc GetTribe(GetTribeRequest) returns (GetTribeResponse) {};
+  rpc SharedTribes(SharedTribesRequest) returns (SharedTribesResponse) {};
   rpc SendInvite(SendInviteRequest) returns (google.protobuf.Empty) {};
   rpc AcceptInvite(AcceptInviteRequest) returns (google.protobuf.Empty) {};
   rpc ConnectToTribeWithCode(ConnectToTribeWithCodeRequest) returns (google.protobuf.Empty) {};

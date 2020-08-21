@@ -1,0 +1,45 @@
+syntax = "proto3";
+
+package connections.language;
+option go_package = "connections/languagepb;languagepb";
+import "google/protobuf/empty.proto";
+
+message Language {
+  string code = 1;
+  string english_name = 2;
+  string native_name = 3;
+}
+
+message GetAllLanguagesResponse {
+  repeated Language languages = 1;
+}
+
+message GetUserLanguagesRequest {
+  string user_id = 1;
+}
+
+message GetUserLanguagesResponse {
+  repeated Language languages = 1;
+}
+
+message GetSharedLanguagesRequest {
+  string user_to_id = 1;
+  string user_from_id = 2;
+}
+
+message GetSharedLanguagesResponse {
+  repeated Language languages = 1;
+}
+
+message UpdateLanguageRequest {
+  string user_id = 1;
+  repeated string codes = 2;
+}
+
+service LanguageService {
+  rpc GetAllLanguages(google.protobuf.Empty) returns (GetAllLanguagesResponse) {};
+  rpc GetUserLanguages(GetUserLanguagesRequest) returns (GetUserLanguagesResponse) {};
+  rpc GetSharedLanguages(GetSharedLanguagesRequest) returns (GetSharedLanguagesResponse) {};
+  rpc UpdateLanguage(UpdateLanguageRequest) returns (google.protobuf.Empty) {};
+}
+
