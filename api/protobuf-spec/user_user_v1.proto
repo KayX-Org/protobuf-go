@@ -51,6 +51,16 @@ message GetUsersResponse {
   repeated User user = 1;
 }
 
+message GetUserProfileStrengthRequest {
+  string user_id = 1;
+}
+
+message GetUserProfileStrengthResponse {
+  string description = 1;
+  string strength = 2;
+  int32 percentage = 3;
+}
+
 message UpdateProfileRequest {
   Profile profile = 1;
   string user_id = 2;
@@ -78,6 +88,7 @@ message UserExistsRequest {
 service UserService{
   rpc GetUser(GetUserRequest) returns (GetUserResponse) {};
   rpc GetUsers(GetUsersRequest) returns (GetUsersResponse) {};
+  rpc GetUserProfileStrength(GetUserProfileStrengthRequest) returns (GetUserProfileStrengthResponse) {};
   rpc UpdateProfile(UpdateProfileRequest) returns (UpdateProfileResponse) {};
   rpc UpdateAvatar(UpdateAvatarRequest) returns (google.protobuf.Empty) {};
   rpc UserExists(UserExistsRequest) returns (UserExistsResponse) {};
