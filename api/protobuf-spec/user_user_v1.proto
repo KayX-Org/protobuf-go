@@ -87,6 +87,7 @@ message UserExistsRequest {
 
 service UserService{
   rpc GetUser(GetUserRequest) returns (GetUserResponse) {};
+  rpc GetUserFromInternalService(GetUserRequest) returns (GetUserResponse) {};
   rpc GetUsers(GetUsersRequest) returns (GetUsersResponse) {};
   rpc GetUserProfileStrength(GetUserProfileStrengthRequest) returns (GetUserProfileStrengthResponse) {};
   rpc UpdateProfile(UpdateProfileRequest) returns (UpdateProfileResponse) {};
