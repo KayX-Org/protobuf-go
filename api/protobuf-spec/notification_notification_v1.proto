@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package notification.notification;
+option go_package = "notification/notificationpb;notificationpb";
+import "google/protobuf/empty.proto";
+
+message SendEmailVerificationRequest {
+  string email = 1;
+  string code = 2;
+}
+
+message SendSMSVerificationRequest {
+  string phone_number = 1;
+  string code = 2;
+}
+
+service NotificationService{
+  rpc SendEmailVerification(SendEmailVerificationRequest) returns (google.protobuf.Empty) {};
+  rpc SendSMSVerification(SendSMSVerificationRequest) returns (google.protobuf.Empty) {};
+}
+
