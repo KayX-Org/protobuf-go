@@ -39,6 +39,10 @@ message GetUserRequest {
   string requested = 2;
 }
 
+message GetUserFromInternalServiceRequest {
+  string user_id = 1;
+}
+
 message GetUserResponse {
   User user = 1;
 }
@@ -87,7 +91,7 @@ message UserExistsRequest {
 
 service UserService{
   rpc GetUser(GetUserRequest) returns (GetUserResponse) {};
-  rpc GetUserFromInternalService(GetUserRequest) returns (GetUserResponse) {};
+  rpc GetUserFromInternalService(GetUserFromInternalServiceRequest) returns (GetUserResponse) {};
   rpc GetUsers(GetUsersRequest) returns (GetUsersResponse) {};
   rpc GetUserProfileStrength(GetUserProfileStrengthRequest) returns (GetUserProfileStrengthResponse) {};
   rpc UpdateProfile(UpdateProfileRequest) returns (UpdateProfileResponse) {};
