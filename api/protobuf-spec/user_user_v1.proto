@@ -32,6 +32,7 @@ message User {
   string phone_number = 2;
   string email = 3;
   Profile profile = 4;
+  bool email_verified = 5;
 }
 
 message GetUserRequest {
@@ -80,6 +81,10 @@ message UpdateAvatarRequest {
   string user_id = 3;
 }
 
+message UpdateEmailRequest {
+  string email = 1;
+}
+
 message UserExistsResponse {
   bool exists = 1;
 }
@@ -96,5 +101,6 @@ service UserService{
   rpc GetUserProfileStrength(GetUserProfileStrengthRequest) returns (GetUserProfileStrengthResponse) {};
   rpc UpdateProfile(UpdateProfileRequest) returns (UpdateProfileResponse) {};
   rpc UpdateAvatar(UpdateAvatarRequest) returns (google.protobuf.Empty) {};
+  rpc UpdateEmail(UpdateEmailRequest) returns (google.protobuf.Empty) {};
   rpc UserExists(UserExistsRequest) returns (UserExistsResponse) {};
 }
