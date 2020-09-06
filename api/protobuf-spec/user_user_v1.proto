@@ -83,6 +83,7 @@ message UpdateAvatarRequest {
 
 message UpdateEmailRequest {
   string email = 1;
+  string user_id = 2;
 }
 
 message UserExistsResponse {
