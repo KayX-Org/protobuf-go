@@ -14,8 +14,14 @@ message SendSMSVerificationRequest {
   string code = 2;
 }
 
+message UpdateFirebaseTokenRequest {
+  string token = 1;
+  string user_id = 2;
+}
+
 service NotificationService{
   rpc SendEmailVerification(SendEmailVerificationRequest) returns (google.protobuf.Empty) {};
   rpc SendSMSVerification(SendSMSVerificationRequest) returns (google.protobuf.Empty) {};
+  rpc UpdateFirebaseToken(UpdateFirebaseTokenRequest) returns (google.protobuf.Empty) {};
 }
 
