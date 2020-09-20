@@ -116,16 +116,26 @@ message GetMeetingVibesSentRequest {
   string user_id = 1;
 }
 
+message MeetingVibesSentConnection {
+  string vibe_id = 1;
+  string to_user_id = 2;
+}
+
 message GetMeetingVibesSentResponse {
-  repeated string vibe_ids = 1;
+  repeated MeetingVibesSentConnection vibes_connection = 1;
 }
 
 message GetMeetingVibesReceivedRequest {
   string user_id = 1;
 }
 
+message MeetingVibesReceivedConnection {
+  string vibe_id = 1;
+  string from_user_id = 2;
+}
+
 message GetMeetingVibesReceivedResponse {
-  repeated string vibe_ids = 1;
+  repeated MeetingVibesReceivedConnection vibes_connection = 1;
 }
 
 message GetMeetingVibesFromMeetingRequest {
@@ -134,14 +144,6 @@ message GetMeetingVibesFromMeetingRequest {
 
 message GetMeetingVibesFromMeetingResponse {
   repeated string vibe_ids = 1;
-}
-
-message GetUserFromMeetingVibeRequest {
-  string vibe_id = 1;
-}
-
-message GetUserFromMeetingVibeResponse {
-  string user_id = 1;
 }
 
 service MeetingService {
@@ -159,6 +161,5 @@ service MeetingService {
   rpc GetMeetingVibesSent(GetMeetingVibesSentRequest) returns (GetMeetingVibesSentResponse) {};
   rpc GetMeetingVibesReceived(GetMeetingVibesReceivedRequest) returns (GetMeetingVibesReceivedResponse) {};
   rpc GetMeetingVibesFromMeeting(GetMeetingVibesFromMeetingRequest) returns (GetMeetingVibesFromMeetingResponse) {};
-  rpc GetUserFromMeetingVibe(GetUserFromMeetingVibeRequest) returns (GetUserFromMeetingVibeResponse) {};
 }
 
