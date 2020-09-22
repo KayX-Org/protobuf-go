@@ -1,0 +1,87 @@
+syntax = "proto3";
+
+package connections.chat;
+option go_package = "connections/chatpb;chatpb";
+import "google/protobuf/empty.proto";
+import "google/protobuf/timestamp.proto";
+
+enum MessageType {
+  TEXT = 0;
+}
+
+message MessageConnection {
+  string message_id = 1;
+  bool seen = 2;
+  bool sent_by_user = 3;
+}
+
+message Message {
+  string id = 1;
+  string room_id = 2;
+  string from_user_id = 3;
+  string content = 4;
+  MessageType type = 5;
+  google.protobuf.Timestamp sentAt = 6;
+}
+
+message SendChatMessageRequest {
+  string from_user_id = 1;
+  string to_user_id = 2;
+  string content = 3;
+  MessageType message_type = 4;
+}
+
+message SendChatMessageResponse {
+  string id = 1;
+}
+
+message SendSupportChatMessageResponse {
+  string id = 1;
+}
+
+message SendSupportChatMessageRequest {
+  string from_user_id = 1;
+  string content = 3;
+  MessageType message_type = 4;
+}
+
+message FetchSupportChatMessagesRequest {
+  string user_id = 1;
+}
+
+message FetchSupportChatMessagesResponse {
+  repeated MessageConnection connection = 1;
+}
+
+message FetchChatMessagesRequest {
+  string interested_user_id = 1;
+  string with_user_id = 2;
+}
+
+message FetchChatMessagesResponse {
+  repeated MessageConnection connection = 1;
+}
+
+message GetMessagesRequest {
+  repeated string ids = 1;
+}
+
+message GetMessagesResponse {
+  repeated Message message = 1;
+}
+
+message MarkMessagesAsSeenUpToDateRequest {
+  google.protobuf.Timestamp date = 1;
+  string room_id = 2;
+  string user_id = 3;
+}
+
+service ChatService {
+  rpc SendChatMessage(SendChatMessageRequest) returns (SendChatMessageResponse) {};
+  rpc SendSupportChatMessage(SendSupportChatMessageRequest) returns (SendSupportChatMessageResponse) {};
+  rpc FetchChatMessages(FetchChatMessagesRequest) returns (FetchChatMessagesResponse) {};
+  rpc FetchSupportChatMessages(FetchSupportChatMessagesRequest) returns (FetchSupportChatMessagesResponse) {};
+  rpc MarkMessagesAsSeenUpToDate(MarkMessagesAsSeenUpToDateRequest) returns (google.protobuf.Empty) {};
+  rpc GetMessages(GetMessagesRequest) returns (GetMessagesResponse) {};
+}
+
