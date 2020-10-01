@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package connections.location;
+option go_package = "connections/locationpb;locationpb";
+
+message Location {
+  string country = 1;
+  string city = 2;
+  float lat = 3;
+  float long = 4;
+}
+
+message SearchLocationsRequest {
+  string text = 1;
+}
+
+message SearchLocationResponse {
+  repeated Location locations = 1;
+}
+
+service LocationService {
+  rpc SearchLocations(SearchLocationsRequest) returns (SearchLocationResponse) {};
+}
+
