@@ -4,6 +4,11 @@ package notification.notification;
 option go_package = "notification/notificationpb;notificationpb";
 import "google/protobuf/empty.proto";
 
+message Action {
+  string name = 1;
+  string action = 2;
+}
+
 message Notification {
   string id = 1;
   string avatar = 2;
@@ -13,6 +18,7 @@ message Notification {
   bytes data = 6;
   string topic = 7;
   bool read = 8;
+  repeated Action actions = 9;
 }
 
 message SendEmailVerificationRequest {
