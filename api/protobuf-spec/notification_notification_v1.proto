@@ -52,6 +52,7 @@ message MarNotificationAsReadRequest {
 
 message MarNotificationAsActedRequest {
   string notification_id = 1;
+  string action = 2;
 }
 
 service NotificationService{
@@ -61,6 +62,6 @@ service NotificationService{
   rpc GetUserNotifications(GetUserNotificationRequest) returns (GetUserNotificationResponse) {};
   rpc GetNotifications(GetNotificationsRequest) returns (GetNotificationsResponse) {};
   rpc MarNotificationAsRead(MarNotificationAsReadRequest) returns (google.protobuf.Empty) {};
-  rpc MarNotificationAsActed(MarNotificationAsActedRequest) returns (google.protobuf.Empty) {};
+  rpc RunNotificationAction(MarNotificationAsActedRequest) returns (google.protobuf.Empty) {};
 }
 
