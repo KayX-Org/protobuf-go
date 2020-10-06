@@ -4,6 +4,17 @@ package notification.notification;
 option go_package = "notification/notificationpb;notificationpb";
 import "google/protobuf/empty.proto";
 
+message Notification {
+  string id = 1;
+  string avatar = 2;
+  string avatar_type = 3;
+  string body = 4;
+  string title = 5;
+  bytes data = 6;
+  string topic = 7;
+  bool read = 8;
+}
+
 message SendEmailVerificationRequest {
   string email = 1;
   string code = 2;
@@ -19,9 +30,37 @@ message UpdateFirebaseTokenRequest {
   string user_id = 2;
 }
 
+message GetUserNotificationRequest {
+  string user_id = 1;
+}
+
+message GetUserNotificationResponse {
+  repeated string notification_ids = 1;
+}
+
+message GetNotificationsRequest {
+  repeated string notification_ids = 1;
+}
+
+message GetNotificationsResponse {
+  repeated Notification notifications = 1;
+}
+
+message MarNotificationAsReadRequest {
+  string notification_id = 1;
+}
+
+message MarNotificationAsActedRequest {
+  string notification_id = 1;
+}
+
 service NotificationService{
   rpc SendEmailVerification(SendEmailVerificationRequest) returns (google.protobuf.Empty) {};
   rpc SendSMSVerification(SendSMSVerificationRequest) returns (google.protobuf.Empty) {};
   rpc UpdateFirebaseToken(UpdateFirebaseTokenRequest) returns (google.protobuf.Empty) {};
+  rpc GetUserNotifications(GetUserNotificationRequest) returns (GetUserNotificationResponse) {};
+  rpc GetNotifications(GetNotificationsRequest) returns (GetNotificationsResponse) {};
+  rpc MarNotificationAsRead(MarNotificationAsReadRequest) returns (google.protobuf.Empty) {};
+  rpc MarNotificationAsActed(MarNotificationAsActedRequest) returns (google.protobuf.Empty) {};
 }
 

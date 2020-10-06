@@ -30,6 +30,109 @@ const (
 // of the legacy proto package is being used.
 const _ = proto.ProtoPackageIsVersion4
 
+type Notification struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	Id         string `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
+	Avatar     string `protobuf:"bytes,2,opt,name=avatar,proto3" json:"avatar,omitempty"`
+	AvatarType string `protobuf:"bytes,3,opt,name=avatar_type,json=avatarType,proto3" json:"avatar_type,omitempty"`
+	Body       string `protobuf:"bytes,4,opt,name=body,proto3" json:"body,omitempty"`
+	Title      string `protobuf:"bytes,5,opt,name=title,proto3" json:"title,omitempty"`
+	Data       []byte `protobuf:"bytes,6,opt,name=data,proto3" json:"data,omitempty"`
+	Topic      string `protobuf:"bytes,7,opt,name=topic,proto3" json:"topic,omitempty"`
+	Read       bool   `protobuf:"varint,8,opt,name=read,proto3" json:"read,omitempty"`
+}
+
+func (x *Notification) Reset() {
+	*x = Notification{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_api_protobuf_spec_notification_notification_v1_proto_msgTypes[0]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *Notification) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*Notification) ProtoMessage() {}
+
+func (x *Notification) ProtoReflect() protoreflect.Message {
+	mi := &file_api_protobuf_spec_notification_notification_v1_proto_msgTypes[0]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use Notification.ProtoReflect.Descriptor instead.
+func (*Notification) Descriptor() ([]byte, []int) {
+	return file_api_protobuf_spec_notification_notification_v1_proto_rawDescGZIP(), []int{0}
+}
+
+func (x *Notification) GetId() string {
+	if x != nil {
+		return x.Id
+	}
+	return ""
+}
+
+func (x *Notification) GetAvatar() string {
+	if x != nil {
+		return x.Avatar
+	}
+	return ""
+}
+
+func (x *Notification) GetAvatarType() string {
+	if x != nil {
+		return x.AvatarType
+	}
+	return ""
+}
+
+func (x *Notification) GetBody() string {
+	if x != nil {
+		return x.Body
+	}
+	return ""
+}
+
+func (x *Notification) GetTitle() string {
+	if x != nil {
+		return x.Title
+	}
+	return ""
+}
+
+func (x *Notification) GetData() []byte {
+	if x != nil {
+		return x.Data
+	}
+	return nil
+}
+
+func (x *Notification) GetTopic() string {
+	if x != nil {
+		return x.Topic
+	}
+	return ""
+}
+
+func (x *Notification) GetRead() bool {
+	if x != nil {
+		return x.Read
+	}
+	return false
+}
+
 type SendEmailVerificationRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -42,7 +145,7 @@ type SendEmailVerificationRequest struct {
 func (x *SendEmailVerificationRequest) Reset() {
 	*x = SendEmailVerificationRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_api_protobuf_spec_notification_notification_v1_proto_msgTypes[0]
+		mi := &file_api_protobuf_spec_notification_notification_v1_proto_msgTypes[1]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -55,7 +158,7 @@ func (x *SendEmailVerificationRequest) String() string {
 func (*SendEmailVerificationRequest) ProtoMessage() {}
 
 func (x *SendEmailVerificationRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_api_protobuf_spec_notification_notification_v1_proto_msgTypes[0]
+	mi := &file_api_protobuf_spec_notification_notification_v1_proto_msgTypes[1]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -68,7 +171,7 @@ func (x *SendEmailVerificationRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use SendEmailVerificationRequest.ProtoReflect.Descriptor instead.
 func (*SendEmailVerificationRequest) Descriptor() ([]byte, []int) {
-	return file_api_protobuf_spec_notification_notification_v1_proto_rawDescGZIP(), []int{0}
+	return file_api_protobuf_spec_notification_notification_v1_proto_rawDescGZIP(), []int{1}
 }
 
 func (x *SendEmailVerificationRequest) GetEmail() string {
@@ -97,7 +200,7 @@ type SendSMSVerificationRequest struct {
 func (x *SendSMSVerificationRequest) Reset() {
 	*x = SendSMSVerificationRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_api_protobuf_spec_notification_notification_v1_proto_msgTypes[1]
+		mi := &file_api_protobuf_spec_notification_notification_v1_proto_msgTypes[2]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -110,7 +213,7 @@ func (x *SendSMSVerificationRequest) String() string {
 func (*SendSMSVerificationRequest) ProtoMessage() {}
 
 func (x *SendSMSVerificationRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_api_protobuf_spec_notification_notification_v1_proto_msgTypes[1]
+	mi := &file_api_protobuf_spec_notification_notification_v1_proto_msgTypes[2]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -123,7 +226,7 @@ func (x *SendSMSVerificationRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use SendSMSVerificationRequest.ProtoReflect.Descriptor instead.
 func (*SendSMSVerificationRequest) Descriptor() ([]byte, []int) {
-	return file_api_protobuf_spec_notification_notification_v1_proto_rawDescGZIP(), []int{1}
+	return file_api_protobuf_spec_notification_notification_v1_proto_rawDescGZIP(), []int{2}
 }
 
 func (x *SendSMSVerificationRequest) GetPhoneNumber() string {
@@ -152,7 +255,7 @@ type UpdateFirebaseTokenRequest struct {
 func (x *UpdateFirebaseTokenRequest) Reset() {
 	*x = UpdateFirebaseTokenRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_api_protobuf_spec_notification_notification_v1_proto_msgTypes[2]
+		mi := &file_api_protobuf_spec_notification_notification_v1_proto_msgTypes[3]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -165,7 +268,7 @@ func (x *UpdateFirebaseTokenRequest) String() string {
 func (*UpdateFirebaseTokenRequest) ProtoMessage() {}
 
 func (x *UpdateFirebaseTokenRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_api_protobuf_spec_notification_notification_v1_proto_msgTypes[2]
+	mi := &file_api_protobuf_spec_notification_notification_v1_proto_msgTypes[3]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -178,7 +281,7 @@ func (x *UpdateFirebaseTokenRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use UpdateFirebaseTokenRequest.ProtoReflect.Descriptor instead.
 func (*UpdateFirebaseTokenRequest) Descriptor() ([]byte, []int) {
-	return file_api_protobuf_spec_notification_notification_v1_proto_rawDescGZIP(), []int{2}
+	return file_api_protobuf_spec_notification_notification_v1_proto_rawDescGZIP(), []int{3}
 }
 
 func (x *UpdateFirebaseTokenRequest) GetToken() string {
@@ -195,6 +298,288 @@ func (x *UpdateFirebaseTokenRequest) GetUserId() string {
 	return ""
 }
 
+type GetUserNotificationRequest struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	UserId string `protobuf:"bytes,1,opt,name=user_id,json=userId,proto3" json:"user_id,omitempty"`
+}
+
+func (x *GetUserNotificationRequest) Reset() {
+	*x = GetUserNotificationRequest{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_api_protobuf_spec_notification_notification_v1_proto_msgTypes[4]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *GetUserNotificationRequest) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*GetUserNotificationRequest) ProtoMessage() {}
+
+func (x *GetUserNotificationRequest) ProtoReflect() protoreflect.Message {
+	mi := &file_api_protobuf_spec_notification_notification_v1_proto_msgTypes[4]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use GetUserNotificationRequest.ProtoReflect.Descriptor instead.
+func (*GetUserNotificationRequest) Descriptor() ([]byte, []int) {
+	return file_api_protobuf_spec_notification_notification_v1_proto_rawDescGZIP(), []int{4}
+}
+
+func (x *GetUserNotificationRequest) GetUserId() string {
+	if x != nil {
+		return x.UserId
+	}
+	return ""
+}
+
+type GetUserNotificationResponse struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	NotificationIds []string `protobuf:"bytes,1,rep,name=notification_ids,json=notificationIds,proto3" json:"notification_ids,omitempty"`
+}
+
+func (x *GetUserNotificationResponse) Reset() {
+	*x = GetUserNotificationResponse{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_api_protobuf_spec_notification_notification_v1_proto_msgTypes[5]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *GetUserNotificationResponse) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*GetUserNotificationResponse) ProtoMessage() {}
+
+func (x *GetUserNotificationResponse) ProtoReflect() protoreflect.Message {
+	mi := &file_api_protobuf_spec_notification_notification_v1_proto_msgTypes[5]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use GetUserNotificationResponse.ProtoReflect.Descriptor instead.
+func (*GetUserNotificationResponse) Descriptor() ([]byte, []int) {
+	return file_api_protobuf_spec_notification_notification_v1_proto_rawDescGZIP(), []int{5}
+}
+
+func (x *GetUserNotificationResponse) GetNotificationIds() []string {
+	if x != nil {
+		return x.NotificationIds
+	}
+	return nil
+}
+
+type GetNotificationsRequest struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	NotificationIds []string `protobuf:"bytes,1,rep,name=notification_ids,json=notificationIds,proto3" json:"notification_ids,omitempty"`
+}
+
+func (x *GetNotificationsRequest) Reset() {
+	*x = GetNotificationsRequest{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_api_protobuf_spec_notification_notification_v1_proto_msgTypes[6]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *GetNotificationsRequest) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*GetNotificationsRequest) ProtoMessage() {}
+
+func (x *GetNotificationsRequest) ProtoReflect() protoreflect.Message {
+	mi := &file_api_protobuf_spec_notification_notification_v1_proto_msgTypes[6]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use GetNotificationsRequest.ProtoReflect.Descriptor instead.
+func (*GetNotificationsRequest) Descriptor() ([]byte, []int) {
+	return file_api_protobuf_spec_notification_notification_v1_proto_rawDescGZIP(), []int{6}
+}
+
+func (x *GetNotificationsRequest) GetNotificationIds() []string {
+	if x != nil {
+		return x.NotificationIds
+	}
+	return nil
+}
+
+type GetNotificationsResponse struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	Notifications []*Notification `protobuf:"bytes,1,rep,name=notifications,proto3" json:"notifications,omitempty"`
+}
+
+func (x *GetNotificationsResponse) Reset() {
+	*x = GetNotificationsResponse{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_api_protobuf_spec_notification_notification_v1_proto_msgTypes[7]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *GetNotificationsResponse) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*GetNotificationsResponse) ProtoMessage() {}
+
+func (x *GetNotificationsResponse) ProtoReflect() protoreflect.Message {
+	mi := &file_api_protobuf_spec_notification_notification_v1_proto_msgTypes[7]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use GetNotificationsResponse.ProtoReflect.Descriptor instead.
+func (*GetNotificationsResponse) Descriptor() ([]byte, []int) {
+	return file_api_protobuf_spec_notification_notification_v1_proto_rawDescGZIP(), []int{7}
+}
+
+func (x *GetNotificationsResponse) GetNotifications() []*Notification {
+	if x != nil {
+		return x.Notifications
+	}
+	return nil
+}
+
+type MarNotificationAsReadRequest struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	NotificationId string `protobuf:"bytes,1,opt,name=notification_id,json=notificationId,proto3" json:"notification_id,omitempty"`
+}
+
+func (x *MarNotificationAsReadRequest) Reset() {
+	*x = MarNotificationAsReadRequest{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_api_protobuf_spec_notification_notification_v1_proto_msgTypes[8]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *MarNotificationAsReadRequest) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*MarNotificationAsReadRequest) ProtoMessage() {}
+
+func (x *MarNotificationAsReadRequest) ProtoReflect() protoreflect.Message {
+	mi := &file_api_protobuf_spec_notification_notification_v1_proto_msgTypes[8]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use MarNotificationAsReadRequest.ProtoReflect.Descriptor instead.
+func (*MarNotificationAsReadRequest) Descriptor() ([]byte, []int) {
+	return file_api_protobuf_spec_notification_notification_v1_proto_rawDescGZIP(), []int{8}
+}
+
+func (x *MarNotificationAsReadRequest) GetNotificationId() string {
+	if x != nil {
+		return x.NotificationId
+	}
+	return ""
+}
+
+type MarNotificationAsActedRequest struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	NotificationId string `protobuf:"bytes,1,opt,name=notification_id,json=notificationId,proto3" json:"notification_id,omitempty"`
+}
+
+func (x *MarNotificationAsActedRequest) Reset() {
+	*x = MarNotificationAsActedRequest{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_api_protobuf_spec_notification_notification_v1_proto_msgTypes[9]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *MarNotificationAsActedRequest) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*MarNotificationAsActedRequest) ProtoMessage() {}
+
+func (x *MarNotificationAsActedRequest) ProtoReflect() protoreflect.Message {
+	mi := &file_api_protobuf_spec_notification_notification_v1_proto_msgTypes[9]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use MarNotificationAsActedRequest.ProtoReflect.Descriptor instead.
+func (*MarNotificationAsActedRequest) Descriptor() ([]byte, []int) {
+	return file_api_protobuf_spec_notification_notification_v1_proto_rawDescGZIP(), []int{9}
+}
+
+func (x *MarNotificationAsActedRequest) GetNotificationId() string {
+	if x != nil {
+		return x.NotificationId
+	}
+	return ""
+}
+
 var File_api_protobuf_spec_notification_notification_v1_proto protoreflect.FileDescriptor
 
 var file_api_protobuf_spec_notification_notification_v1_proto_rawDesc = []byte{
@@ -204,47 +589,117 @@ var file_api_protobuf_spec_notification_notification_v1_proto_rawDesc = []byte{
 	0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x12, 0x19, 0x6e, 0x6f, 0x74, 0x69, 0x66, 0x69, 0x63, 0x61,
 	0x74, 0x69, 0x6f, 0x6e, 0x2e, 0x6e, 0x6f, 0x74, 0x69, 0x66, 0x69, 0x63, 0x61, 0x74, 0x69, 0x6f,
 	0x6e, 0x1a, 0x1b, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x2f, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x62,
-	0x75, 0x66, 0x2f, 0x65, 0x6d, 0x70, 0x74, 0x79, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x22, 0x48,
-	0x0a, 0x1c, 0x53, 0x65, 0x6e, 0x64, 0x45, 0x6d, 0x61, 0x69, 0x6c, 0x56, 0x65, 0x72, 0x69, 0x66,
-	0x69, 0x63, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x12, 0x14,
-	0x0a, 0x05, 0x65, 0x6d, 0x61, 0x69, 0x6c, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x05, 0x65,
-	0x6d, 0x61, 0x69, 0x6c, 0x12, 0x12, 0x0a, 0x04, 0x63, 0x6f, 0x64, 0x65, 0x18, 0x02, 0x20, 0x01,
-	0x28, 0x09, 0x52, 0x04, 0x63, 0x6f, 0x64, 0x65, 0x22, 0x53, 0x0a, 0x1a, 0x53, 0x65, 0x6e, 0x64,
-	0x53, 0x4d, 0x53, 0x56, 0x65, 0x72, 0x69, 0x66, 0x69, 0x63, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x52,
-	0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x12, 0x21, 0x0a, 0x0c, 0x70, 0x68, 0x6f, 0x6e, 0x65, 0x5f,
-	0x6e, 0x75, 0x6d, 0x62, 0x65, 0x72, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x0b, 0x70, 0x68,
-	0x6f, 0x6e, 0x65, 0x4e, 0x75, 0x6d, 0x62, 0x65, 0x72, 0x12, 0x12, 0x0a, 0x04, 0x63, 0x6f, 0x64,
-	0x65, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52, 0x04, 0x63, 0x6f, 0x64, 0x65, 0x22, 0x4b, 0x0a,
-	0x1a, 0x55, 0x70, 0x64, 0x61, 0x74, 0x65, 0x46, 0x69, 0x72, 0x65, 0x62, 0x61, 0x73, 0x65, 0x54,
-	0x6f, 0x6b, 0x65, 0x6e, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x12, 0x14, 0x0a, 0x05, 0x74,
-	0x6f, 0x6b, 0x65, 0x6e, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x05, 0x74, 0x6f, 0x6b, 0x65,
-	0x6e, 0x12, 0x17, 0x0a, 0x07, 0x75, 0x73, 0x65, 0x72, 0x5f, 0x69, 0x64, 0x18, 0x02, 0x20, 0x01,
-	0x28, 0x09, 0x52, 0x06, 0x75, 0x73, 0x65, 0x72, 0x49, 0x64, 0x32, 0xd1, 0x02, 0x0a, 0x13, 0x4e,
-	0x6f, 0x74, 0x69, 0x66, 0x69, 0x63, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x53, 0x65, 0x72, 0x76, 0x69,
-	0x63, 0x65, 0x12, 0x6a, 0x0a, 0x15, 0x53, 0x65, 0x6e, 0x64, 0x45, 0x6d, 0x61, 0x69, 0x6c, 0x56,
-	0x65, 0x72, 0x69, 0x66, 0x69, 0x63, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x12, 0x37, 0x2e, 0x6e, 0x6f,
-	0x74, 0x69, 0x66, 0x69, 0x63, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x2e, 0x6e, 0x6f, 0x74, 0x69, 0x66,
-	0x69, 0x63, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x2e, 0x53, 0x65, 0x6e, 0x64, 0x45, 0x6d, 0x61, 0x69,
-	0x6c, 0x56, 0x65, 0x72, 0x69, 0x66, 0x69, 0x63, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x52, 0x65, 0x71,
-	0x75, 0x65, 0x73, 0x74, 0x1a, 0x16, 0x2e, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x2e, 0x70, 0x72,
-	0x6f, 0x74, 0x6f, 0x62, 0x75, 0x66, 0x2e, 0x45, 0x6d, 0x70, 0x74, 0x79, 0x22, 0x00, 0x12, 0x66,
-	0x0a, 0x13, 0x53, 0x65, 0x6e, 0x64, 0x53, 0x4d, 0x53, 0x56, 0x65, 0x72, 0x69, 0x66, 0x69, 0x63,
-	0x61, 0x74, 0x69, 0x6f, 0x6e, 0x12, 0x35, 0x2e, 0x6e, 0x6f, 0x74, 0x69, 0x66, 0x69, 0x63, 0x61,
+	0x75, 0x66, 0x2f, 0x65, 0x6d, 0x70, 0x74, 0x79, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x22, 0xbf,
+	0x01, 0x0a, 0x0c, 0x4e, 0x6f, 0x74, 0x69, 0x66, 0x69, 0x63, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x12,
+	0x0e, 0x0a, 0x02, 0x69, 0x64, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x02, 0x69, 0x64, 0x12,
+	0x16, 0x0a, 0x06, 0x61, 0x76, 0x61, 0x74, 0x61, 0x72, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52,
+	0x06, 0x61, 0x76, 0x61, 0x74, 0x61, 0x72, 0x12, 0x1f, 0x0a, 0x0b, 0x61, 0x76, 0x61, 0x74, 0x61,
+	0x72, 0x5f, 0x74, 0x79, 0x70, 0x65, 0x18, 0x03, 0x20, 0x01, 0x28, 0x09, 0x52, 0x0a, 0x61, 0x76,
+	0x61, 0x74, 0x61, 0x72, 0x54, 0x79, 0x70, 0x65, 0x12, 0x12, 0x0a, 0x04, 0x62, 0x6f, 0x64, 0x79,
+	0x18, 0x04, 0x20, 0x01, 0x28, 0x09, 0x52, 0x04, 0x62, 0x6f, 0x64, 0x79, 0x12, 0x14, 0x0a, 0x05,
+	0x74, 0x69, 0x74, 0x6c, 0x65, 0x18, 0x05, 0x20, 0x01, 0x28, 0x09, 0x52, 0x05, 0x74, 0x69, 0x74,
+	0x6c, 0x65, 0x12, 0x12, 0x0a, 0x04, 0x64, 0x61, 0x74, 0x61, 0x18, 0x06, 0x20, 0x01, 0x28, 0x0c,
+	0x52, 0x04, 0x64, 0x61, 0x74, 0x61, 0x12, 0x14, 0x0a, 0x05, 0x74, 0x6f, 0x70, 0x69, 0x63, 0x18,
+	0x07, 0x20, 0x01, 0x28, 0x09, 0x52, 0x05, 0x74, 0x6f, 0x70, 0x69, 0x63, 0x12, 0x12, 0x0a, 0x04,
+	0x72, 0x65, 0x61, 0x64, 0x18, 0x08, 0x20, 0x01, 0x28, 0x08, 0x52, 0x04, 0x72, 0x65, 0x61, 0x64,
+	0x22, 0x48, 0x0a, 0x1c, 0x53, 0x65, 0x6e, 0x64, 0x45, 0x6d, 0x61, 0x69, 0x6c, 0x56, 0x65, 0x72,
+	0x69, 0x66, 0x69, 0x63, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74,
+	0x12, 0x14, 0x0a, 0x05, 0x65, 0x6d, 0x61, 0x69, 0x6c, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52,
+	0x05, 0x65, 0x6d, 0x61, 0x69, 0x6c, 0x12, 0x12, 0x0a, 0x04, 0x63, 0x6f, 0x64, 0x65, 0x18, 0x02,
+	0x20, 0x01, 0x28, 0x09, 0x52, 0x04, 0x63, 0x6f, 0x64, 0x65, 0x22, 0x53, 0x0a, 0x1a, 0x53, 0x65,
+	0x6e, 0x64, 0x53, 0x4d, 0x53, 0x56, 0x65, 0x72, 0x69, 0x66, 0x69, 0x63, 0x61, 0x74, 0x69, 0x6f,
+	0x6e, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x12, 0x21, 0x0a, 0x0c, 0x70, 0x68, 0x6f, 0x6e,
+	0x65, 0x5f, 0x6e, 0x75, 0x6d, 0x62, 0x65, 0x72, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x0b,
+	0x70, 0x68, 0x6f, 0x6e, 0x65, 0x4e, 0x75, 0x6d, 0x62, 0x65, 0x72, 0x12, 0x12, 0x0a, 0x04, 0x63,
+	0x6f, 0x64, 0x65, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52, 0x04, 0x63, 0x6f, 0x64, 0x65, 0x22,
+	0x4b, 0x0a, 0x1a, 0x55, 0x70, 0x64, 0x61, 0x74, 0x65, 0x46, 0x69, 0x72, 0x65, 0x62, 0x61, 0x73,
+	0x65, 0x54, 0x6f, 0x6b, 0x65, 0x6e, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x12, 0x14, 0x0a,
+	0x05, 0x74, 0x6f, 0x6b, 0x65, 0x6e, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x05, 0x74, 0x6f,
+	0x6b, 0x65, 0x6e, 0x12, 0x17, 0x0a, 0x07, 0x75, 0x73, 0x65, 0x72, 0x5f, 0x69, 0x64, 0x18, 0x02,
+	0x20, 0x01, 0x28, 0x09, 0x52, 0x06, 0x75, 0x73, 0x65, 0x72, 0x49, 0x64, 0x22, 0x35, 0x0a, 0x1a,
+	0x47, 0x65, 0x74, 0x55, 0x73, 0x65, 0x72, 0x4e, 0x6f, 0x74, 0x69, 0x66, 0x69, 0x63, 0x61, 0x74,
+	0x69, 0x6f, 0x6e, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x12, 0x17, 0x0a, 0x07, 0x75, 0x73,
+	0x65, 0x72, 0x5f, 0x69, 0x64, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x06, 0x75, 0x73, 0x65,
+	0x72, 0x49, 0x64, 0x22, 0x48, 0x0a, 0x1b, 0x47, 0x65, 0x74, 0x55, 0x73, 0x65, 0x72, 0x4e, 0x6f,
+	0x74, 0x69, 0x66, 0x69, 0x63, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e,
+	0x73, 0x65, 0x12, 0x29, 0x0a, 0x10, 0x6e, 0x6f, 0x74, 0x69, 0x66, 0x69, 0x63, 0x61, 0x74, 0x69,
+	0x6f, 0x6e, 0x5f, 0x69, 0x64, 0x73, 0x18, 0x01, 0x20, 0x03, 0x28, 0x09, 0x52, 0x0f, 0x6e, 0x6f,
+	0x74, 0x69, 0x66, 0x69, 0x63, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x49, 0x64, 0x73, 0x22, 0x44, 0x0a,
+	0x17, 0x47, 0x65, 0x74, 0x4e, 0x6f, 0x74, 0x69, 0x66, 0x69, 0x63, 0x61, 0x74, 0x69, 0x6f, 0x6e,
+	0x73, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x12, 0x29, 0x0a, 0x10, 0x6e, 0x6f, 0x74, 0x69,
+	0x66, 0x69, 0x63, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x5f, 0x69, 0x64, 0x73, 0x18, 0x01, 0x20, 0x03,
+	0x28, 0x09, 0x52, 0x0f, 0x6e, 0x6f, 0x74, 0x69, 0x66, 0x69, 0x63, 0x61, 0x74, 0x69, 0x6f, 0x6e,
+	0x49, 0x64, 0x73, 0x22, 0x69, 0x0a, 0x18, 0x47, 0x65, 0x74, 0x4e, 0x6f, 0x74, 0x69, 0x66, 0x69,
+	0x63, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12,
+	0x4d, 0x0a, 0x0d, 0x6e, 0x6f, 0x74, 0x69, 0x66, 0x69, 0x63, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x73,
+	0x18, 0x01, 0x20, 0x03, 0x28, 0x0b, 0x32, 0x27, 0x2e, 0x6e, 0x6f, 0x74, 0x69, 0x66, 0x69, 0x63,
+	0x61, 0x74, 0x69, 0x6f, 0x6e, 0x2e, 0x6e, 0x6f, 0x74, 0x69, 0x66, 0x69, 0x63, 0x61, 0x74, 0x69,
+	0x6f, 0x6e, 0x2e, 0x4e, 0x6f, 0x74, 0x69, 0x66, 0x69, 0x63, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x52,
+	0x0d, 0x6e, 0x6f, 0x74, 0x69, 0x66, 0x69, 0x63, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x22, 0x47,
+	0x0a, 0x1c, 0x4d, 0x61, 0x72, 0x4e, 0x6f, 0x74, 0x69, 0x66, 0x69, 0x63, 0x61, 0x74, 0x69, 0x6f,
+	0x6e, 0x41, 0x73, 0x52, 0x65, 0x61, 0x64, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x12, 0x27,
+	0x0a, 0x0f, 0x6e, 0x6f, 0x74, 0x69, 0x66, 0x69, 0x63, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x5f, 0x69,
+	0x64, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x0e, 0x6e, 0x6f, 0x74, 0x69, 0x66, 0x69, 0x63,
+	0x61, 0x74, 0x69, 0x6f, 0x6e, 0x49, 0x64, 0x22, 0x48, 0x0a, 0x1d, 0x4d, 0x61, 0x72, 0x4e, 0x6f,
+	0x74, 0x69, 0x66, 0x69, 0x63, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x41, 0x73, 0x41, 0x63, 0x74, 0x65,
+	0x64, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x12, 0x27, 0x0a, 0x0f, 0x6e, 0x6f, 0x74, 0x69,
+	0x66, 0x69, 0x63, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x5f, 0x69, 0x64, 0x18, 0x01, 0x20, 0x01, 0x28,
+	0x09, 0x52, 0x0e, 0x6e, 0x6f, 0x74, 0x69, 0x66, 0x69, 0x63, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x49,
+	0x64, 0x32, 0xb4, 0x06, 0x0a, 0x13, 0x4e, 0x6f, 0x74, 0x69, 0x66, 0x69, 0x63, 0x61, 0x74, 0x69,
+	0x6f, 0x6e, 0x53, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x12, 0x6a, 0x0a, 0x15, 0x53, 0x65, 0x6e,
+	0x64, 0x45, 0x6d, 0x61, 0x69, 0x6c, 0x56, 0x65, 0x72, 0x69, 0x66, 0x69, 0x63, 0x61, 0x74, 0x69,
+	0x6f, 0x6e, 0x12, 0x37, 0x2e, 0x6e, 0x6f, 0x74, 0x69, 0x66, 0x69, 0x63, 0x61, 0x74, 0x69, 0x6f,
+	0x6e, 0x2e, 0x6e, 0x6f, 0x74, 0x69, 0x66, 0x69, 0x63, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x2e, 0x53,
+	0x65, 0x6e, 0x64, 0x45, 0x6d, 0x61, 0x69, 0x6c, 0x56, 0x65, 0x72, 0x69, 0x66, 0x69, 0x63, 0x61,
+	0x74, 0x69, 0x6f, 0x6e, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x16, 0x2e, 0x67, 0x6f,
+	0x6f, 0x67, 0x6c, 0x65, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x62, 0x75, 0x66, 0x2e, 0x45, 0x6d,
+	0x70, 0x74, 0x79, 0x22, 0x00, 0x12, 0x66, 0x0a, 0x13, 0x53, 0x65, 0x6e, 0x64, 0x53, 0x4d, 0x53,
+	0x56, 0x65, 0x72, 0x69, 0x66, 0x69, 0x63, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x12, 0x35, 0x2e, 0x6e,
+	0x6f, 0x74, 0x69, 0x66, 0x69, 0x63, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x2e, 0x6e, 0x6f, 0x74, 0x69,
+	0x66, 0x69, 0x63, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x2e, 0x53, 0x65, 0x6e, 0x64, 0x53, 0x4d, 0x53,
+	0x56, 0x65, 0x72, 0x69, 0x66, 0x69, 0x63, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x52, 0x65, 0x71, 0x75,
+	0x65, 0x73, 0x74, 0x1a, 0x16, 0x2e, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x2e, 0x70, 0x72, 0x6f,
+	0x74, 0x6f, 0x62, 0x75, 0x66, 0x2e, 0x45, 0x6d, 0x70, 0x74, 0x79, 0x22, 0x00, 0x12, 0x66, 0x0a,
+	0x13, 0x55, 0x70, 0x64, 0x61, 0x74, 0x65, 0x46, 0x69, 0x72, 0x65, 0x62, 0x61, 0x73, 0x65, 0x54,
+	0x6f, 0x6b, 0x65, 0x6e, 0x12, 0x35, 0x2e, 0x6e, 0x6f, 0x74, 0x69, 0x66, 0x69, 0x63, 0x61, 0x74,
+	0x69, 0x6f, 0x6e, 0x2e, 0x6e, 0x6f, 0x74, 0x69, 0x66, 0x69, 0x63, 0x61, 0x74, 0x69, 0x6f, 0x6e,
+	0x2e, 0x55, 0x70, 0x64, 0x61, 0x74, 0x65, 0x46, 0x69, 0x72, 0x65, 0x62, 0x61, 0x73, 0x65, 0x54,
+	0x6f, 0x6b, 0x65, 0x6e, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x16, 0x2e, 0x67, 0x6f,
+	0x6f, 0x67, 0x6c, 0x65, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x62, 0x75, 0x66, 0x2e, 0x45, 0x6d,
+	0x70, 0x74, 0x79, 0x22, 0x00, 0x12, 0x87, 0x01, 0x0a, 0x14, 0x47, 0x65, 0x74, 0x55, 0x73, 0x65,
+	0x72, 0x4e, 0x6f, 0x74, 0x69, 0x66, 0x69, 0x63, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x12, 0x35,
+	0x2e, 0x6e, 0x6f, 0x74, 0x69, 0x66, 0x69, 0x63, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x2e, 0x6e, 0x6f,
+	0x74, 0x69, 0x66, 0x69, 0x63, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x2e, 0x47, 0x65, 0x74, 0x55, 0x73,
+	0x65, 0x72, 0x4e, 0x6f, 0x74, 0x69, 0x66, 0x69, 0x63, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x52, 0x65,
+	0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x36, 0x2e, 0x6e, 0x6f, 0x74, 0x69, 0x66, 0x69, 0x63, 0x61,
 	0x74, 0x69, 0x6f, 0x6e, 0x2e, 0x6e, 0x6f, 0x74, 0x69, 0x66, 0x69, 0x63, 0x61, 0x74, 0x69, 0x6f,
-	0x6e, 0x2e, 0x53, 0x65, 0x6e, 0x64, 0x53, 0x4d, 0x53, 0x56, 0x65, 0x72, 0x69, 0x66, 0x69, 0x63,
-	0x61, 0x74, 0x69, 0x6f, 0x6e, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x16, 0x2e, 0x67,
-	0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x62, 0x75, 0x66, 0x2e, 0x45,
-	0x6d, 0x70, 0x74, 0x79, 0x22, 0x00, 0x12, 0x66, 0x0a, 0x13, 0x55, 0x70, 0x64, 0x61, 0x74, 0x65,
-	0x46, 0x69, 0x72, 0x65, 0x62, 0x61, 0x73, 0x65, 0x54, 0x6f, 0x6b, 0x65, 0x6e, 0x12, 0x35, 0x2e,
-	0x6e, 0x6f, 0x74, 0x69, 0x66, 0x69, 0x63, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x2e, 0x6e, 0x6f, 0x74,
-	0x69, 0x66, 0x69, 0x63, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x2e, 0x55, 0x70, 0x64, 0x61, 0x74, 0x65,
-	0x46, 0x69, 0x72, 0x65, 0x62, 0x61, 0x73, 0x65, 0x54, 0x6f, 0x6b, 0x65, 0x6e, 0x52, 0x65, 0x71,
-	0x75, 0x65, 0x73, 0x74, 0x1a, 0x16, 0x2e, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x2e, 0x70, 0x72,
-	0x6f, 0x74, 0x6f, 0x62, 0x75, 0x66, 0x2e, 0x45, 0x6d, 0x70, 0x74, 0x79, 0x22, 0x00, 0x42, 0x2c,
-	0x5a, 0x2a, 0x6e, 0x6f, 0x74, 0x69, 0x66, 0x69, 0x63, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x2f, 0x6e,
-	0x6f, 0x74, 0x69, 0x66, 0x69, 0x63, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x70, 0x62, 0x3b, 0x6e, 0x6f,
-	0x74, 0x69, 0x66, 0x69, 0x63, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x70, 0x62, 0x62, 0x06, 0x70, 0x72,
-	0x6f, 0x74, 0x6f, 0x33,
+	0x6e, 0x2e, 0x47, 0x65, 0x74, 0x55, 0x73, 0x65, 0x72, 0x4e, 0x6f, 0x74, 0x69, 0x66, 0x69, 0x63,
+	0x61, 0x74, 0x69, 0x6f, 0x6e, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00, 0x12,
+	0x7d, 0x0a, 0x10, 0x47, 0x65, 0x74, 0x4e, 0x6f, 0x74, 0x69, 0x66, 0x69, 0x63, 0x61, 0x74, 0x69,
+	0x6f, 0x6e, 0x73, 0x12, 0x32, 0x2e, 0x6e, 0x6f, 0x74, 0x69, 0x66, 0x69, 0x63, 0x61, 0x74, 0x69,
+	0x6f, 0x6e, 0x2e, 0x6e, 0x6f, 0x74, 0x69, 0x66, 0x69, 0x63, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x2e,
+	0x47, 0x65, 0x74, 0x4e, 0x6f, 0x74, 0x69, 0x66, 0x69, 0x63, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x73,
+	0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x33, 0x2e, 0x6e, 0x6f, 0x74, 0x69, 0x66, 0x69,
+	0x63, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x2e, 0x6e, 0x6f, 0x74, 0x69, 0x66, 0x69, 0x63, 0x61, 0x74,
+	0x69, 0x6f, 0x6e, 0x2e, 0x47, 0x65, 0x74, 0x4e, 0x6f, 0x74, 0x69, 0x66, 0x69, 0x63, 0x61, 0x74,
+	0x69, 0x6f, 0x6e, 0x73, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00, 0x12, 0x6a,
+	0x0a, 0x15, 0x4d, 0x61, 0x72, 0x4e, 0x6f, 0x74, 0x69, 0x66, 0x69, 0x63, 0x61, 0x74, 0x69, 0x6f,
+	0x6e, 0x41, 0x73, 0x52, 0x65, 0x61, 0x64, 0x12, 0x37, 0x2e, 0x6e, 0x6f, 0x74, 0x69, 0x66, 0x69,
+	0x63, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x2e, 0x6e, 0x6f, 0x74, 0x69, 0x66, 0x69, 0x63, 0x61, 0x74,
+	0x69, 0x6f, 0x6e, 0x2e, 0x4d, 0x61, 0x72, 0x4e, 0x6f, 0x74, 0x69, 0x66, 0x69, 0x63, 0x61, 0x74,
+	0x69, 0x6f, 0x6e, 0x41, 0x73, 0x52, 0x65, 0x61, 0x64, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74,
+	0x1a, 0x16, 0x2e, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x62,
+	0x75, 0x66, 0x2e, 0x45, 0x6d, 0x70, 0x74, 0x79, 0x22, 0x00, 0x12, 0x6c, 0x0a, 0x16, 0x4d, 0x61,
+	0x72, 0x4e, 0x6f, 0x74, 0x69, 0x66, 0x69, 0x63, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x41, 0x73, 0x41,
+	0x63, 0x74, 0x65, 0x64, 0x12, 0x38, 0x2e, 0x6e, 0x6f, 0x74, 0x69, 0x66, 0x69, 0x63, 0x61, 0x74,
+	0x69, 0x6f, 0x6e, 0x2e, 0x6e, 0x6f, 0x74, 0x69, 0x66, 0x69, 0x63, 0x61, 0x74, 0x69, 0x6f, 0x6e,
+	0x2e, 0x4d, 0x61, 0x72, 0x4e, 0x6f, 0x74, 0x69, 0x66, 0x69, 0x63, 0x61, 0x74, 0x69, 0x6f, 0x6e,
+	0x41, 0x73, 0x41, 0x63, 0x74, 0x65, 0x64, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x16,
+	0x2e, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x62, 0x75, 0x66,
+	0x2e, 0x45, 0x6d, 0x70, 0x74, 0x79, 0x22, 0x00, 0x42, 0x2c, 0x5a, 0x2a, 0x6e, 0x6f, 0x74, 0x69,
+	0x66, 0x69, 0x63, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x2f, 0x6e, 0x6f, 0x74, 0x69, 0x66, 0x69, 0x63,
+	0x61, 0x74, 0x69, 0x6f, 0x6e, 0x70, 0x62, 0x3b, 0x6e, 0x6f, 0x74, 0x69, 0x66, 0x69, 0x63, 0x61,
+	0x74, 0x69, 0x6f, 0x6e, 0x70, 0x62, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
 }
 
 var (
@@ -259,25 +714,41 @@ func file_api_protobuf_spec_notification_notification_v1_proto_rawDescGZIP() []b
 	return file_api_protobuf_spec_notification_notification_v1_proto_rawDescData
 }
 
-var file_api_protobuf_spec_notification_notification_v1_proto_msgTypes = make([]protoimpl.MessageInfo, 3)
+var file_api_protobuf_spec_notification_notification_v1_proto_msgTypes = make([]protoimpl.MessageInfo, 10)
 var file_api_protobuf_spec_notification_notification_v1_proto_goTypes = []interface{}{
-	(*SendEmailVerificationRequest)(nil), // 0: notification.notification.SendEmailVerificationRequest
-	(*SendSMSVerificationRequest)(nil),   // 1: notification.notification.SendSMSVerificationRequest
-	(*UpdateFirebaseTokenRequest)(nil),   // 2: notification.notification.UpdateFirebaseTokenRequest
-	(*empty.Empty)(nil),                  // 3: google.protobuf.Empty
+	(*Notification)(nil),                  // 0: notification.notification.Notification
+	(*SendEmailVerificationRequest)(nil),  // 1: notification.notification.SendEmailVerificationRequest
+	(*SendSMSVerificationRequest)(nil),    // 2: notification.notification.SendSMSVerificationRequest
+	(*UpdateFirebaseTokenRequest)(nil),    // 3: notification.notification.UpdateFirebaseTokenRequest
+	(*GetUserNotificationRequest)(nil),    // 4: notification.notification.GetUserNotificationRequest
+	(*GetUserNotificationResponse)(nil),   // 5: notification.notification.GetUserNotificationResponse
+	(*GetNotificationsRequest)(nil),       // 6: notification.notification.GetNotificationsRequest
+	(*GetNotificationsResponse)(nil),      // 7: notification.notification.GetNotificationsResponse
+	(*MarNotificationAsReadRequest)(nil),  // 8: notification.notification.MarNotificationAsReadRequest
+	(*MarNotificationAsActedRequest)(nil), // 9: notification.notification.MarNotificationAsActedRequest
+	(*empty.Empty)(nil),                   // 10: google.protobuf.Empty
 }
 var file_api_protobuf_spec_notification_notification_v1_proto_depIdxs = []int32{
-	0, // 0: notification.notification.NotificationService.SendEmailVerification:input_type -> notification.notification.SendEmailVerificationRequest
-	1, // 1: notification.notification.NotificationService.SendSMSVerification:input_type -> notification.notification.SendSMSVerificationRequest
-	2, // 2: notification.notification.NotificationService.UpdateFirebaseToken:input_type -> notification.notification.UpdateFirebaseTokenRequest
-	3, // 3: notification.notification.NotificationService.SendEmailVerification:output_type -> google.protobuf.Empty
-	3, // 4: notification.notification.NotificationService.SendSMSVerification:output_type -> google.protobuf.Empty
-	3, // 5: notification.notification.NotificationService.UpdateFirebaseToken:output_type -> google.protobuf.Empty
-	3, // [3:6] is the sub-list for method output_type
-	0, // [0:3] is the sub-list for method input_type
-	0, // [0:0] is the sub-list for extension type_name
-	0, // [0:0] is the sub-list for extension extendee
-	0, // [0:0] is the sub-list for field type_name
+	0,  // 0: notification.notification.GetNotificationsResponse.notifications:type_name -> notification.notification.Notification
+	1,  // 1: notification.notification.NotificationService.SendEmailVerification:input_type -> notification.notification.SendEmailVerificationRequest
+	2,  // 2: notification.notification.NotificationService.SendSMSVerification:input_type -> notification.notification.SendSMSVerificationRequest
+	3,  // 3: notification.notification.NotificationService.UpdateFirebaseToken:input_type -> notification.notification.UpdateFirebaseTokenRequest
+	4,  // 4: notification.notification.NotificationService.GetUserNotifications:input_type -> notification.notification.GetUserNotificationRequest
+	6,  // 5: notification.notification.NotificationService.GetNotifications:input_type -> notification.notification.GetNotificationsRequest
+	8,  // 6: notification.notification.NotificationService.MarNotificationAsRead:input_type -> notification.notification.MarNotificationAsReadRequest
+	9,  // 7: notification.notification.NotificationService.MarNotificationAsActed:input_type -> notification.notification.MarNotificationAsActedRequest
+	10, // 8: notification.notification.NotificationService.SendEmailVerification:output_type -> google.protobuf.Empty
+	10, // 9: notification.notification.NotificationService.SendSMSVerification:output_type -> google.protobuf.Empty
+	10, // 10: notification.notification.NotificationService.UpdateFirebaseToken:output_type -> google.protobuf.Empty
+	5,  // 11: notification.notification.NotificationService.GetUserNotifications:output_type -> notification.notification.GetUserNotificationResponse
+	7,  // 12: notification.notification.NotificationService.GetNotifications:output_type -> notification.notification.GetNotificationsResponse
+	10, // 13: notification.notification.NotificationService.MarNotificationAsRead:output_type -> google.protobuf.Empty
+	10, // 14: notification.notification.NotificationService.MarNotificationAsActed:output_type -> google.protobuf.Empty
+	8,  // [8:15] is the sub-list for method output_type
+	1,  // [1:8] is the sub-list for method input_type
+	1,  // [1:1] is the sub-list for extension type_name
+	1,  // [1:1] is the sub-list for extension extendee
+	0,  // [0:1] is the sub-list for field type_name
 }
 
 func init() { file_api_protobuf_spec_notification_notification_v1_proto_init() }
@@ -287,7 +758,7 @@ func file_api_protobuf_spec_notification_notification_v1_proto_init() {
 	}
 	if !protoimpl.UnsafeEnabled {
 		file_api_protobuf_spec_notification_notification_v1_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*SendEmailVerificationRequest); i {
+			switch v := v.(*Notification); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -299,7 +770,7 @@ func file_api_protobuf_spec_notification_notification_v1_proto_init() {
 			}
 		}
 		file_api_protobuf_spec_notification_notification_v1_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*SendSMSVerificationRequest); i {
+			switch v := v.(*SendEmailVerificationRequest); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -311,7 +782,91 @@ func file_api_protobuf_spec_notification_notification_v1_proto_init() {
 			}
 		}
 		file_api_protobuf_spec_notification_notification_v1_proto_msgTypes[2].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*SendSMSVerificationRequest); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_api_protobuf_spec_notification_notification_v1_proto_msgTypes[3].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*UpdateFirebaseTokenRequest); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_api_protobuf_spec_notification_notification_v1_proto_msgTypes[4].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*GetUserNotificationRequest); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_api_protobuf_spec_notification_notification_v1_proto_msgTypes[5].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*GetUserNotificationResponse); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_api_protobuf_spec_notification_notification_v1_proto_msgTypes[6].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*GetNotificationsRequest); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_api_protobuf_spec_notification_notification_v1_proto_msgTypes[7].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*GetNotificationsResponse); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_api_protobuf_spec_notification_notification_v1_proto_msgTypes[8].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*MarNotificationAsReadRequest); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_api_protobuf_spec_notification_notification_v1_proto_msgTypes[9].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*MarNotificationAsActedRequest); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -329,7 +884,7 @@ func file_api_protobuf_spec_notification_notification_v1_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: file_api_protobuf_spec_notification_notification_v1_proto_rawDesc,
 			NumEnums:      0,
-			NumMessages:   3,
+			NumMessages:   10,
 			NumExtensions: 0,
 			NumServices:   1,
 		},
@@ -358,6 +913,10 @@ type NotificationServiceClient interface {
 	SendEmailVerification(ctx context.Context, in *SendEmailVerificationRequest, opts ...grpc.CallOption) (*empty.Empty, error)
 	SendSMSVerification(ctx context.Context, in *SendSMSVerificationRequest, opts ...grpc.CallOption) (*empty.Empty, error)
 	UpdateFirebaseToken(ctx context.Context, in *UpdateFirebaseTokenRequest, opts ...grpc.CallOption) (*empty.Empty, error)
+	GetUserNotifications(ctx context.Context, in *GetUserNotificationRequest, opts ...grpc.CallOption) (*GetUserNotificationResponse, error)
+	GetNotifications(ctx context.Context, in *GetNotificationsRequest, opts ...grpc.CallOption) (*GetNotificationsResponse, error)
+	MarNotificationAsRead(ctx context.Context, in *MarNotificationAsReadRequest, opts ...grpc.CallOption) (*empty.Empty, error)
+	MarNotificationAsActed(ctx context.Context, in *MarNotificationAsActedRequest, opts ...grpc.CallOption) (*empty.Empty, error)
 }
 
 type notificationServiceClient struct {
@@ -395,11 +954,51 @@ func (c *notificationServiceClient) UpdateFirebaseToken(ctx context.Context, in 
 	return out, nil
 }
 
+func (c *notificationServiceClient) GetUserNotifications(ctx context.Context, in *GetUserNotificationRequest, opts ...grpc.CallOption) (*GetUserNotificationResponse, error) {
+	out := new(GetUserNotificationResponse)
+	err := c.cc.Invoke(ctx, "/notification.notification.NotificationService/GetUserNotifications", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *notificationServiceClient) GetNotifications(ctx context.Context, in *GetNotificationsRequest, opts ...grpc.CallOption) (*GetNotificationsResponse, error) {
+	out := new(GetNotificationsResponse)
+	err := c.cc.Invoke(ctx, "/notification.notification.NotificationService/GetNotifications", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *notificationServiceClient) MarNotificationAsRead(ctx context.Context, in *MarNotificationAsReadRequest, opts ...grpc.CallOption) (*empty.Empty, error) {
+	out := new(empty.Empty)
+	err := c.cc.Invoke(ctx, "/notification.notification.NotificationService/MarNotificationAsRead", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *notificationServiceClient) MarNotificationAsActed(ctx context.Context, in *MarNotificationAsActedRequest, opts ...grpc.CallOption) (*empty.Empty, error) {
+	out := new(empty.Empty)
+	err := c.cc.Invoke(ctx, "/notification.notification.NotificationService/MarNotificationAsActed", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // NotificationServiceServer is the server API for NotificationService service.
 type NotificationServiceServer interface {
 	SendEmailVerification(context.Context, *SendEmailVerificationRequest) (*empty.Empty, error)
 	SendSMSVerification(context.Context, *SendSMSVerificationRequest) (*empty.Empty, error)
 	UpdateFirebaseToken(context.Context, *UpdateFirebaseTokenRequest) (*empty.Empty, error)
+	GetUserNotifications(context.Context, *GetUserNotificationRequest) (*GetUserNotificationResponse, error)
+	GetNotifications(context.Context, *GetNotificationsRequest) (*GetNotificationsResponse, error)
+	MarNotificationAsRead(context.Context, *MarNotificationAsReadRequest) (*empty.Empty, error)
+	MarNotificationAsActed(context.Context, *MarNotificationAsActedRequest) (*empty.Empty, error)
 }
 
 // UnimplementedNotificationServiceServer can be embedded to have forward compatible implementations.
@@ -414,6 +1013,18 @@ func (*UnimplementedNotificationServiceServer) SendSMSVerification(context.Conte
 }
 func (*UnimplementedNotificationServiceServer) UpdateFirebaseToken(context.Context, *UpdateFirebaseTokenRequest) (*empty.Empty, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method UpdateFirebaseToken not implemented")
+}
+func (*UnimplementedNotificationServiceServer) GetUserNotifications(context.Context, *GetUserNotificationRequest) (*GetUserNotificationResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetUserNotifications not implemented")
+}
+func (*UnimplementedNotificationServiceServer) GetNotifications(context.Context, *GetNotificationsRequest) (*GetNotificationsResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetNotifications not implemented")
+}
+func (*UnimplementedNotificationServiceServer) MarNotificationAsRead(context.Context, *MarNotificationAsReadRequest) (*empty.Empty, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method MarNotificationAsRead not implemented")
+}
+func (*UnimplementedNotificationServiceServer) MarNotificationAsActed(context.Context, *MarNotificationAsActedRequest) (*empty.Empty, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method MarNotificationAsActed not implemented")
 }
 
 func RegisterNotificationServiceServer(s *grpc.Server, srv NotificationServiceServer) {
@@ -474,6 +1085,78 @@ func _NotificationService_UpdateFirebaseToken_Handler(srv interface{}, ctx conte
 	return interceptor(ctx, in, info, handler)
 }
 
+func _NotificationService_GetUserNotifications_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(GetUserNotificationRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(NotificationServiceServer).GetUserNotifications(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/notification.notification.NotificationService/GetUserNotifications",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(NotificationServiceServer).GetUserNotifications(ctx, req.(*GetUserNotificationRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _NotificationService_GetNotifications_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(GetNotificationsRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(NotificationServiceServer).GetNotifications(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/notification.notification.NotificationService/GetNotifications",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(NotificationServiceServer).GetNotifications(ctx, req.(*GetNotificationsRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _NotificationService_MarNotificationAsRead_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(MarNotificationAsReadRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(NotificationServiceServer).MarNotificationAsRead(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/notification.notification.NotificationService/MarNotificationAsRead",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(NotificationServiceServer).MarNotificationAsRead(ctx, req.(*MarNotificationAsReadRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _NotificationService_MarNotificationAsActed_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(MarNotificationAsActedRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(NotificationServiceServer).MarNotificationAsActed(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/notification.notification.NotificationService/MarNotificationAsActed",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(NotificationServiceServer).MarNotificationAsActed(ctx, req.(*MarNotificationAsActedRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 var _NotificationService_serviceDesc = grpc.ServiceDesc{
 	ServiceName: "notification.notification.NotificationService",
 	HandlerType: (*NotificationServiceServer)(nil),
@@ -489,6 +1172,22 @@ var _NotificationService_serviceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "UpdateFirebaseToken",
 			Handler:    _NotificationService_UpdateFirebaseToken_Handler,
+		},
+		{
+			MethodName: "GetUserNotifications",
+			Handler:    _NotificationService_GetUserNotifications_Handler,
+		},
+		{
+			MethodName: "GetNotifications",
+			Handler:    _NotificationService_GetNotifications_Handler,
+		},
+		{
+			MethodName: "MarNotificationAsRead",
+			Handler:    _NotificationService_MarNotificationAsRead_Handler,
+		},
+		{
+			MethodName: "MarNotificationAsActed",
+			Handler:    _NotificationService_MarNotificationAsActed_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
