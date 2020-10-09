@@ -18,7 +18,6 @@ message Notification {
   string title = 5;
   bytes data = 6;
   string topic = 7;
-  bool read = 8;
   repeated Action actions = 9;
   google.protobuf.Timestamp created = 10;
 }
