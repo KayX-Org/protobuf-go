@@ -3,6 +3,7 @@ syntax = "proto3";
 package notification.notification;
 option go_package = "notification/notificationpb;notificationpb";
 import "google/protobuf/empty.proto";
+import "google/protobuf/timestamp.proto";
 
 message Action {
   string name = 1;
@@ -19,6 +20,12 @@ message Notification {
   string topic = 7;
   bool read = 8;
   repeated Action actions = 9;
+  google.protobuf.Timestamp created = 10;
+}
+
+message UserNotificationConnection {
+  bool read = 1;
+  string notification_id = 2;
 }
 
 message SendEmailVerificationRequest {
@@ -41,7 +48,7 @@ message GetUserNotificationRequest {
 }
 
 message GetUserNotificationResponse {
-  repeated string notification_ids = 1;
+  repeated UserNotificationConnection connection = 1;
 }
 
 message GetNotificationsRequest {
@@ -54,11 +61,13 @@ message GetNotificationsResponse {
 
 message MarNotificationAsReadRequest {
   string notification_id = 1;
+  string user_id = 2;
 }
 
 message MarNotificationAsActedRequest {
   string notification_id = 1;
   string action = 2;
+  string user_id = 3;
 }
 
 service NotificationService{
