@@ -25,6 +25,7 @@ message Profile {
   string avatar_url = 5;
   string biography = 6;
   google.protobuf.Timestamp avatar_updated_at = 7;
+  google.protobuf.Timestamp last_updated_app = 8;
 }
 
 message User {
@@ -86,6 +87,10 @@ message UpdateEmailRequest {
   string user_id = 2;
 }
 
+message UpdateLastUpdatedAppRequest {
+  string user_id = 2;
+}
+
 message UserExistsResponse {
   bool exists = 1;
 }
@@ -109,6 +114,7 @@ service UserService{
   rpc UpdateProfile(UpdateProfileRequest) returns (UpdateProfileResponse) {};
   rpc UpdateAvatar(UpdateAvatarRequest) returns (google.protobuf.Empty) {};
   rpc UpdateEmail(UpdateEmailRequest) returns (google.protobuf.Empty) {};
+  rpc UpdateLastUpdatedApp(UpdateLastUpdatedAppRequest) returns (google.protobuf.Empty) {};
   rpc VerifyEmail(VerifyEmailRequest) returns (google.protobuf.Empty) {};
   rpc UserExists(UserExistsRequest) returns (UserExistsResponse) {};
 }
