@@ -45,6 +45,11 @@ message AcceptInviteRequest {
   string code = 2;
 }
 
+message DeclineInviteRequest {
+  string user_id = 1;
+  string code = 2;
+}
+
 message ConnectToTribeWithCodeRequest {
   string user_id = 1;
   string code = 2;
@@ -95,6 +100,7 @@ service TribeService {
   rpc SharedTribes(SharedTribesRequest) returns (SharedTribesResponse) {};
   rpc SendInvite(SendInviteRequest) returns (google.protobuf.Empty) {};
   rpc AcceptInvite(AcceptInviteRequest) returns (google.protobuf.Empty) {};
+  rpc DeclineInvite(DeclineInviteRequest) returns (google.protobuf.Empty) {};
   rpc ConnectToTribeWithCode(ConnectToTribeWithCodeRequest) returns (google.protobuf.Empty) {};
   rpc GetTribesPerUser(GetTribesPerUserRequest) returns (GetTribesPerUserResponse) {};
   rpc GetTribeMembers(GetTribeMembersRequest) returns (GetTribeMembersResponse) {};
