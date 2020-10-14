@@ -38,6 +38,22 @@ message GetTribeInterestsRequests {
   string tribe_id = 1;
 }
 
+message SearchInterestsRequests {
+  string text = 1;
+}
+
+message SearchInterestsResponse {
+  repeated string interest_ids = 1;
+}
+
+message SearchServicesRequests {
+  string text = 1;
+}
+
+message SearchServicesResponse {
+  repeated string services_ids = 1;
+}
+
 message SharedInterestsResponse {
   repeated string interest_ids = 1;
 }
@@ -117,15 +133,16 @@ service ResourceService {
   rpc SharedInterests(SharedInterestsRequests) returns (SharedInterestsResponse) {};
   rpc GetAllInterests(google.protobuf.Empty) returns (GetAllInterestsResponse) {};
   rpc GetUserInterests(GetUserInterestsRequests) returns (GetUserInterestsResponse) {};
+  rpc SearchInterest(SearchInterestsRequests) returns (SearchInterestsResponse) {};
   rpc ConnectUserInterests(ConnectUserInterestsRequests) returns (google.protobuf.Empty) {};
 
   rpc GetTribeInterests(GetTribeInterestsRequests) returns (GetTribeInterestsResponse) {};
   rpc SharedTribeUserInterests(SharedTribeUserInterestsRequests) returns (SharedTribeUserInterestsResponse) {};
   rpc ConnectTribeInterests(ConnectTribeInterestsRequests) returns (google.protobuf.Empty) {};
 
-
   rpc GetServices(GetServicesRequests) returns (GetServicesResponse) {};
   rpc GetAllServices(google.protobuf.Empty) returns (GetAllServicesResponse) {};
+  rpc SearchServices(SearchServicesRequests) returns (SearchServicesResponse) {};
   rpc GetUserOfferServices(UserOfferServicesRequests) returns (UserOfferServicesResponse) {};
   rpc GetUserRequestedServices(UserRequestedServicesRequests) returns (UserRequestedServicesResponse) {};
   rpc ConnectUserOfferServices(ConnectUserOfferServicesRequests) returns (google.protobuf.Empty) {};
