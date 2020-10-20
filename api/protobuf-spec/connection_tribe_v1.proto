@@ -21,6 +21,12 @@ message Tribe {
   string twitter_url = 13;
 }
 
+message FAQ {
+  string type = 1;
+  string content = 2;
+  repeated FAQ childs = 3;
+}
+
 message TribeInviteCode {
   string tribe_id = 1;
   string code = 2;
@@ -91,8 +97,26 @@ message GetInvitesRequest {
   general.Pagination pagination = 2;
 }
 
+message GetMutualConnectionAmountRequest {
+  string user_id = 1;
+  string tribe_id = 2;
+}
+
+message GetMutualConnectionAmountResponse {
+  int32 total = 1;
+}
+
+message DisconnectUserFromTribeRequest {
+  string userId = 1;
+  string tribe_id = 2;
+}
+
 message GetInvitesResponse {
   repeated TribeInviteCode tribe_invite_codes = 1;
+}
+
+message GetFAQResponse {
+  repeated FAQ faq = 1;
 }
 
 service TribeService {
@@ -105,5 +129,8 @@ service TribeService {
   rpc GetTribesPerUser(GetTribesPerUserRequest) returns (GetTribesPerUserResponse) {};
   rpc GetTribeMembers(GetTribeMembersRequest) returns (GetTribeMembersResponse) {};
   rpc GetInvites(GetInvitesRequest) returns (GetInvitesResponse) {};
+  rpc GetMutualConnections(GetMutualConnectionAmountRequest) returns (GetMutualConnectionAmountResponse) {};
+  rpc DisconnectUserFromTribe(DisconnectUserFromTribeRequest) returns (google.protobuf.Empty) {};
+  rpc GetFAQ(google.protobuf.Empty) returns (GetFAQResponse) {};
 }
 

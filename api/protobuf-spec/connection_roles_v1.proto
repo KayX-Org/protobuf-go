@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package connections.role;
+option go_package = "connections/rolepb;rolepb";
+import "google/protobuf/empty.proto";
+
+message GetAllRolesResponse {
+  repeated string user_ids = 1;
+}
+
+service RoleService {
+  rpc FetchSupportCrew(google.protobuf.Empty) returns (GetAllRolesResponse) {};
+}
+
