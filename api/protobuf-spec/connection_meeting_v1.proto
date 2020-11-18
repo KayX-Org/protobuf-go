@@ -93,6 +93,15 @@ message GetPendingMeetingsResponse {
   repeated string meeting_ids = 1;
 }
 
+message GetUpcomingMeetingBetweenUsersRequest {
+  string form_user_id = 1;
+  string to_user_id = 2;
+}
+
+message GetUpcomingMeetingBetweenUsersResponse {
+  string meeting_id = 1;
+}
+
 message SendMeetingVibeRequest {
   string meeting_id = 1;
   string from_user_id = 2;
@@ -155,6 +164,7 @@ service MeetingService {
   rpc DeclineMeetingInvite(DeclineMeetingInviteRequest) returns (google.protobuf.Empty) {};
   rpc GetUpcomingMeetings(GetUpcomingMeetingsRequest) returns (GetUpcomingMeetingsResponse) {};
   rpc GetPendingMeetings(GetPendingMeetingsRequest) returns (GetPendingMeetingsResponse) {};
+  rpc GetUpcomingMeetingBetweenUsers(GetUpcomingMeetingBetweenUsersRequest) returns (GetUpcomingMeetingBetweenUsersResponse) {};
 
   rpc GetMeetingVibe(GetMeetingVibeRequest) returns (GetMeetingVibeResponse) {};
   rpc SendMeetingVibe(SendMeetingVibeRequest) returns (SendMeetingVibeResponse) {};

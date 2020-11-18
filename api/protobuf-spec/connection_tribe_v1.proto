@@ -3,6 +3,7 @@ syntax = "proto3";
 package connections.tribe;
 option go_package = "connections/tribepb;tribepb";
 import "google/protobuf/empty.proto";
+import "google/protobuf/timestamp.proto";
 import "api/protobuf-spec/general.proto";
 
 message Tribe {
@@ -32,8 +33,24 @@ message TribeInviteCode {
   string code = 2;
 }
 
+message TribeActivity {
+  string id = 1;
+  string rich_text = 2;
+  string plain_text = 3;
+  string tribe_id = 4;
+  google.protobuf.Timestamp createdAt = 5;
+}
+
 message GetTribeRequest {
   string id = 1;
+}
+
+message GetTribeActivityRequest {
+  string tribe_id = 1;
+}
+
+message GetTribeActivityResponse {
+  repeated TribeActivity activity = 1;
 }
 
 message GetTribeResponse {
@@ -121,6 +138,7 @@ message GetFAQResponse {
 
 service TribeService {
   rpc GetTribe(GetTribeRequest) returns (GetTribeResponse) {};
+  rpc GetTribeActivity(GetTribeActivityRequest) returns (GetTribeActivityResponse) {};
   rpc SharedTribes(SharedTribesRequest) returns (SharedTribesResponse) {};
   rpc SendInvite(SendInviteRequest) returns (google.protobuf.Empty) {};
   rpc AcceptInvite(AcceptInviteRequest) returns (google.protobuf.Empty) {};
