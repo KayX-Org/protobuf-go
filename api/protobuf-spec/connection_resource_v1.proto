@@ -141,10 +141,6 @@ message CreateInterestResponse {
   string id = 2;
 }
 
-message CreateServiceRequest {
-  string name = 1;
-}
-
 service ResourceService {
   rpc GetInterests(GetInterestsRequests) returns (GetInterestsResponse) {};
   rpc GetMainInterests(google.protobuf.Empty) returns (GetMainInterestsResponse) {};
@@ -159,7 +155,6 @@ service ResourceService {
   rpc ConnectTribeInterests(ConnectTribeInterestsRequests) returns (google.protobuf.Empty) {};
 
   rpc GetServices(GetServicesRequests) returns (GetServicesResponse) {};
-  rpc CreateService(CreateServiceRequest) returns (google.protobuf.Empty) {};
   rpc GetAllServices(google.protobuf.Empty) returns (GetAllServicesResponse) {};
   rpc SearchServices(SearchServicesRequests) returns (SearchServicesResponse) {};
   rpc GetUserOfferServices(UserOfferServicesRequests) returns (UserOfferServicesResponse) {};
