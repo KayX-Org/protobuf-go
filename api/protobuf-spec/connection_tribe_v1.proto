@@ -41,6 +41,16 @@ message TribeActivity {
   google.protobuf.Timestamp createdAt = 5;
 }
 
+message UserTribeConnection {
+  string tribe_id = 1;
+  bool new = 2;
+}
+
+message TribeUserConnection {
+  string user_id = 1;
+  bool new = 2;
+}
+
 message GetTribeRequest {
   string id = 1;
 }
@@ -93,7 +103,7 @@ message SharedTribesRequest {
 }
 
 message GetTribesPerUserResponse {
-  repeated string tribe_id = 1;
+  repeated UserTribeConnection tribes = 1;
 }
 
 message SharedTribesResponse {
@@ -106,7 +116,7 @@ message GetTribeMembersRequest {
 }
 
 message GetTribeMembersResponse {
-  repeated string user_ids = 1;
+  repeated TribeUserConnection users = 1;
 }
 
 message GetInvitesRequest {
@@ -136,6 +146,14 @@ message GetFAQResponse {
   repeated FAQ faq = 1;
 }
 
+message FetchNumberOfNewConnectionsRequest {
+  string user_id = 1;
+}
+
+message FetchNumberOfNewConnectionsResponse {
+  int32 total = 1;
+}
+
 service TribeService {
   rpc GetTribe(GetTribeRequest) returns (GetTribeResponse) {};
   rpc GetTribeActivity(GetTribeActivityRequest) returns (GetTribeActivityResponse) {};
@@ -150,5 +168,6 @@ service TribeService {
   rpc GetMutualConnections(GetMutualConnectionAmountRequest) returns (GetMutualConnectionAmountResponse) {};
   rpc DisconnectUserFromTribe(DisconnectUserFromTribeRequest) returns (google.protobuf.Empty) {};
   rpc GetFAQ(google.protobuf.Empty) returns (GetFAQResponse) {};
+  rpc FetchNumberOfNewConnections(FetchNumberOfNewConnectionsRequest) returns (FetchNumberOfNewConnectionsResponse) {};
 }
 

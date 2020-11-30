@@ -161,6 +161,14 @@ message GetMeetingVibesFromMeetingResponse {
   repeated string vibe_ids = 1;
 }
 
+message FetchNumberOfNewConnectionsRequest {
+  string user_id = 1;
+}
+
+message FetchNumberOfNewConnectionsResponse {
+  int32 total = 1;
+}
+
 service MeetingService {
   rpc GetMeeting(GetMeetingRequest) returns (GetMeetingResponse) {};
   rpc SendMeetingInvite(SendMeetingInviteRequest) returns (SendMeetingInviteResponse) {};
@@ -171,6 +179,7 @@ service MeetingService {
   rpc GetUpcomingMeetings(GetUpcomingMeetingsRequest) returns (GetUpcomingMeetingsResponse) {};
   rpc GetPendingMeetings(GetPendingMeetingsRequest) returns (GetPendingMeetingsResponse) {};
   rpc GetUpcomingMeetingBetweenUsers(GetUpcomingMeetingBetweenUsersRequest) returns (GetUpcomingMeetingBetweenUsersResponse) {};
+  rpc FetchNumberOfNewConnections(FetchNumberOfNewConnectionsRequest) returns (FetchNumberOfNewConnectionsResponse) {};
 
   rpc GetMeetingVibe(GetMeetingVibeRequest) returns (GetMeetingVibeResponse) {};
   rpc SendMeetingVibe(SendMeetingVibeRequest) returns (SendMeetingVibeResponse) {};
