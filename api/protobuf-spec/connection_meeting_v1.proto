@@ -32,6 +32,12 @@ message MeetingVibe {
   string meeting_id = 12;
 }
 
+message UserMeetingConnection {
+  string meeting_id = 1;
+  string invited_user_id = 2;
+  bool new = 3;
+}
+
 message GetMeetingRequest {
   string id = 1;
 }
@@ -82,7 +88,7 @@ message GetUpcomingMeetingsRequest {
 }
 
 message GetUpcomingMeetingsResponse {
-  repeated string meeting_ids = 1;
+  repeated UserMeetingConnection meetings = 1;
 }
 
 message GetPendingMeetingsRequest {
@@ -90,7 +96,7 @@ message GetPendingMeetingsRequest {
 }
 
 message GetPendingMeetingsResponse {
-  repeated string meeting_ids = 1;
+  repeated UserMeetingConnection meetings = 1;
 }
 
 message GetUpcomingMeetingBetweenUsersRequest {

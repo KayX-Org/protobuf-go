@@ -277,6 +277,69 @@ func (x *MeetingVibe) GetMeetingId() string {
 	return ""
 }
 
+type UserMeetingConnection struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	MeetingId     string `protobuf:"bytes,1,opt,name=meeting_id,json=meetingId,proto3" json:"meeting_id,omitempty"`
+	InvitedUserId string `protobuf:"bytes,2,opt,name=invited_user_id,json=invitedUserId,proto3" json:"invited_user_id,omitempty"`
+	New           bool   `protobuf:"varint,3,opt,name=new,proto3" json:"new,omitempty"`
+}
+
+func (x *UserMeetingConnection) Reset() {
+	*x = UserMeetingConnection{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_api_protobuf_spec_connection_meeting_v1_proto_msgTypes[2]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *UserMeetingConnection) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*UserMeetingConnection) ProtoMessage() {}
+
+func (x *UserMeetingConnection) ProtoReflect() protoreflect.Message {
+	mi := &file_api_protobuf_spec_connection_meeting_v1_proto_msgTypes[2]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use UserMeetingConnection.ProtoReflect.Descriptor instead.
+func (*UserMeetingConnection) Descriptor() ([]byte, []int) {
+	return file_api_protobuf_spec_connection_meeting_v1_proto_rawDescGZIP(), []int{2}
+}
+
+func (x *UserMeetingConnection) GetMeetingId() string {
+	if x != nil {
+		return x.MeetingId
+	}
+	return ""
+}
+
+func (x *UserMeetingConnection) GetInvitedUserId() string {
+	if x != nil {
+		return x.InvitedUserId
+	}
+	return ""
+}
+
+func (x *UserMeetingConnection) GetNew() bool {
+	if x != nil {
+		return x.New
+	}
+	return false
+}
+
 type GetMeetingRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -288,7 +351,7 @@ type GetMeetingRequest struct {
 func (x *GetMeetingRequest) Reset() {
 	*x = GetMeetingRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_api_protobuf_spec_connection_meeting_v1_proto_msgTypes[2]
+		mi := &file_api_protobuf_spec_connection_meeting_v1_proto_msgTypes[3]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -301,7 +364,7 @@ func (x *GetMeetingRequest) String() string {
 func (*GetMeetingRequest) ProtoMessage() {}
 
 func (x *GetMeetingRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_api_protobuf_spec_connection_meeting_v1_proto_msgTypes[2]
+	mi := &file_api_protobuf_spec_connection_meeting_v1_proto_msgTypes[3]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -314,7 +377,7 @@ func (x *GetMeetingRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetMeetingRequest.ProtoReflect.Descriptor instead.
 func (*GetMeetingRequest) Descriptor() ([]byte, []int) {
-	return file_api_protobuf_spec_connection_meeting_v1_proto_rawDescGZIP(), []int{2}
+	return file_api_protobuf_spec_connection_meeting_v1_proto_rawDescGZIP(), []int{3}
 }
 
 func (x *GetMeetingRequest) GetId() string {
@@ -335,7 +398,7 @@ type GetMeetingResponse struct {
 func (x *GetMeetingResponse) Reset() {
 	*x = GetMeetingResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_api_protobuf_spec_connection_meeting_v1_proto_msgTypes[3]
+		mi := &file_api_protobuf_spec_connection_meeting_v1_proto_msgTypes[4]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -348,7 +411,7 @@ func (x *GetMeetingResponse) String() string {
 func (*GetMeetingResponse) ProtoMessage() {}
 
 func (x *GetMeetingResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_api_protobuf_spec_connection_meeting_v1_proto_msgTypes[3]
+	mi := &file_api_protobuf_spec_connection_meeting_v1_proto_msgTypes[4]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -361,7 +424,7 @@ func (x *GetMeetingResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetMeetingResponse.ProtoReflect.Descriptor instead.
 func (*GetMeetingResponse) Descriptor() ([]byte, []int) {
-	return file_api_protobuf_spec_connection_meeting_v1_proto_rawDescGZIP(), []int{3}
+	return file_api_protobuf_spec_connection_meeting_v1_proto_rawDescGZIP(), []int{4}
 }
 
 func (x *GetMeetingResponse) GetMeeting() *Meeting {
@@ -387,7 +450,7 @@ type SendMeetingInviteRequest struct {
 func (x *SendMeetingInviteRequest) Reset() {
 	*x = SendMeetingInviteRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_api_protobuf_spec_connection_meeting_v1_proto_msgTypes[4]
+		mi := &file_api_protobuf_spec_connection_meeting_v1_proto_msgTypes[5]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -400,7 +463,7 @@ func (x *SendMeetingInviteRequest) String() string {
 func (*SendMeetingInviteRequest) ProtoMessage() {}
 
 func (x *SendMeetingInviteRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_api_protobuf_spec_connection_meeting_v1_proto_msgTypes[4]
+	mi := &file_api_protobuf_spec_connection_meeting_v1_proto_msgTypes[5]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -413,7 +476,7 @@ func (x *SendMeetingInviteRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use SendMeetingInviteRequest.ProtoReflect.Descriptor instead.
 func (*SendMeetingInviteRequest) Descriptor() ([]byte, []int) {
-	return file_api_protobuf_spec_connection_meeting_v1_proto_rawDescGZIP(), []int{4}
+	return file_api_protobuf_spec_connection_meeting_v1_proto_rawDescGZIP(), []int{5}
 }
 
 func (x *SendMeetingInviteRequest) GetBeginning() *timestamp.Timestamp {
@@ -469,7 +532,7 @@ type SendMeetingInviteResponse struct {
 func (x *SendMeetingInviteResponse) Reset() {
 	*x = SendMeetingInviteResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_api_protobuf_spec_connection_meeting_v1_proto_msgTypes[5]
+		mi := &file_api_protobuf_spec_connection_meeting_v1_proto_msgTypes[6]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -482,7 +545,7 @@ func (x *SendMeetingInviteResponse) String() string {
 func (*SendMeetingInviteResponse) ProtoMessage() {}
 
 func (x *SendMeetingInviteResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_api_protobuf_spec_connection_meeting_v1_proto_msgTypes[5]
+	mi := &file_api_protobuf_spec_connection_meeting_v1_proto_msgTypes[6]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -495,7 +558,7 @@ func (x *SendMeetingInviteResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use SendMeetingInviteResponse.ProtoReflect.Descriptor instead.
 func (*SendMeetingInviteResponse) Descriptor() ([]byte, []int) {
-	return file_api_protobuf_spec_connection_meeting_v1_proto_rawDescGZIP(), []int{5}
+	return file_api_protobuf_spec_connection_meeting_v1_proto_rawDescGZIP(), []int{6}
 }
 
 func (x *SendMeetingInviteResponse) GetId() string {
@@ -521,7 +584,7 @@ type UpdateMeetingInviteRequest struct {
 func (x *UpdateMeetingInviteRequest) Reset() {
 	*x = UpdateMeetingInviteRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_api_protobuf_spec_connection_meeting_v1_proto_msgTypes[6]
+		mi := &file_api_protobuf_spec_connection_meeting_v1_proto_msgTypes[7]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -534,7 +597,7 @@ func (x *UpdateMeetingInviteRequest) String() string {
 func (*UpdateMeetingInviteRequest) ProtoMessage() {}
 
 func (x *UpdateMeetingInviteRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_api_protobuf_spec_connection_meeting_v1_proto_msgTypes[6]
+	mi := &file_api_protobuf_spec_connection_meeting_v1_proto_msgTypes[7]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -547,7 +610,7 @@ func (x *UpdateMeetingInviteRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use UpdateMeetingInviteRequest.ProtoReflect.Descriptor instead.
 func (*UpdateMeetingInviteRequest) Descriptor() ([]byte, []int) {
-	return file_api_protobuf_spec_connection_meeting_v1_proto_rawDescGZIP(), []int{6}
+	return file_api_protobuf_spec_connection_meeting_v1_proto_rawDescGZIP(), []int{7}
 }
 
 func (x *UpdateMeetingInviteRequest) GetBeginning() *timestamp.Timestamp {
@@ -604,7 +667,7 @@ type AcceptMeetingInviteRequest struct {
 func (x *AcceptMeetingInviteRequest) Reset() {
 	*x = AcceptMeetingInviteRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_api_protobuf_spec_connection_meeting_v1_proto_msgTypes[7]
+		mi := &file_api_protobuf_spec_connection_meeting_v1_proto_msgTypes[8]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -617,7 +680,7 @@ func (x *AcceptMeetingInviteRequest) String() string {
 func (*AcceptMeetingInviteRequest) ProtoMessage() {}
 
 func (x *AcceptMeetingInviteRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_api_protobuf_spec_connection_meeting_v1_proto_msgTypes[7]
+	mi := &file_api_protobuf_spec_connection_meeting_v1_proto_msgTypes[8]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -630,7 +693,7 @@ func (x *AcceptMeetingInviteRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use AcceptMeetingInviteRequest.ProtoReflect.Descriptor instead.
 func (*AcceptMeetingInviteRequest) Descriptor() ([]byte, []int) {
-	return file_api_protobuf_spec_connection_meeting_v1_proto_rawDescGZIP(), []int{7}
+	return file_api_protobuf_spec_connection_meeting_v1_proto_rawDescGZIP(), []int{8}
 }
 
 func (x *AcceptMeetingInviteRequest) GetMeetingId() string {
@@ -659,7 +722,7 @@ type CancelMeetingInviteRequest struct {
 func (x *CancelMeetingInviteRequest) Reset() {
 	*x = CancelMeetingInviteRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_api_protobuf_spec_connection_meeting_v1_proto_msgTypes[8]
+		mi := &file_api_protobuf_spec_connection_meeting_v1_proto_msgTypes[9]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -672,7 +735,7 @@ func (x *CancelMeetingInviteRequest) String() string {
 func (*CancelMeetingInviteRequest) ProtoMessage() {}
 
 func (x *CancelMeetingInviteRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_api_protobuf_spec_connection_meeting_v1_proto_msgTypes[8]
+	mi := &file_api_protobuf_spec_connection_meeting_v1_proto_msgTypes[9]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -685,7 +748,7 @@ func (x *CancelMeetingInviteRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CancelMeetingInviteRequest.ProtoReflect.Descriptor instead.
 func (*CancelMeetingInviteRequest) Descriptor() ([]byte, []int) {
-	return file_api_protobuf_spec_connection_meeting_v1_proto_rawDescGZIP(), []int{8}
+	return file_api_protobuf_spec_connection_meeting_v1_proto_rawDescGZIP(), []int{9}
 }
 
 func (x *CancelMeetingInviteRequest) GetMeetingId() string {
@@ -714,7 +777,7 @@ type DeclineMeetingInviteRequest struct {
 func (x *DeclineMeetingInviteRequest) Reset() {
 	*x = DeclineMeetingInviteRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_api_protobuf_spec_connection_meeting_v1_proto_msgTypes[9]
+		mi := &file_api_protobuf_spec_connection_meeting_v1_proto_msgTypes[10]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -727,7 +790,7 @@ func (x *DeclineMeetingInviteRequest) String() string {
 func (*DeclineMeetingInviteRequest) ProtoMessage() {}
 
 func (x *DeclineMeetingInviteRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_api_protobuf_spec_connection_meeting_v1_proto_msgTypes[9]
+	mi := &file_api_protobuf_spec_connection_meeting_v1_proto_msgTypes[10]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -740,7 +803,7 @@ func (x *DeclineMeetingInviteRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use DeclineMeetingInviteRequest.ProtoReflect.Descriptor instead.
 func (*DeclineMeetingInviteRequest) Descriptor() ([]byte, []int) {
-	return file_api_protobuf_spec_connection_meeting_v1_proto_rawDescGZIP(), []int{9}
+	return file_api_protobuf_spec_connection_meeting_v1_proto_rawDescGZIP(), []int{10}
 }
 
 func (x *DeclineMeetingInviteRequest) GetMeetingId() string {
@@ -768,7 +831,7 @@ type GetUpcomingMeetingsRequest struct {
 func (x *GetUpcomingMeetingsRequest) Reset() {
 	*x = GetUpcomingMeetingsRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_api_protobuf_spec_connection_meeting_v1_proto_msgTypes[10]
+		mi := &file_api_protobuf_spec_connection_meeting_v1_proto_msgTypes[11]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -781,7 +844,7 @@ func (x *GetUpcomingMeetingsRequest) String() string {
 func (*GetUpcomingMeetingsRequest) ProtoMessage() {}
 
 func (x *GetUpcomingMeetingsRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_api_protobuf_spec_connection_meeting_v1_proto_msgTypes[10]
+	mi := &file_api_protobuf_spec_connection_meeting_v1_proto_msgTypes[11]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -794,7 +857,7 @@ func (x *GetUpcomingMeetingsRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetUpcomingMeetingsRequest.ProtoReflect.Descriptor instead.
 func (*GetUpcomingMeetingsRequest) Descriptor() ([]byte, []int) {
-	return file_api_protobuf_spec_connection_meeting_v1_proto_rawDescGZIP(), []int{10}
+	return file_api_protobuf_spec_connection_meeting_v1_proto_rawDescGZIP(), []int{11}
 }
 
 func (x *GetUpcomingMeetingsRequest) GetUserId() string {
@@ -809,13 +872,13 @@ type GetUpcomingMeetingsResponse struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	MeetingIds []string `protobuf:"bytes,1,rep,name=meeting_ids,json=meetingIds,proto3" json:"meeting_ids,omitempty"`
+	Meetings []*UserMeetingConnection `protobuf:"bytes,1,rep,name=meetings,proto3" json:"meetings,omitempty"`
 }
 
 func (x *GetUpcomingMeetingsResponse) Reset() {
 	*x = GetUpcomingMeetingsResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_api_protobuf_spec_connection_meeting_v1_proto_msgTypes[11]
+		mi := &file_api_protobuf_spec_connection_meeting_v1_proto_msgTypes[12]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -828,7 +891,7 @@ func (x *GetUpcomingMeetingsResponse) String() string {
 func (*GetUpcomingMeetingsResponse) ProtoMessage() {}
 
 func (x *GetUpcomingMeetingsResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_api_protobuf_spec_connection_meeting_v1_proto_msgTypes[11]
+	mi := &file_api_protobuf_spec_connection_meeting_v1_proto_msgTypes[12]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -841,12 +904,12 @@ func (x *GetUpcomingMeetingsResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetUpcomingMeetingsResponse.ProtoReflect.Descriptor instead.
 func (*GetUpcomingMeetingsResponse) Descriptor() ([]byte, []int) {
-	return file_api_protobuf_spec_connection_meeting_v1_proto_rawDescGZIP(), []int{11}
+	return file_api_protobuf_spec_connection_meeting_v1_proto_rawDescGZIP(), []int{12}
 }
 
-func (x *GetUpcomingMeetingsResponse) GetMeetingIds() []string {
+func (x *GetUpcomingMeetingsResponse) GetMeetings() []*UserMeetingConnection {
 	if x != nil {
-		return x.MeetingIds
+		return x.Meetings
 	}
 	return nil
 }
@@ -862,7 +925,7 @@ type GetPendingMeetingsRequest struct {
 func (x *GetPendingMeetingsRequest) Reset() {
 	*x = GetPendingMeetingsRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_api_protobuf_spec_connection_meeting_v1_proto_msgTypes[12]
+		mi := &file_api_protobuf_spec_connection_meeting_v1_proto_msgTypes[13]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -875,7 +938,7 @@ func (x *GetPendingMeetingsRequest) String() string {
 func (*GetPendingMeetingsRequest) ProtoMessage() {}
 
 func (x *GetPendingMeetingsRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_api_protobuf_spec_connection_meeting_v1_proto_msgTypes[12]
+	mi := &file_api_protobuf_spec_connection_meeting_v1_proto_msgTypes[13]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -888,7 +951,7 @@ func (x *GetPendingMeetingsRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetPendingMeetingsRequest.ProtoReflect.Descriptor instead.
 func (*GetPendingMeetingsRequest) Descriptor() ([]byte, []int) {
-	return file_api_protobuf_spec_connection_meeting_v1_proto_rawDescGZIP(), []int{12}
+	return file_api_protobuf_spec_connection_meeting_v1_proto_rawDescGZIP(), []int{13}
 }
 
 func (x *GetPendingMeetingsRequest) GetUserId() string {
@@ -903,13 +966,13 @@ type GetPendingMeetingsResponse struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	MeetingIds []string `protobuf:"bytes,1,rep,name=meeting_ids,json=meetingIds,proto3" json:"meeting_ids,omitempty"`
+	Meetings []*UserMeetingConnection `protobuf:"bytes,1,rep,name=meetings,proto3" json:"meetings,omitempty"`
 }
 
 func (x *GetPendingMeetingsResponse) Reset() {
 	*x = GetPendingMeetingsResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_api_protobuf_spec_connection_meeting_v1_proto_msgTypes[13]
+		mi := &file_api_protobuf_spec_connection_meeting_v1_proto_msgTypes[14]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -922,7 +985,7 @@ func (x *GetPendingMeetingsResponse) String() string {
 func (*GetPendingMeetingsResponse) ProtoMessage() {}
 
 func (x *GetPendingMeetingsResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_api_protobuf_spec_connection_meeting_v1_proto_msgTypes[13]
+	mi := &file_api_protobuf_spec_connection_meeting_v1_proto_msgTypes[14]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -935,12 +998,12 @@ func (x *GetPendingMeetingsResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetPendingMeetingsResponse.ProtoReflect.Descriptor instead.
 func (*GetPendingMeetingsResponse) Descriptor() ([]byte, []int) {
-	return file_api_protobuf_spec_connection_meeting_v1_proto_rawDescGZIP(), []int{13}
+	return file_api_protobuf_spec_connection_meeting_v1_proto_rawDescGZIP(), []int{14}
 }
 
-func (x *GetPendingMeetingsResponse) GetMeetingIds() []string {
+func (x *GetPendingMeetingsResponse) GetMeetings() []*UserMeetingConnection {
 	if x != nil {
-		return x.MeetingIds
+		return x.Meetings
 	}
 	return nil
 }
@@ -957,7 +1020,7 @@ type GetUpcomingMeetingBetweenUsersRequest struct {
 func (x *GetUpcomingMeetingBetweenUsersRequest) Reset() {
 	*x = GetUpcomingMeetingBetweenUsersRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_api_protobuf_spec_connection_meeting_v1_proto_msgTypes[14]
+		mi := &file_api_protobuf_spec_connection_meeting_v1_proto_msgTypes[15]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -970,7 +1033,7 @@ func (x *GetUpcomingMeetingBetweenUsersRequest) String() string {
 func (*GetUpcomingMeetingBetweenUsersRequest) ProtoMessage() {}
 
 func (x *GetUpcomingMeetingBetweenUsersRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_api_protobuf_spec_connection_meeting_v1_proto_msgTypes[14]
+	mi := &file_api_protobuf_spec_connection_meeting_v1_proto_msgTypes[15]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -983,7 +1046,7 @@ func (x *GetUpcomingMeetingBetweenUsersRequest) ProtoReflect() protoreflect.Mess
 
 // Deprecated: Use GetUpcomingMeetingBetweenUsersRequest.ProtoReflect.Descriptor instead.
 func (*GetUpcomingMeetingBetweenUsersRequest) Descriptor() ([]byte, []int) {
-	return file_api_protobuf_spec_connection_meeting_v1_proto_rawDescGZIP(), []int{14}
+	return file_api_protobuf_spec_connection_meeting_v1_proto_rawDescGZIP(), []int{15}
 }
 
 func (x *GetUpcomingMeetingBetweenUsersRequest) GetFormUserId() string {
@@ -1011,7 +1074,7 @@ type GetUpcomingMeetingBetweenUsersResponse struct {
 func (x *GetUpcomingMeetingBetweenUsersResponse) Reset() {
 	*x = GetUpcomingMeetingBetweenUsersResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_api_protobuf_spec_connection_meeting_v1_proto_msgTypes[15]
+		mi := &file_api_protobuf_spec_connection_meeting_v1_proto_msgTypes[16]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1024,7 +1087,7 @@ func (x *GetUpcomingMeetingBetweenUsersResponse) String() string {
 func (*GetUpcomingMeetingBetweenUsersResponse) ProtoMessage() {}
 
 func (x *GetUpcomingMeetingBetweenUsersResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_api_protobuf_spec_connection_meeting_v1_proto_msgTypes[15]
+	mi := &file_api_protobuf_spec_connection_meeting_v1_proto_msgTypes[16]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1037,7 +1100,7 @@ func (x *GetUpcomingMeetingBetweenUsersResponse) ProtoReflect() protoreflect.Mes
 
 // Deprecated: Use GetUpcomingMeetingBetweenUsersResponse.ProtoReflect.Descriptor instead.
 func (*GetUpcomingMeetingBetweenUsersResponse) Descriptor() ([]byte, []int) {
-	return file_api_protobuf_spec_connection_meeting_v1_proto_rawDescGZIP(), []int{15}
+	return file_api_protobuf_spec_connection_meeting_v1_proto_rawDescGZIP(), []int{16}
 }
 
 func (x *GetUpcomingMeetingBetweenUsersResponse) GetMeetingId() string {
@@ -1061,7 +1124,7 @@ type SendMeetingVibeRequest struct {
 func (x *SendMeetingVibeRequest) Reset() {
 	*x = SendMeetingVibeRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_api_protobuf_spec_connection_meeting_v1_proto_msgTypes[16]
+		mi := &file_api_protobuf_spec_connection_meeting_v1_proto_msgTypes[17]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1074,7 +1137,7 @@ func (x *SendMeetingVibeRequest) String() string {
 func (*SendMeetingVibeRequest) ProtoMessage() {}
 
 func (x *SendMeetingVibeRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_api_protobuf_spec_connection_meeting_v1_proto_msgTypes[16]
+	mi := &file_api_protobuf_spec_connection_meeting_v1_proto_msgTypes[17]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1087,7 +1150,7 @@ func (x *SendMeetingVibeRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use SendMeetingVibeRequest.ProtoReflect.Descriptor instead.
 func (*SendMeetingVibeRequest) Descriptor() ([]byte, []int) {
-	return file_api_protobuf_spec_connection_meeting_v1_proto_rawDescGZIP(), []int{16}
+	return file_api_protobuf_spec_connection_meeting_v1_proto_rawDescGZIP(), []int{17}
 }
 
 func (x *SendMeetingVibeRequest) GetMeetingId() string {
@@ -1129,7 +1192,7 @@ type SendMeetingVibeResponse struct {
 func (x *SendMeetingVibeResponse) Reset() {
 	*x = SendMeetingVibeResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_api_protobuf_spec_connection_meeting_v1_proto_msgTypes[17]
+		mi := &file_api_protobuf_spec_connection_meeting_v1_proto_msgTypes[18]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1142,7 +1205,7 @@ func (x *SendMeetingVibeResponse) String() string {
 func (*SendMeetingVibeResponse) ProtoMessage() {}
 
 func (x *SendMeetingVibeResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_api_protobuf_spec_connection_meeting_v1_proto_msgTypes[17]
+	mi := &file_api_protobuf_spec_connection_meeting_v1_proto_msgTypes[18]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1155,7 +1218,7 @@ func (x *SendMeetingVibeResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use SendMeetingVibeResponse.ProtoReflect.Descriptor instead.
 func (*SendMeetingVibeResponse) Descriptor() ([]byte, []int) {
-	return file_api_protobuf_spec_connection_meeting_v1_proto_rawDescGZIP(), []int{17}
+	return file_api_protobuf_spec_connection_meeting_v1_proto_rawDescGZIP(), []int{18}
 }
 
 func (x *SendMeetingVibeResponse) GetId() string {
@@ -1176,7 +1239,7 @@ type GetMeetingVibeRequest struct {
 func (x *GetMeetingVibeRequest) Reset() {
 	*x = GetMeetingVibeRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_api_protobuf_spec_connection_meeting_v1_proto_msgTypes[18]
+		mi := &file_api_protobuf_spec_connection_meeting_v1_proto_msgTypes[19]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1189,7 +1252,7 @@ func (x *GetMeetingVibeRequest) String() string {
 func (*GetMeetingVibeRequest) ProtoMessage() {}
 
 func (x *GetMeetingVibeRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_api_protobuf_spec_connection_meeting_v1_proto_msgTypes[18]
+	mi := &file_api_protobuf_spec_connection_meeting_v1_proto_msgTypes[19]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1202,7 +1265,7 @@ func (x *GetMeetingVibeRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetMeetingVibeRequest.ProtoReflect.Descriptor instead.
 func (*GetMeetingVibeRequest) Descriptor() ([]byte, []int) {
-	return file_api_protobuf_spec_connection_meeting_v1_proto_rawDescGZIP(), []int{18}
+	return file_api_protobuf_spec_connection_meeting_v1_proto_rawDescGZIP(), []int{19}
 }
 
 func (x *GetMeetingVibeRequest) GetVibeId() string {
@@ -1223,7 +1286,7 @@ type GetMeetingVibeResponse struct {
 func (x *GetMeetingVibeResponse) Reset() {
 	*x = GetMeetingVibeResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_api_protobuf_spec_connection_meeting_v1_proto_msgTypes[19]
+		mi := &file_api_protobuf_spec_connection_meeting_v1_proto_msgTypes[20]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1236,7 +1299,7 @@ func (x *GetMeetingVibeResponse) String() string {
 func (*GetMeetingVibeResponse) ProtoMessage() {}
 
 func (x *GetMeetingVibeResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_api_protobuf_spec_connection_meeting_v1_proto_msgTypes[19]
+	mi := &file_api_protobuf_spec_connection_meeting_v1_proto_msgTypes[20]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1249,7 +1312,7 @@ func (x *GetMeetingVibeResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetMeetingVibeResponse.ProtoReflect.Descriptor instead.
 func (*GetMeetingVibeResponse) Descriptor() ([]byte, []int) {
-	return file_api_protobuf_spec_connection_meeting_v1_proto_rawDescGZIP(), []int{19}
+	return file_api_protobuf_spec_connection_meeting_v1_proto_rawDescGZIP(), []int{20}
 }
 
 func (x *GetMeetingVibeResponse) GetVibe() *MeetingVibe {
@@ -1270,7 +1333,7 @@ type GetMeetingVibesSentRequest struct {
 func (x *GetMeetingVibesSentRequest) Reset() {
 	*x = GetMeetingVibesSentRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_api_protobuf_spec_connection_meeting_v1_proto_msgTypes[20]
+		mi := &file_api_protobuf_spec_connection_meeting_v1_proto_msgTypes[21]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1283,7 +1346,7 @@ func (x *GetMeetingVibesSentRequest) String() string {
 func (*GetMeetingVibesSentRequest) ProtoMessage() {}
 
 func (x *GetMeetingVibesSentRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_api_protobuf_spec_connection_meeting_v1_proto_msgTypes[20]
+	mi := &file_api_protobuf_spec_connection_meeting_v1_proto_msgTypes[21]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1296,7 +1359,7 @@ func (x *GetMeetingVibesSentRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetMeetingVibesSentRequest.ProtoReflect.Descriptor instead.
 func (*GetMeetingVibesSentRequest) Descriptor() ([]byte, []int) {
-	return file_api_protobuf_spec_connection_meeting_v1_proto_rawDescGZIP(), []int{20}
+	return file_api_protobuf_spec_connection_meeting_v1_proto_rawDescGZIP(), []int{21}
 }
 
 func (x *GetMeetingVibesSentRequest) GetUserId() string {
@@ -1318,7 +1381,7 @@ type MeetingVibesSentConnection struct {
 func (x *MeetingVibesSentConnection) Reset() {
 	*x = MeetingVibesSentConnection{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_api_protobuf_spec_connection_meeting_v1_proto_msgTypes[21]
+		mi := &file_api_protobuf_spec_connection_meeting_v1_proto_msgTypes[22]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1331,7 +1394,7 @@ func (x *MeetingVibesSentConnection) String() string {
 func (*MeetingVibesSentConnection) ProtoMessage() {}
 
 func (x *MeetingVibesSentConnection) ProtoReflect() protoreflect.Message {
-	mi := &file_api_protobuf_spec_connection_meeting_v1_proto_msgTypes[21]
+	mi := &file_api_protobuf_spec_connection_meeting_v1_proto_msgTypes[22]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1344,7 +1407,7 @@ func (x *MeetingVibesSentConnection) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use MeetingVibesSentConnection.ProtoReflect.Descriptor instead.
 func (*MeetingVibesSentConnection) Descriptor() ([]byte, []int) {
-	return file_api_protobuf_spec_connection_meeting_v1_proto_rawDescGZIP(), []int{21}
+	return file_api_protobuf_spec_connection_meeting_v1_proto_rawDescGZIP(), []int{22}
 }
 
 func (x *MeetingVibesSentConnection) GetVibeId() string {
@@ -1372,7 +1435,7 @@ type GetMeetingVibesSentResponse struct {
 func (x *GetMeetingVibesSentResponse) Reset() {
 	*x = GetMeetingVibesSentResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_api_protobuf_spec_connection_meeting_v1_proto_msgTypes[22]
+		mi := &file_api_protobuf_spec_connection_meeting_v1_proto_msgTypes[23]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1385,7 +1448,7 @@ func (x *GetMeetingVibesSentResponse) String() string {
 func (*GetMeetingVibesSentResponse) ProtoMessage() {}
 
 func (x *GetMeetingVibesSentResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_api_protobuf_spec_connection_meeting_v1_proto_msgTypes[22]
+	mi := &file_api_protobuf_spec_connection_meeting_v1_proto_msgTypes[23]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1398,7 +1461,7 @@ func (x *GetMeetingVibesSentResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetMeetingVibesSentResponse.ProtoReflect.Descriptor instead.
 func (*GetMeetingVibesSentResponse) Descriptor() ([]byte, []int) {
-	return file_api_protobuf_spec_connection_meeting_v1_proto_rawDescGZIP(), []int{22}
+	return file_api_protobuf_spec_connection_meeting_v1_proto_rawDescGZIP(), []int{23}
 }
 
 func (x *GetMeetingVibesSentResponse) GetVibesConnection() []*MeetingVibesSentConnection {
@@ -1419,7 +1482,7 @@ type GetMeetingVibesReceivedRequest struct {
 func (x *GetMeetingVibesReceivedRequest) Reset() {
 	*x = GetMeetingVibesReceivedRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_api_protobuf_spec_connection_meeting_v1_proto_msgTypes[23]
+		mi := &file_api_protobuf_spec_connection_meeting_v1_proto_msgTypes[24]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1432,7 +1495,7 @@ func (x *GetMeetingVibesReceivedRequest) String() string {
 func (*GetMeetingVibesReceivedRequest) ProtoMessage() {}
 
 func (x *GetMeetingVibesReceivedRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_api_protobuf_spec_connection_meeting_v1_proto_msgTypes[23]
+	mi := &file_api_protobuf_spec_connection_meeting_v1_proto_msgTypes[24]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1445,7 +1508,7 @@ func (x *GetMeetingVibesReceivedRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetMeetingVibesReceivedRequest.ProtoReflect.Descriptor instead.
 func (*GetMeetingVibesReceivedRequest) Descriptor() ([]byte, []int) {
-	return file_api_protobuf_spec_connection_meeting_v1_proto_rawDescGZIP(), []int{23}
+	return file_api_protobuf_spec_connection_meeting_v1_proto_rawDescGZIP(), []int{24}
 }
 
 func (x *GetMeetingVibesReceivedRequest) GetUserId() string {
@@ -1467,7 +1530,7 @@ type MeetingVibesReceivedConnection struct {
 func (x *MeetingVibesReceivedConnection) Reset() {
 	*x = MeetingVibesReceivedConnection{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_api_protobuf_spec_connection_meeting_v1_proto_msgTypes[24]
+		mi := &file_api_protobuf_spec_connection_meeting_v1_proto_msgTypes[25]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1480,7 +1543,7 @@ func (x *MeetingVibesReceivedConnection) String() string {
 func (*MeetingVibesReceivedConnection) ProtoMessage() {}
 
 func (x *MeetingVibesReceivedConnection) ProtoReflect() protoreflect.Message {
-	mi := &file_api_protobuf_spec_connection_meeting_v1_proto_msgTypes[24]
+	mi := &file_api_protobuf_spec_connection_meeting_v1_proto_msgTypes[25]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1493,7 +1556,7 @@ func (x *MeetingVibesReceivedConnection) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use MeetingVibesReceivedConnection.ProtoReflect.Descriptor instead.
 func (*MeetingVibesReceivedConnection) Descriptor() ([]byte, []int) {
-	return file_api_protobuf_spec_connection_meeting_v1_proto_rawDescGZIP(), []int{24}
+	return file_api_protobuf_spec_connection_meeting_v1_proto_rawDescGZIP(), []int{25}
 }
 
 func (x *MeetingVibesReceivedConnection) GetVibeId() string {
@@ -1521,7 +1584,7 @@ type GetMeetingVibesReceivedResponse struct {
 func (x *GetMeetingVibesReceivedResponse) Reset() {
 	*x = GetMeetingVibesReceivedResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_api_protobuf_spec_connection_meeting_v1_proto_msgTypes[25]
+		mi := &file_api_protobuf_spec_connection_meeting_v1_proto_msgTypes[26]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1534,7 +1597,7 @@ func (x *GetMeetingVibesReceivedResponse) String() string {
 func (*GetMeetingVibesReceivedResponse) ProtoMessage() {}
 
 func (x *GetMeetingVibesReceivedResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_api_protobuf_spec_connection_meeting_v1_proto_msgTypes[25]
+	mi := &file_api_protobuf_spec_connection_meeting_v1_proto_msgTypes[26]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1547,7 +1610,7 @@ func (x *GetMeetingVibesReceivedResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetMeetingVibesReceivedResponse.ProtoReflect.Descriptor instead.
 func (*GetMeetingVibesReceivedResponse) Descriptor() ([]byte, []int) {
-	return file_api_protobuf_spec_connection_meeting_v1_proto_rawDescGZIP(), []int{25}
+	return file_api_protobuf_spec_connection_meeting_v1_proto_rawDescGZIP(), []int{26}
 }
 
 func (x *GetMeetingVibesReceivedResponse) GetVibesConnection() []*MeetingVibesReceivedConnection {
@@ -1568,7 +1631,7 @@ type GetMeetingVibesFromMeetingRequest struct {
 func (x *GetMeetingVibesFromMeetingRequest) Reset() {
 	*x = GetMeetingVibesFromMeetingRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_api_protobuf_spec_connection_meeting_v1_proto_msgTypes[26]
+		mi := &file_api_protobuf_spec_connection_meeting_v1_proto_msgTypes[27]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1581,7 +1644,7 @@ func (x *GetMeetingVibesFromMeetingRequest) String() string {
 func (*GetMeetingVibesFromMeetingRequest) ProtoMessage() {}
 
 func (x *GetMeetingVibesFromMeetingRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_api_protobuf_spec_connection_meeting_v1_proto_msgTypes[26]
+	mi := &file_api_protobuf_spec_connection_meeting_v1_proto_msgTypes[27]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1594,7 +1657,7 @@ func (x *GetMeetingVibesFromMeetingRequest) ProtoReflect() protoreflect.Message 
 
 // Deprecated: Use GetMeetingVibesFromMeetingRequest.ProtoReflect.Descriptor instead.
 func (*GetMeetingVibesFromMeetingRequest) Descriptor() ([]byte, []int) {
-	return file_api_protobuf_spec_connection_meeting_v1_proto_rawDescGZIP(), []int{26}
+	return file_api_protobuf_spec_connection_meeting_v1_proto_rawDescGZIP(), []int{27}
 }
 
 func (x *GetMeetingVibesFromMeetingRequest) GetMeetingId() string {
@@ -1615,7 +1678,7 @@ type GetMeetingVibesFromMeetingResponse struct {
 func (x *GetMeetingVibesFromMeetingResponse) Reset() {
 	*x = GetMeetingVibesFromMeetingResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_api_protobuf_spec_connection_meeting_v1_proto_msgTypes[27]
+		mi := &file_api_protobuf_spec_connection_meeting_v1_proto_msgTypes[28]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1628,7 +1691,7 @@ func (x *GetMeetingVibesFromMeetingResponse) String() string {
 func (*GetMeetingVibesFromMeetingResponse) ProtoMessage() {}
 
 func (x *GetMeetingVibesFromMeetingResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_api_protobuf_spec_connection_meeting_v1_proto_msgTypes[27]
+	mi := &file_api_protobuf_spec_connection_meeting_v1_proto_msgTypes[28]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1641,7 +1704,7 @@ func (x *GetMeetingVibesFromMeetingResponse) ProtoReflect() protoreflect.Message
 
 // Deprecated: Use GetMeetingVibesFromMeetingResponse.ProtoReflect.Descriptor instead.
 func (*GetMeetingVibesFromMeetingResponse) Descriptor() ([]byte, []int) {
-	return file_api_protobuf_spec_connection_meeting_v1_proto_rawDescGZIP(), []int{27}
+	return file_api_protobuf_spec_connection_meeting_v1_proto_rawDescGZIP(), []int{28}
 }
 
 func (x *GetMeetingVibesFromMeetingResponse) GetVibeIds() []string {
@@ -1718,14 +1781,40 @@ var file_api_protobuf_spec_connection_meeting_v1_proto_rawDesc = []byte{
 	0x54, 0x69, 0x6d, 0x65, 0x73, 0x74, 0x61, 0x6d, 0x70, 0x52, 0x07, 0x75, 0x70, 0x64, 0x61, 0x74,
 	0x65, 0x64, 0x12, 0x1d, 0x0a, 0x0a, 0x6d, 0x65, 0x65, 0x74, 0x69, 0x6e, 0x67, 0x5f, 0x69, 0x64,
 	0x18, 0x0c, 0x20, 0x01, 0x28, 0x09, 0x52, 0x09, 0x6d, 0x65, 0x65, 0x74, 0x69, 0x6e, 0x67, 0x49,
-	0x64, 0x22, 0x23, 0x0a, 0x11, 0x47, 0x65, 0x74, 0x4d, 0x65, 0x65, 0x74, 0x69, 0x6e, 0x67, 0x52,
-	0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x12, 0x0e, 0x0a, 0x02, 0x69, 0x64, 0x18, 0x01, 0x20, 0x01,
-	0x28, 0x09, 0x52, 0x02, 0x69, 0x64, 0x22, 0x4c, 0x0a, 0x12, 0x47, 0x65, 0x74, 0x4d, 0x65, 0x65,
-	0x74, 0x69, 0x6e, 0x67, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x36, 0x0a, 0x07,
-	0x6d, 0x65, 0x65, 0x74, 0x69, 0x6e, 0x67, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x1c, 0x2e,
-	0x63, 0x6f, 0x6e, 0x6e, 0x65, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x2e, 0x6d, 0x65, 0x65, 0x74,
-	0x69, 0x6e, 0x67, 0x2e, 0x4d, 0x65, 0x65, 0x74, 0x69, 0x6e, 0x67, 0x52, 0x07, 0x6d, 0x65, 0x65,
-	0x74, 0x69, 0x6e, 0x67, 0x22, 0xfc, 0x01, 0x0a, 0x18, 0x53, 0x65, 0x6e, 0x64, 0x4d, 0x65, 0x65,
+	0x64, 0x22, 0x70, 0x0a, 0x15, 0x55, 0x73, 0x65, 0x72, 0x4d, 0x65, 0x65, 0x74, 0x69, 0x6e, 0x67,
+	0x43, 0x6f, 0x6e, 0x6e, 0x65, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x12, 0x1d, 0x0a, 0x0a, 0x6d, 0x65,
+	0x65, 0x74, 0x69, 0x6e, 0x67, 0x5f, 0x69, 0x64, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x09,
+	0x6d, 0x65, 0x65, 0x74, 0x69, 0x6e, 0x67, 0x49, 0x64, 0x12, 0x26, 0x0a, 0x0f, 0x69, 0x6e, 0x76,
+	0x69, 0x74, 0x65, 0x64, 0x5f, 0x75, 0x73, 0x65, 0x72, 0x5f, 0x69, 0x64, 0x18, 0x02, 0x20, 0x01,
+	0x28, 0x09, 0x52, 0x0d, 0x69, 0x6e, 0x76, 0x69, 0x74, 0x65, 0x64, 0x55, 0x73, 0x65, 0x72, 0x49,
+	0x64, 0x12, 0x10, 0x0a, 0x03, 0x6e, 0x65, 0x77, 0x18, 0x03, 0x20, 0x01, 0x28, 0x08, 0x52, 0x03,
+	0x6e, 0x65, 0x77, 0x22, 0x23, 0x0a, 0x11, 0x47, 0x65, 0x74, 0x4d, 0x65, 0x65, 0x74, 0x69, 0x6e,
+	0x67, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x12, 0x0e, 0x0a, 0x02, 0x69, 0x64, 0x18, 0x01,
+	0x20, 0x01, 0x28, 0x09, 0x52, 0x02, 0x69, 0x64, 0x22, 0x4c, 0x0a, 0x12, 0x47, 0x65, 0x74, 0x4d,
+	0x65, 0x65, 0x74, 0x69, 0x6e, 0x67, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x36,
+	0x0a, 0x07, 0x6d, 0x65, 0x65, 0x74, 0x69, 0x6e, 0x67, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0b, 0x32,
+	0x1c, 0x2e, 0x63, 0x6f, 0x6e, 0x6e, 0x65, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x2e, 0x6d, 0x65,
+	0x65, 0x74, 0x69, 0x6e, 0x67, 0x2e, 0x4d, 0x65, 0x65, 0x74, 0x69, 0x6e, 0x67, 0x52, 0x07, 0x6d,
+	0x65, 0x65, 0x74, 0x69, 0x6e, 0x67, 0x22, 0xfc, 0x01, 0x0a, 0x18, 0x53, 0x65, 0x6e, 0x64, 0x4d,
+	0x65, 0x65, 0x74, 0x69, 0x6e, 0x67, 0x49, 0x6e, 0x76, 0x69, 0x74, 0x65, 0x52, 0x65, 0x71, 0x75,
+	0x65, 0x73, 0x74, 0x12, 0x38, 0x0a, 0x09, 0x62, 0x65, 0x67, 0x69, 0x6e, 0x6e, 0x69, 0x6e, 0x67,
+	0x18, 0x01, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x1a, 0x2e, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x2e,
+	0x70, 0x72, 0x6f, 0x74, 0x6f, 0x62, 0x75, 0x66, 0x2e, 0x54, 0x69, 0x6d, 0x65, 0x73, 0x74, 0x61,
+	0x6d, 0x70, 0x52, 0x09, 0x62, 0x65, 0x67, 0x69, 0x6e, 0x6e, 0x69, 0x6e, 0x67, 0x12, 0x32, 0x0a,
+	0x06, 0x65, 0x6e, 0x64, 0x69, 0x6e, 0x67, 0x18, 0x02, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x1a, 0x2e,
+	0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x62, 0x75, 0x66, 0x2e,
+	0x54, 0x69, 0x6d, 0x65, 0x73, 0x74, 0x61, 0x6d, 0x70, 0x52, 0x06, 0x65, 0x6e, 0x64, 0x69, 0x6e,
+	0x67, 0x12, 0x20, 0x0a, 0x0b, 0x64, 0x65, 0x73, 0x63, 0x72, 0x69, 0x70, 0x74, 0x69, 0x6f, 0x6e,
+	0x18, 0x03, 0x20, 0x01, 0x28, 0x09, 0x52, 0x0b, 0x64, 0x65, 0x73, 0x63, 0x72, 0x69, 0x70, 0x74,
+	0x69, 0x6f, 0x6e, 0x12, 0x1a, 0x0a, 0x08, 0x6c, 0x6f, 0x63, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x18,
+	0x04, 0x20, 0x01, 0x28, 0x09, 0x52, 0x08, 0x6c, 0x6f, 0x63, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x12,
+	0x1b, 0x0a, 0x09, 0x75, 0x73, 0x65, 0x72, 0x5f, 0x66, 0x72, 0x6f, 0x6d, 0x18, 0x05, 0x20, 0x01,
+	0x28, 0x09, 0x52, 0x08, 0x75, 0x73, 0x65, 0x72, 0x46, 0x72, 0x6f, 0x6d, 0x12, 0x17, 0x0a, 0x07,
+	0x75, 0x73, 0x65, 0x72, 0x5f, 0x74, 0x6f, 0x18, 0x06, 0x20, 0x01, 0x28, 0x09, 0x52, 0x06, 0x75,
+	0x73, 0x65, 0x72, 0x54, 0x6f, 0x22, 0x2b, 0x0a, 0x19, 0x53, 0x65, 0x6e, 0x64, 0x4d, 0x65, 0x65,
+	0x74, 0x69, 0x6e, 0x67, 0x49, 0x6e, 0x76, 0x69, 0x74, 0x65, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e,
+	0x73, 0x65, 0x12, 0x0e, 0x0a, 0x02, 0x69, 0x64, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x02,
+	0x69, 0x64, 0x22, 0xf4, 0x01, 0x0a, 0x1a, 0x55, 0x70, 0x64, 0x61, 0x74, 0x65, 0x4d, 0x65, 0x65,
 	0x74, 0x69, 0x6e, 0x67, 0x49, 0x6e, 0x76, 0x69, 0x74, 0x65, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73,
 	0x74, 0x12, 0x38, 0x0a, 0x09, 0x62, 0x65, 0x67, 0x69, 0x6e, 0x6e, 0x69, 0x6e, 0x67, 0x18, 0x01,
 	0x20, 0x01, 0x28, 0x0b, 0x32, 0x1a, 0x2e, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x2e, 0x70, 0x72,
@@ -1737,60 +1826,46 @@ var file_api_protobuf_spec_connection_meeting_v1_proto_rawDesc = []byte{
 	0x20, 0x0a, 0x0b, 0x64, 0x65, 0x73, 0x63, 0x72, 0x69, 0x70, 0x74, 0x69, 0x6f, 0x6e, 0x18, 0x03,
 	0x20, 0x01, 0x28, 0x09, 0x52, 0x0b, 0x64, 0x65, 0x73, 0x63, 0x72, 0x69, 0x70, 0x74, 0x69, 0x6f,
 	0x6e, 0x12, 0x1a, 0x0a, 0x08, 0x6c, 0x6f, 0x63, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x18, 0x04, 0x20,
-	0x01, 0x28, 0x09, 0x52, 0x08, 0x6c, 0x6f, 0x63, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x12, 0x1b, 0x0a,
-	0x09, 0x75, 0x73, 0x65, 0x72, 0x5f, 0x66, 0x72, 0x6f, 0x6d, 0x18, 0x05, 0x20, 0x01, 0x28, 0x09,
-	0x52, 0x08, 0x75, 0x73, 0x65, 0x72, 0x46, 0x72, 0x6f, 0x6d, 0x12, 0x17, 0x0a, 0x07, 0x75, 0x73,
-	0x65, 0x72, 0x5f, 0x74, 0x6f, 0x18, 0x06, 0x20, 0x01, 0x28, 0x09, 0x52, 0x06, 0x75, 0x73, 0x65,
-	0x72, 0x54, 0x6f, 0x22, 0x2b, 0x0a, 0x19, 0x53, 0x65, 0x6e, 0x64, 0x4d, 0x65, 0x65, 0x74, 0x69,
-	0x6e, 0x67, 0x49, 0x6e, 0x76, 0x69, 0x74, 0x65, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65,
-	0x12, 0x0e, 0x0a, 0x02, 0x69, 0x64, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x02, 0x69, 0x64,
-	0x22, 0xf4, 0x01, 0x0a, 0x1a, 0x55, 0x70, 0x64, 0x61, 0x74, 0x65, 0x4d, 0x65, 0x65, 0x74, 0x69,
-	0x6e, 0x67, 0x49, 0x6e, 0x76, 0x69, 0x74, 0x65, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x12,
-	0x38, 0x0a, 0x09, 0x62, 0x65, 0x67, 0x69, 0x6e, 0x6e, 0x69, 0x6e, 0x67, 0x18, 0x01, 0x20, 0x01,
-	0x28, 0x0b, 0x32, 0x1a, 0x2e, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x2e, 0x70, 0x72, 0x6f, 0x74,
-	0x6f, 0x62, 0x75, 0x66, 0x2e, 0x54, 0x69, 0x6d, 0x65, 0x73, 0x74, 0x61, 0x6d, 0x70, 0x52, 0x09,
-	0x62, 0x65, 0x67, 0x69, 0x6e, 0x6e, 0x69, 0x6e, 0x67, 0x12, 0x32, 0x0a, 0x06, 0x65, 0x6e, 0x64,
-	0x69, 0x6e, 0x67, 0x18, 0x02, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x1a, 0x2e, 0x67, 0x6f, 0x6f, 0x67,
-	0x6c, 0x65, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x62, 0x75, 0x66, 0x2e, 0x54, 0x69, 0x6d, 0x65,
-	0x73, 0x74, 0x61, 0x6d, 0x70, 0x52, 0x06, 0x65, 0x6e, 0x64, 0x69, 0x6e, 0x67, 0x12, 0x20, 0x0a,
-	0x0b, 0x64, 0x65, 0x73, 0x63, 0x72, 0x69, 0x70, 0x74, 0x69, 0x6f, 0x6e, 0x18, 0x03, 0x20, 0x01,
-	0x28, 0x09, 0x52, 0x0b, 0x64, 0x65, 0x73, 0x63, 0x72, 0x69, 0x70, 0x74, 0x69, 0x6f, 0x6e, 0x12,
-	0x1a, 0x0a, 0x08, 0x6c, 0x6f, 0x63, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x18, 0x04, 0x20, 0x01, 0x28,
-	0x09, 0x52, 0x08, 0x6c, 0x6f, 0x63, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x12, 0x0e, 0x0a, 0x02, 0x69,
-	0x64, 0x18, 0x05, 0x20, 0x01, 0x28, 0x09, 0x52, 0x02, 0x69, 0x64, 0x12, 0x1a, 0x0a, 0x08, 0x75,
-	0x73, 0x65, 0x72, 0x46, 0x72, 0x6f, 0x6d, 0x18, 0x06, 0x20, 0x01, 0x28, 0x09, 0x52, 0x08, 0x75,
-	0x73, 0x65, 0x72, 0x46, 0x72, 0x6f, 0x6d, 0x22, 0x54, 0x0a, 0x1a, 0x41, 0x63, 0x63, 0x65, 0x70,
-	0x74, 0x4d, 0x65, 0x65, 0x74, 0x69, 0x6e, 0x67, 0x49, 0x6e, 0x76, 0x69, 0x74, 0x65, 0x52, 0x65,
-	0x71, 0x75, 0x65, 0x73, 0x74, 0x12, 0x1d, 0x0a, 0x0a, 0x6d, 0x65, 0x65, 0x74, 0x69, 0x6e, 0x67,
-	0x5f, 0x69, 0x64, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x09, 0x6d, 0x65, 0x65, 0x74, 0x69,
-	0x6e, 0x67, 0x49, 0x64, 0x12, 0x17, 0x0a, 0x07, 0x75, 0x73, 0x65, 0x72, 0x5f, 0x69, 0x64, 0x18,
-	0x02, 0x20, 0x01, 0x28, 0x09, 0x52, 0x06, 0x75, 0x73, 0x65, 0x72, 0x49, 0x64, 0x22, 0x54, 0x0a,
-	0x1a, 0x43, 0x61, 0x6e, 0x63, 0x65, 0x6c, 0x4d, 0x65, 0x65, 0x74, 0x69, 0x6e, 0x67, 0x49, 0x6e,
-	0x76, 0x69, 0x74, 0x65, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x12, 0x1d, 0x0a, 0x0a, 0x6d,
-	0x65, 0x65, 0x74, 0x69, 0x6e, 0x67, 0x5f, 0x69, 0x64, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52,
-	0x09, 0x6d, 0x65, 0x65, 0x74, 0x69, 0x6e, 0x67, 0x49, 0x64, 0x12, 0x17, 0x0a, 0x07, 0x75, 0x73,
-	0x65, 0x72, 0x5f, 0x69, 0x64, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52, 0x06, 0x75, 0x73, 0x65,
-	0x72, 0x49, 0x64, 0x22, 0x55, 0x0a, 0x1b, 0x44, 0x65, 0x63, 0x6c, 0x69, 0x6e, 0x65, 0x4d, 0x65,
-	0x65, 0x74, 0x69, 0x6e, 0x67, 0x49, 0x6e, 0x76, 0x69, 0x74, 0x65, 0x52, 0x65, 0x71, 0x75, 0x65,
-	0x73, 0x74, 0x12, 0x1d, 0x0a, 0x0a, 0x6d, 0x65, 0x65, 0x74, 0x69, 0x6e, 0x67, 0x5f, 0x69, 0x64,
-	0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x09, 0x6d, 0x65, 0x65, 0x74, 0x69, 0x6e, 0x67, 0x49,
-	0x64, 0x12, 0x17, 0x0a, 0x07, 0x75, 0x73, 0x65, 0x72, 0x5f, 0x69, 0x64, 0x18, 0x02, 0x20, 0x01,
-	0x28, 0x09, 0x52, 0x06, 0x75, 0x73, 0x65, 0x72, 0x49, 0x64, 0x22, 0x35, 0x0a, 0x1a, 0x47, 0x65,
-	0x74, 0x55, 0x70, 0x63, 0x6f, 0x6d, 0x69, 0x6e, 0x67, 0x4d, 0x65, 0x65, 0x74, 0x69, 0x6e, 0x67,
-	0x73, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x12, 0x17, 0x0a, 0x07, 0x75, 0x73, 0x65, 0x72,
-	0x5f, 0x69, 0x64, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x06, 0x75, 0x73, 0x65, 0x72, 0x49,
-	0x64, 0x22, 0x3e, 0x0a, 0x1b, 0x47, 0x65, 0x74, 0x55, 0x70, 0x63, 0x6f, 0x6d, 0x69, 0x6e, 0x67,
-	0x4d, 0x65, 0x65, 0x74, 0x69, 0x6e, 0x67, 0x73, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65,
-	0x12, 0x1f, 0x0a, 0x0b, 0x6d, 0x65, 0x65, 0x74, 0x69, 0x6e, 0x67, 0x5f, 0x69, 0x64, 0x73, 0x18,
-	0x01, 0x20, 0x03, 0x28, 0x09, 0x52, 0x0a, 0x6d, 0x65, 0x65, 0x74, 0x69, 0x6e, 0x67, 0x49, 0x64,
-	0x73, 0x22, 0x34, 0x0a, 0x19, 0x47, 0x65, 0x74, 0x50, 0x65, 0x6e, 0x64, 0x69, 0x6e, 0x67, 0x4d,
-	0x65, 0x65, 0x74, 0x69, 0x6e, 0x67, 0x73, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x12, 0x17,
-	0x0a, 0x07, 0x75, 0x73, 0x65, 0x72, 0x5f, 0x69, 0x64, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52,
-	0x06, 0x75, 0x73, 0x65, 0x72, 0x49, 0x64, 0x22, 0x3d, 0x0a, 0x1a, 0x47, 0x65, 0x74, 0x50, 0x65,
-	0x6e, 0x64, 0x69, 0x6e, 0x67, 0x4d, 0x65, 0x65, 0x74, 0x69, 0x6e, 0x67, 0x73, 0x52, 0x65, 0x73,
-	0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x1f, 0x0a, 0x0b, 0x6d, 0x65, 0x65, 0x74, 0x69, 0x6e, 0x67,
-	0x5f, 0x69, 0x64, 0x73, 0x18, 0x01, 0x20, 0x03, 0x28, 0x09, 0x52, 0x0a, 0x6d, 0x65, 0x65, 0x74,
-	0x69, 0x6e, 0x67, 0x49, 0x64, 0x73, 0x22, 0x67, 0x0a, 0x25, 0x47, 0x65, 0x74, 0x55, 0x70, 0x63,
+	0x01, 0x28, 0x09, 0x52, 0x08, 0x6c, 0x6f, 0x63, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x12, 0x0e, 0x0a,
+	0x02, 0x69, 0x64, 0x18, 0x05, 0x20, 0x01, 0x28, 0x09, 0x52, 0x02, 0x69, 0x64, 0x12, 0x1a, 0x0a,
+	0x08, 0x75, 0x73, 0x65, 0x72, 0x46, 0x72, 0x6f, 0x6d, 0x18, 0x06, 0x20, 0x01, 0x28, 0x09, 0x52,
+	0x08, 0x75, 0x73, 0x65, 0x72, 0x46, 0x72, 0x6f, 0x6d, 0x22, 0x54, 0x0a, 0x1a, 0x41, 0x63, 0x63,
+	0x65, 0x70, 0x74, 0x4d, 0x65, 0x65, 0x74, 0x69, 0x6e, 0x67, 0x49, 0x6e, 0x76, 0x69, 0x74, 0x65,
+	0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x12, 0x1d, 0x0a, 0x0a, 0x6d, 0x65, 0x65, 0x74, 0x69,
+	0x6e, 0x67, 0x5f, 0x69, 0x64, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x09, 0x6d, 0x65, 0x65,
+	0x74, 0x69, 0x6e, 0x67, 0x49, 0x64, 0x12, 0x17, 0x0a, 0x07, 0x75, 0x73, 0x65, 0x72, 0x5f, 0x69,
+	0x64, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52, 0x06, 0x75, 0x73, 0x65, 0x72, 0x49, 0x64, 0x22,
+	0x54, 0x0a, 0x1a, 0x43, 0x61, 0x6e, 0x63, 0x65, 0x6c, 0x4d, 0x65, 0x65, 0x74, 0x69, 0x6e, 0x67,
+	0x49, 0x6e, 0x76, 0x69, 0x74, 0x65, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x12, 0x1d, 0x0a,
+	0x0a, 0x6d, 0x65, 0x65, 0x74, 0x69, 0x6e, 0x67, 0x5f, 0x69, 0x64, 0x18, 0x01, 0x20, 0x01, 0x28,
+	0x09, 0x52, 0x09, 0x6d, 0x65, 0x65, 0x74, 0x69, 0x6e, 0x67, 0x49, 0x64, 0x12, 0x17, 0x0a, 0x07,
+	0x75, 0x73, 0x65, 0x72, 0x5f, 0x69, 0x64, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52, 0x06, 0x75,
+	0x73, 0x65, 0x72, 0x49, 0x64, 0x22, 0x55, 0x0a, 0x1b, 0x44, 0x65, 0x63, 0x6c, 0x69, 0x6e, 0x65,
+	0x4d, 0x65, 0x65, 0x74, 0x69, 0x6e, 0x67, 0x49, 0x6e, 0x76, 0x69, 0x74, 0x65, 0x52, 0x65, 0x71,
+	0x75, 0x65, 0x73, 0x74, 0x12, 0x1d, 0x0a, 0x0a, 0x6d, 0x65, 0x65, 0x74, 0x69, 0x6e, 0x67, 0x5f,
+	0x69, 0x64, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x09, 0x6d, 0x65, 0x65, 0x74, 0x69, 0x6e,
+	0x67, 0x49, 0x64, 0x12, 0x17, 0x0a, 0x07, 0x75, 0x73, 0x65, 0x72, 0x5f, 0x69, 0x64, 0x18, 0x02,
+	0x20, 0x01, 0x28, 0x09, 0x52, 0x06, 0x75, 0x73, 0x65, 0x72, 0x49, 0x64, 0x22, 0x35, 0x0a, 0x1a,
+	0x47, 0x65, 0x74, 0x55, 0x70, 0x63, 0x6f, 0x6d, 0x69, 0x6e, 0x67, 0x4d, 0x65, 0x65, 0x74, 0x69,
+	0x6e, 0x67, 0x73, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x12, 0x17, 0x0a, 0x07, 0x75, 0x73,
+	0x65, 0x72, 0x5f, 0x69, 0x64, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x06, 0x75, 0x73, 0x65,
+	0x72, 0x49, 0x64, 0x22, 0x65, 0x0a, 0x1b, 0x47, 0x65, 0x74, 0x55, 0x70, 0x63, 0x6f, 0x6d, 0x69,
+	0x6e, 0x67, 0x4d, 0x65, 0x65, 0x74, 0x69, 0x6e, 0x67, 0x73, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e,
+	0x73, 0x65, 0x12, 0x46, 0x0a, 0x08, 0x6d, 0x65, 0x65, 0x74, 0x69, 0x6e, 0x67, 0x73, 0x18, 0x01,
+	0x20, 0x03, 0x28, 0x0b, 0x32, 0x2a, 0x2e, 0x63, 0x6f, 0x6e, 0x6e, 0x65, 0x63, 0x74, 0x69, 0x6f,
+	0x6e, 0x73, 0x2e, 0x6d, 0x65, 0x65, 0x74, 0x69, 0x6e, 0x67, 0x2e, 0x55, 0x73, 0x65, 0x72, 0x4d,
+	0x65, 0x65, 0x74, 0x69, 0x6e, 0x67, 0x43, 0x6f, 0x6e, 0x6e, 0x65, 0x63, 0x74, 0x69, 0x6f, 0x6e,
+	0x52, 0x08, 0x6d, 0x65, 0x65, 0x74, 0x69, 0x6e, 0x67, 0x73, 0x22, 0x34, 0x0a, 0x19, 0x47, 0x65,
+	0x74, 0x50, 0x65, 0x6e, 0x64, 0x69, 0x6e, 0x67, 0x4d, 0x65, 0x65, 0x74, 0x69, 0x6e, 0x67, 0x73,
+	0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x12, 0x17, 0x0a, 0x07, 0x75, 0x73, 0x65, 0x72, 0x5f,
+	0x69, 0x64, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x06, 0x75, 0x73, 0x65, 0x72, 0x49, 0x64,
+	0x22, 0x64, 0x0a, 0x1a, 0x47, 0x65, 0x74, 0x50, 0x65, 0x6e, 0x64, 0x69, 0x6e, 0x67, 0x4d, 0x65,
+	0x65, 0x74, 0x69, 0x6e, 0x67, 0x73, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x46,
+	0x0a, 0x08, 0x6d, 0x65, 0x65, 0x74, 0x69, 0x6e, 0x67, 0x73, 0x18, 0x01, 0x20, 0x03, 0x28, 0x0b,
+	0x32, 0x2a, 0x2e, 0x63, 0x6f, 0x6e, 0x6e, 0x65, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x2e, 0x6d,
+	0x65, 0x65, 0x74, 0x69, 0x6e, 0x67, 0x2e, 0x55, 0x73, 0x65, 0x72, 0x4d, 0x65, 0x65, 0x74, 0x69,
+	0x6e, 0x67, 0x43, 0x6f, 0x6e, 0x6e, 0x65, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x52, 0x08, 0x6d, 0x65,
+	0x65, 0x74, 0x69, 0x6e, 0x67, 0x73, 0x22, 0x67, 0x0a, 0x25, 0x47, 0x65, 0x74, 0x55, 0x70, 0x63,
 	0x6f, 0x6d, 0x69, 0x6e, 0x67, 0x4d, 0x65, 0x65, 0x74, 0x69, 0x6e, 0x67, 0x42, 0x65, 0x74, 0x77,
 	0x65, 0x65, 0x6e, 0x55, 0x73, 0x65, 0x72, 0x73, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x12,
 	0x20, 0x0a, 0x0c, 0x66, 0x6f, 0x72, 0x6d, 0x5f, 0x75, 0x73, 0x65, 0x72, 0x5f, 0x69, 0x64, 0x18,
@@ -1988,91 +2063,94 @@ func file_api_protobuf_spec_connection_meeting_v1_proto_rawDescGZIP() []byte {
 	return file_api_protobuf_spec_connection_meeting_v1_proto_rawDescData
 }
 
-var file_api_protobuf_spec_connection_meeting_v1_proto_msgTypes = make([]protoimpl.MessageInfo, 28)
+var file_api_protobuf_spec_connection_meeting_v1_proto_msgTypes = make([]protoimpl.MessageInfo, 29)
 var file_api_protobuf_spec_connection_meeting_v1_proto_goTypes = []interface{}{
 	(*Meeting)(nil),                                // 0: connections.meeting.Meeting
 	(*MeetingVibe)(nil),                            // 1: connections.meeting.MeetingVibe
-	(*GetMeetingRequest)(nil),                      // 2: connections.meeting.GetMeetingRequest
-	(*GetMeetingResponse)(nil),                     // 3: connections.meeting.GetMeetingResponse
-	(*SendMeetingInviteRequest)(nil),               // 4: connections.meeting.SendMeetingInviteRequest
-	(*SendMeetingInviteResponse)(nil),              // 5: connections.meeting.SendMeetingInviteResponse
-	(*UpdateMeetingInviteRequest)(nil),             // 6: connections.meeting.UpdateMeetingInviteRequest
-	(*AcceptMeetingInviteRequest)(nil),             // 7: connections.meeting.AcceptMeetingInviteRequest
-	(*CancelMeetingInviteRequest)(nil),             // 8: connections.meeting.CancelMeetingInviteRequest
-	(*DeclineMeetingInviteRequest)(nil),            // 9: connections.meeting.DeclineMeetingInviteRequest
-	(*GetUpcomingMeetingsRequest)(nil),             // 10: connections.meeting.GetUpcomingMeetingsRequest
-	(*GetUpcomingMeetingsResponse)(nil),            // 11: connections.meeting.GetUpcomingMeetingsResponse
-	(*GetPendingMeetingsRequest)(nil),              // 12: connections.meeting.GetPendingMeetingsRequest
-	(*GetPendingMeetingsResponse)(nil),             // 13: connections.meeting.GetPendingMeetingsResponse
-	(*GetUpcomingMeetingBetweenUsersRequest)(nil),  // 14: connections.meeting.GetUpcomingMeetingBetweenUsersRequest
-	(*GetUpcomingMeetingBetweenUsersResponse)(nil), // 15: connections.meeting.GetUpcomingMeetingBetweenUsersResponse
-	(*SendMeetingVibeRequest)(nil),                 // 16: connections.meeting.SendMeetingVibeRequest
-	(*SendMeetingVibeResponse)(nil),                // 17: connections.meeting.SendMeetingVibeResponse
-	(*GetMeetingVibeRequest)(nil),                  // 18: connections.meeting.GetMeetingVibeRequest
-	(*GetMeetingVibeResponse)(nil),                 // 19: connections.meeting.GetMeetingVibeResponse
-	(*GetMeetingVibesSentRequest)(nil),             // 20: connections.meeting.GetMeetingVibesSentRequest
-	(*MeetingVibesSentConnection)(nil),             // 21: connections.meeting.MeetingVibesSentConnection
-	(*GetMeetingVibesSentResponse)(nil),            // 22: connections.meeting.GetMeetingVibesSentResponse
-	(*GetMeetingVibesReceivedRequest)(nil),         // 23: connections.meeting.GetMeetingVibesReceivedRequest
-	(*MeetingVibesReceivedConnection)(nil),         // 24: connections.meeting.MeetingVibesReceivedConnection
-	(*GetMeetingVibesReceivedResponse)(nil),        // 25: connections.meeting.GetMeetingVibesReceivedResponse
-	(*GetMeetingVibesFromMeetingRequest)(nil),      // 26: connections.meeting.GetMeetingVibesFromMeetingRequest
-	(*GetMeetingVibesFromMeetingResponse)(nil),     // 27: connections.meeting.GetMeetingVibesFromMeetingResponse
-	(*timestamp.Timestamp)(nil),                    // 28: google.protobuf.Timestamp
-	(*empty.Empty)(nil),                            // 29: google.protobuf.Empty
+	(*UserMeetingConnection)(nil),                  // 2: connections.meeting.UserMeetingConnection
+	(*GetMeetingRequest)(nil),                      // 3: connections.meeting.GetMeetingRequest
+	(*GetMeetingResponse)(nil),                     // 4: connections.meeting.GetMeetingResponse
+	(*SendMeetingInviteRequest)(nil),               // 5: connections.meeting.SendMeetingInviteRequest
+	(*SendMeetingInviteResponse)(nil),              // 6: connections.meeting.SendMeetingInviteResponse
+	(*UpdateMeetingInviteRequest)(nil),             // 7: connections.meeting.UpdateMeetingInviteRequest
+	(*AcceptMeetingInviteRequest)(nil),             // 8: connections.meeting.AcceptMeetingInviteRequest
+	(*CancelMeetingInviteRequest)(nil),             // 9: connections.meeting.CancelMeetingInviteRequest
+	(*DeclineMeetingInviteRequest)(nil),            // 10: connections.meeting.DeclineMeetingInviteRequest
+	(*GetUpcomingMeetingsRequest)(nil),             // 11: connections.meeting.GetUpcomingMeetingsRequest
+	(*GetUpcomingMeetingsResponse)(nil),            // 12: connections.meeting.GetUpcomingMeetingsResponse
+	(*GetPendingMeetingsRequest)(nil),              // 13: connections.meeting.GetPendingMeetingsRequest
+	(*GetPendingMeetingsResponse)(nil),             // 14: connections.meeting.GetPendingMeetingsResponse
+	(*GetUpcomingMeetingBetweenUsersRequest)(nil),  // 15: connections.meeting.GetUpcomingMeetingBetweenUsersRequest
+	(*GetUpcomingMeetingBetweenUsersResponse)(nil), // 16: connections.meeting.GetUpcomingMeetingBetweenUsersResponse
+	(*SendMeetingVibeRequest)(nil),                 // 17: connections.meeting.SendMeetingVibeRequest
+	(*SendMeetingVibeResponse)(nil),                // 18: connections.meeting.SendMeetingVibeResponse
+	(*GetMeetingVibeRequest)(nil),                  // 19: connections.meeting.GetMeetingVibeRequest
+	(*GetMeetingVibeResponse)(nil),                 // 20: connections.meeting.GetMeetingVibeResponse
+	(*GetMeetingVibesSentRequest)(nil),             // 21: connections.meeting.GetMeetingVibesSentRequest
+	(*MeetingVibesSentConnection)(nil),             // 22: connections.meeting.MeetingVibesSentConnection
+	(*GetMeetingVibesSentResponse)(nil),            // 23: connections.meeting.GetMeetingVibesSentResponse
+	(*GetMeetingVibesReceivedRequest)(nil),         // 24: connections.meeting.GetMeetingVibesReceivedRequest
+	(*MeetingVibesReceivedConnection)(nil),         // 25: connections.meeting.MeetingVibesReceivedConnection
+	(*GetMeetingVibesReceivedResponse)(nil),        // 26: connections.meeting.GetMeetingVibesReceivedResponse
+	(*GetMeetingVibesFromMeetingRequest)(nil),      // 27: connections.meeting.GetMeetingVibesFromMeetingRequest
+	(*GetMeetingVibesFromMeetingResponse)(nil),     // 28: connections.meeting.GetMeetingVibesFromMeetingResponse
+	(*timestamp.Timestamp)(nil),                    // 29: google.protobuf.Timestamp
+	(*empty.Empty)(nil),                            // 30: google.protobuf.Empty
 }
 var file_api_protobuf_spec_connection_meeting_v1_proto_depIdxs = []int32{
-	28, // 0: connections.meeting.Meeting.beginning:type_name -> google.protobuf.Timestamp
-	28, // 1: connections.meeting.Meeting.accepted:type_name -> google.protobuf.Timestamp
-	28, // 2: connections.meeting.Meeting.created:type_name -> google.protobuf.Timestamp
-	28, // 3: connections.meeting.Meeting.updated:type_name -> google.protobuf.Timestamp
-	28, // 4: connections.meeting.Meeting.canceled:type_name -> google.protobuf.Timestamp
-	28, // 5: connections.meeting.Meeting.declined:type_name -> google.protobuf.Timestamp
-	28, // 6: connections.meeting.Meeting.ending:type_name -> google.protobuf.Timestamp
-	28, // 7: connections.meeting.MeetingVibe.created:type_name -> google.protobuf.Timestamp
-	28, // 8: connections.meeting.MeetingVibe.updated:type_name -> google.protobuf.Timestamp
+	29, // 0: connections.meeting.Meeting.beginning:type_name -> google.protobuf.Timestamp
+	29, // 1: connections.meeting.Meeting.accepted:type_name -> google.protobuf.Timestamp
+	29, // 2: connections.meeting.Meeting.created:type_name -> google.protobuf.Timestamp
+	29, // 3: connections.meeting.Meeting.updated:type_name -> google.protobuf.Timestamp
+	29, // 4: connections.meeting.Meeting.canceled:type_name -> google.protobuf.Timestamp
+	29, // 5: connections.meeting.Meeting.declined:type_name -> google.protobuf.Timestamp
+	29, // 6: connections.meeting.Meeting.ending:type_name -> google.protobuf.Timestamp
+	29, // 7: connections.meeting.MeetingVibe.created:type_name -> google.protobuf.Timestamp
+	29, // 8: connections.meeting.MeetingVibe.updated:type_name -> google.protobuf.Timestamp
 	0,  // 9: connections.meeting.GetMeetingResponse.meeting:type_name -> connections.meeting.Meeting
-	28, // 10: connections.meeting.SendMeetingInviteRequest.beginning:type_name -> google.protobuf.Timestamp
-	28, // 11: connections.meeting.SendMeetingInviteRequest.ending:type_name -> google.protobuf.Timestamp
-	28, // 12: connections.meeting.UpdateMeetingInviteRequest.beginning:type_name -> google.protobuf.Timestamp
-	28, // 13: connections.meeting.UpdateMeetingInviteRequest.ending:type_name -> google.protobuf.Timestamp
-	1,  // 14: connections.meeting.SendMeetingVibeRequest.meeting_vibe:type_name -> connections.meeting.MeetingVibe
-	1,  // 15: connections.meeting.GetMeetingVibeResponse.vibe:type_name -> connections.meeting.MeetingVibe
-	21, // 16: connections.meeting.GetMeetingVibesSentResponse.vibes_connection:type_name -> connections.meeting.MeetingVibesSentConnection
-	24, // 17: connections.meeting.GetMeetingVibesReceivedResponse.vibes_connection:type_name -> connections.meeting.MeetingVibesReceivedConnection
-	2,  // 18: connections.meeting.MeetingService.GetMeeting:input_type -> connections.meeting.GetMeetingRequest
-	4,  // 19: connections.meeting.MeetingService.SendMeetingInvite:input_type -> connections.meeting.SendMeetingInviteRequest
-	6,  // 20: connections.meeting.MeetingService.UpdateMeetingInvite:input_type -> connections.meeting.UpdateMeetingInviteRequest
-	7,  // 21: connections.meeting.MeetingService.AcceptMeetingInvite:input_type -> connections.meeting.AcceptMeetingInviteRequest
-	8,  // 22: connections.meeting.MeetingService.CancelMeetingInvite:input_type -> connections.meeting.CancelMeetingInviteRequest
-	9,  // 23: connections.meeting.MeetingService.DeclineMeetingInvite:input_type -> connections.meeting.DeclineMeetingInviteRequest
-	10, // 24: connections.meeting.MeetingService.GetUpcomingMeetings:input_type -> connections.meeting.GetUpcomingMeetingsRequest
-	12, // 25: connections.meeting.MeetingService.GetPendingMeetings:input_type -> connections.meeting.GetPendingMeetingsRequest
-	14, // 26: connections.meeting.MeetingService.GetUpcomingMeetingBetweenUsers:input_type -> connections.meeting.GetUpcomingMeetingBetweenUsersRequest
-	18, // 27: connections.meeting.MeetingService.GetMeetingVibe:input_type -> connections.meeting.GetMeetingVibeRequest
-	16, // 28: connections.meeting.MeetingService.SendMeetingVibe:input_type -> connections.meeting.SendMeetingVibeRequest
-	20, // 29: connections.meeting.MeetingService.GetMeetingVibesSent:input_type -> connections.meeting.GetMeetingVibesSentRequest
-	23, // 30: connections.meeting.MeetingService.GetMeetingVibesReceived:input_type -> connections.meeting.GetMeetingVibesReceivedRequest
-	26, // 31: connections.meeting.MeetingService.GetMeetingVibesFromMeeting:input_type -> connections.meeting.GetMeetingVibesFromMeetingRequest
-	3,  // 32: connections.meeting.MeetingService.GetMeeting:output_type -> connections.meeting.GetMeetingResponse
-	5,  // 33: connections.meeting.MeetingService.SendMeetingInvite:output_type -> connections.meeting.SendMeetingInviteResponse
-	29, // 34: connections.meeting.MeetingService.UpdateMeetingInvite:output_type -> google.protobuf.Empty
-	29, // 35: connections.meeting.MeetingService.AcceptMeetingInvite:output_type -> google.protobuf.Empty
-	29, // 36: connections.meeting.MeetingService.CancelMeetingInvite:output_type -> google.protobuf.Empty
-	29, // 37: connections.meeting.MeetingService.DeclineMeetingInvite:output_type -> google.protobuf.Empty
-	11, // 38: connections.meeting.MeetingService.GetUpcomingMeetings:output_type -> connections.meeting.GetUpcomingMeetingsResponse
-	13, // 39: connections.meeting.MeetingService.GetPendingMeetings:output_type -> connections.meeting.GetPendingMeetingsResponse
-	15, // 40: connections.meeting.MeetingService.GetUpcomingMeetingBetweenUsers:output_type -> connections.meeting.GetUpcomingMeetingBetweenUsersResponse
-	19, // 41: connections.meeting.MeetingService.GetMeetingVibe:output_type -> connections.meeting.GetMeetingVibeResponse
-	17, // 42: connections.meeting.MeetingService.SendMeetingVibe:output_type -> connections.meeting.SendMeetingVibeResponse
-	22, // 43: connections.meeting.MeetingService.GetMeetingVibesSent:output_type -> connections.meeting.GetMeetingVibesSentResponse
-	25, // 44: connections.meeting.MeetingService.GetMeetingVibesReceived:output_type -> connections.meeting.GetMeetingVibesReceivedResponse
-	27, // 45: connections.meeting.MeetingService.GetMeetingVibesFromMeeting:output_type -> connections.meeting.GetMeetingVibesFromMeetingResponse
-	32, // [32:46] is the sub-list for method output_type
-	18, // [18:32] is the sub-list for method input_type
-	18, // [18:18] is the sub-list for extension type_name
-	18, // [18:18] is the sub-list for extension extendee
-	0,  // [0:18] is the sub-list for field type_name
+	29, // 10: connections.meeting.SendMeetingInviteRequest.beginning:type_name -> google.protobuf.Timestamp
+	29, // 11: connections.meeting.SendMeetingInviteRequest.ending:type_name -> google.protobuf.Timestamp
+	29, // 12: connections.meeting.UpdateMeetingInviteRequest.beginning:type_name -> google.protobuf.Timestamp
+	29, // 13: connections.meeting.UpdateMeetingInviteRequest.ending:type_name -> google.protobuf.Timestamp
+	2,  // 14: connections.meeting.GetUpcomingMeetingsResponse.meetings:type_name -> connections.meeting.UserMeetingConnection
+	2,  // 15: connections.meeting.GetPendingMeetingsResponse.meetings:type_name -> connections.meeting.UserMeetingConnection
+	1,  // 16: connections.meeting.SendMeetingVibeRequest.meeting_vibe:type_name -> connections.meeting.MeetingVibe
+	1,  // 17: connections.meeting.GetMeetingVibeResponse.vibe:type_name -> connections.meeting.MeetingVibe
+	22, // 18: connections.meeting.GetMeetingVibesSentResponse.vibes_connection:type_name -> connections.meeting.MeetingVibesSentConnection
+	25, // 19: connections.meeting.GetMeetingVibesReceivedResponse.vibes_connection:type_name -> connections.meeting.MeetingVibesReceivedConnection
+	3,  // 20: connections.meeting.MeetingService.GetMeeting:input_type -> connections.meeting.GetMeetingRequest
+	5,  // 21: connections.meeting.MeetingService.SendMeetingInvite:input_type -> connections.meeting.SendMeetingInviteRequest
+	7,  // 22: connections.meeting.MeetingService.UpdateMeetingInvite:input_type -> connections.meeting.UpdateMeetingInviteRequest
+	8,  // 23: connections.meeting.MeetingService.AcceptMeetingInvite:input_type -> connections.meeting.AcceptMeetingInviteRequest
+	9,  // 24: connections.meeting.MeetingService.CancelMeetingInvite:input_type -> connections.meeting.CancelMeetingInviteRequest
+	10, // 25: connections.meeting.MeetingService.DeclineMeetingInvite:input_type -> connections.meeting.DeclineMeetingInviteRequest
+	11, // 26: connections.meeting.MeetingService.GetUpcomingMeetings:input_type -> connections.meeting.GetUpcomingMeetingsRequest
+	13, // 27: connections.meeting.MeetingService.GetPendingMeetings:input_type -> connections.meeting.GetPendingMeetingsRequest
+	15, // 28: connections.meeting.MeetingService.GetUpcomingMeetingBetweenUsers:input_type -> connections.meeting.GetUpcomingMeetingBetweenUsersRequest
+	19, // 29: connections.meeting.MeetingService.GetMeetingVibe:input_type -> connections.meeting.GetMeetingVibeRequest
+	17, // 30: connections.meeting.MeetingService.SendMeetingVibe:input_type -> connections.meeting.SendMeetingVibeRequest
+	21, // 31: connections.meeting.MeetingService.GetMeetingVibesSent:input_type -> connections.meeting.GetMeetingVibesSentRequest
+	24, // 32: connections.meeting.MeetingService.GetMeetingVibesReceived:input_type -> connections.meeting.GetMeetingVibesReceivedRequest
+	27, // 33: connections.meeting.MeetingService.GetMeetingVibesFromMeeting:input_type -> connections.meeting.GetMeetingVibesFromMeetingRequest
+	4,  // 34: connections.meeting.MeetingService.GetMeeting:output_type -> connections.meeting.GetMeetingResponse
+	6,  // 35: connections.meeting.MeetingService.SendMeetingInvite:output_type -> connections.meeting.SendMeetingInviteResponse
+	30, // 36: connections.meeting.MeetingService.UpdateMeetingInvite:output_type -> google.protobuf.Empty
+	30, // 37: connections.meeting.MeetingService.AcceptMeetingInvite:output_type -> google.protobuf.Empty
+	30, // 38: connections.meeting.MeetingService.CancelMeetingInvite:output_type -> google.protobuf.Empty
+	30, // 39: connections.meeting.MeetingService.DeclineMeetingInvite:output_type -> google.protobuf.Empty
+	12, // 40: connections.meeting.MeetingService.GetUpcomingMeetings:output_type -> connections.meeting.GetUpcomingMeetingsResponse
+	14, // 41: connections.meeting.MeetingService.GetPendingMeetings:output_type -> connections.meeting.GetPendingMeetingsResponse
+	16, // 42: connections.meeting.MeetingService.GetUpcomingMeetingBetweenUsers:output_type -> connections.meeting.GetUpcomingMeetingBetweenUsersResponse
+	20, // 43: connections.meeting.MeetingService.GetMeetingVibe:output_type -> connections.meeting.GetMeetingVibeResponse
+	18, // 44: connections.meeting.MeetingService.SendMeetingVibe:output_type -> connections.meeting.SendMeetingVibeResponse
+	23, // 45: connections.meeting.MeetingService.GetMeetingVibesSent:output_type -> connections.meeting.GetMeetingVibesSentResponse
+	26, // 46: connections.meeting.MeetingService.GetMeetingVibesReceived:output_type -> connections.meeting.GetMeetingVibesReceivedResponse
+	28, // 47: connections.meeting.MeetingService.GetMeetingVibesFromMeeting:output_type -> connections.meeting.GetMeetingVibesFromMeetingResponse
+	34, // [34:48] is the sub-list for method output_type
+	20, // [20:34] is the sub-list for method input_type
+	20, // [20:20] is the sub-list for extension type_name
+	20, // [20:20] is the sub-list for extension extendee
+	0,  // [0:20] is the sub-list for field type_name
 }
 
 func init() { file_api_protobuf_spec_connection_meeting_v1_proto_init() }
@@ -2106,7 +2184,7 @@ func file_api_protobuf_spec_connection_meeting_v1_proto_init() {
 			}
 		}
 		file_api_protobuf_spec_connection_meeting_v1_proto_msgTypes[2].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*GetMeetingRequest); i {
+			switch v := v.(*UserMeetingConnection); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -2118,7 +2196,7 @@ func file_api_protobuf_spec_connection_meeting_v1_proto_init() {
 			}
 		}
 		file_api_protobuf_spec_connection_meeting_v1_proto_msgTypes[3].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*GetMeetingResponse); i {
+			switch v := v.(*GetMeetingRequest); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -2130,7 +2208,7 @@ func file_api_protobuf_spec_connection_meeting_v1_proto_init() {
 			}
 		}
 		file_api_protobuf_spec_connection_meeting_v1_proto_msgTypes[4].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*SendMeetingInviteRequest); i {
+			switch v := v.(*GetMeetingResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -2142,7 +2220,7 @@ func file_api_protobuf_spec_connection_meeting_v1_proto_init() {
 			}
 		}
 		file_api_protobuf_spec_connection_meeting_v1_proto_msgTypes[5].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*SendMeetingInviteResponse); i {
+			switch v := v.(*SendMeetingInviteRequest); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -2154,7 +2232,7 @@ func file_api_protobuf_spec_connection_meeting_v1_proto_init() {
 			}
 		}
 		file_api_protobuf_spec_connection_meeting_v1_proto_msgTypes[6].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*UpdateMeetingInviteRequest); i {
+			switch v := v.(*SendMeetingInviteResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -2166,7 +2244,7 @@ func file_api_protobuf_spec_connection_meeting_v1_proto_init() {
 			}
 		}
 		file_api_protobuf_spec_connection_meeting_v1_proto_msgTypes[7].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*AcceptMeetingInviteRequest); i {
+			switch v := v.(*UpdateMeetingInviteRequest); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -2178,7 +2256,7 @@ func file_api_protobuf_spec_connection_meeting_v1_proto_init() {
 			}
 		}
 		file_api_protobuf_spec_connection_meeting_v1_proto_msgTypes[8].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*CancelMeetingInviteRequest); i {
+			switch v := v.(*AcceptMeetingInviteRequest); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -2190,7 +2268,7 @@ func file_api_protobuf_spec_connection_meeting_v1_proto_init() {
 			}
 		}
 		file_api_protobuf_spec_connection_meeting_v1_proto_msgTypes[9].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*DeclineMeetingInviteRequest); i {
+			switch v := v.(*CancelMeetingInviteRequest); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -2202,7 +2280,7 @@ func file_api_protobuf_spec_connection_meeting_v1_proto_init() {
 			}
 		}
 		file_api_protobuf_spec_connection_meeting_v1_proto_msgTypes[10].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*GetUpcomingMeetingsRequest); i {
+			switch v := v.(*DeclineMeetingInviteRequest); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -2214,7 +2292,7 @@ func file_api_protobuf_spec_connection_meeting_v1_proto_init() {
 			}
 		}
 		file_api_protobuf_spec_connection_meeting_v1_proto_msgTypes[11].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*GetUpcomingMeetingsResponse); i {
+			switch v := v.(*GetUpcomingMeetingsRequest); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -2226,7 +2304,7 @@ func file_api_protobuf_spec_connection_meeting_v1_proto_init() {
 			}
 		}
 		file_api_protobuf_spec_connection_meeting_v1_proto_msgTypes[12].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*GetPendingMeetingsRequest); i {
+			switch v := v.(*GetUpcomingMeetingsResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -2238,7 +2316,7 @@ func file_api_protobuf_spec_connection_meeting_v1_proto_init() {
 			}
 		}
 		file_api_protobuf_spec_connection_meeting_v1_proto_msgTypes[13].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*GetPendingMeetingsResponse); i {
+			switch v := v.(*GetPendingMeetingsRequest); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -2250,7 +2328,7 @@ func file_api_protobuf_spec_connection_meeting_v1_proto_init() {
 			}
 		}
 		file_api_protobuf_spec_connection_meeting_v1_proto_msgTypes[14].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*GetUpcomingMeetingBetweenUsersRequest); i {
+			switch v := v.(*GetPendingMeetingsResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -2262,7 +2340,7 @@ func file_api_protobuf_spec_connection_meeting_v1_proto_init() {
 			}
 		}
 		file_api_protobuf_spec_connection_meeting_v1_proto_msgTypes[15].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*GetUpcomingMeetingBetweenUsersResponse); i {
+			switch v := v.(*GetUpcomingMeetingBetweenUsersRequest); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -2274,7 +2352,7 @@ func file_api_protobuf_spec_connection_meeting_v1_proto_init() {
 			}
 		}
 		file_api_protobuf_spec_connection_meeting_v1_proto_msgTypes[16].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*SendMeetingVibeRequest); i {
+			switch v := v.(*GetUpcomingMeetingBetweenUsersResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -2286,7 +2364,7 @@ func file_api_protobuf_spec_connection_meeting_v1_proto_init() {
 			}
 		}
 		file_api_protobuf_spec_connection_meeting_v1_proto_msgTypes[17].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*SendMeetingVibeResponse); i {
+			switch v := v.(*SendMeetingVibeRequest); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -2298,7 +2376,7 @@ func file_api_protobuf_spec_connection_meeting_v1_proto_init() {
 			}
 		}
 		file_api_protobuf_spec_connection_meeting_v1_proto_msgTypes[18].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*GetMeetingVibeRequest); i {
+			switch v := v.(*SendMeetingVibeResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -2310,7 +2388,7 @@ func file_api_protobuf_spec_connection_meeting_v1_proto_init() {
 			}
 		}
 		file_api_protobuf_spec_connection_meeting_v1_proto_msgTypes[19].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*GetMeetingVibeResponse); i {
+			switch v := v.(*GetMeetingVibeRequest); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -2322,7 +2400,7 @@ func file_api_protobuf_spec_connection_meeting_v1_proto_init() {
 			}
 		}
 		file_api_protobuf_spec_connection_meeting_v1_proto_msgTypes[20].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*GetMeetingVibesSentRequest); i {
+			switch v := v.(*GetMeetingVibeResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -2334,7 +2412,7 @@ func file_api_protobuf_spec_connection_meeting_v1_proto_init() {
 			}
 		}
 		file_api_protobuf_spec_connection_meeting_v1_proto_msgTypes[21].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*MeetingVibesSentConnection); i {
+			switch v := v.(*GetMeetingVibesSentRequest); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -2346,7 +2424,7 @@ func file_api_protobuf_spec_connection_meeting_v1_proto_init() {
 			}
 		}
 		file_api_protobuf_spec_connection_meeting_v1_proto_msgTypes[22].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*GetMeetingVibesSentResponse); i {
+			switch v := v.(*MeetingVibesSentConnection); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -2358,7 +2436,7 @@ func file_api_protobuf_spec_connection_meeting_v1_proto_init() {
 			}
 		}
 		file_api_protobuf_spec_connection_meeting_v1_proto_msgTypes[23].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*GetMeetingVibesReceivedRequest); i {
+			switch v := v.(*GetMeetingVibesSentResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -2370,7 +2448,7 @@ func file_api_protobuf_spec_connection_meeting_v1_proto_init() {
 			}
 		}
 		file_api_protobuf_spec_connection_meeting_v1_proto_msgTypes[24].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*MeetingVibesReceivedConnection); i {
+			switch v := v.(*GetMeetingVibesReceivedRequest); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -2382,7 +2460,7 @@ func file_api_protobuf_spec_connection_meeting_v1_proto_init() {
 			}
 		}
 		file_api_protobuf_spec_connection_meeting_v1_proto_msgTypes[25].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*GetMeetingVibesReceivedResponse); i {
+			switch v := v.(*MeetingVibesReceivedConnection); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -2394,7 +2472,7 @@ func file_api_protobuf_spec_connection_meeting_v1_proto_init() {
 			}
 		}
 		file_api_protobuf_spec_connection_meeting_v1_proto_msgTypes[26].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*GetMeetingVibesFromMeetingRequest); i {
+			switch v := v.(*GetMeetingVibesReceivedResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -2406,6 +2484,18 @@ func file_api_protobuf_spec_connection_meeting_v1_proto_init() {
 			}
 		}
 		file_api_protobuf_spec_connection_meeting_v1_proto_msgTypes[27].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*GetMeetingVibesFromMeetingRequest); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_api_protobuf_spec_connection_meeting_v1_proto_msgTypes[28].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*GetMeetingVibesFromMeetingResponse); i {
 			case 0:
 				return &v.state
@@ -2424,7 +2514,7 @@ func file_api_protobuf_spec_connection_meeting_v1_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: file_api_protobuf_spec_connection_meeting_v1_proto_rawDesc,
 			NumEnums:      0,
-			NumMessages:   28,
+			NumMessages:   29,
 			NumExtensions: 0,
 			NumServices:   1,
 		},
