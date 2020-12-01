@@ -53,6 +53,11 @@ message GetUsersRequest {
   repeated string users = 1;
 }
 
+message GetUsersWithRequesterRequest {
+  repeated string users = 1;
+  string requester = 2;
+}
+
 message GetUsersResponse {
   repeated User user = 1;
 }
@@ -110,6 +115,7 @@ service UserService{
   rpc GetUser(GetUserRequest) returns (GetUserResponse) {};
   rpc GetUserFromInternalService(GetUserFromInternalServiceRequest) returns (GetUserResponse) {};
   rpc GetUsers(GetUsersRequest) returns (GetUsersResponse) {};
+  rpc GetUsersWithRequester(GetUsersWithRequesterRequest) returns (GetUsersResponse) {};
   rpc GetUserProfileStrength(GetUserProfileStrengthRequest) returns (GetUserProfileStrengthResponse) {};
   rpc UpdateProfile(UpdateProfileRequest) returns (UpdateProfileResponse) {};
   rpc UpdateAvatar(UpdateAvatarRequest) returns (google.protobuf.Empty) {};
