@@ -46,6 +46,14 @@ message GetMeetingResponse {
   Meeting meeting = 1;
 }
 
+message GetMeetingsRequest {
+  repeated string ids = 1;
+}
+
+message GetMeetingsResponse {
+  repeated Meeting meetings = 1;
+}
+
 message SendMeetingInviteRequest {
   google.protobuf.Timestamp beginning = 1;
   google.protobuf.Timestamp ending = 2;
@@ -127,6 +135,14 @@ message GetMeetingVibeResponse {
   MeetingVibe vibe = 1;
 }
 
+message GetMeetingVibesRequest {
+  repeated string ids = 1;
+}
+
+message GetMeetingVibesResponse {
+  repeated MeetingVibe vibes = 1;
+}
+
 message GetMeetingVibesSentRequest {
   string user_id = 1;
 }
@@ -171,6 +187,7 @@ message FetchNumberOfNewConnectionsResponse {
 
 service MeetingService {
   rpc GetMeeting(GetMeetingRequest) returns (GetMeetingResponse) {};
+  rpc GetMeetings(GetMeetingsRequest) returns (GetMeetingsResponse) {};
   rpc SendMeetingInvite(SendMeetingInviteRequest) returns (SendMeetingInviteResponse) {};
   rpc UpdateMeetingInvite(UpdateMeetingInviteRequest) returns (google.protobuf.Empty) {};
   rpc AcceptMeetingInvite(AcceptMeetingInviteRequest) returns (google.protobuf.Empty) {};
@@ -182,6 +199,7 @@ service MeetingService {
   rpc FetchNumberOfNewConnections(FetchNumberOfNewConnectionsRequest) returns (FetchNumberOfNewConnectionsResponse) {};
 
   rpc GetMeetingVibe(GetMeetingVibeRequest) returns (GetMeetingVibeResponse) {};
+  rpc GetMeetingVibes(GetMeetingVibesRequest) returns (GetMeetingVibesResponse) {};
   rpc SendMeetingVibe(SendMeetingVibeRequest) returns (SendMeetingVibeResponse) {};
   rpc GetMeetingVibesSent(GetMeetingVibesSentRequest) returns (GetMeetingVibesSentResponse) {};
   rpc GetMeetingVibesReceived(GetMeetingVibesReceivedRequest) returns (GetMeetingVibesReceivedResponse) {};
