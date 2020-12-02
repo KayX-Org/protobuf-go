@@ -8,6 +8,7 @@ import "google/protobuf/timestamp.proto";
 message Action {
   string name = 1;
   string action = 2;
+  bool isPrimary = 3;
 }
 
 message Notification {
