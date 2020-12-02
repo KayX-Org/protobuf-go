@@ -141,6 +141,24 @@ message CreateInterestResponse {
   string id = 2;
 }
 
+message CreateOfferedServiceRequest {
+  string name = 1;
+  string user_id = 2;
+}
+
+message CreateOfferedServiceResponse {
+  string id = 2;
+}
+
+message CreateRequestedServiceRequest {
+  string name = 1;
+  string user_id = 2;
+}
+
+message CreateRequestedServiceResponse {
+  string id = 2;
+}
+
 service ResourceService {
   rpc GetInterests(GetInterestsRequests) returns (GetInterestsResponse) {};
   rpc GetMainInterests(google.protobuf.Empty) returns (GetMainInterestsResponse) {};
@@ -155,6 +173,8 @@ service ResourceService {
   rpc ConnectTribeInterests(ConnectTribeInterestsRequests) returns (google.protobuf.Empty) {};
 
   rpc GetServices(GetServicesRequests) returns (GetServicesResponse) {};
+  rpc CreateOfferedService(CreateOfferedServiceRequest) returns (CreateOfferedServiceResponse) {};
+  rpc CreateRequestedService(CreateRequestedServiceRequest) returns (CreateRequestedServiceResponse) {};
   rpc GetAllServices(google.protobuf.Empty) returns (GetAllServicesResponse) {};
   rpc SearchServices(SearchServicesRequests) returns (SearchServicesResponse) {};
   rpc GetUserOfferServices(UserOfferServicesRequests) returns (UserOfferServicesResponse) {};
