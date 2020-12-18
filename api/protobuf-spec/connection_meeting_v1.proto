@@ -9,6 +9,7 @@ message Meeting {
   string id = 1;
   string description = 2;
   string location = 3;
+  string creator_id = 11;
   google.protobuf.Timestamp beginning = 4;
   google.protobuf.Timestamp accepted = 5;
   google.protobuf.Timestamp created = 6;
