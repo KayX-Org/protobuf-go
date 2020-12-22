@@ -53,6 +53,10 @@ message GetUsersRequest {
   repeated string users = 1;
 }
 
+message DeleteUserRequest {
+  string user_id = 1;
+}
+
 message GetUsersWithRequesterRequest {
   repeated string users = 1;
   string requester = 2;
@@ -121,6 +125,7 @@ service UserService{
   rpc UpdateAvatar(UpdateAvatarRequest) returns (google.protobuf.Empty) {};
   rpc UpdateEmail(UpdateEmailRequest) returns (google.protobuf.Empty) {};
   rpc UpdateLastUpdatedApp(UpdateLastUpdatedAppRequest) returns (google.protobuf.Empty) {};
+  rpc DeleteUser(DeleteUserRequest) returns (google.protobuf.Empty) {};
   rpc VerifyEmail(VerifyEmailRequest) returns (google.protobuf.Empty) {};
   rpc UserExists(UserExistsRequest) returns (UserExistsResponse) {};
 }
