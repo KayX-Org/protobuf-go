@@ -112,7 +112,6 @@ message UserExistsRequest {
 message VerifyEmailRequest {
   string code = 1;
   string email = 2;
-  string user_id = 3;
 }
 
 service UserService{
