@@ -114,6 +114,11 @@ message VerifyEmailRequest {
   string email = 2;
 }
 
+message VerifyBase64EmailRequest {
+  string code = 1;
+  string base64_email = 2;
+}
+
 service UserService{
   rpc GetUser(GetUserRequest) returns (GetUserResponse) {};
   rpc GetUserFromInternalService(GetUserFromInternalServiceRequest) returns (GetUserResponse) {};
@@ -126,5 +131,6 @@ service UserService{
   rpc UpdateLastUpdatedApp(UpdateLastUpdatedAppRequest) returns (google.protobuf.Empty) {};
   rpc DeleteUser(DeleteUserRequest) returns (google.protobuf.Empty) {};
   rpc VerifyEmail(VerifyEmailRequest) returns (google.protobuf.Empty) {};
+  rpc VerifyBase64Email(VerifyBase64EmailRequest) returns (google.protobuf.Empty) {};
   rpc UserExists(UserExistsRequest) returns (UserExistsResponse) {};
 }
