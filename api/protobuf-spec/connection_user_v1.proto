@@ -80,12 +80,21 @@ message AreConnectedRequest {
   string userToId = 2;
 }
 
+message IsConnectionRequestSentRequest {
+  string userFromId = 1;
+  string userToId = 2;
+}
+
 message DisconnectUsersRequest {
   string userFromId = 1;
   string userToId = 2;
 }
 
 message AreConnectedResponse {
+  bool connected = 1;
+}
+
+message IsConnectionRequestSentResponse {
   bool connected = 1;
 }
 
@@ -101,6 +110,14 @@ message FetchNumberOfNewConnectionsResponse {
   int32 total = 1;
 }
 
+message FetchNumberOfTotalConnectionsRequest {
+  string user_id = 1;
+}
+
+message FetchNumberOfTotalConnectionsResponse {
+  int32 total = 1;
+}
+
 service UserConnectionService {
   rpc UpdateLocation(UpdateLocationRequest) returns (google.protobuf.Empty) {};
   rpc GetLocation(GetLocationRequest) returns (GetLocationResponse) {};
@@ -113,7 +130,9 @@ service UserConnectionService {
   rpc UserDistance(UserDistanceRequest) returns (UserDistanceResponse) {};
   rpc TotalUsers(google.protobuf.Empty) returns (TotalUsersResponse) {};
   rpc AreConnected(AreConnectedRequest) returns (AreConnectedResponse) {};
+  rpc IsConnectionRequestSent(IsConnectionRequestSentRequest) returns (IsConnectionRequestSentResponse) {};
   rpc DisconnectUsers(DisconnectUsersRequest) returns (google.protobuf.Empty) {};
   rpc FetchNumberOfNewConnections(FetchNumberOfNewConnectionsRequest) returns (FetchNumberOfNewConnectionsResponse) {};
+  rpc FetchNumberOfTotalConnections(FetchNumberOfTotalConnectionsRequest) returns (FetchNumberOfTotalConnectionsResponse) {};
 }
 

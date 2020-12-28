@@ -186,6 +186,14 @@ message FetchNumberOfNewConnectionsResponse {
   int32 total = 1;
 }
 
+message FetchNumberOfTotalConnectionsRequest {
+  string user_id = 1;
+}
+
+message FetchNumberOfTotalConnectionsResponse {
+  int32 total = 1;
+}
+
 service MeetingService {
   rpc GetMeeting(GetMeetingRequest) returns (GetMeetingResponse) {};
   rpc GetMeetings(GetMeetingsRequest) returns (GetMeetingsResponse) {};
@@ -198,6 +206,7 @@ service MeetingService {
   rpc GetPendingMeetings(GetPendingMeetingsRequest) returns (GetPendingMeetingsResponse) {};
   rpc GetUpcomingMeetingBetweenUsers(GetUpcomingMeetingBetweenUsersRequest) returns (GetUpcomingMeetingBetweenUsersResponse) {};
   rpc FetchNumberOfNewConnections(FetchNumberOfNewConnectionsRequest) returns (FetchNumberOfNewConnectionsResponse) {};
+  rpc FetchNumberOfTotalConnections(FetchNumberOfTotalConnectionsRequest) returns (FetchNumberOfTotalConnectionsResponse) {};
 
   rpc GetMeetingVibe(GetMeetingVibeRequest) returns (GetMeetingVibeResponse) {};
   rpc GetMeetingVibes(GetMeetingVibesRequest) returns (GetMeetingVibesResponse) {};

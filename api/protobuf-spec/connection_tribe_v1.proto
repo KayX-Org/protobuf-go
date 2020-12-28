@@ -162,6 +162,14 @@ message FetchNumberOfNewConnectionsResponse {
   int32 total = 1;
 }
 
+message FetchNumberOfTotalConnectionsRequest {
+  string user_id = 1;
+}
+
+message FetchNumberOfTotalConnectionsResponse {
+  int32 total = 1;
+}
+
 service TribeService {
   rpc GetTribe(GetTribeRequest) returns (GetTribeResponse) {};
   rpc GetTribes(GetTribesRequest) returns (GetTribesResponse) {};
@@ -178,5 +186,6 @@ service TribeService {
   rpc DisconnectUserFromTribe(DisconnectUserFromTribeRequest) returns (google.protobuf.Empty) {};
   rpc GetFAQ(google.protobuf.Empty) returns (GetFAQResponse) {};
   rpc FetchNumberOfNewConnections(FetchNumberOfNewConnectionsRequest) returns (FetchNumberOfNewConnectionsResponse) {};
+  rpc FetchNumberOfTotalConnections(FetchNumberOfTotalConnectionsRequest) returns (FetchNumberOfTotalConnectionsResponse) {};
 }
 
