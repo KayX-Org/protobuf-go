@@ -56,7 +56,8 @@ message GetTribeRequest {
 }
 
 message GetTribeShareableLinkRequest {
-  string id = 1;
+  string tribe_id = 1;
+  string user_id = 2;
 }
 
 message GetTribeByCodeRequest {
