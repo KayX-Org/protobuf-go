@@ -119,6 +119,11 @@ message FetchNumberOfTotalConnectionsRequest {
   string user_id = 1;
 }
 
+message MarConnectionAsSeenRequest {
+  string user_from_id = 1;
+  string user_to_id = 2;
+}
+
 message FetchNumberOfTotalConnectionsResponse {
   int32 total = 1;
 }
@@ -139,5 +144,6 @@ service UserConnectionService {
   rpc DisconnectUsers(DisconnectUsersRequest) returns (google.protobuf.Empty) {};
   rpc FetchNumberOfNewConnections(FetchNumberOfNewConnectionsRequest) returns (FetchNumberOfNewConnectionsResponse) {};
   rpc FetchNumberOfTotalConnections(FetchNumberOfTotalConnectionsRequest) returns (FetchNumberOfTotalConnectionsResponse) {};
+  rpc MarkConnectionAsSeen(MarConnectionAsSeenRequest) returns (google.protobuf.Empty) {};
 }
 
