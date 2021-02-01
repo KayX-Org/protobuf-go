@@ -10,6 +10,11 @@ message Location {
   float long = 2;
 }
 
+message UserConnection {
+  string userId = 1;
+  bool new = 2;
+}
+
 message UpdateLocationRequest {
   Location location = 1;
   string userId = 2;
@@ -39,7 +44,7 @@ message FetchConnectionsRequest {
 }
 
 message FetchConnectionsResponse {
-  repeated string userId = 1;
+  repeated UserConnection users = 1;
 }
 
 message IgnoreUserRequest {
