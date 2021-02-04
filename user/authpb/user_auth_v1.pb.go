@@ -124,6 +124,108 @@ func (x *VerifyAccessTokenResponse) GetUserUuid() string {
 	return ""
 }
 
+type VerifyAccessTokenWithRoleRequest struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	Token string `protobuf:"bytes,1,opt,name=token,proto3" json:"token,omitempty"`
+	Role  string `protobuf:"bytes,2,opt,name=role,proto3" json:"role,omitempty"`
+}
+
+func (x *VerifyAccessTokenWithRoleRequest) Reset() {
+	*x = VerifyAccessTokenWithRoleRequest{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_api_protobuf_spec_user_auth_v1_proto_msgTypes[2]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *VerifyAccessTokenWithRoleRequest) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*VerifyAccessTokenWithRoleRequest) ProtoMessage() {}
+
+func (x *VerifyAccessTokenWithRoleRequest) ProtoReflect() protoreflect.Message {
+	mi := &file_api_protobuf_spec_user_auth_v1_proto_msgTypes[2]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use VerifyAccessTokenWithRoleRequest.ProtoReflect.Descriptor instead.
+func (*VerifyAccessTokenWithRoleRequest) Descriptor() ([]byte, []int) {
+	return file_api_protobuf_spec_user_auth_v1_proto_rawDescGZIP(), []int{2}
+}
+
+func (x *VerifyAccessTokenWithRoleRequest) GetToken() string {
+	if x != nil {
+		return x.Token
+	}
+	return ""
+}
+
+func (x *VerifyAccessTokenWithRoleRequest) GetRole() string {
+	if x != nil {
+		return x.Role
+	}
+	return ""
+}
+
+type VerifyAccessTokenWithRoleResponse struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	UserUuid string `protobuf:"bytes,1,opt,name=user_uuid,json=userUuid,proto3" json:"user_uuid,omitempty"`
+}
+
+func (x *VerifyAccessTokenWithRoleResponse) Reset() {
+	*x = VerifyAccessTokenWithRoleResponse{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_api_protobuf_spec_user_auth_v1_proto_msgTypes[3]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *VerifyAccessTokenWithRoleResponse) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*VerifyAccessTokenWithRoleResponse) ProtoMessage() {}
+
+func (x *VerifyAccessTokenWithRoleResponse) ProtoReflect() protoreflect.Message {
+	mi := &file_api_protobuf_spec_user_auth_v1_proto_msgTypes[3]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use VerifyAccessTokenWithRoleResponse.ProtoReflect.Descriptor instead.
+func (*VerifyAccessTokenWithRoleResponse) Descriptor() ([]byte, []int) {
+	return file_api_protobuf_spec_user_auth_v1_proto_rawDescGZIP(), []int{3}
+}
+
+func (x *VerifyAccessTokenWithRoleResponse) GetUserUuid() string {
+	if x != nil {
+		return x.UserUuid
+	}
+	return ""
+}
+
 type RefreshTokenRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -135,7 +237,7 @@ type RefreshTokenRequest struct {
 func (x *RefreshTokenRequest) Reset() {
 	*x = RefreshTokenRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_api_protobuf_spec_user_auth_v1_proto_msgTypes[2]
+		mi := &file_api_protobuf_spec_user_auth_v1_proto_msgTypes[4]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -148,7 +250,7 @@ func (x *RefreshTokenRequest) String() string {
 func (*RefreshTokenRequest) ProtoMessage() {}
 
 func (x *RefreshTokenRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_api_protobuf_spec_user_auth_v1_proto_msgTypes[2]
+	mi := &file_api_protobuf_spec_user_auth_v1_proto_msgTypes[4]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -161,7 +263,7 @@ func (x *RefreshTokenRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use RefreshTokenRequest.ProtoReflect.Descriptor instead.
 func (*RefreshTokenRequest) Descriptor() ([]byte, []int) {
-	return file_api_protobuf_spec_user_auth_v1_proto_rawDescGZIP(), []int{2}
+	return file_api_protobuf_spec_user_auth_v1_proto_rawDescGZIP(), []int{4}
 }
 
 func (x *RefreshTokenRequest) GetToken() string {
@@ -183,7 +285,7 @@ type RefreshTokenResponse struct {
 func (x *RefreshTokenResponse) Reset() {
 	*x = RefreshTokenResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_api_protobuf_spec_user_auth_v1_proto_msgTypes[3]
+		mi := &file_api_protobuf_spec_user_auth_v1_proto_msgTypes[5]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -196,7 +298,7 @@ func (x *RefreshTokenResponse) String() string {
 func (*RefreshTokenResponse) ProtoMessage() {}
 
 func (x *RefreshTokenResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_api_protobuf_spec_user_auth_v1_proto_msgTypes[3]
+	mi := &file_api_protobuf_spec_user_auth_v1_proto_msgTypes[5]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -209,7 +311,7 @@ func (x *RefreshTokenResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use RefreshTokenResponse.ProtoReflect.Descriptor instead.
 func (*RefreshTokenResponse) Descriptor() ([]byte, []int) {
-	return file_api_protobuf_spec_user_auth_v1_proto_rawDescGZIP(), []int{3}
+	return file_api_protobuf_spec_user_auth_v1_proto_rawDescGZIP(), []int{5}
 }
 
 func (x *RefreshTokenResponse) GetAccessToken() string {
@@ -238,7 +340,7 @@ type SendVerificationCodeRequest struct {
 func (x *SendVerificationCodeRequest) Reset() {
 	*x = SendVerificationCodeRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_api_protobuf_spec_user_auth_v1_proto_msgTypes[4]
+		mi := &file_api_protobuf_spec_user_auth_v1_proto_msgTypes[6]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -251,7 +353,7 @@ func (x *SendVerificationCodeRequest) String() string {
 func (*SendVerificationCodeRequest) ProtoMessage() {}
 
 func (x *SendVerificationCodeRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_api_protobuf_spec_user_auth_v1_proto_msgTypes[4]
+	mi := &file_api_protobuf_spec_user_auth_v1_proto_msgTypes[6]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -264,7 +366,7 @@ func (x *SendVerificationCodeRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use SendVerificationCodeRequest.ProtoReflect.Descriptor instead.
 func (*SendVerificationCodeRequest) Descriptor() ([]byte, []int) {
-	return file_api_protobuf_spec_user_auth_v1_proto_rawDescGZIP(), []int{4}
+	return file_api_protobuf_spec_user_auth_v1_proto_rawDescGZIP(), []int{6}
 }
 
 func (x *SendVerificationCodeRequest) GetPhoneNumber() string {
@@ -293,7 +395,7 @@ type VerifyUpdatedNumberRequest struct {
 func (x *VerifyUpdatedNumberRequest) Reset() {
 	*x = VerifyUpdatedNumberRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_api_protobuf_spec_user_auth_v1_proto_msgTypes[5]
+		mi := &file_api_protobuf_spec_user_auth_v1_proto_msgTypes[7]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -306,7 +408,7 @@ func (x *VerifyUpdatedNumberRequest) String() string {
 func (*VerifyUpdatedNumberRequest) ProtoMessage() {}
 
 func (x *VerifyUpdatedNumberRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_api_protobuf_spec_user_auth_v1_proto_msgTypes[5]
+	mi := &file_api_protobuf_spec_user_auth_v1_proto_msgTypes[7]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -319,7 +421,7 @@ func (x *VerifyUpdatedNumberRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use VerifyUpdatedNumberRequest.ProtoReflect.Descriptor instead.
 func (*VerifyUpdatedNumberRequest) Descriptor() ([]byte, []int) {
-	return file_api_protobuf_spec_user_auth_v1_proto_rawDescGZIP(), []int{5}
+	return file_api_protobuf_spec_user_auth_v1_proto_rawDescGZIP(), []int{7}
 }
 
 func (x *VerifyUpdatedNumberRequest) GetPhoneNumber() string {
@@ -347,7 +449,7 @@ type SendVerificationCodeResponse struct {
 func (x *SendVerificationCodeResponse) Reset() {
 	*x = SendVerificationCodeResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_api_protobuf_spec_user_auth_v1_proto_msgTypes[6]
+		mi := &file_api_protobuf_spec_user_auth_v1_proto_msgTypes[8]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -360,7 +462,7 @@ func (x *SendVerificationCodeResponse) String() string {
 func (*SendVerificationCodeResponse) ProtoMessage() {}
 
 func (x *SendVerificationCodeResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_api_protobuf_spec_user_auth_v1_proto_msgTypes[6]
+	mi := &file_api_protobuf_spec_user_auth_v1_proto_msgTypes[8]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -373,7 +475,7 @@ func (x *SendVerificationCodeResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use SendVerificationCodeResponse.ProtoReflect.Descriptor instead.
 func (*SendVerificationCodeResponse) Descriptor() ([]byte, []int) {
-	return file_api_protobuf_spec_user_auth_v1_proto_rawDescGZIP(), []int{6}
+	return file_api_protobuf_spec_user_auth_v1_proto_rawDescGZIP(), []int{8}
 }
 
 func (x *SendVerificationCodeResponse) GetSuccess() bool {
@@ -395,7 +497,7 @@ type VerifyCodeRequest struct {
 func (x *VerifyCodeRequest) Reset() {
 	*x = VerifyCodeRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_api_protobuf_spec_user_auth_v1_proto_msgTypes[7]
+		mi := &file_api_protobuf_spec_user_auth_v1_proto_msgTypes[9]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -408,7 +510,7 @@ func (x *VerifyCodeRequest) String() string {
 func (*VerifyCodeRequest) ProtoMessage() {}
 
 func (x *VerifyCodeRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_api_protobuf_spec_user_auth_v1_proto_msgTypes[7]
+	mi := &file_api_protobuf_spec_user_auth_v1_proto_msgTypes[9]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -421,7 +523,7 @@ func (x *VerifyCodeRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use VerifyCodeRequest.ProtoReflect.Descriptor instead.
 func (*VerifyCodeRequest) Descriptor() ([]byte, []int) {
-	return file_api_protobuf_spec_user_auth_v1_proto_rawDescGZIP(), []int{7}
+	return file_api_protobuf_spec_user_auth_v1_proto_rawDescGZIP(), []int{9}
 }
 
 func (x *VerifyCodeRequest) GetPhoneNumber() string {
@@ -450,7 +552,7 @@ type VerifyCodeResponse struct {
 func (x *VerifyCodeResponse) Reset() {
 	*x = VerifyCodeResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_api_protobuf_spec_user_auth_v1_proto_msgTypes[8]
+		mi := &file_api_protobuf_spec_user_auth_v1_proto_msgTypes[10]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -463,7 +565,7 @@ func (x *VerifyCodeResponse) String() string {
 func (*VerifyCodeResponse) ProtoMessage() {}
 
 func (x *VerifyCodeResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_api_protobuf_spec_user_auth_v1_proto_msgTypes[8]
+	mi := &file_api_protobuf_spec_user_auth_v1_proto_msgTypes[10]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -476,7 +578,7 @@ func (x *VerifyCodeResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use VerifyCodeResponse.ProtoReflect.Descriptor instead.
 func (*VerifyCodeResponse) Descriptor() ([]byte, []int) {
-	return file_api_protobuf_spec_user_auth_v1_proto_rawDescGZIP(), []int{8}
+	return file_api_protobuf_spec_user_auth_v1_proto_rawDescGZIP(), []int{10}
 }
 
 func (x *VerifyCodeResponse) GetAccessToken() string {
@@ -504,7 +606,7 @@ type LogoutRequest struct {
 func (x *LogoutRequest) Reset() {
 	*x = LogoutRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_api_protobuf_spec_user_auth_v1_proto_msgTypes[9]
+		mi := &file_api_protobuf_spec_user_auth_v1_proto_msgTypes[11]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -517,7 +619,7 @@ func (x *LogoutRequest) String() string {
 func (*LogoutRequest) ProtoMessage() {}
 
 func (x *LogoutRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_api_protobuf_spec_user_auth_v1_proto_msgTypes[9]
+	mi := &file_api_protobuf_spec_user_auth_v1_proto_msgTypes[11]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -530,7 +632,7 @@ func (x *LogoutRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use LogoutRequest.ProtoReflect.Descriptor instead.
 func (*LogoutRequest) Descriptor() ([]byte, []int) {
-	return file_api_protobuf_spec_user_auth_v1_proto_rawDescGZIP(), []int{9}
+	return file_api_protobuf_spec_user_auth_v1_proto_rawDescGZIP(), []int{11}
 }
 
 func (x *LogoutRequest) GetToken() string {
@@ -551,7 +653,7 @@ type LogoutResponse struct {
 func (x *LogoutResponse) Reset() {
 	*x = LogoutResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_api_protobuf_spec_user_auth_v1_proto_msgTypes[10]
+		mi := &file_api_protobuf_spec_user_auth_v1_proto_msgTypes[12]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -564,7 +666,7 @@ func (x *LogoutResponse) String() string {
 func (*LogoutResponse) ProtoMessage() {}
 
 func (x *LogoutResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_api_protobuf_spec_user_auth_v1_proto_msgTypes[10]
+	mi := &file_api_protobuf_spec_user_auth_v1_proto_msgTypes[12]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -577,7 +679,7 @@ func (x *LogoutResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use LogoutResponse.ProtoReflect.Descriptor instead.
 func (*LogoutResponse) Descriptor() ([]byte, []int) {
-	return file_api_protobuf_spec_user_auth_v1_proto_rawDescGZIP(), []int{10}
+	return file_api_protobuf_spec_user_auth_v1_proto_rawDescGZIP(), []int{12}
 }
 
 func (x *LogoutResponse) GetSuccess() bool {
@@ -600,6 +702,15 @@ var file_api_protobuf_spec_user_auth_v1_proto_rawDesc = []byte{
 	0x6b, 0x65, 0x6e, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x05, 0x74, 0x6f, 0x6b, 0x65, 0x6e,
 	0x22, 0x38, 0x0a, 0x19, 0x56, 0x65, 0x72, 0x69, 0x66, 0x79, 0x41, 0x63, 0x63, 0x65, 0x73, 0x73,
 	0x54, 0x6f, 0x6b, 0x65, 0x6e, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x1b, 0x0a,
+	0x09, 0x75, 0x73, 0x65, 0x72, 0x5f, 0x75, 0x75, 0x69, 0x64, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09,
+	0x52, 0x08, 0x75, 0x73, 0x65, 0x72, 0x55, 0x75, 0x69, 0x64, 0x22, 0x4c, 0x0a, 0x20, 0x56, 0x65,
+	0x72, 0x69, 0x66, 0x79, 0x41, 0x63, 0x63, 0x65, 0x73, 0x73, 0x54, 0x6f, 0x6b, 0x65, 0x6e, 0x57,
+	0x69, 0x74, 0x68, 0x52, 0x6f, 0x6c, 0x65, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x12, 0x14,
+	0x0a, 0x05, 0x74, 0x6f, 0x6b, 0x65, 0x6e, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x05, 0x74,
+	0x6f, 0x6b, 0x65, 0x6e, 0x12, 0x12, 0x0a, 0x04, 0x72, 0x6f, 0x6c, 0x65, 0x18, 0x02, 0x20, 0x01,
+	0x28, 0x09, 0x52, 0x04, 0x72, 0x6f, 0x6c, 0x65, 0x22, 0x40, 0x0a, 0x21, 0x56, 0x65, 0x72, 0x69,
+	0x66, 0x79, 0x41, 0x63, 0x63, 0x65, 0x73, 0x73, 0x54, 0x6f, 0x6b, 0x65, 0x6e, 0x57, 0x69, 0x74,
+	0x68, 0x52, 0x6f, 0x6c, 0x65, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x1b, 0x0a,
 	0x09, 0x75, 0x73, 0x65, 0x72, 0x5f, 0x75, 0x75, 0x69, 0x64, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09,
 	0x52, 0x08, 0x75, 0x73, 0x65, 0x72, 0x55, 0x75, 0x69, 0x64, 0x22, 0x2b, 0x0a, 0x13, 0x52, 0x65,
 	0x66, 0x72, 0x65, 0x73, 0x68, 0x54, 0x6f, 0x6b, 0x65, 0x6e, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73,
@@ -641,7 +752,7 @@ var file_api_protobuf_spec_user_auth_v1_proto_rawDesc = []byte{
 	0x6f, 0x6b, 0x65, 0x6e, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x05, 0x74, 0x6f, 0x6b, 0x65,
 	0x6e, 0x22, 0x2a, 0x0a, 0x0e, 0x4c, 0x6f, 0x67, 0x6f, 0x75, 0x74, 0x52, 0x65, 0x73, 0x70, 0x6f,
 	0x6e, 0x73, 0x65, 0x12, 0x18, 0x0a, 0x07, 0x73, 0x75, 0x63, 0x63, 0x65, 0x73, 0x73, 0x18, 0x01,
-	0x20, 0x01, 0x28, 0x08, 0x52, 0x07, 0x73, 0x75, 0x63, 0x63, 0x65, 0x73, 0x73, 0x32, 0x93, 0x04,
+	0x20, 0x01, 0x28, 0x08, 0x52, 0x07, 0x73, 0x75, 0x63, 0x63, 0x65, 0x73, 0x73, 0x32, 0x8d, 0x05,
 	0x0a, 0x0b, 0x41, 0x75, 0x74, 0x68, 0x53, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x12, 0x60, 0x0a,
 	0x11, 0x56, 0x65, 0x72, 0x69, 0x66, 0x79, 0x41, 0x63, 0x63, 0x65, 0x73, 0x73, 0x54, 0x6f, 0x6b,
 	0x65, 0x6e, 0x12, 0x23, 0x2e, 0x75, 0x73, 0x65, 0x72, 0x2e, 0x61, 0x75, 0x74, 0x68, 0x2e, 0x56,
@@ -649,35 +760,42 @@ var file_api_protobuf_spec_user_auth_v1_proto_rawDesc = []byte{
 	0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x24, 0x2e, 0x75, 0x73, 0x65, 0x72, 0x2e, 0x61,
 	0x75, 0x74, 0x68, 0x2e, 0x56, 0x65, 0x72, 0x69, 0x66, 0x79, 0x41, 0x63, 0x63, 0x65, 0x73, 0x73,
 	0x54, 0x6f, 0x6b, 0x65, 0x6e, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00, 0x12,
-	0x51, 0x0a, 0x0c, 0x52, 0x65, 0x66, 0x72, 0x65, 0x73, 0x68, 0x54, 0x6f, 0x6b, 0x65, 0x6e, 0x12,
-	0x1e, 0x2e, 0x75, 0x73, 0x65, 0x72, 0x2e, 0x61, 0x75, 0x74, 0x68, 0x2e, 0x52, 0x65, 0x66, 0x72,
-	0x65, 0x73, 0x68, 0x54, 0x6f, 0x6b, 0x65, 0x6e, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a,
-	0x1f, 0x2e, 0x75, 0x73, 0x65, 0x72, 0x2e, 0x61, 0x75, 0x74, 0x68, 0x2e, 0x52, 0x65, 0x66, 0x72,
-	0x65, 0x73, 0x68, 0x54, 0x6f, 0x6b, 0x65, 0x6e, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65,
-	0x22, 0x00, 0x12, 0x69, 0x0a, 0x14, 0x53, 0x65, 0x6e, 0x64, 0x56, 0x65, 0x72, 0x69, 0x66, 0x69,
-	0x63, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x43, 0x6f, 0x64, 0x65, 0x12, 0x26, 0x2e, 0x75, 0x73, 0x65,
-	0x72, 0x2e, 0x61, 0x75, 0x74, 0x68, 0x2e, 0x53, 0x65, 0x6e, 0x64, 0x56, 0x65, 0x72, 0x69, 0x66,
-	0x69, 0x63, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x43, 0x6f, 0x64, 0x65, 0x52, 0x65, 0x71, 0x75, 0x65,
-	0x73, 0x74, 0x1a, 0x27, 0x2e, 0x75, 0x73, 0x65, 0x72, 0x2e, 0x61, 0x75, 0x74, 0x68, 0x2e, 0x53,
-	0x65, 0x6e, 0x64, 0x56, 0x65, 0x72, 0x69, 0x66, 0x69, 0x63, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x43,
-	0x6f, 0x64, 0x65, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00, 0x12, 0x4b, 0x0a,
-	0x0a, 0x56, 0x65, 0x72, 0x69, 0x66, 0x79, 0x43, 0x6f, 0x64, 0x65, 0x12, 0x1c, 0x2e, 0x75, 0x73,
-	0x65, 0x72, 0x2e, 0x61, 0x75, 0x74, 0x68, 0x2e, 0x56, 0x65, 0x72, 0x69, 0x66, 0x79, 0x43, 0x6f,
-	0x64, 0x65, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x1d, 0x2e, 0x75, 0x73, 0x65, 0x72,
-	0x2e, 0x61, 0x75, 0x74, 0x68, 0x2e, 0x56, 0x65, 0x72, 0x69, 0x66, 0x79, 0x43, 0x6f, 0x64, 0x65,
-	0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00, 0x12, 0x56, 0x0a, 0x13, 0x56, 0x65,
-	0x72, 0x69, 0x66, 0x79, 0x55, 0x70, 0x64, 0x61, 0x74, 0x65, 0x64, 0x4e, 0x75, 0x6d, 0x62, 0x65,
-	0x72, 0x12, 0x25, 0x2e, 0x75, 0x73, 0x65, 0x72, 0x2e, 0x61, 0x75, 0x74, 0x68, 0x2e, 0x56, 0x65,
-	0x72, 0x69, 0x66, 0x79, 0x55, 0x70, 0x64, 0x61, 0x74, 0x65, 0x64, 0x4e, 0x75, 0x6d, 0x62, 0x65,
-	0x72, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x16, 0x2e, 0x67, 0x6f, 0x6f, 0x67, 0x6c,
-	0x65, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x62, 0x75, 0x66, 0x2e, 0x45, 0x6d, 0x70, 0x74, 0x79,
-	0x22, 0x00, 0x12, 0x3f, 0x0a, 0x06, 0x4c, 0x6f, 0x67, 0x6f, 0x75, 0x74, 0x12, 0x18, 0x2e, 0x75,
-	0x73, 0x65, 0x72, 0x2e, 0x61, 0x75, 0x74, 0x68, 0x2e, 0x4c, 0x6f, 0x67, 0x6f, 0x75, 0x74, 0x52,
-	0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x19, 0x2e, 0x75, 0x73, 0x65, 0x72, 0x2e, 0x61, 0x75,
-	0x74, 0x68, 0x2e, 0x4c, 0x6f, 0x67, 0x6f, 0x75, 0x74, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73,
-	0x65, 0x22, 0x00, 0x42, 0x14, 0x5a, 0x12, 0x75, 0x73, 0x65, 0x72, 0x2f, 0x61, 0x75, 0x74, 0x68,
-	0x70, 0x62, 0x3b, 0x61, 0x75, 0x74, 0x68, 0x70, 0x62, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f,
-	0x33,
+	0x78, 0x0a, 0x19, 0x56, 0x65, 0x72, 0x69, 0x66, 0x79, 0x41, 0x63, 0x63, 0x65, 0x73, 0x73, 0x54,
+	0x6f, 0x6b, 0x65, 0x6e, 0x57, 0x69, 0x74, 0x68, 0x52, 0x6f, 0x6c, 0x65, 0x12, 0x2b, 0x2e, 0x75,
+	0x73, 0x65, 0x72, 0x2e, 0x61, 0x75, 0x74, 0x68, 0x2e, 0x56, 0x65, 0x72, 0x69, 0x66, 0x79, 0x41,
+	0x63, 0x63, 0x65, 0x73, 0x73, 0x54, 0x6f, 0x6b, 0x65, 0x6e, 0x57, 0x69, 0x74, 0x68, 0x52, 0x6f,
+	0x6c, 0x65, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x2c, 0x2e, 0x75, 0x73, 0x65, 0x72,
+	0x2e, 0x61, 0x75, 0x74, 0x68, 0x2e, 0x56, 0x65, 0x72, 0x69, 0x66, 0x79, 0x41, 0x63, 0x63, 0x65,
+	0x73, 0x73, 0x54, 0x6f, 0x6b, 0x65, 0x6e, 0x57, 0x69, 0x74, 0x68, 0x52, 0x6f, 0x6c, 0x65, 0x52,
+	0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00, 0x12, 0x51, 0x0a, 0x0c, 0x52, 0x65, 0x66,
+	0x72, 0x65, 0x73, 0x68, 0x54, 0x6f, 0x6b, 0x65, 0x6e, 0x12, 0x1e, 0x2e, 0x75, 0x73, 0x65, 0x72,
+	0x2e, 0x61, 0x75, 0x74, 0x68, 0x2e, 0x52, 0x65, 0x66, 0x72, 0x65, 0x73, 0x68, 0x54, 0x6f, 0x6b,
+	0x65, 0x6e, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x1f, 0x2e, 0x75, 0x73, 0x65, 0x72,
+	0x2e, 0x61, 0x75, 0x74, 0x68, 0x2e, 0x52, 0x65, 0x66, 0x72, 0x65, 0x73, 0x68, 0x54, 0x6f, 0x6b,
+	0x65, 0x6e, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00, 0x12, 0x69, 0x0a, 0x14,
+	0x53, 0x65, 0x6e, 0x64, 0x56, 0x65, 0x72, 0x69, 0x66, 0x69, 0x63, 0x61, 0x74, 0x69, 0x6f, 0x6e,
+	0x43, 0x6f, 0x64, 0x65, 0x12, 0x26, 0x2e, 0x75, 0x73, 0x65, 0x72, 0x2e, 0x61, 0x75, 0x74, 0x68,
+	0x2e, 0x53, 0x65, 0x6e, 0x64, 0x56, 0x65, 0x72, 0x69, 0x66, 0x69, 0x63, 0x61, 0x74, 0x69, 0x6f,
+	0x6e, 0x43, 0x6f, 0x64, 0x65, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x27, 0x2e, 0x75,
+	0x73, 0x65, 0x72, 0x2e, 0x61, 0x75, 0x74, 0x68, 0x2e, 0x53, 0x65, 0x6e, 0x64, 0x56, 0x65, 0x72,
+	0x69, 0x66, 0x69, 0x63, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x43, 0x6f, 0x64, 0x65, 0x52, 0x65, 0x73,
+	0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00, 0x12, 0x4b, 0x0a, 0x0a, 0x56, 0x65, 0x72, 0x69, 0x66,
+	0x79, 0x43, 0x6f, 0x64, 0x65, 0x12, 0x1c, 0x2e, 0x75, 0x73, 0x65, 0x72, 0x2e, 0x61, 0x75, 0x74,
+	0x68, 0x2e, 0x56, 0x65, 0x72, 0x69, 0x66, 0x79, 0x43, 0x6f, 0x64, 0x65, 0x52, 0x65, 0x71, 0x75,
+	0x65, 0x73, 0x74, 0x1a, 0x1d, 0x2e, 0x75, 0x73, 0x65, 0x72, 0x2e, 0x61, 0x75, 0x74, 0x68, 0x2e,
+	0x56, 0x65, 0x72, 0x69, 0x66, 0x79, 0x43, 0x6f, 0x64, 0x65, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e,
+	0x73, 0x65, 0x22, 0x00, 0x12, 0x56, 0x0a, 0x13, 0x56, 0x65, 0x72, 0x69, 0x66, 0x79, 0x55, 0x70,
+	0x64, 0x61, 0x74, 0x65, 0x64, 0x4e, 0x75, 0x6d, 0x62, 0x65, 0x72, 0x12, 0x25, 0x2e, 0x75, 0x73,
+	0x65, 0x72, 0x2e, 0x61, 0x75, 0x74, 0x68, 0x2e, 0x56, 0x65, 0x72, 0x69, 0x66, 0x79, 0x55, 0x70,
+	0x64, 0x61, 0x74, 0x65, 0x64, 0x4e, 0x75, 0x6d, 0x62, 0x65, 0x72, 0x52, 0x65, 0x71, 0x75, 0x65,
+	0x73, 0x74, 0x1a, 0x16, 0x2e, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x2e, 0x70, 0x72, 0x6f, 0x74,
+	0x6f, 0x62, 0x75, 0x66, 0x2e, 0x45, 0x6d, 0x70, 0x74, 0x79, 0x22, 0x00, 0x12, 0x3f, 0x0a, 0x06,
+	0x4c, 0x6f, 0x67, 0x6f, 0x75, 0x74, 0x12, 0x18, 0x2e, 0x75, 0x73, 0x65, 0x72, 0x2e, 0x61, 0x75,
+	0x74, 0x68, 0x2e, 0x4c, 0x6f, 0x67, 0x6f, 0x75, 0x74, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74,
+	0x1a, 0x19, 0x2e, 0x75, 0x73, 0x65, 0x72, 0x2e, 0x61, 0x75, 0x74, 0x68, 0x2e, 0x4c, 0x6f, 0x67,
+	0x6f, 0x75, 0x74, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00, 0x42, 0x14, 0x5a,
+	0x12, 0x75, 0x73, 0x65, 0x72, 0x2f, 0x61, 0x75, 0x74, 0x68, 0x70, 0x62, 0x3b, 0x61, 0x75, 0x74,
+	0x68, 0x70, 0x62, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
 }
 
 var (
@@ -692,36 +810,40 @@ func file_api_protobuf_spec_user_auth_v1_proto_rawDescGZIP() []byte {
 	return file_api_protobuf_spec_user_auth_v1_proto_rawDescData
 }
 
-var file_api_protobuf_spec_user_auth_v1_proto_msgTypes = make([]protoimpl.MessageInfo, 11)
+var file_api_protobuf_spec_user_auth_v1_proto_msgTypes = make([]protoimpl.MessageInfo, 13)
 var file_api_protobuf_spec_user_auth_v1_proto_goTypes = []interface{}{
-	(*VerifyAccessTokenRequest)(nil),     // 0: user.auth.VerifyAccessTokenRequest
-	(*VerifyAccessTokenResponse)(nil),    // 1: user.auth.VerifyAccessTokenResponse
-	(*RefreshTokenRequest)(nil),          // 2: user.auth.RefreshTokenRequest
-	(*RefreshTokenResponse)(nil),         // 3: user.auth.RefreshTokenResponse
-	(*SendVerificationCodeRequest)(nil),  // 4: user.auth.SendVerificationCodeRequest
-	(*VerifyUpdatedNumberRequest)(nil),   // 5: user.auth.VerifyUpdatedNumberRequest
-	(*SendVerificationCodeResponse)(nil), // 6: user.auth.SendVerificationCodeResponse
-	(*VerifyCodeRequest)(nil),            // 7: user.auth.VerifyCodeRequest
-	(*VerifyCodeResponse)(nil),           // 8: user.auth.VerifyCodeResponse
-	(*LogoutRequest)(nil),                // 9: user.auth.LogoutRequest
-	(*LogoutResponse)(nil),               // 10: user.auth.LogoutResponse
-	(*empty.Empty)(nil),                  // 11: google.protobuf.Empty
+	(*VerifyAccessTokenRequest)(nil),          // 0: user.auth.VerifyAccessTokenRequest
+	(*VerifyAccessTokenResponse)(nil),         // 1: user.auth.VerifyAccessTokenResponse
+	(*VerifyAccessTokenWithRoleRequest)(nil),  // 2: user.auth.VerifyAccessTokenWithRoleRequest
+	(*VerifyAccessTokenWithRoleResponse)(nil), // 3: user.auth.VerifyAccessTokenWithRoleResponse
+	(*RefreshTokenRequest)(nil),               // 4: user.auth.RefreshTokenRequest
+	(*RefreshTokenResponse)(nil),              // 5: user.auth.RefreshTokenResponse
+	(*SendVerificationCodeRequest)(nil),       // 6: user.auth.SendVerificationCodeRequest
+	(*VerifyUpdatedNumberRequest)(nil),        // 7: user.auth.VerifyUpdatedNumberRequest
+	(*SendVerificationCodeResponse)(nil),      // 8: user.auth.SendVerificationCodeResponse
+	(*VerifyCodeRequest)(nil),                 // 9: user.auth.VerifyCodeRequest
+	(*VerifyCodeResponse)(nil),                // 10: user.auth.VerifyCodeResponse
+	(*LogoutRequest)(nil),                     // 11: user.auth.LogoutRequest
+	(*LogoutResponse)(nil),                    // 12: user.auth.LogoutResponse
+	(*empty.Empty)(nil),                       // 13: google.protobuf.Empty
 }
 var file_api_protobuf_spec_user_auth_v1_proto_depIdxs = []int32{
 	0,  // 0: user.auth.AuthService.VerifyAccessToken:input_type -> user.auth.VerifyAccessTokenRequest
-	2,  // 1: user.auth.AuthService.RefreshToken:input_type -> user.auth.RefreshTokenRequest
-	4,  // 2: user.auth.AuthService.SendVerificationCode:input_type -> user.auth.SendVerificationCodeRequest
-	7,  // 3: user.auth.AuthService.VerifyCode:input_type -> user.auth.VerifyCodeRequest
-	5,  // 4: user.auth.AuthService.VerifyUpdatedNumber:input_type -> user.auth.VerifyUpdatedNumberRequest
-	9,  // 5: user.auth.AuthService.Logout:input_type -> user.auth.LogoutRequest
-	1,  // 6: user.auth.AuthService.VerifyAccessToken:output_type -> user.auth.VerifyAccessTokenResponse
-	3,  // 7: user.auth.AuthService.RefreshToken:output_type -> user.auth.RefreshTokenResponse
-	6,  // 8: user.auth.AuthService.SendVerificationCode:output_type -> user.auth.SendVerificationCodeResponse
-	8,  // 9: user.auth.AuthService.VerifyCode:output_type -> user.auth.VerifyCodeResponse
-	11, // 10: user.auth.AuthService.VerifyUpdatedNumber:output_type -> google.protobuf.Empty
-	10, // 11: user.auth.AuthService.Logout:output_type -> user.auth.LogoutResponse
-	6,  // [6:12] is the sub-list for method output_type
-	0,  // [0:6] is the sub-list for method input_type
+	2,  // 1: user.auth.AuthService.VerifyAccessTokenWithRole:input_type -> user.auth.VerifyAccessTokenWithRoleRequest
+	4,  // 2: user.auth.AuthService.RefreshToken:input_type -> user.auth.RefreshTokenRequest
+	6,  // 3: user.auth.AuthService.SendVerificationCode:input_type -> user.auth.SendVerificationCodeRequest
+	9,  // 4: user.auth.AuthService.VerifyCode:input_type -> user.auth.VerifyCodeRequest
+	7,  // 5: user.auth.AuthService.VerifyUpdatedNumber:input_type -> user.auth.VerifyUpdatedNumberRequest
+	11, // 6: user.auth.AuthService.Logout:input_type -> user.auth.LogoutRequest
+	1,  // 7: user.auth.AuthService.VerifyAccessToken:output_type -> user.auth.VerifyAccessTokenResponse
+	3,  // 8: user.auth.AuthService.VerifyAccessTokenWithRole:output_type -> user.auth.VerifyAccessTokenWithRoleResponse
+	5,  // 9: user.auth.AuthService.RefreshToken:output_type -> user.auth.RefreshTokenResponse
+	8,  // 10: user.auth.AuthService.SendVerificationCode:output_type -> user.auth.SendVerificationCodeResponse
+	10, // 11: user.auth.AuthService.VerifyCode:output_type -> user.auth.VerifyCodeResponse
+	13, // 12: user.auth.AuthService.VerifyUpdatedNumber:output_type -> google.protobuf.Empty
+	12, // 13: user.auth.AuthService.Logout:output_type -> user.auth.LogoutResponse
+	7,  // [7:14] is the sub-list for method output_type
+	0,  // [0:7] is the sub-list for method input_type
 	0,  // [0:0] is the sub-list for extension type_name
 	0,  // [0:0] is the sub-list for extension extendee
 	0,  // [0:0] is the sub-list for field type_name
@@ -758,7 +880,7 @@ func file_api_protobuf_spec_user_auth_v1_proto_init() {
 			}
 		}
 		file_api_protobuf_spec_user_auth_v1_proto_msgTypes[2].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*RefreshTokenRequest); i {
+			switch v := v.(*VerifyAccessTokenWithRoleRequest); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -770,7 +892,7 @@ func file_api_protobuf_spec_user_auth_v1_proto_init() {
 			}
 		}
 		file_api_protobuf_spec_user_auth_v1_proto_msgTypes[3].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*RefreshTokenResponse); i {
+			switch v := v.(*VerifyAccessTokenWithRoleResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -782,7 +904,7 @@ func file_api_protobuf_spec_user_auth_v1_proto_init() {
 			}
 		}
 		file_api_protobuf_spec_user_auth_v1_proto_msgTypes[4].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*SendVerificationCodeRequest); i {
+			switch v := v.(*RefreshTokenRequest); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -794,7 +916,7 @@ func file_api_protobuf_spec_user_auth_v1_proto_init() {
 			}
 		}
 		file_api_protobuf_spec_user_auth_v1_proto_msgTypes[5].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*VerifyUpdatedNumberRequest); i {
+			switch v := v.(*RefreshTokenResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -806,7 +928,7 @@ func file_api_protobuf_spec_user_auth_v1_proto_init() {
 			}
 		}
 		file_api_protobuf_spec_user_auth_v1_proto_msgTypes[6].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*SendVerificationCodeResponse); i {
+			switch v := v.(*SendVerificationCodeRequest); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -818,7 +940,7 @@ func file_api_protobuf_spec_user_auth_v1_proto_init() {
 			}
 		}
 		file_api_protobuf_spec_user_auth_v1_proto_msgTypes[7].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*VerifyCodeRequest); i {
+			switch v := v.(*VerifyUpdatedNumberRequest); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -830,7 +952,7 @@ func file_api_protobuf_spec_user_auth_v1_proto_init() {
 			}
 		}
 		file_api_protobuf_spec_user_auth_v1_proto_msgTypes[8].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*VerifyCodeResponse); i {
+			switch v := v.(*SendVerificationCodeResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -842,7 +964,7 @@ func file_api_protobuf_spec_user_auth_v1_proto_init() {
 			}
 		}
 		file_api_protobuf_spec_user_auth_v1_proto_msgTypes[9].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*LogoutRequest); i {
+			switch v := v.(*VerifyCodeRequest); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -854,6 +976,30 @@ func file_api_protobuf_spec_user_auth_v1_proto_init() {
 			}
 		}
 		file_api_protobuf_spec_user_auth_v1_proto_msgTypes[10].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*VerifyCodeResponse); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_api_protobuf_spec_user_auth_v1_proto_msgTypes[11].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*LogoutRequest); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_api_protobuf_spec_user_auth_v1_proto_msgTypes[12].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*LogoutResponse); i {
 			case 0:
 				return &v.state
@@ -872,7 +1018,7 @@ func file_api_protobuf_spec_user_auth_v1_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: file_api_protobuf_spec_user_auth_v1_proto_rawDesc,
 			NumEnums:      0,
-			NumMessages:   11,
+			NumMessages:   13,
 			NumExtensions: 0,
 			NumServices:   1,
 		},
@@ -899,6 +1045,7 @@ const _ = grpc.SupportPackageIsVersion6
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://godoc.org/google.golang.org/grpc#ClientConn.NewStream.
 type AuthServiceClient interface {
 	VerifyAccessToken(ctx context.Context, in *VerifyAccessTokenRequest, opts ...grpc.CallOption) (*VerifyAccessTokenResponse, error)
+	VerifyAccessTokenWithRole(ctx context.Context, in *VerifyAccessTokenWithRoleRequest, opts ...grpc.CallOption) (*VerifyAccessTokenWithRoleResponse, error)
 	RefreshToken(ctx context.Context, in *RefreshTokenRequest, opts ...grpc.CallOption) (*RefreshTokenResponse, error)
 	SendVerificationCode(ctx context.Context, in *SendVerificationCodeRequest, opts ...grpc.CallOption) (*SendVerificationCodeResponse, error)
 	VerifyCode(ctx context.Context, in *VerifyCodeRequest, opts ...grpc.CallOption) (*VerifyCodeResponse, error)
@@ -917,6 +1064,15 @@ func NewAuthServiceClient(cc grpc.ClientConnInterface) AuthServiceClient {
 func (c *authServiceClient) VerifyAccessToken(ctx context.Context, in *VerifyAccessTokenRequest, opts ...grpc.CallOption) (*VerifyAccessTokenResponse, error) {
 	out := new(VerifyAccessTokenResponse)
 	err := c.cc.Invoke(ctx, "/user.auth.AuthService/VerifyAccessToken", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *authServiceClient) VerifyAccessTokenWithRole(ctx context.Context, in *VerifyAccessTokenWithRoleRequest, opts ...grpc.CallOption) (*VerifyAccessTokenWithRoleResponse, error) {
+	out := new(VerifyAccessTokenWithRoleResponse)
+	err := c.cc.Invoke(ctx, "/user.auth.AuthService/VerifyAccessTokenWithRole", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -971,6 +1127,7 @@ func (c *authServiceClient) Logout(ctx context.Context, in *LogoutRequest, opts 
 // AuthServiceServer is the server API for AuthService service.
 type AuthServiceServer interface {
 	VerifyAccessToken(context.Context, *VerifyAccessTokenRequest) (*VerifyAccessTokenResponse, error)
+	VerifyAccessTokenWithRole(context.Context, *VerifyAccessTokenWithRoleRequest) (*VerifyAccessTokenWithRoleResponse, error)
 	RefreshToken(context.Context, *RefreshTokenRequest) (*RefreshTokenResponse, error)
 	SendVerificationCode(context.Context, *SendVerificationCodeRequest) (*SendVerificationCodeResponse, error)
 	VerifyCode(context.Context, *VerifyCodeRequest) (*VerifyCodeResponse, error)
@@ -984,6 +1141,9 @@ type UnimplementedAuthServiceServer struct {
 
 func (*UnimplementedAuthServiceServer) VerifyAccessToken(context.Context, *VerifyAccessTokenRequest) (*VerifyAccessTokenResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method VerifyAccessToken not implemented")
+}
+func (*UnimplementedAuthServiceServer) VerifyAccessTokenWithRole(context.Context, *VerifyAccessTokenWithRoleRequest) (*VerifyAccessTokenWithRoleResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method VerifyAccessTokenWithRole not implemented")
 }
 func (*UnimplementedAuthServiceServer) RefreshToken(context.Context, *RefreshTokenRequest) (*RefreshTokenResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method RefreshToken not implemented")
@@ -1019,6 +1179,24 @@ func _AuthService_VerifyAccessToken_Handler(srv interface{}, ctx context.Context
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(AuthServiceServer).VerifyAccessToken(ctx, req.(*VerifyAccessTokenRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _AuthService_VerifyAccessTokenWithRole_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(VerifyAccessTokenWithRoleRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(AuthServiceServer).VerifyAccessTokenWithRole(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/user.auth.AuthService/VerifyAccessTokenWithRole",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(AuthServiceServer).VerifyAccessTokenWithRole(ctx, req.(*VerifyAccessTokenWithRoleRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
@@ -1120,6 +1298,10 @@ var _AuthService_serviceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "VerifyAccessToken",
 			Handler:    _AuthService_VerifyAccessToken_Handler,
+		},
+		{
+			MethodName: "VerifyAccessTokenWithRole",
+			Handler:    _AuthService_VerifyAccessTokenWithRole_Handler,
 		},
 		{
 			MethodName: "RefreshToken",

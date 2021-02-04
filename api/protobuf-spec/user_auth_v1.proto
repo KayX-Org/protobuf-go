@@ -12,6 +12,15 @@ message VerifyAccessTokenResponse {
   string user_uuid = 1;
 }
 
+message VerifyAccessTokenWithRoleRequest {
+  string token = 1;
+  string role = 2;
+}
+
+message VerifyAccessTokenWithRoleResponse {
+  string user_uuid = 1;
+}
+
 message RefreshTokenRequest {
   string token = 1;
 }
@@ -55,6 +64,7 @@ message LogoutResponse {
 
 service AuthService {
   rpc VerifyAccessToken(VerifyAccessTokenRequest) returns (VerifyAccessTokenResponse) {};
+  rpc VerifyAccessTokenWithRole(VerifyAccessTokenWithRoleRequest) returns (VerifyAccessTokenWithRoleResponse) {};
   rpc RefreshToken(RefreshTokenRequest) returns (RefreshTokenResponse) {};
 
   rpc SendVerificationCode(SendVerificationCodeRequest) returns (SendVerificationCodeResponse) {}
