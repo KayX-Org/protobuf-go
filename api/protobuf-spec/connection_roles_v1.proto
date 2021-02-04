@@ -4,11 +4,24 @@ package connections.role;
 option go_package = "connections/rolepb;rolepb";
 import "google/protobuf/empty.proto";
 
+message Role {
+  string name = 1;
+}
+
 message GetAllRolesResponse {
   repeated string user_ids = 1;
 }
 
+message FetchUserRolesRequest {
+  string user_id = 1;
+}
+
+message FetchUserRolesResponse {
+  repeated Role roles = 1;
+}
+
 service RoleService {
   rpc FetchSupportCrew(google.protobuf.Empty) returns (GetAllRolesResponse) {};
+  rpc FetchUserRoles(FetchUserRolesRequest) returns (FetchUserRolesResponse) {};
 }
 
