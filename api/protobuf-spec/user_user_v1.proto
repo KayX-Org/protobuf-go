@@ -111,6 +111,14 @@ message UserExistsRequest {
   string number = 2;
 }
 
+message EmailExistsResponse {
+  bool exists = 1;
+}
+
+message EmailExistsRequest {
+  string email = 1;
+}
+
 message VerifyEmailRequest {
   string code = 1;
   string email = 2;
@@ -135,4 +143,5 @@ service UserService{
   rpc VerifyEmail(VerifyEmailRequest) returns (google.protobuf.Empty) {};
   rpc VerifyBase64Email(VerifyBase64EmailRequest) returns (google.protobuf.Empty) {};
   rpc UserExists(UserExistsRequest) returns (UserExistsResponse) {};
+  rpc EmailExists(EmailExistsRequest) returns (EmailExistsResponse) {};
 }
