@@ -10,6 +10,7 @@ message VerifyAccessTokenRequest {
 
 message VerifyAccessTokenResponse {
   string user_uuid = 1;
+  repeated string roles = 2;
 }
 
 message VerifyAccessTokenWithRoleRequest {
@@ -19,6 +20,7 @@ message VerifyAccessTokenWithRoleRequest {
 
 message VerifyAccessTokenWithRoleResponse {
   string user_uuid = 1;
+  repeated string roles = 2;
 }
 
 message RefreshTokenRequest {
