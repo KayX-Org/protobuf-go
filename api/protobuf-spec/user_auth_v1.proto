@@ -37,6 +37,11 @@ message SendVerificationCodeRequest {
   string app_secret = 2;
 }
 
+message SendVerificationCodeForRoleRequest {
+  string phone_number = 1;
+  string role = 2;
+}
+
 message VerifyUpdatedNumberRequest {
   string phone_number = 1;
   string user_uuid = 2;
@@ -69,7 +74,8 @@ service AuthService {
   rpc VerifyAccessTokenWithRole(VerifyAccessTokenWithRoleRequest) returns (VerifyAccessTokenWithRoleResponse) {};
   rpc RefreshToken(RefreshTokenRequest) returns (RefreshTokenResponse) {};
 
-  rpc SendVerificationCode(SendVerificationCodeRequest) returns (SendVerificationCodeResponse) {}
+  rpc SendVerificationCode(SendVerificationCodeRequest) returns (google.protobuf.Empty) {}
+  rpc SendVerificationCodeForRole(SendVerificationCodeForRoleRequest) returns (google.protobuf.Empty) {}
   rpc VerifyCode(VerifyCodeRequest) returns (VerifyCodeResponse) {}
   rpc VerifyUpdatedNumber(VerifyUpdatedNumberRequest) returns (google.protobuf.Empty) {}
 

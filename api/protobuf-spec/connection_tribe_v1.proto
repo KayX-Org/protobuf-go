@@ -92,6 +92,10 @@ message GetTribesResponse {
   repeated Tribe tribes = 1;
 }
 
+message GetAllTribesResponse {
+  repeated string tribeIds = 1;
+}
+
 message SendInviteRequest {
   string sender_id = 1;
   string receiver_id = 2;
@@ -197,6 +201,7 @@ service TribeService {
   rpc GetTribeByCode(GetTribeByCodeRequest) returns (GetTribeByCodeResponse) {};
   rpc GetTribeShareableLink(GetTribeShareableLinkRequest) returns (GetTribeShareableLinkResponse) {};
   rpc GetTribes(GetTribesRequest) returns (GetTribesResponse) {};
+  rpc GetAllTribes(google.protobuf.Empty) returns (GetAllTribesResponse) {};
   rpc GetTribeActivity(GetTribeActivityRequest) returns (GetTribeActivityResponse) {};
   rpc SharedTribes(SharedTribesRequest) returns (SharedTribesResponse) {};
   rpc SendInvite(SendInviteRequest) returns (google.protobuf.Empty) {};
