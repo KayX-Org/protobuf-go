@@ -55,6 +55,36 @@ message GetTribeRequest {
   string id = 1;
 }
 
+message UpdateTribeRequest {
+  string id = 1;
+  string name = 2;
+  string code = 3;
+  string tagline = 4;
+  string description = 5;
+  string language = 6;
+  string headquarters = 7;
+  string wbesite_url = 8;
+}
+
+message CreateTribeRequest {
+  string name = 2;
+  string code = 3;
+  string tagline = 4;
+  string description = 5;
+  string language = 6;
+  string headquarters = 7;
+  string wbesite_url = 8;
+}
+
+message CreateTribeResponse {
+  string id = 1;
+}
+
+message UpdateTribeAvatarRequest {
+  string id = 1;
+  string avatarUrl = 2;
+}
+
 message GetTribeShareableLinkRequest {
   string tribe_id = 1;
   string user_id = 2;
@@ -198,6 +228,9 @@ message FetchNumberOfTotalConnectionsResponse {
 
 service TribeService {
   rpc GetTribe(GetTribeRequest) returns (GetTribeResponse) {};
+  rpc CreateTribe(CreateTribeRequest) returns (CreateTribeResponse) {};
+  rpc UpdateTribe(UpdateTribeRequest) returns (google.protobuf.Empty) {};
+  rpc UpdateTribeAvatar(UpdateTribeAvatarRequest) returns (google.protobuf.Empty) {};
   rpc GetTribeByCode(GetTribeByCodeRequest) returns (GetTribeByCodeResponse) {};
   rpc GetTribeShareableLink(GetTribeShareableLinkRequest) returns (GetTribeShareableLinkResponse) {};
   rpc GetTribes(GetTribesRequest) returns (GetTribesResponse) {};
