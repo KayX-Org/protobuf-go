@@ -202,6 +202,10 @@ message CreateTribeActivityRequest {
   string plainText = 3;
 }
 
+message CreateTribeActivityResponse {
+  string id = 1;
+}
+
 message DisconnectUserFromTribeRequest {
   string userId = 1;
   string tribe_id = 2;
@@ -257,7 +261,7 @@ service TribeService {
   rpc GetMutualConnections(GetMutualConnectionAmountRequest) returns (GetMutualConnectionAmountResponse) {};
   rpc DisconnectUserFromTribe(DisconnectUserFromTribeRequest) returns (google.protobuf.Empty) {};
   rpc DeleteTribeActivity(DeleteTribeActivityRequest) returns (google.protobuf.Empty) {};
-  rpc CreateTribeActivity(CreateTribeActivityRequest) returns (google.protobuf.Empty) {};
+  rpc CreateTribeActivity(CreateTribeActivityRequest) returns (CreateTribeActivityResponse) {};
   rpc GetFAQ(google.protobuf.Empty) returns (GetFAQResponse) {};
   rpc FetchNumberOfNewConnections(FetchNumberOfNewConnectionsRequest) returns (FetchNumberOfNewConnectionsResponse) {};
   rpc FetchNumberOfTotalConnections(FetchNumberOfTotalConnectionsRequest) returns (FetchNumberOfTotalConnectionsResponse) {};
