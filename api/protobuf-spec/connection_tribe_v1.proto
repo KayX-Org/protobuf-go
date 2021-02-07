@@ -192,6 +192,10 @@ message GetMutualConnectionAmountResponse {
   int32 total = 1;
 }
 
+message DeleteTribeActivityRequest {
+  string activityId = 1;
+}
+
 message DisconnectUserFromTribeRequest {
   string userId = 1;
   string tribe_id = 2;
@@ -246,6 +250,7 @@ service TribeService {
   rpc GetInvites(GetInvitesRequest) returns (GetInvitesResponse) {};
   rpc GetMutualConnections(GetMutualConnectionAmountRequest) returns (GetMutualConnectionAmountResponse) {};
   rpc DisconnectUserFromTribe(DisconnectUserFromTribeRequest) returns (google.protobuf.Empty) {};
+  rpc DeleteTribeActivity(DeleteTribeActivityRequest) returns (google.protobuf.Empty) {};
   rpc GetFAQ(google.protobuf.Empty) returns (GetFAQResponse) {};
   rpc FetchNumberOfNewConnections(FetchNumberOfNewConnectionsRequest) returns (FetchNumberOfNewConnectionsResponse) {};
   rpc FetchNumberOfTotalConnections(FetchNumberOfTotalConnectionsRequest) returns (FetchNumberOfTotalConnectionsResponse) {};
