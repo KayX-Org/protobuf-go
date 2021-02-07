@@ -107,7 +107,7 @@ message GetTribeActivityResponse {
 }
 
 message GetActivitiesRequest {
-  string activity_id = 1;
+  repeated string activity_ids = 1;
 }
 
 message GetActivitiesResponse {
