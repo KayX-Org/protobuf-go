@@ -1072,6 +1072,100 @@ func (x *GetTribeActivityResponse) GetActivity() []*TribeActivity {
 	return nil
 }
 
+type GetActivitiesRequest struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	ActivityId string `protobuf:"bytes,1,opt,name=activity_id,json=activityId,proto3" json:"activity_id,omitempty"`
+}
+
+func (x *GetActivitiesRequest) Reset() {
+	*x = GetActivitiesRequest{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[16]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *GetActivitiesRequest) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*GetActivitiesRequest) ProtoMessage() {}
+
+func (x *GetActivitiesRequest) ProtoReflect() protoreflect.Message {
+	mi := &file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[16]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use GetActivitiesRequest.ProtoReflect.Descriptor instead.
+func (*GetActivitiesRequest) Descriptor() ([]byte, []int) {
+	return file_api_protobuf_spec_connection_tribe_v1_proto_rawDescGZIP(), []int{16}
+}
+
+func (x *GetActivitiesRequest) GetActivityId() string {
+	if x != nil {
+		return x.ActivityId
+	}
+	return ""
+}
+
+type GetActivitiesResponse struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	Activity []*TribeActivity `protobuf:"bytes,1,rep,name=activity,proto3" json:"activity,omitempty"`
+}
+
+func (x *GetActivitiesResponse) Reset() {
+	*x = GetActivitiesResponse{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[17]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *GetActivitiesResponse) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*GetActivitiesResponse) ProtoMessage() {}
+
+func (x *GetActivitiesResponse) ProtoReflect() protoreflect.Message {
+	mi := &file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[17]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use GetActivitiesResponse.ProtoReflect.Descriptor instead.
+func (*GetActivitiesResponse) Descriptor() ([]byte, []int) {
+	return file_api_protobuf_spec_connection_tribe_v1_proto_rawDescGZIP(), []int{17}
+}
+
+func (x *GetActivitiesResponse) GetActivity() []*TribeActivity {
+	if x != nil {
+		return x.Activity
+	}
+	return nil
+}
+
 type GetTribeResponse struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -1083,7 +1177,7 @@ type GetTribeResponse struct {
 func (x *GetTribeResponse) Reset() {
 	*x = GetTribeResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[16]
+		mi := &file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[18]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1096,7 +1190,7 @@ func (x *GetTribeResponse) String() string {
 func (*GetTribeResponse) ProtoMessage() {}
 
 func (x *GetTribeResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[16]
+	mi := &file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[18]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1109,7 +1203,7 @@ func (x *GetTribeResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetTribeResponse.ProtoReflect.Descriptor instead.
 func (*GetTribeResponse) Descriptor() ([]byte, []int) {
-	return file_api_protobuf_spec_connection_tribe_v1_proto_rawDescGZIP(), []int{16}
+	return file_api_protobuf_spec_connection_tribe_v1_proto_rawDescGZIP(), []int{18}
 }
 
 func (x *GetTribeResponse) GetTribe() *Tribe {
@@ -1130,7 +1224,7 @@ type GetTribeByCodeResponse struct {
 func (x *GetTribeByCodeResponse) Reset() {
 	*x = GetTribeByCodeResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[17]
+		mi := &file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[19]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1143,7 +1237,7 @@ func (x *GetTribeByCodeResponse) String() string {
 func (*GetTribeByCodeResponse) ProtoMessage() {}
 
 func (x *GetTribeByCodeResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[17]
+	mi := &file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[19]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1156,7 +1250,7 @@ func (x *GetTribeByCodeResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetTribeByCodeResponse.ProtoReflect.Descriptor instead.
 func (*GetTribeByCodeResponse) Descriptor() ([]byte, []int) {
-	return file_api_protobuf_spec_connection_tribe_v1_proto_rawDescGZIP(), []int{17}
+	return file_api_protobuf_spec_connection_tribe_v1_proto_rawDescGZIP(), []int{19}
 }
 
 func (x *GetTribeByCodeResponse) GetTribe() *Tribe {
@@ -1177,7 +1271,7 @@ type GetTribeShareableLinkResponse struct {
 func (x *GetTribeShareableLinkResponse) Reset() {
 	*x = GetTribeShareableLinkResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[18]
+		mi := &file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[20]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1190,7 +1284,7 @@ func (x *GetTribeShareableLinkResponse) String() string {
 func (*GetTribeShareableLinkResponse) ProtoMessage() {}
 
 func (x *GetTribeShareableLinkResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[18]
+	mi := &file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[20]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1203,7 +1297,7 @@ func (x *GetTribeShareableLinkResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetTribeShareableLinkResponse.ProtoReflect.Descriptor instead.
 func (*GetTribeShareableLinkResponse) Descriptor() ([]byte, []int) {
-	return file_api_protobuf_spec_connection_tribe_v1_proto_rawDescGZIP(), []int{18}
+	return file_api_protobuf_spec_connection_tribe_v1_proto_rawDescGZIP(), []int{20}
 }
 
 func (x *GetTribeShareableLinkResponse) GetLink() string {
@@ -1224,7 +1318,7 @@ type GetTribesResponse struct {
 func (x *GetTribesResponse) Reset() {
 	*x = GetTribesResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[19]
+		mi := &file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[21]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1237,7 +1331,7 @@ func (x *GetTribesResponse) String() string {
 func (*GetTribesResponse) ProtoMessage() {}
 
 func (x *GetTribesResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[19]
+	mi := &file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[21]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1250,7 +1344,7 @@ func (x *GetTribesResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetTribesResponse.ProtoReflect.Descriptor instead.
 func (*GetTribesResponse) Descriptor() ([]byte, []int) {
-	return file_api_protobuf_spec_connection_tribe_v1_proto_rawDescGZIP(), []int{19}
+	return file_api_protobuf_spec_connection_tribe_v1_proto_rawDescGZIP(), []int{21}
 }
 
 func (x *GetTribesResponse) GetTribes() []*Tribe {
@@ -1271,7 +1365,7 @@ type GetAllTribesResponse struct {
 func (x *GetAllTribesResponse) Reset() {
 	*x = GetAllTribesResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[20]
+		mi := &file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[22]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1284,7 +1378,7 @@ func (x *GetAllTribesResponse) String() string {
 func (*GetAllTribesResponse) ProtoMessage() {}
 
 func (x *GetAllTribesResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[20]
+	mi := &file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[22]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1297,7 +1391,7 @@ func (x *GetAllTribesResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetAllTribesResponse.ProtoReflect.Descriptor instead.
 func (*GetAllTribesResponse) Descriptor() ([]byte, []int) {
-	return file_api_protobuf_spec_connection_tribe_v1_proto_rawDescGZIP(), []int{20}
+	return file_api_protobuf_spec_connection_tribe_v1_proto_rawDescGZIP(), []int{22}
 }
 
 func (x *GetAllTribesResponse) GetTribeIds() []string {
@@ -1320,7 +1414,7 @@ type SendInviteRequest struct {
 func (x *SendInviteRequest) Reset() {
 	*x = SendInviteRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[21]
+		mi := &file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[23]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1333,7 +1427,7 @@ func (x *SendInviteRequest) String() string {
 func (*SendInviteRequest) ProtoMessage() {}
 
 func (x *SendInviteRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[21]
+	mi := &file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[23]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1346,7 +1440,7 @@ func (x *SendInviteRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use SendInviteRequest.ProtoReflect.Descriptor instead.
 func (*SendInviteRequest) Descriptor() ([]byte, []int) {
-	return file_api_protobuf_spec_connection_tribe_v1_proto_rawDescGZIP(), []int{21}
+	return file_api_protobuf_spec_connection_tribe_v1_proto_rawDescGZIP(), []int{23}
 }
 
 func (x *SendInviteRequest) GetSenderId() string {
@@ -1382,7 +1476,7 @@ type AcceptInviteRequest struct {
 func (x *AcceptInviteRequest) Reset() {
 	*x = AcceptInviteRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[22]
+		mi := &file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[24]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1395,7 +1489,7 @@ func (x *AcceptInviteRequest) String() string {
 func (*AcceptInviteRequest) ProtoMessage() {}
 
 func (x *AcceptInviteRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[22]
+	mi := &file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[24]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1408,7 +1502,7 @@ func (x *AcceptInviteRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use AcceptInviteRequest.ProtoReflect.Descriptor instead.
 func (*AcceptInviteRequest) Descriptor() ([]byte, []int) {
-	return file_api_protobuf_spec_connection_tribe_v1_proto_rawDescGZIP(), []int{22}
+	return file_api_protobuf_spec_connection_tribe_v1_proto_rawDescGZIP(), []int{24}
 }
 
 func (x *AcceptInviteRequest) GetUserId() string {
@@ -1437,7 +1531,7 @@ type DeclineInviteRequest struct {
 func (x *DeclineInviteRequest) Reset() {
 	*x = DeclineInviteRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[23]
+		mi := &file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[25]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1450,7 +1544,7 @@ func (x *DeclineInviteRequest) String() string {
 func (*DeclineInviteRequest) ProtoMessage() {}
 
 func (x *DeclineInviteRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[23]
+	mi := &file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[25]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1463,7 +1557,7 @@ func (x *DeclineInviteRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use DeclineInviteRequest.ProtoReflect.Descriptor instead.
 func (*DeclineInviteRequest) Descriptor() ([]byte, []int) {
-	return file_api_protobuf_spec_connection_tribe_v1_proto_rawDescGZIP(), []int{23}
+	return file_api_protobuf_spec_connection_tribe_v1_proto_rawDescGZIP(), []int{25}
 }
 
 func (x *DeclineInviteRequest) GetUserId() string {
@@ -1492,7 +1586,7 @@ type ConnectToTribeWithCodeRequest struct {
 func (x *ConnectToTribeWithCodeRequest) Reset() {
 	*x = ConnectToTribeWithCodeRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[24]
+		mi := &file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[26]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1505,7 +1599,7 @@ func (x *ConnectToTribeWithCodeRequest) String() string {
 func (*ConnectToTribeWithCodeRequest) ProtoMessage() {}
 
 func (x *ConnectToTribeWithCodeRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[24]
+	mi := &file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[26]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1518,7 +1612,7 @@ func (x *ConnectToTribeWithCodeRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ConnectToTribeWithCodeRequest.ProtoReflect.Descriptor instead.
 func (*ConnectToTribeWithCodeRequest) Descriptor() ([]byte, []int) {
-	return file_api_protobuf_spec_connection_tribe_v1_proto_rawDescGZIP(), []int{24}
+	return file_api_protobuf_spec_connection_tribe_v1_proto_rawDescGZIP(), []int{26}
 }
 
 func (x *ConnectToTribeWithCodeRequest) GetUserId() string {
@@ -1547,7 +1641,7 @@ type GetTribesPerUserRequest struct {
 func (x *GetTribesPerUserRequest) Reset() {
 	*x = GetTribesPerUserRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[25]
+		mi := &file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[27]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1560,7 +1654,7 @@ func (x *GetTribesPerUserRequest) String() string {
 func (*GetTribesPerUserRequest) ProtoMessage() {}
 
 func (x *GetTribesPerUserRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[25]
+	mi := &file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[27]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1573,7 +1667,7 @@ func (x *GetTribesPerUserRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetTribesPerUserRequest.ProtoReflect.Descriptor instead.
 func (*GetTribesPerUserRequest) Descriptor() ([]byte, []int) {
-	return file_api_protobuf_spec_connection_tribe_v1_proto_rawDescGZIP(), []int{25}
+	return file_api_protobuf_spec_connection_tribe_v1_proto_rawDescGZIP(), []int{27}
 }
 
 func (x *GetTribesPerUserRequest) GetUserId() string {
@@ -1601,7 +1695,7 @@ type TribesPerUserResponse struct {
 func (x *TribesPerUserResponse) Reset() {
 	*x = TribesPerUserResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[26]
+		mi := &file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[28]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1614,7 +1708,7 @@ func (x *TribesPerUserResponse) String() string {
 func (*TribesPerUserResponse) ProtoMessage() {}
 
 func (x *TribesPerUserResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[26]
+	mi := &file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[28]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1627,7 +1721,7 @@ func (x *TribesPerUserResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use TribesPerUserResponse.ProtoReflect.Descriptor instead.
 func (*TribesPerUserResponse) Descriptor() ([]byte, []int) {
-	return file_api_protobuf_spec_connection_tribe_v1_proto_rawDescGZIP(), []int{26}
+	return file_api_protobuf_spec_connection_tribe_v1_proto_rawDescGZIP(), []int{28}
 }
 
 func (x *TribesPerUserResponse) GetTribeId() []string {
@@ -1649,7 +1743,7 @@ type SharedTribesRequest struct {
 func (x *SharedTribesRequest) Reset() {
 	*x = SharedTribesRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[27]
+		mi := &file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[29]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1662,7 +1756,7 @@ func (x *SharedTribesRequest) String() string {
 func (*SharedTribesRequest) ProtoMessage() {}
 
 func (x *SharedTribesRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[27]
+	mi := &file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[29]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1675,7 +1769,7 @@ func (x *SharedTribesRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use SharedTribesRequest.ProtoReflect.Descriptor instead.
 func (*SharedTribesRequest) Descriptor() ([]byte, []int) {
-	return file_api_protobuf_spec_connection_tribe_v1_proto_rawDescGZIP(), []int{27}
+	return file_api_protobuf_spec_connection_tribe_v1_proto_rawDescGZIP(), []int{29}
 }
 
 func (x *SharedTribesRequest) GetUserFromId() string {
@@ -1703,7 +1797,7 @@ type GetTribesPerUserResponse struct {
 func (x *GetTribesPerUserResponse) Reset() {
 	*x = GetTribesPerUserResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[28]
+		mi := &file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[30]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1716,7 +1810,7 @@ func (x *GetTribesPerUserResponse) String() string {
 func (*GetTribesPerUserResponse) ProtoMessage() {}
 
 func (x *GetTribesPerUserResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[28]
+	mi := &file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[30]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1729,7 +1823,7 @@ func (x *GetTribesPerUserResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetTribesPerUserResponse.ProtoReflect.Descriptor instead.
 func (*GetTribesPerUserResponse) Descriptor() ([]byte, []int) {
-	return file_api_protobuf_spec_connection_tribe_v1_proto_rawDescGZIP(), []int{28}
+	return file_api_protobuf_spec_connection_tribe_v1_proto_rawDescGZIP(), []int{30}
 }
 
 func (x *GetTribesPerUserResponse) GetTribes() []*UserTribeConnection {
@@ -1750,7 +1844,7 @@ type SharedTribesResponse struct {
 func (x *SharedTribesResponse) Reset() {
 	*x = SharedTribesResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[29]
+		mi := &file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[31]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1763,7 +1857,7 @@ func (x *SharedTribesResponse) String() string {
 func (*SharedTribesResponse) ProtoMessage() {}
 
 func (x *SharedTribesResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[29]
+	mi := &file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[31]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1776,7 +1870,7 @@ func (x *SharedTribesResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use SharedTribesResponse.ProtoReflect.Descriptor instead.
 func (*SharedTribesResponse) Descriptor() ([]byte, []int) {
-	return file_api_protobuf_spec_connection_tribe_v1_proto_rawDescGZIP(), []int{29}
+	return file_api_protobuf_spec_connection_tribe_v1_proto_rawDescGZIP(), []int{31}
 }
 
 func (x *SharedTribesResponse) GetTribeIds() []string {
@@ -1798,7 +1892,7 @@ type GetTribeMembersRequest struct {
 func (x *GetTribeMembersRequest) Reset() {
 	*x = GetTribeMembersRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[30]
+		mi := &file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[32]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1811,7 +1905,7 @@ func (x *GetTribeMembersRequest) String() string {
 func (*GetTribeMembersRequest) ProtoMessage() {}
 
 func (x *GetTribeMembersRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[30]
+	mi := &file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[32]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1824,7 +1918,7 @@ func (x *GetTribeMembersRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetTribeMembersRequest.ProtoReflect.Descriptor instead.
 func (*GetTribeMembersRequest) Descriptor() ([]byte, []int) {
-	return file_api_protobuf_spec_connection_tribe_v1_proto_rawDescGZIP(), []int{30}
+	return file_api_protobuf_spec_connection_tribe_v1_proto_rawDescGZIP(), []int{32}
 }
 
 func (x *GetTribeMembersRequest) GetTribeId() string {
@@ -1852,7 +1946,7 @@ type GetTribeMembersResponse struct {
 func (x *GetTribeMembersResponse) Reset() {
 	*x = GetTribeMembersResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[31]
+		mi := &file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[33]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1865,7 +1959,7 @@ func (x *GetTribeMembersResponse) String() string {
 func (*GetTribeMembersResponse) ProtoMessage() {}
 
 func (x *GetTribeMembersResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[31]
+	mi := &file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[33]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1878,7 +1972,7 @@ func (x *GetTribeMembersResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetTribeMembersResponse.ProtoReflect.Descriptor instead.
 func (*GetTribeMembersResponse) Descriptor() ([]byte, []int) {
-	return file_api_protobuf_spec_connection_tribe_v1_proto_rawDescGZIP(), []int{31}
+	return file_api_protobuf_spec_connection_tribe_v1_proto_rawDescGZIP(), []int{33}
 }
 
 func (x *GetTribeMembersResponse) GetUsers() []*TribeUserConnection {
@@ -1900,7 +1994,7 @@ type GetInvitesRequest struct {
 func (x *GetInvitesRequest) Reset() {
 	*x = GetInvitesRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[32]
+		mi := &file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[34]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1913,7 +2007,7 @@ func (x *GetInvitesRequest) String() string {
 func (*GetInvitesRequest) ProtoMessage() {}
 
 func (x *GetInvitesRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[32]
+	mi := &file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[34]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1926,7 +2020,7 @@ func (x *GetInvitesRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetInvitesRequest.ProtoReflect.Descriptor instead.
 func (*GetInvitesRequest) Descriptor() ([]byte, []int) {
-	return file_api_protobuf_spec_connection_tribe_v1_proto_rawDescGZIP(), []int{32}
+	return file_api_protobuf_spec_connection_tribe_v1_proto_rawDescGZIP(), []int{34}
 }
 
 func (x *GetInvitesRequest) GetUserId() string {
@@ -1955,7 +2049,7 @@ type GetMutualConnectionAmountRequest struct {
 func (x *GetMutualConnectionAmountRequest) Reset() {
 	*x = GetMutualConnectionAmountRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[33]
+		mi := &file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[35]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1968,7 +2062,7 @@ func (x *GetMutualConnectionAmountRequest) String() string {
 func (*GetMutualConnectionAmountRequest) ProtoMessage() {}
 
 func (x *GetMutualConnectionAmountRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[33]
+	mi := &file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[35]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1981,7 +2075,7 @@ func (x *GetMutualConnectionAmountRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetMutualConnectionAmountRequest.ProtoReflect.Descriptor instead.
 func (*GetMutualConnectionAmountRequest) Descriptor() ([]byte, []int) {
-	return file_api_protobuf_spec_connection_tribe_v1_proto_rawDescGZIP(), []int{33}
+	return file_api_protobuf_spec_connection_tribe_v1_proto_rawDescGZIP(), []int{35}
 }
 
 func (x *GetMutualConnectionAmountRequest) GetUserId() string {
@@ -2009,7 +2103,7 @@ type GetMutualConnectionAmountResponse struct {
 func (x *GetMutualConnectionAmountResponse) Reset() {
 	*x = GetMutualConnectionAmountResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[34]
+		mi := &file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[36]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -2022,7 +2116,7 @@ func (x *GetMutualConnectionAmountResponse) String() string {
 func (*GetMutualConnectionAmountResponse) ProtoMessage() {}
 
 func (x *GetMutualConnectionAmountResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[34]
+	mi := &file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[36]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2035,7 +2129,7 @@ func (x *GetMutualConnectionAmountResponse) ProtoReflect() protoreflect.Message 
 
 // Deprecated: Use GetMutualConnectionAmountResponse.ProtoReflect.Descriptor instead.
 func (*GetMutualConnectionAmountResponse) Descriptor() ([]byte, []int) {
-	return file_api_protobuf_spec_connection_tribe_v1_proto_rawDescGZIP(), []int{34}
+	return file_api_protobuf_spec_connection_tribe_v1_proto_rawDescGZIP(), []int{36}
 }
 
 func (x *GetMutualConnectionAmountResponse) GetTotal() int32 {
@@ -2056,7 +2150,7 @@ type DeleteTribeActivityRequest struct {
 func (x *DeleteTribeActivityRequest) Reset() {
 	*x = DeleteTribeActivityRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[35]
+		mi := &file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[37]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -2069,7 +2163,7 @@ func (x *DeleteTribeActivityRequest) String() string {
 func (*DeleteTribeActivityRequest) ProtoMessage() {}
 
 func (x *DeleteTribeActivityRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[35]
+	mi := &file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[37]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2082,7 +2176,7 @@ func (x *DeleteTribeActivityRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use DeleteTribeActivityRequest.ProtoReflect.Descriptor instead.
 func (*DeleteTribeActivityRequest) Descriptor() ([]byte, []int) {
-	return file_api_protobuf_spec_connection_tribe_v1_proto_rawDescGZIP(), []int{35}
+	return file_api_protobuf_spec_connection_tribe_v1_proto_rawDescGZIP(), []int{37}
 }
 
 func (x *DeleteTribeActivityRequest) GetActivityId() string {
@@ -2105,7 +2199,7 @@ type CreateTribeActivityRequest struct {
 func (x *CreateTribeActivityRequest) Reset() {
 	*x = CreateTribeActivityRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[36]
+		mi := &file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[38]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -2118,7 +2212,7 @@ func (x *CreateTribeActivityRequest) String() string {
 func (*CreateTribeActivityRequest) ProtoMessage() {}
 
 func (x *CreateTribeActivityRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[36]
+	mi := &file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[38]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2131,7 +2225,7 @@ func (x *CreateTribeActivityRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CreateTribeActivityRequest.ProtoReflect.Descriptor instead.
 func (*CreateTribeActivityRequest) Descriptor() ([]byte, []int) {
-	return file_api_protobuf_spec_connection_tribe_v1_proto_rawDescGZIP(), []int{36}
+	return file_api_protobuf_spec_connection_tribe_v1_proto_rawDescGZIP(), []int{38}
 }
 
 func (x *CreateTribeActivityRequest) GetTribeId() string {
@@ -2166,7 +2260,7 @@ type CreateTribeActivityResponse struct {
 func (x *CreateTribeActivityResponse) Reset() {
 	*x = CreateTribeActivityResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[37]
+		mi := &file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[39]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -2179,7 +2273,7 @@ func (x *CreateTribeActivityResponse) String() string {
 func (*CreateTribeActivityResponse) ProtoMessage() {}
 
 func (x *CreateTribeActivityResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[37]
+	mi := &file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[39]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2192,7 +2286,7 @@ func (x *CreateTribeActivityResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CreateTribeActivityResponse.ProtoReflect.Descriptor instead.
 func (*CreateTribeActivityResponse) Descriptor() ([]byte, []int) {
-	return file_api_protobuf_spec_connection_tribe_v1_proto_rawDescGZIP(), []int{37}
+	return file_api_protobuf_spec_connection_tribe_v1_proto_rawDescGZIP(), []int{39}
 }
 
 func (x *CreateTribeActivityResponse) GetId() string {
@@ -2214,7 +2308,7 @@ type DisconnectUserFromTribeRequest struct {
 func (x *DisconnectUserFromTribeRequest) Reset() {
 	*x = DisconnectUserFromTribeRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[38]
+		mi := &file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[40]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -2227,7 +2321,7 @@ func (x *DisconnectUserFromTribeRequest) String() string {
 func (*DisconnectUserFromTribeRequest) ProtoMessage() {}
 
 func (x *DisconnectUserFromTribeRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[38]
+	mi := &file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[40]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2240,7 +2334,7 @@ func (x *DisconnectUserFromTribeRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use DisconnectUserFromTribeRequest.ProtoReflect.Descriptor instead.
 func (*DisconnectUserFromTribeRequest) Descriptor() ([]byte, []int) {
-	return file_api_protobuf_spec_connection_tribe_v1_proto_rawDescGZIP(), []int{38}
+	return file_api_protobuf_spec_connection_tribe_v1_proto_rawDescGZIP(), []int{40}
 }
 
 func (x *DisconnectUserFromTribeRequest) GetUserId() string {
@@ -2268,7 +2362,7 @@ type GetInvitesResponse struct {
 func (x *GetInvitesResponse) Reset() {
 	*x = GetInvitesResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[39]
+		mi := &file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[41]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -2281,7 +2375,7 @@ func (x *GetInvitesResponse) String() string {
 func (*GetInvitesResponse) ProtoMessage() {}
 
 func (x *GetInvitesResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[39]
+	mi := &file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[41]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2294,7 +2388,7 @@ func (x *GetInvitesResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetInvitesResponse.ProtoReflect.Descriptor instead.
 func (*GetInvitesResponse) Descriptor() ([]byte, []int) {
-	return file_api_protobuf_spec_connection_tribe_v1_proto_rawDescGZIP(), []int{39}
+	return file_api_protobuf_spec_connection_tribe_v1_proto_rawDescGZIP(), []int{41}
 }
 
 func (x *GetInvitesResponse) GetTribeInviteCodes() []*TribeInviteCode {
@@ -2315,7 +2409,7 @@ type GetFAQResponse struct {
 func (x *GetFAQResponse) Reset() {
 	*x = GetFAQResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[40]
+		mi := &file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[42]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -2328,7 +2422,7 @@ func (x *GetFAQResponse) String() string {
 func (*GetFAQResponse) ProtoMessage() {}
 
 func (x *GetFAQResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[40]
+	mi := &file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[42]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2341,7 +2435,7 @@ func (x *GetFAQResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetFAQResponse.ProtoReflect.Descriptor instead.
 func (*GetFAQResponse) Descriptor() ([]byte, []int) {
-	return file_api_protobuf_spec_connection_tribe_v1_proto_rawDescGZIP(), []int{40}
+	return file_api_protobuf_spec_connection_tribe_v1_proto_rawDescGZIP(), []int{42}
 }
 
 func (x *GetFAQResponse) GetFaq() []*FAQ {
@@ -2362,7 +2456,7 @@ type FetchNumberOfNewConnectionsRequest struct {
 func (x *FetchNumberOfNewConnectionsRequest) Reset() {
 	*x = FetchNumberOfNewConnectionsRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[41]
+		mi := &file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[43]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -2375,7 +2469,7 @@ func (x *FetchNumberOfNewConnectionsRequest) String() string {
 func (*FetchNumberOfNewConnectionsRequest) ProtoMessage() {}
 
 func (x *FetchNumberOfNewConnectionsRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[41]
+	mi := &file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[43]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2388,7 +2482,7 @@ func (x *FetchNumberOfNewConnectionsRequest) ProtoReflect() protoreflect.Message
 
 // Deprecated: Use FetchNumberOfNewConnectionsRequest.ProtoReflect.Descriptor instead.
 func (*FetchNumberOfNewConnectionsRequest) Descriptor() ([]byte, []int) {
-	return file_api_protobuf_spec_connection_tribe_v1_proto_rawDescGZIP(), []int{41}
+	return file_api_protobuf_spec_connection_tribe_v1_proto_rawDescGZIP(), []int{43}
 }
 
 func (x *FetchNumberOfNewConnectionsRequest) GetUserId() string {
@@ -2409,7 +2503,7 @@ type FetchNumberOfNewConnectionsResponse struct {
 func (x *FetchNumberOfNewConnectionsResponse) Reset() {
 	*x = FetchNumberOfNewConnectionsResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[42]
+		mi := &file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[44]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -2422,7 +2516,7 @@ func (x *FetchNumberOfNewConnectionsResponse) String() string {
 func (*FetchNumberOfNewConnectionsResponse) ProtoMessage() {}
 
 func (x *FetchNumberOfNewConnectionsResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[42]
+	mi := &file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[44]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2435,7 +2529,7 @@ func (x *FetchNumberOfNewConnectionsResponse) ProtoReflect() protoreflect.Messag
 
 // Deprecated: Use FetchNumberOfNewConnectionsResponse.ProtoReflect.Descriptor instead.
 func (*FetchNumberOfNewConnectionsResponse) Descriptor() ([]byte, []int) {
-	return file_api_protobuf_spec_connection_tribe_v1_proto_rawDescGZIP(), []int{42}
+	return file_api_protobuf_spec_connection_tribe_v1_proto_rawDescGZIP(), []int{44}
 }
 
 func (x *FetchNumberOfNewConnectionsResponse) GetTotal() int32 {
@@ -2456,7 +2550,7 @@ type FetchNumberOfTotalConnectionsRequest struct {
 func (x *FetchNumberOfTotalConnectionsRequest) Reset() {
 	*x = FetchNumberOfTotalConnectionsRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[43]
+		mi := &file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[45]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -2469,7 +2563,7 @@ func (x *FetchNumberOfTotalConnectionsRequest) String() string {
 func (*FetchNumberOfTotalConnectionsRequest) ProtoMessage() {}
 
 func (x *FetchNumberOfTotalConnectionsRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[43]
+	mi := &file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[45]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2482,7 +2576,7 @@ func (x *FetchNumberOfTotalConnectionsRequest) ProtoReflect() protoreflect.Messa
 
 // Deprecated: Use FetchNumberOfTotalConnectionsRequest.ProtoReflect.Descriptor instead.
 func (*FetchNumberOfTotalConnectionsRequest) Descriptor() ([]byte, []int) {
-	return file_api_protobuf_spec_connection_tribe_v1_proto_rawDescGZIP(), []int{43}
+	return file_api_protobuf_spec_connection_tribe_v1_proto_rawDescGZIP(), []int{45}
 }
 
 func (x *FetchNumberOfTotalConnectionsRequest) GetUserId() string {
@@ -2504,7 +2598,7 @@ type MarkTribeConnectionAsSeenRequest struct {
 func (x *MarkTribeConnectionAsSeenRequest) Reset() {
 	*x = MarkTribeConnectionAsSeenRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[44]
+		mi := &file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[46]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -2517,7 +2611,7 @@ func (x *MarkTribeConnectionAsSeenRequest) String() string {
 func (*MarkTribeConnectionAsSeenRequest) ProtoMessage() {}
 
 func (x *MarkTribeConnectionAsSeenRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[44]
+	mi := &file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[46]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2530,7 +2624,7 @@ func (x *MarkTribeConnectionAsSeenRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use MarkTribeConnectionAsSeenRequest.ProtoReflect.Descriptor instead.
 func (*MarkTribeConnectionAsSeenRequest) Descriptor() ([]byte, []int) {
-	return file_api_protobuf_spec_connection_tribe_v1_proto_rawDescGZIP(), []int{44}
+	return file_api_protobuf_spec_connection_tribe_v1_proto_rawDescGZIP(), []int{46}
 }
 
 func (x *MarkTribeConnectionAsSeenRequest) GetUserId() string {
@@ -2558,7 +2652,7 @@ type FetchNumberOfTotalConnectionsResponse struct {
 func (x *FetchNumberOfTotalConnectionsResponse) Reset() {
 	*x = FetchNumberOfTotalConnectionsResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[45]
+		mi := &file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[47]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -2571,7 +2665,7 @@ func (x *FetchNumberOfTotalConnectionsResponse) String() string {
 func (*FetchNumberOfTotalConnectionsResponse) ProtoMessage() {}
 
 func (x *FetchNumberOfTotalConnectionsResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[45]
+	mi := &file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[47]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2584,7 +2678,7 @@ func (x *FetchNumberOfTotalConnectionsResponse) ProtoReflect() protoreflect.Mess
 
 // Deprecated: Use FetchNumberOfTotalConnectionsResponse.ProtoReflect.Descriptor instead.
 func (*FetchNumberOfTotalConnectionsResponse) Descriptor() ([]byte, []int) {
-	return file_api_protobuf_spec_connection_tribe_v1_proto_rawDescGZIP(), []int{45}
+	return file_api_protobuf_spec_connection_tribe_v1_proto_rawDescGZIP(), []int{47}
 }
 
 func (x *FetchNumberOfTotalConnectionsResponse) GetTotal() int32 {
@@ -2713,6 +2807,15 @@ var file_api_protobuf_spec_connection_tribe_v1_proto_rawDesc = []byte{
 	0x74, 0x12, 0x19, 0x0a, 0x08, 0x74, 0x72, 0x69, 0x62, 0x65, 0x5f, 0x69, 0x64, 0x18, 0x01, 0x20,
 	0x01, 0x28, 0x09, 0x52, 0x07, 0x74, 0x72, 0x69, 0x62, 0x65, 0x49, 0x64, 0x22, 0x58, 0x0a, 0x18,
 	0x47, 0x65, 0x74, 0x54, 0x72, 0x69, 0x62, 0x65, 0x41, 0x63, 0x74, 0x69, 0x76, 0x69, 0x74, 0x79,
+	0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x3c, 0x0a, 0x08, 0x61, 0x63, 0x74, 0x69,
+	0x76, 0x69, 0x74, 0x79, 0x18, 0x01, 0x20, 0x03, 0x28, 0x0b, 0x32, 0x20, 0x2e, 0x63, 0x6f, 0x6e,
+	0x6e, 0x65, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x2e, 0x74, 0x72, 0x69, 0x62, 0x65, 0x2e, 0x54,
+	0x72, 0x69, 0x62, 0x65, 0x41, 0x63, 0x74, 0x69, 0x76, 0x69, 0x74, 0x79, 0x52, 0x08, 0x61, 0x63,
+	0x74, 0x69, 0x76, 0x69, 0x74, 0x79, 0x22, 0x37, 0x0a, 0x14, 0x47, 0x65, 0x74, 0x41, 0x63, 0x74,
+	0x69, 0x76, 0x69, 0x74, 0x69, 0x65, 0x73, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x12, 0x1f,
+	0x0a, 0x0b, 0x61, 0x63, 0x74, 0x69, 0x76, 0x69, 0x74, 0x79, 0x5f, 0x69, 0x64, 0x18, 0x01, 0x20,
+	0x01, 0x28, 0x09, 0x52, 0x0a, 0x61, 0x63, 0x74, 0x69, 0x76, 0x69, 0x74, 0x79, 0x49, 0x64, 0x22,
+	0x55, 0x0a, 0x15, 0x47, 0x65, 0x74, 0x41, 0x63, 0x74, 0x69, 0x76, 0x69, 0x74, 0x69, 0x65, 0x73,
 	0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x3c, 0x0a, 0x08, 0x61, 0x63, 0x74, 0x69,
 	0x76, 0x69, 0x74, 0x79, 0x18, 0x01, 0x20, 0x03, 0x28, 0x0b, 0x32, 0x20, 0x2e, 0x63, 0x6f, 0x6e,
 	0x6e, 0x65, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x2e, 0x74, 0x72, 0x69, 0x62, 0x65, 0x2e, 0x54,
@@ -2860,7 +2963,7 @@ var file_api_protobuf_spec_connection_tribe_v1_proto_rawDesc = []byte{
 	0x62, 0x65, 0x72, 0x4f, 0x66, 0x54, 0x6f, 0x74, 0x61, 0x6c, 0x43, 0x6f, 0x6e, 0x6e, 0x65, 0x63,
 	0x74, 0x69, 0x6f, 0x6e, 0x73, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x14, 0x0a,
 	0x05, 0x74, 0x6f, 0x74, 0x61, 0x6c, 0x18, 0x01, 0x20, 0x01, 0x28, 0x05, 0x52, 0x05, 0x74, 0x6f,
-	0x74, 0x61, 0x6c, 0x32, 0x8a, 0x14, 0x0a, 0x0c, 0x54, 0x72, 0x69, 0x62, 0x65, 0x53, 0x65, 0x72,
+	0x74, 0x61, 0x6c, 0x32, 0xf0, 0x14, 0x0a, 0x0c, 0x54, 0x72, 0x69, 0x62, 0x65, 0x53, 0x65, 0x72,
 	0x76, 0x69, 0x63, 0x65, 0x12, 0x55, 0x0a, 0x08, 0x47, 0x65, 0x74, 0x54, 0x72, 0x69, 0x62, 0x65,
 	0x12, 0x22, 0x2e, 0x63, 0x6f, 0x6e, 0x6e, 0x65, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x2e, 0x74,
 	0x72, 0x69, 0x62, 0x65, 0x2e, 0x47, 0x65, 0x74, 0x54, 0x72, 0x69, 0x62, 0x65, 0x52, 0x65, 0x71,
@@ -2915,115 +3018,121 @@ var file_api_protobuf_spec_connection_tribe_v1_proto_rawDesc = []byte{
 	0x76, 0x69, 0x74, 0x79, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x2b, 0x2e, 0x63, 0x6f,
 	0x6e, 0x6e, 0x65, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x2e, 0x74, 0x72, 0x69, 0x62, 0x65, 0x2e,
 	0x47, 0x65, 0x74, 0x54, 0x72, 0x69, 0x62, 0x65, 0x41, 0x63, 0x74, 0x69, 0x76, 0x69, 0x74, 0x79,
-	0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00, 0x12, 0x61, 0x0a, 0x0c, 0x53, 0x68,
-	0x61, 0x72, 0x65, 0x64, 0x54, 0x72, 0x69, 0x62, 0x65, 0x73, 0x12, 0x26, 0x2e, 0x63, 0x6f, 0x6e,
-	0x6e, 0x65, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x2e, 0x74, 0x72, 0x69, 0x62, 0x65, 0x2e, 0x53,
-	0x68, 0x61, 0x72, 0x65, 0x64, 0x54, 0x72, 0x69, 0x62, 0x65, 0x73, 0x52, 0x65, 0x71, 0x75, 0x65,
-	0x73, 0x74, 0x1a, 0x27, 0x2e, 0x63, 0x6f, 0x6e, 0x6e, 0x65, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x73,
-	0x2e, 0x74, 0x72, 0x69, 0x62, 0x65, 0x2e, 0x53, 0x68, 0x61, 0x72, 0x65, 0x64, 0x54, 0x72, 0x69,
-	0x62, 0x65, 0x73, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00, 0x12, 0x4c, 0x0a,
-	0x0a, 0x53, 0x65, 0x6e, 0x64, 0x49, 0x6e, 0x76, 0x69, 0x74, 0x65, 0x12, 0x24, 0x2e, 0x63, 0x6f,
+	0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00, 0x12, 0x64, 0x0a, 0x0d, 0x47, 0x65,
+	0x74, 0x41, 0x63, 0x74, 0x69, 0x76, 0x69, 0x74, 0x69, 0x65, 0x73, 0x12, 0x27, 0x2e, 0x63, 0x6f,
 	0x6e, 0x6e, 0x65, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x2e, 0x74, 0x72, 0x69, 0x62, 0x65, 0x2e,
-	0x53, 0x65, 0x6e, 0x64, 0x49, 0x6e, 0x76, 0x69, 0x74, 0x65, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73,
-	0x74, 0x1a, 0x16, 0x2e, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f,
-	0x62, 0x75, 0x66, 0x2e, 0x45, 0x6d, 0x70, 0x74, 0x79, 0x22, 0x00, 0x12, 0x50, 0x0a, 0x0c, 0x41,
-	0x63, 0x63, 0x65, 0x70, 0x74, 0x49, 0x6e, 0x76, 0x69, 0x74, 0x65, 0x12, 0x26, 0x2e, 0x63, 0x6f,
-	0x6e, 0x6e, 0x65, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x2e, 0x74, 0x72, 0x69, 0x62, 0x65, 0x2e,
-	0x41, 0x63, 0x63, 0x65, 0x70, 0x74, 0x49, 0x6e, 0x76, 0x69, 0x74, 0x65, 0x52, 0x65, 0x71, 0x75,
-	0x65, 0x73, 0x74, 0x1a, 0x16, 0x2e, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x2e, 0x70, 0x72, 0x6f,
-	0x74, 0x6f, 0x62, 0x75, 0x66, 0x2e, 0x45, 0x6d, 0x70, 0x74, 0x79, 0x22, 0x00, 0x12, 0x52, 0x0a,
-	0x0d, 0x44, 0x65, 0x63, 0x6c, 0x69, 0x6e, 0x65, 0x49, 0x6e, 0x76, 0x69, 0x74, 0x65, 0x12, 0x27,
-	0x2e, 0x63, 0x6f, 0x6e, 0x6e, 0x65, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x2e, 0x74, 0x72, 0x69,
-	0x62, 0x65, 0x2e, 0x44, 0x65, 0x63, 0x6c, 0x69, 0x6e, 0x65, 0x49, 0x6e, 0x76, 0x69, 0x74, 0x65,
+	0x47, 0x65, 0x74, 0x41, 0x63, 0x74, 0x69, 0x76, 0x69, 0x74, 0x69, 0x65, 0x73, 0x52, 0x65, 0x71,
+	0x75, 0x65, 0x73, 0x74, 0x1a, 0x28, 0x2e, 0x63, 0x6f, 0x6e, 0x6e, 0x65, 0x63, 0x74, 0x69, 0x6f,
+	0x6e, 0x73, 0x2e, 0x74, 0x72, 0x69, 0x62, 0x65, 0x2e, 0x47, 0x65, 0x74, 0x41, 0x63, 0x74, 0x69,
+	0x76, 0x69, 0x74, 0x69, 0x65, 0x73, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00,
+	0x12, 0x61, 0x0a, 0x0c, 0x53, 0x68, 0x61, 0x72, 0x65, 0x64, 0x54, 0x72, 0x69, 0x62, 0x65, 0x73,
+	0x12, 0x26, 0x2e, 0x63, 0x6f, 0x6e, 0x6e, 0x65, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x2e, 0x74,
+	0x72, 0x69, 0x62, 0x65, 0x2e, 0x53, 0x68, 0x61, 0x72, 0x65, 0x64, 0x54, 0x72, 0x69, 0x62, 0x65,
+	0x73, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x27, 0x2e, 0x63, 0x6f, 0x6e, 0x6e, 0x65,
+	0x63, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x2e, 0x74, 0x72, 0x69, 0x62, 0x65, 0x2e, 0x53, 0x68, 0x61,
+	0x72, 0x65, 0x64, 0x54, 0x72, 0x69, 0x62, 0x65, 0x73, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73,
+	0x65, 0x22, 0x00, 0x12, 0x4c, 0x0a, 0x0a, 0x53, 0x65, 0x6e, 0x64, 0x49, 0x6e, 0x76, 0x69, 0x74,
+	0x65, 0x12, 0x24, 0x2e, 0x63, 0x6f, 0x6e, 0x6e, 0x65, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x2e,
+	0x74, 0x72, 0x69, 0x62, 0x65, 0x2e, 0x53, 0x65, 0x6e, 0x64, 0x49, 0x6e, 0x76, 0x69, 0x74, 0x65,
 	0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x16, 0x2e, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65,
 	0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x62, 0x75, 0x66, 0x2e, 0x45, 0x6d, 0x70, 0x74, 0x79, 0x22,
-	0x00, 0x12, 0x64, 0x0a, 0x16, 0x43, 0x6f, 0x6e, 0x6e, 0x65, 0x63, 0x74, 0x54, 0x6f, 0x54, 0x72,
-	0x69, 0x62, 0x65, 0x57, 0x69, 0x74, 0x68, 0x43, 0x6f, 0x64, 0x65, 0x12, 0x30, 0x2e, 0x63, 0x6f,
-	0x6e, 0x6e, 0x65, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x2e, 0x74, 0x72, 0x69, 0x62, 0x65, 0x2e,
-	0x43, 0x6f, 0x6e, 0x6e, 0x65, 0x63, 0x74, 0x54, 0x6f, 0x54, 0x72, 0x69, 0x62, 0x65, 0x57, 0x69,
-	0x74, 0x68, 0x43, 0x6f, 0x64, 0x65, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x16, 0x2e,
+	0x00, 0x12, 0x50, 0x0a, 0x0c, 0x41, 0x63, 0x63, 0x65, 0x70, 0x74, 0x49, 0x6e, 0x76, 0x69, 0x74,
+	0x65, 0x12, 0x26, 0x2e, 0x63, 0x6f, 0x6e, 0x6e, 0x65, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x2e,
+	0x74, 0x72, 0x69, 0x62, 0x65, 0x2e, 0x41, 0x63, 0x63, 0x65, 0x70, 0x74, 0x49, 0x6e, 0x76, 0x69,
+	0x74, 0x65, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x16, 0x2e, 0x67, 0x6f, 0x6f, 0x67,
+	0x6c, 0x65, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x62, 0x75, 0x66, 0x2e, 0x45, 0x6d, 0x70, 0x74,
+	0x79, 0x22, 0x00, 0x12, 0x52, 0x0a, 0x0d, 0x44, 0x65, 0x63, 0x6c, 0x69, 0x6e, 0x65, 0x49, 0x6e,
+	0x76, 0x69, 0x74, 0x65, 0x12, 0x27, 0x2e, 0x63, 0x6f, 0x6e, 0x6e, 0x65, 0x63, 0x74, 0x69, 0x6f,
+	0x6e, 0x73, 0x2e, 0x74, 0x72, 0x69, 0x62, 0x65, 0x2e, 0x44, 0x65, 0x63, 0x6c, 0x69, 0x6e, 0x65,
+	0x49, 0x6e, 0x76, 0x69, 0x74, 0x65, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x16, 0x2e,
 	0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x62, 0x75, 0x66, 0x2e,
-	0x45, 0x6d, 0x70, 0x74, 0x79, 0x22, 0x00, 0x12, 0x6d, 0x0a, 0x10, 0x47, 0x65, 0x74, 0x54, 0x72,
-	0x69, 0x62, 0x65, 0x73, 0x50, 0x65, 0x72, 0x55, 0x73, 0x65, 0x72, 0x12, 0x2a, 0x2e, 0x63, 0x6f,
-	0x6e, 0x6e, 0x65, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x2e, 0x74, 0x72, 0x69, 0x62, 0x65, 0x2e,
-	0x47, 0x65, 0x74, 0x54, 0x72, 0x69, 0x62, 0x65, 0x73, 0x50, 0x65, 0x72, 0x55, 0x73, 0x65, 0x72,
-	0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x2b, 0x2e, 0x63, 0x6f, 0x6e, 0x6e, 0x65, 0x63,
-	0x74, 0x69, 0x6f, 0x6e, 0x73, 0x2e, 0x74, 0x72, 0x69, 0x62, 0x65, 0x2e, 0x47, 0x65, 0x74, 0x54,
-	0x72, 0x69, 0x62, 0x65, 0x73, 0x50, 0x65, 0x72, 0x55, 0x73, 0x65, 0x72, 0x52, 0x65, 0x73, 0x70,
-	0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00, 0x12, 0x6a, 0x0a, 0x0f, 0x47, 0x65, 0x74, 0x54, 0x72, 0x69,
-	0x62, 0x65, 0x4d, 0x65, 0x6d, 0x62, 0x65, 0x72, 0x73, 0x12, 0x29, 0x2e, 0x63, 0x6f, 0x6e, 0x6e,
-	0x65, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x2e, 0x74, 0x72, 0x69, 0x62, 0x65, 0x2e, 0x47, 0x65,
-	0x74, 0x54, 0x72, 0x69, 0x62, 0x65, 0x4d, 0x65, 0x6d, 0x62, 0x65, 0x72, 0x73, 0x52, 0x65, 0x71,
-	0x75, 0x65, 0x73, 0x74, 0x1a, 0x2a, 0x2e, 0x63, 0x6f, 0x6e, 0x6e, 0x65, 0x63, 0x74, 0x69, 0x6f,
-	0x6e, 0x73, 0x2e, 0x74, 0x72, 0x69, 0x62, 0x65, 0x2e, 0x47, 0x65, 0x74, 0x54, 0x72, 0x69, 0x62,
-	0x65, 0x4d, 0x65, 0x6d, 0x62, 0x65, 0x72, 0x73, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65,
-	0x22, 0x00, 0x12, 0x5b, 0x0a, 0x0a, 0x47, 0x65, 0x74, 0x49, 0x6e, 0x76, 0x69, 0x74, 0x65, 0x73,
-	0x12, 0x24, 0x2e, 0x63, 0x6f, 0x6e, 0x6e, 0x65, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x2e, 0x74,
-	0x72, 0x69, 0x62, 0x65, 0x2e, 0x47, 0x65, 0x74, 0x49, 0x6e, 0x76, 0x69, 0x74, 0x65, 0x73, 0x52,
-	0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x25, 0x2e, 0x63, 0x6f, 0x6e, 0x6e, 0x65, 0x63, 0x74,
-	0x69, 0x6f, 0x6e, 0x73, 0x2e, 0x74, 0x72, 0x69, 0x62, 0x65, 0x2e, 0x47, 0x65, 0x74, 0x49, 0x6e,
-	0x76, 0x69, 0x74, 0x65, 0x73, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00, 0x12,
-	0x83, 0x01, 0x0a, 0x14, 0x47, 0x65, 0x74, 0x4d, 0x75, 0x74, 0x75, 0x61, 0x6c, 0x43, 0x6f, 0x6e,
-	0x6e, 0x65, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x12, 0x33, 0x2e, 0x63, 0x6f, 0x6e, 0x6e, 0x65,
-	0x63, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x2e, 0x74, 0x72, 0x69, 0x62, 0x65, 0x2e, 0x47, 0x65, 0x74,
-	0x4d, 0x75, 0x74, 0x75, 0x61, 0x6c, 0x43, 0x6f, 0x6e, 0x6e, 0x65, 0x63, 0x74, 0x69, 0x6f, 0x6e,
-	0x41, 0x6d, 0x6f, 0x75, 0x6e, 0x74, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x34, 0x2e,
+	0x45, 0x6d, 0x70, 0x74, 0x79, 0x22, 0x00, 0x12, 0x64, 0x0a, 0x16, 0x43, 0x6f, 0x6e, 0x6e, 0x65,
+	0x63, 0x74, 0x54, 0x6f, 0x54, 0x72, 0x69, 0x62, 0x65, 0x57, 0x69, 0x74, 0x68, 0x43, 0x6f, 0x64,
+	0x65, 0x12, 0x30, 0x2e, 0x63, 0x6f, 0x6e, 0x6e, 0x65, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x2e,
+	0x74, 0x72, 0x69, 0x62, 0x65, 0x2e, 0x43, 0x6f, 0x6e, 0x6e, 0x65, 0x63, 0x74, 0x54, 0x6f, 0x54,
+	0x72, 0x69, 0x62, 0x65, 0x57, 0x69, 0x74, 0x68, 0x43, 0x6f, 0x64, 0x65, 0x52, 0x65, 0x71, 0x75,
+	0x65, 0x73, 0x74, 0x1a, 0x16, 0x2e, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x2e, 0x70, 0x72, 0x6f,
+	0x74, 0x6f, 0x62, 0x75, 0x66, 0x2e, 0x45, 0x6d, 0x70, 0x74, 0x79, 0x22, 0x00, 0x12, 0x6d, 0x0a,
+	0x10, 0x47, 0x65, 0x74, 0x54, 0x72, 0x69, 0x62, 0x65, 0x73, 0x50, 0x65, 0x72, 0x55, 0x73, 0x65,
+	0x72, 0x12, 0x2a, 0x2e, 0x63, 0x6f, 0x6e, 0x6e, 0x65, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x2e,
+	0x74, 0x72, 0x69, 0x62, 0x65, 0x2e, 0x47, 0x65, 0x74, 0x54, 0x72, 0x69, 0x62, 0x65, 0x73, 0x50,
+	0x65, 0x72, 0x55, 0x73, 0x65, 0x72, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x2b, 0x2e,
 	0x63, 0x6f, 0x6e, 0x6e, 0x65, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x2e, 0x74, 0x72, 0x69, 0x62,
-	0x65, 0x2e, 0x47, 0x65, 0x74, 0x4d, 0x75, 0x74, 0x75, 0x61, 0x6c, 0x43, 0x6f, 0x6e, 0x6e, 0x65,
-	0x63, 0x74, 0x69, 0x6f, 0x6e, 0x41, 0x6d, 0x6f, 0x75, 0x6e, 0x74, 0x52, 0x65, 0x73, 0x70, 0x6f,
-	0x6e, 0x73, 0x65, 0x22, 0x00, 0x12, 0x66, 0x0a, 0x17, 0x44, 0x69, 0x73, 0x63, 0x6f, 0x6e, 0x6e,
-	0x65, 0x63, 0x74, 0x55, 0x73, 0x65, 0x72, 0x46, 0x72, 0x6f, 0x6d, 0x54, 0x72, 0x69, 0x62, 0x65,
-	0x12, 0x31, 0x2e, 0x63, 0x6f, 0x6e, 0x6e, 0x65, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x2e, 0x74,
-	0x72, 0x69, 0x62, 0x65, 0x2e, 0x44, 0x69, 0x73, 0x63, 0x6f, 0x6e, 0x6e, 0x65, 0x63, 0x74, 0x55,
-	0x73, 0x65, 0x72, 0x46, 0x72, 0x6f, 0x6d, 0x54, 0x72, 0x69, 0x62, 0x65, 0x52, 0x65, 0x71, 0x75,
-	0x65, 0x73, 0x74, 0x1a, 0x16, 0x2e, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x2e, 0x70, 0x72, 0x6f,
-	0x74, 0x6f, 0x62, 0x75, 0x66, 0x2e, 0x45, 0x6d, 0x70, 0x74, 0x79, 0x22, 0x00, 0x12, 0x5e, 0x0a,
-	0x13, 0x44, 0x65, 0x6c, 0x65, 0x74, 0x65, 0x54, 0x72, 0x69, 0x62, 0x65, 0x41, 0x63, 0x74, 0x69,
-	0x76, 0x69, 0x74, 0x79, 0x12, 0x2d, 0x2e, 0x63, 0x6f, 0x6e, 0x6e, 0x65, 0x63, 0x74, 0x69, 0x6f,
-	0x6e, 0x73, 0x2e, 0x74, 0x72, 0x69, 0x62, 0x65, 0x2e, 0x44, 0x65, 0x6c, 0x65, 0x74, 0x65, 0x54,
-	0x72, 0x69, 0x62, 0x65, 0x41, 0x63, 0x74, 0x69, 0x76, 0x69, 0x74, 0x79, 0x52, 0x65, 0x71, 0x75,
-	0x65, 0x73, 0x74, 0x1a, 0x16, 0x2e, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x2e, 0x70, 0x72, 0x6f,
-	0x74, 0x6f, 0x62, 0x75, 0x66, 0x2e, 0x45, 0x6d, 0x70, 0x74, 0x79, 0x22, 0x00, 0x12, 0x76, 0x0a,
-	0x13, 0x43, 0x72, 0x65, 0x61, 0x74, 0x65, 0x54, 0x72, 0x69, 0x62, 0x65, 0x41, 0x63, 0x74, 0x69,
-	0x76, 0x69, 0x74, 0x79, 0x12, 0x2d, 0x2e, 0x63, 0x6f, 0x6e, 0x6e, 0x65, 0x63, 0x74, 0x69, 0x6f,
-	0x6e, 0x73, 0x2e, 0x74, 0x72, 0x69, 0x62, 0x65, 0x2e, 0x43, 0x72, 0x65, 0x61, 0x74, 0x65, 0x54,
-	0x72, 0x69, 0x62, 0x65, 0x41, 0x63, 0x74, 0x69, 0x76, 0x69, 0x74, 0x79, 0x52, 0x65, 0x71, 0x75,
-	0x65, 0x73, 0x74, 0x1a, 0x2e, 0x2e, 0x63, 0x6f, 0x6e, 0x6e, 0x65, 0x63, 0x74, 0x69, 0x6f, 0x6e,
-	0x73, 0x2e, 0x74, 0x72, 0x69, 0x62, 0x65, 0x2e, 0x43, 0x72, 0x65, 0x61, 0x74, 0x65, 0x54, 0x72,
-	0x69, 0x62, 0x65, 0x41, 0x63, 0x74, 0x69, 0x76, 0x69, 0x74, 0x79, 0x52, 0x65, 0x73, 0x70, 0x6f,
-	0x6e, 0x73, 0x65, 0x22, 0x00, 0x12, 0x45, 0x0a, 0x06, 0x47, 0x65, 0x74, 0x46, 0x41, 0x51, 0x12,
-	0x16, 0x2e, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x62, 0x75,
-	0x66, 0x2e, 0x45, 0x6d, 0x70, 0x74, 0x79, 0x1a, 0x21, 0x2e, 0x63, 0x6f, 0x6e, 0x6e, 0x65, 0x63,
-	0x74, 0x69, 0x6f, 0x6e, 0x73, 0x2e, 0x74, 0x72, 0x69, 0x62, 0x65, 0x2e, 0x47, 0x65, 0x74, 0x46,
-	0x41, 0x51, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00, 0x12, 0x8e, 0x01, 0x0a,
-	0x1b, 0x46, 0x65, 0x74, 0x63, 0x68, 0x4e, 0x75, 0x6d, 0x62, 0x65, 0x72, 0x4f, 0x66, 0x4e, 0x65,
-	0x77, 0x43, 0x6f, 0x6e, 0x6e, 0x65, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x12, 0x35, 0x2e, 0x63,
+	0x65, 0x2e, 0x47, 0x65, 0x74, 0x54, 0x72, 0x69, 0x62, 0x65, 0x73, 0x50, 0x65, 0x72, 0x55, 0x73,
+	0x65, 0x72, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00, 0x12, 0x6a, 0x0a, 0x0f,
+	0x47, 0x65, 0x74, 0x54, 0x72, 0x69, 0x62, 0x65, 0x4d, 0x65, 0x6d, 0x62, 0x65, 0x72, 0x73, 0x12,
+	0x29, 0x2e, 0x63, 0x6f, 0x6e, 0x6e, 0x65, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x2e, 0x74, 0x72,
+	0x69, 0x62, 0x65, 0x2e, 0x47, 0x65, 0x74, 0x54, 0x72, 0x69, 0x62, 0x65, 0x4d, 0x65, 0x6d, 0x62,
+	0x65, 0x72, 0x73, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x2a, 0x2e, 0x63, 0x6f, 0x6e,
+	0x6e, 0x65, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x2e, 0x74, 0x72, 0x69, 0x62, 0x65, 0x2e, 0x47,
+	0x65, 0x74, 0x54, 0x72, 0x69, 0x62, 0x65, 0x4d, 0x65, 0x6d, 0x62, 0x65, 0x72, 0x73, 0x52, 0x65,
+	0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00, 0x12, 0x5b, 0x0a, 0x0a, 0x47, 0x65, 0x74, 0x49,
+	0x6e, 0x76, 0x69, 0x74, 0x65, 0x73, 0x12, 0x24, 0x2e, 0x63, 0x6f, 0x6e, 0x6e, 0x65, 0x63, 0x74,
+	0x69, 0x6f, 0x6e, 0x73, 0x2e, 0x74, 0x72, 0x69, 0x62, 0x65, 0x2e, 0x47, 0x65, 0x74, 0x49, 0x6e,
+	0x76, 0x69, 0x74, 0x65, 0x73, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x25, 0x2e, 0x63,
 	0x6f, 0x6e, 0x6e, 0x65, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x2e, 0x74, 0x72, 0x69, 0x62, 0x65,
-	0x2e, 0x46, 0x65, 0x74, 0x63, 0x68, 0x4e, 0x75, 0x6d, 0x62, 0x65, 0x72, 0x4f, 0x66, 0x4e, 0x65,
-	0x77, 0x43, 0x6f, 0x6e, 0x6e, 0x65, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x52, 0x65, 0x71, 0x75,
-	0x65, 0x73, 0x74, 0x1a, 0x36, 0x2e, 0x63, 0x6f, 0x6e, 0x6e, 0x65, 0x63, 0x74, 0x69, 0x6f, 0x6e,
-	0x73, 0x2e, 0x74, 0x72, 0x69, 0x62, 0x65, 0x2e, 0x46, 0x65, 0x74, 0x63, 0x68, 0x4e, 0x75, 0x6d,
-	0x62, 0x65, 0x72, 0x4f, 0x66, 0x4e, 0x65, 0x77, 0x43, 0x6f, 0x6e, 0x6e, 0x65, 0x63, 0x74, 0x69,
-	0x6f, 0x6e, 0x73, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00, 0x12, 0x94, 0x01,
-	0x0a, 0x1d, 0x46, 0x65, 0x74, 0x63, 0x68, 0x4e, 0x75, 0x6d, 0x62, 0x65, 0x72, 0x4f, 0x66, 0x54,
-	0x6f, 0x74, 0x61, 0x6c, 0x43, 0x6f, 0x6e, 0x6e, 0x65, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x12,
-	0x37, 0x2e, 0x63, 0x6f, 0x6e, 0x6e, 0x65, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x2e, 0x74, 0x72,
-	0x69, 0x62, 0x65, 0x2e, 0x46, 0x65, 0x74, 0x63, 0x68, 0x4e, 0x75, 0x6d, 0x62, 0x65, 0x72, 0x4f,
-	0x66, 0x54, 0x6f, 0x74, 0x61, 0x6c, 0x43, 0x6f, 0x6e, 0x6e, 0x65, 0x63, 0x74, 0x69, 0x6f, 0x6e,
-	0x73, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x38, 0x2e, 0x63, 0x6f, 0x6e, 0x6e, 0x65,
-	0x63, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x2e, 0x74, 0x72, 0x69, 0x62, 0x65, 0x2e, 0x46, 0x65, 0x74,
-	0x63, 0x68, 0x4e, 0x75, 0x6d, 0x62, 0x65, 0x72, 0x4f, 0x66, 0x54, 0x6f, 0x74, 0x61, 0x6c, 0x43,
-	0x6f, 0x6e, 0x6e, 0x65, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e,
-	0x73, 0x65, 0x22, 0x00, 0x12, 0x6a, 0x0a, 0x19, 0x4d, 0x61, 0x72, 0x6b, 0x54, 0x72, 0x69, 0x62,
-	0x65, 0x43, 0x6f, 0x6e, 0x6e, 0x65, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x41, 0x73, 0x53, 0x65, 0x65,
-	0x6e, 0x12, 0x33, 0x2e, 0x63, 0x6f, 0x6e, 0x6e, 0x65, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x2e,
-	0x74, 0x72, 0x69, 0x62, 0x65, 0x2e, 0x4d, 0x61, 0x72, 0x6b, 0x54, 0x72, 0x69, 0x62, 0x65, 0x43,
-	0x6f, 0x6e, 0x6e, 0x65, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x41, 0x73, 0x53, 0x65, 0x65, 0x6e, 0x52,
-	0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x16, 0x2e, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x2e,
-	0x70, 0x72, 0x6f, 0x74, 0x6f, 0x62, 0x75, 0x66, 0x2e, 0x45, 0x6d, 0x70, 0x74, 0x79, 0x22, 0x00,
-	0x42, 0x1d, 0x5a, 0x1b, 0x63, 0x6f, 0x6e, 0x6e, 0x65, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x2f,
-	0x74, 0x72, 0x69, 0x62, 0x65, 0x70, 0x62, 0x3b, 0x74, 0x72, 0x69, 0x62, 0x65, 0x70, 0x62, 0x62,
-	0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
+	0x2e, 0x47, 0x65, 0x74, 0x49, 0x6e, 0x76, 0x69, 0x74, 0x65, 0x73, 0x52, 0x65, 0x73, 0x70, 0x6f,
+	0x6e, 0x73, 0x65, 0x22, 0x00, 0x12, 0x83, 0x01, 0x0a, 0x14, 0x47, 0x65, 0x74, 0x4d, 0x75, 0x74,
+	0x75, 0x61, 0x6c, 0x43, 0x6f, 0x6e, 0x6e, 0x65, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x12, 0x33,
+	0x2e, 0x63, 0x6f, 0x6e, 0x6e, 0x65, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x2e, 0x74, 0x72, 0x69,
+	0x62, 0x65, 0x2e, 0x47, 0x65, 0x74, 0x4d, 0x75, 0x74, 0x75, 0x61, 0x6c, 0x43, 0x6f, 0x6e, 0x6e,
+	0x65, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x41, 0x6d, 0x6f, 0x75, 0x6e, 0x74, 0x52, 0x65, 0x71, 0x75,
+	0x65, 0x73, 0x74, 0x1a, 0x34, 0x2e, 0x63, 0x6f, 0x6e, 0x6e, 0x65, 0x63, 0x74, 0x69, 0x6f, 0x6e,
+	0x73, 0x2e, 0x74, 0x72, 0x69, 0x62, 0x65, 0x2e, 0x47, 0x65, 0x74, 0x4d, 0x75, 0x74, 0x75, 0x61,
+	0x6c, 0x43, 0x6f, 0x6e, 0x6e, 0x65, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x41, 0x6d, 0x6f, 0x75, 0x6e,
+	0x74, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00, 0x12, 0x66, 0x0a, 0x17, 0x44,
+	0x69, 0x73, 0x63, 0x6f, 0x6e, 0x6e, 0x65, 0x63, 0x74, 0x55, 0x73, 0x65, 0x72, 0x46, 0x72, 0x6f,
+	0x6d, 0x54, 0x72, 0x69, 0x62, 0x65, 0x12, 0x31, 0x2e, 0x63, 0x6f, 0x6e, 0x6e, 0x65, 0x63, 0x74,
+	0x69, 0x6f, 0x6e, 0x73, 0x2e, 0x74, 0x72, 0x69, 0x62, 0x65, 0x2e, 0x44, 0x69, 0x73, 0x63, 0x6f,
+	0x6e, 0x6e, 0x65, 0x63, 0x74, 0x55, 0x73, 0x65, 0x72, 0x46, 0x72, 0x6f, 0x6d, 0x54, 0x72, 0x69,
+	0x62, 0x65, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x16, 0x2e, 0x67, 0x6f, 0x6f, 0x67,
+	0x6c, 0x65, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x62, 0x75, 0x66, 0x2e, 0x45, 0x6d, 0x70, 0x74,
+	0x79, 0x22, 0x00, 0x12, 0x5e, 0x0a, 0x13, 0x44, 0x65, 0x6c, 0x65, 0x74, 0x65, 0x54, 0x72, 0x69,
+	0x62, 0x65, 0x41, 0x63, 0x74, 0x69, 0x76, 0x69, 0x74, 0x79, 0x12, 0x2d, 0x2e, 0x63, 0x6f, 0x6e,
+	0x6e, 0x65, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x2e, 0x74, 0x72, 0x69, 0x62, 0x65, 0x2e, 0x44,
+	0x65, 0x6c, 0x65, 0x74, 0x65, 0x54, 0x72, 0x69, 0x62, 0x65, 0x41, 0x63, 0x74, 0x69, 0x76, 0x69,
+	0x74, 0x79, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x16, 0x2e, 0x67, 0x6f, 0x6f, 0x67,
+	0x6c, 0x65, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x62, 0x75, 0x66, 0x2e, 0x45, 0x6d, 0x70, 0x74,
+	0x79, 0x22, 0x00, 0x12, 0x76, 0x0a, 0x13, 0x43, 0x72, 0x65, 0x61, 0x74, 0x65, 0x54, 0x72, 0x69,
+	0x62, 0x65, 0x41, 0x63, 0x74, 0x69, 0x76, 0x69, 0x74, 0x79, 0x12, 0x2d, 0x2e, 0x63, 0x6f, 0x6e,
+	0x6e, 0x65, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x2e, 0x74, 0x72, 0x69, 0x62, 0x65, 0x2e, 0x43,
+	0x72, 0x65, 0x61, 0x74, 0x65, 0x54, 0x72, 0x69, 0x62, 0x65, 0x41, 0x63, 0x74, 0x69, 0x76, 0x69,
+	0x74, 0x79, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x2e, 0x2e, 0x63, 0x6f, 0x6e, 0x6e,
+	0x65, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x2e, 0x74, 0x72, 0x69, 0x62, 0x65, 0x2e, 0x43, 0x72,
+	0x65, 0x61, 0x74, 0x65, 0x54, 0x72, 0x69, 0x62, 0x65, 0x41, 0x63, 0x74, 0x69, 0x76, 0x69, 0x74,
+	0x79, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00, 0x12, 0x45, 0x0a, 0x06, 0x47,
+	0x65, 0x74, 0x46, 0x41, 0x51, 0x12, 0x16, 0x2e, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x2e, 0x70,
+	0x72, 0x6f, 0x74, 0x6f, 0x62, 0x75, 0x66, 0x2e, 0x45, 0x6d, 0x70, 0x74, 0x79, 0x1a, 0x21, 0x2e,
+	0x63, 0x6f, 0x6e, 0x6e, 0x65, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x2e, 0x74, 0x72, 0x69, 0x62,
+	0x65, 0x2e, 0x47, 0x65, 0x74, 0x46, 0x41, 0x51, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65,
+	0x22, 0x00, 0x12, 0x8e, 0x01, 0x0a, 0x1b, 0x46, 0x65, 0x74, 0x63, 0x68, 0x4e, 0x75, 0x6d, 0x62,
+	0x65, 0x72, 0x4f, 0x66, 0x4e, 0x65, 0x77, 0x43, 0x6f, 0x6e, 0x6e, 0x65, 0x63, 0x74, 0x69, 0x6f,
+	0x6e, 0x73, 0x12, 0x35, 0x2e, 0x63, 0x6f, 0x6e, 0x6e, 0x65, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x73,
+	0x2e, 0x74, 0x72, 0x69, 0x62, 0x65, 0x2e, 0x46, 0x65, 0x74, 0x63, 0x68, 0x4e, 0x75, 0x6d, 0x62,
+	0x65, 0x72, 0x4f, 0x66, 0x4e, 0x65, 0x77, 0x43, 0x6f, 0x6e, 0x6e, 0x65, 0x63, 0x74, 0x69, 0x6f,
+	0x6e, 0x73, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x36, 0x2e, 0x63, 0x6f, 0x6e, 0x6e,
+	0x65, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x2e, 0x74, 0x72, 0x69, 0x62, 0x65, 0x2e, 0x46, 0x65,
+	0x74, 0x63, 0x68, 0x4e, 0x75, 0x6d, 0x62, 0x65, 0x72, 0x4f, 0x66, 0x4e, 0x65, 0x77, 0x43, 0x6f,
+	0x6e, 0x6e, 0x65, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73,
+	0x65, 0x22, 0x00, 0x12, 0x94, 0x01, 0x0a, 0x1d, 0x46, 0x65, 0x74, 0x63, 0x68, 0x4e, 0x75, 0x6d,
+	0x62, 0x65, 0x72, 0x4f, 0x66, 0x54, 0x6f, 0x74, 0x61, 0x6c, 0x43, 0x6f, 0x6e, 0x6e, 0x65, 0x63,
+	0x74, 0x69, 0x6f, 0x6e, 0x73, 0x12, 0x37, 0x2e, 0x63, 0x6f, 0x6e, 0x6e, 0x65, 0x63, 0x74, 0x69,
+	0x6f, 0x6e, 0x73, 0x2e, 0x74, 0x72, 0x69, 0x62, 0x65, 0x2e, 0x46, 0x65, 0x74, 0x63, 0x68, 0x4e,
+	0x75, 0x6d, 0x62, 0x65, 0x72, 0x4f, 0x66, 0x54, 0x6f, 0x74, 0x61, 0x6c, 0x43, 0x6f, 0x6e, 0x6e,
+	0x65, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x38,
+	0x2e, 0x63, 0x6f, 0x6e, 0x6e, 0x65, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x2e, 0x74, 0x72, 0x69,
+	0x62, 0x65, 0x2e, 0x46, 0x65, 0x74, 0x63, 0x68, 0x4e, 0x75, 0x6d, 0x62, 0x65, 0x72, 0x4f, 0x66,
+	0x54, 0x6f, 0x74, 0x61, 0x6c, 0x43, 0x6f, 0x6e, 0x6e, 0x65, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x73,
+	0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00, 0x12, 0x6a, 0x0a, 0x19, 0x4d, 0x61,
+	0x72, 0x6b, 0x54, 0x72, 0x69, 0x62, 0x65, 0x43, 0x6f, 0x6e, 0x6e, 0x65, 0x63, 0x74, 0x69, 0x6f,
+	0x6e, 0x41, 0x73, 0x53, 0x65, 0x65, 0x6e, 0x12, 0x33, 0x2e, 0x63, 0x6f, 0x6e, 0x6e, 0x65, 0x63,
+	0x74, 0x69, 0x6f, 0x6e, 0x73, 0x2e, 0x74, 0x72, 0x69, 0x62, 0x65, 0x2e, 0x4d, 0x61, 0x72, 0x6b,
+	0x54, 0x72, 0x69, 0x62, 0x65, 0x43, 0x6f, 0x6e, 0x6e, 0x65, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x41,
+	0x73, 0x53, 0x65, 0x65, 0x6e, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x16, 0x2e, 0x67,
+	0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x62, 0x75, 0x66, 0x2e, 0x45,
+	0x6d, 0x70, 0x74, 0x79, 0x22, 0x00, 0x42, 0x1d, 0x5a, 0x1b, 0x63, 0x6f, 0x6e, 0x6e, 0x65, 0x63,
+	0x74, 0x69, 0x6f, 0x6e, 0x73, 0x2f, 0x74, 0x72, 0x69, 0x62, 0x65, 0x70, 0x62, 0x3b, 0x74, 0x72,
+	0x69, 0x62, 0x65, 0x70, 0x62, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
 }
 
 var (
@@ -3038,7 +3147,7 @@ func file_api_protobuf_spec_connection_tribe_v1_proto_rawDescGZIP() []byte {
 	return file_api_protobuf_spec_connection_tribe_v1_proto_rawDescData
 }
 
-var file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes = make([]protoimpl.MessageInfo, 46)
+var file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes = make([]protoimpl.MessageInfo, 48)
 var file_api_protobuf_spec_connection_tribe_v1_proto_goTypes = []interface{}{
 	(*Tribe)(nil),                                 // 0: connections.tribe.Tribe
 	(*FAQ)(nil),                                   // 1: connections.tribe.FAQ
@@ -3056,109 +3165,114 @@ var file_api_protobuf_spec_connection_tribe_v1_proto_goTypes = []interface{}{
 	(*GetTribesRequest)(nil),                      // 13: connections.tribe.GetTribesRequest
 	(*GetTribeActivityRequest)(nil),               // 14: connections.tribe.GetTribeActivityRequest
 	(*GetTribeActivityResponse)(nil),              // 15: connections.tribe.GetTribeActivityResponse
-	(*GetTribeResponse)(nil),                      // 16: connections.tribe.GetTribeResponse
-	(*GetTribeByCodeResponse)(nil),                // 17: connections.tribe.GetTribeByCodeResponse
-	(*GetTribeShareableLinkResponse)(nil),         // 18: connections.tribe.GetTribeShareableLinkResponse
-	(*GetTribesResponse)(nil),                     // 19: connections.tribe.GetTribesResponse
-	(*GetAllTribesResponse)(nil),                  // 20: connections.tribe.GetAllTribesResponse
-	(*SendInviteRequest)(nil),                     // 21: connections.tribe.SendInviteRequest
-	(*AcceptInviteRequest)(nil),                   // 22: connections.tribe.AcceptInviteRequest
-	(*DeclineInviteRequest)(nil),                  // 23: connections.tribe.DeclineInviteRequest
-	(*ConnectToTribeWithCodeRequest)(nil),         // 24: connections.tribe.ConnectToTribeWithCodeRequest
-	(*GetTribesPerUserRequest)(nil),               // 25: connections.tribe.GetTribesPerUserRequest
-	(*TribesPerUserResponse)(nil),                 // 26: connections.tribe.TribesPerUserResponse
-	(*SharedTribesRequest)(nil),                   // 27: connections.tribe.SharedTribesRequest
-	(*GetTribesPerUserResponse)(nil),              // 28: connections.tribe.GetTribesPerUserResponse
-	(*SharedTribesResponse)(nil),                  // 29: connections.tribe.SharedTribesResponse
-	(*GetTribeMembersRequest)(nil),                // 30: connections.tribe.GetTribeMembersRequest
-	(*GetTribeMembersResponse)(nil),               // 31: connections.tribe.GetTribeMembersResponse
-	(*GetInvitesRequest)(nil),                     // 32: connections.tribe.GetInvitesRequest
-	(*GetMutualConnectionAmountRequest)(nil),      // 33: connections.tribe.GetMutualConnectionAmountRequest
-	(*GetMutualConnectionAmountResponse)(nil),     // 34: connections.tribe.GetMutualConnectionAmountResponse
-	(*DeleteTribeActivityRequest)(nil),            // 35: connections.tribe.DeleteTribeActivityRequest
-	(*CreateTribeActivityRequest)(nil),            // 36: connections.tribe.CreateTribeActivityRequest
-	(*CreateTribeActivityResponse)(nil),           // 37: connections.tribe.CreateTribeActivityResponse
-	(*DisconnectUserFromTribeRequest)(nil),        // 38: connections.tribe.DisconnectUserFromTribeRequest
-	(*GetInvitesResponse)(nil),                    // 39: connections.tribe.GetInvitesResponse
-	(*GetFAQResponse)(nil),                        // 40: connections.tribe.GetFAQResponse
-	(*FetchNumberOfNewConnectionsRequest)(nil),    // 41: connections.tribe.FetchNumberOfNewConnectionsRequest
-	(*FetchNumberOfNewConnectionsResponse)(nil),   // 42: connections.tribe.FetchNumberOfNewConnectionsResponse
-	(*FetchNumberOfTotalConnectionsRequest)(nil),  // 43: connections.tribe.FetchNumberOfTotalConnectionsRequest
-	(*MarkTribeConnectionAsSeenRequest)(nil),      // 44: connections.tribe.MarkTribeConnectionAsSeenRequest
-	(*FetchNumberOfTotalConnectionsResponse)(nil), // 45: connections.tribe.FetchNumberOfTotalConnectionsResponse
-	(*timestamp.Timestamp)(nil),                   // 46: google.protobuf.Timestamp
-	(*generalpb.Pagination)(nil),                  // 47: general.Pagination
-	(*empty.Empty)(nil),                           // 48: google.protobuf.Empty
+	(*GetActivitiesRequest)(nil),                  // 16: connections.tribe.GetActivitiesRequest
+	(*GetActivitiesResponse)(nil),                 // 17: connections.tribe.GetActivitiesResponse
+	(*GetTribeResponse)(nil),                      // 18: connections.tribe.GetTribeResponse
+	(*GetTribeByCodeResponse)(nil),                // 19: connections.tribe.GetTribeByCodeResponse
+	(*GetTribeShareableLinkResponse)(nil),         // 20: connections.tribe.GetTribeShareableLinkResponse
+	(*GetTribesResponse)(nil),                     // 21: connections.tribe.GetTribesResponse
+	(*GetAllTribesResponse)(nil),                  // 22: connections.tribe.GetAllTribesResponse
+	(*SendInviteRequest)(nil),                     // 23: connections.tribe.SendInviteRequest
+	(*AcceptInviteRequest)(nil),                   // 24: connections.tribe.AcceptInviteRequest
+	(*DeclineInviteRequest)(nil),                  // 25: connections.tribe.DeclineInviteRequest
+	(*ConnectToTribeWithCodeRequest)(nil),         // 26: connections.tribe.ConnectToTribeWithCodeRequest
+	(*GetTribesPerUserRequest)(nil),               // 27: connections.tribe.GetTribesPerUserRequest
+	(*TribesPerUserResponse)(nil),                 // 28: connections.tribe.TribesPerUserResponse
+	(*SharedTribesRequest)(nil),                   // 29: connections.tribe.SharedTribesRequest
+	(*GetTribesPerUserResponse)(nil),              // 30: connections.tribe.GetTribesPerUserResponse
+	(*SharedTribesResponse)(nil),                  // 31: connections.tribe.SharedTribesResponse
+	(*GetTribeMembersRequest)(nil),                // 32: connections.tribe.GetTribeMembersRequest
+	(*GetTribeMembersResponse)(nil),               // 33: connections.tribe.GetTribeMembersResponse
+	(*GetInvitesRequest)(nil),                     // 34: connections.tribe.GetInvitesRequest
+	(*GetMutualConnectionAmountRequest)(nil),      // 35: connections.tribe.GetMutualConnectionAmountRequest
+	(*GetMutualConnectionAmountResponse)(nil),     // 36: connections.tribe.GetMutualConnectionAmountResponse
+	(*DeleteTribeActivityRequest)(nil),            // 37: connections.tribe.DeleteTribeActivityRequest
+	(*CreateTribeActivityRequest)(nil),            // 38: connections.tribe.CreateTribeActivityRequest
+	(*CreateTribeActivityResponse)(nil),           // 39: connections.tribe.CreateTribeActivityResponse
+	(*DisconnectUserFromTribeRequest)(nil),        // 40: connections.tribe.DisconnectUserFromTribeRequest
+	(*GetInvitesResponse)(nil),                    // 41: connections.tribe.GetInvitesResponse
+	(*GetFAQResponse)(nil),                        // 42: connections.tribe.GetFAQResponse
+	(*FetchNumberOfNewConnectionsRequest)(nil),    // 43: connections.tribe.FetchNumberOfNewConnectionsRequest
+	(*FetchNumberOfNewConnectionsResponse)(nil),   // 44: connections.tribe.FetchNumberOfNewConnectionsResponse
+	(*FetchNumberOfTotalConnectionsRequest)(nil),  // 45: connections.tribe.FetchNumberOfTotalConnectionsRequest
+	(*MarkTribeConnectionAsSeenRequest)(nil),      // 46: connections.tribe.MarkTribeConnectionAsSeenRequest
+	(*FetchNumberOfTotalConnectionsResponse)(nil), // 47: connections.tribe.FetchNumberOfTotalConnectionsResponse
+	(*timestamp.Timestamp)(nil),                   // 48: google.protobuf.Timestamp
+	(*generalpb.Pagination)(nil),                  // 49: general.Pagination
+	(*empty.Empty)(nil),                           // 50: google.protobuf.Empty
 }
 var file_api_protobuf_spec_connection_tribe_v1_proto_depIdxs = []int32{
 	1,  // 0: connections.tribe.FAQ.childs:type_name -> connections.tribe.FAQ
-	46, // 1: connections.tribe.TribeActivity.createdAt:type_name -> google.protobuf.Timestamp
+	48, // 1: connections.tribe.TribeActivity.createdAt:type_name -> google.protobuf.Timestamp
 	3,  // 2: connections.tribe.GetTribeActivityResponse.activity:type_name -> connections.tribe.TribeActivity
-	0,  // 3: connections.tribe.GetTribeResponse.tribe:type_name -> connections.tribe.Tribe
-	0,  // 4: connections.tribe.GetTribeByCodeResponse.tribe:type_name -> connections.tribe.Tribe
-	0,  // 5: connections.tribe.GetTribesResponse.tribes:type_name -> connections.tribe.Tribe
-	47, // 6: connections.tribe.GetTribesPerUserRequest.pagination:type_name -> general.Pagination
-	4,  // 7: connections.tribe.GetTribesPerUserResponse.tribes:type_name -> connections.tribe.UserTribeConnection
-	47, // 8: connections.tribe.GetTribeMembersRequest.pagination:type_name -> general.Pagination
-	5,  // 9: connections.tribe.GetTribeMembersResponse.users:type_name -> connections.tribe.TribeUserConnection
-	47, // 10: connections.tribe.GetInvitesRequest.pagination:type_name -> general.Pagination
-	2,  // 11: connections.tribe.GetInvitesResponse.tribe_invite_codes:type_name -> connections.tribe.TribeInviteCode
-	1,  // 12: connections.tribe.GetFAQResponse.faq:type_name -> connections.tribe.FAQ
-	6,  // 13: connections.tribe.TribeService.GetTribe:input_type -> connections.tribe.GetTribeRequest
-	8,  // 14: connections.tribe.TribeService.CreateTribe:input_type -> connections.tribe.CreateTribeRequest
-	7,  // 15: connections.tribe.TribeService.UpdateTribe:input_type -> connections.tribe.UpdateTribeRequest
-	10, // 16: connections.tribe.TribeService.UpdateTribeAvatar:input_type -> connections.tribe.UpdateTribeAvatarRequest
-	12, // 17: connections.tribe.TribeService.GetTribeByCode:input_type -> connections.tribe.GetTribeByCodeRequest
-	11, // 18: connections.tribe.TribeService.GetTribeShareableLink:input_type -> connections.tribe.GetTribeShareableLinkRequest
-	13, // 19: connections.tribe.TribeService.GetTribes:input_type -> connections.tribe.GetTribesRequest
-	48, // 20: connections.tribe.TribeService.GetAllTribes:input_type -> google.protobuf.Empty
-	14, // 21: connections.tribe.TribeService.GetTribeActivity:input_type -> connections.tribe.GetTribeActivityRequest
-	27, // 22: connections.tribe.TribeService.SharedTribes:input_type -> connections.tribe.SharedTribesRequest
-	21, // 23: connections.tribe.TribeService.SendInvite:input_type -> connections.tribe.SendInviteRequest
-	22, // 24: connections.tribe.TribeService.AcceptInvite:input_type -> connections.tribe.AcceptInviteRequest
-	23, // 25: connections.tribe.TribeService.DeclineInvite:input_type -> connections.tribe.DeclineInviteRequest
-	24, // 26: connections.tribe.TribeService.ConnectToTribeWithCode:input_type -> connections.tribe.ConnectToTribeWithCodeRequest
-	25, // 27: connections.tribe.TribeService.GetTribesPerUser:input_type -> connections.tribe.GetTribesPerUserRequest
-	30, // 28: connections.tribe.TribeService.GetTribeMembers:input_type -> connections.tribe.GetTribeMembersRequest
-	32, // 29: connections.tribe.TribeService.GetInvites:input_type -> connections.tribe.GetInvitesRequest
-	33, // 30: connections.tribe.TribeService.GetMutualConnections:input_type -> connections.tribe.GetMutualConnectionAmountRequest
-	38, // 31: connections.tribe.TribeService.DisconnectUserFromTribe:input_type -> connections.tribe.DisconnectUserFromTribeRequest
-	35, // 32: connections.tribe.TribeService.DeleteTribeActivity:input_type -> connections.tribe.DeleteTribeActivityRequest
-	36, // 33: connections.tribe.TribeService.CreateTribeActivity:input_type -> connections.tribe.CreateTribeActivityRequest
-	48, // 34: connections.tribe.TribeService.GetFAQ:input_type -> google.protobuf.Empty
-	41, // 35: connections.tribe.TribeService.FetchNumberOfNewConnections:input_type -> connections.tribe.FetchNumberOfNewConnectionsRequest
-	43, // 36: connections.tribe.TribeService.FetchNumberOfTotalConnections:input_type -> connections.tribe.FetchNumberOfTotalConnectionsRequest
-	44, // 37: connections.tribe.TribeService.MarkTribeConnectionAsSeen:input_type -> connections.tribe.MarkTribeConnectionAsSeenRequest
-	16, // 38: connections.tribe.TribeService.GetTribe:output_type -> connections.tribe.GetTribeResponse
-	9,  // 39: connections.tribe.TribeService.CreateTribe:output_type -> connections.tribe.CreateTribeResponse
-	48, // 40: connections.tribe.TribeService.UpdateTribe:output_type -> google.protobuf.Empty
-	48, // 41: connections.tribe.TribeService.UpdateTribeAvatar:output_type -> google.protobuf.Empty
-	17, // 42: connections.tribe.TribeService.GetTribeByCode:output_type -> connections.tribe.GetTribeByCodeResponse
-	18, // 43: connections.tribe.TribeService.GetTribeShareableLink:output_type -> connections.tribe.GetTribeShareableLinkResponse
-	19, // 44: connections.tribe.TribeService.GetTribes:output_type -> connections.tribe.GetTribesResponse
-	20, // 45: connections.tribe.TribeService.GetAllTribes:output_type -> connections.tribe.GetAllTribesResponse
-	15, // 46: connections.tribe.TribeService.GetTribeActivity:output_type -> connections.tribe.GetTribeActivityResponse
-	29, // 47: connections.tribe.TribeService.SharedTribes:output_type -> connections.tribe.SharedTribesResponse
-	48, // 48: connections.tribe.TribeService.SendInvite:output_type -> google.protobuf.Empty
-	48, // 49: connections.tribe.TribeService.AcceptInvite:output_type -> google.protobuf.Empty
-	48, // 50: connections.tribe.TribeService.DeclineInvite:output_type -> google.protobuf.Empty
-	48, // 51: connections.tribe.TribeService.ConnectToTribeWithCode:output_type -> google.protobuf.Empty
-	28, // 52: connections.tribe.TribeService.GetTribesPerUser:output_type -> connections.tribe.GetTribesPerUserResponse
-	31, // 53: connections.tribe.TribeService.GetTribeMembers:output_type -> connections.tribe.GetTribeMembersResponse
-	39, // 54: connections.tribe.TribeService.GetInvites:output_type -> connections.tribe.GetInvitesResponse
-	34, // 55: connections.tribe.TribeService.GetMutualConnections:output_type -> connections.tribe.GetMutualConnectionAmountResponse
-	48, // 56: connections.tribe.TribeService.DisconnectUserFromTribe:output_type -> google.protobuf.Empty
-	48, // 57: connections.tribe.TribeService.DeleteTribeActivity:output_type -> google.protobuf.Empty
-	37, // 58: connections.tribe.TribeService.CreateTribeActivity:output_type -> connections.tribe.CreateTribeActivityResponse
-	40, // 59: connections.tribe.TribeService.GetFAQ:output_type -> connections.tribe.GetFAQResponse
-	42, // 60: connections.tribe.TribeService.FetchNumberOfNewConnections:output_type -> connections.tribe.FetchNumberOfNewConnectionsResponse
-	45, // 61: connections.tribe.TribeService.FetchNumberOfTotalConnections:output_type -> connections.tribe.FetchNumberOfTotalConnectionsResponse
-	48, // 62: connections.tribe.TribeService.MarkTribeConnectionAsSeen:output_type -> google.protobuf.Empty
-	38, // [38:63] is the sub-list for method output_type
-	13, // [13:38] is the sub-list for method input_type
-	13, // [13:13] is the sub-list for extension type_name
-	13, // [13:13] is the sub-list for extension extendee
-	0,  // [0:13] is the sub-list for field type_name
+	3,  // 3: connections.tribe.GetActivitiesResponse.activity:type_name -> connections.tribe.TribeActivity
+	0,  // 4: connections.tribe.GetTribeResponse.tribe:type_name -> connections.tribe.Tribe
+	0,  // 5: connections.tribe.GetTribeByCodeResponse.tribe:type_name -> connections.tribe.Tribe
+	0,  // 6: connections.tribe.GetTribesResponse.tribes:type_name -> connections.tribe.Tribe
+	49, // 7: connections.tribe.GetTribesPerUserRequest.pagination:type_name -> general.Pagination
+	4,  // 8: connections.tribe.GetTribesPerUserResponse.tribes:type_name -> connections.tribe.UserTribeConnection
+	49, // 9: connections.tribe.GetTribeMembersRequest.pagination:type_name -> general.Pagination
+	5,  // 10: connections.tribe.GetTribeMembersResponse.users:type_name -> connections.tribe.TribeUserConnection
+	49, // 11: connections.tribe.GetInvitesRequest.pagination:type_name -> general.Pagination
+	2,  // 12: connections.tribe.GetInvitesResponse.tribe_invite_codes:type_name -> connections.tribe.TribeInviteCode
+	1,  // 13: connections.tribe.GetFAQResponse.faq:type_name -> connections.tribe.FAQ
+	6,  // 14: connections.tribe.TribeService.GetTribe:input_type -> connections.tribe.GetTribeRequest
+	8,  // 15: connections.tribe.TribeService.CreateTribe:input_type -> connections.tribe.CreateTribeRequest
+	7,  // 16: connections.tribe.TribeService.UpdateTribe:input_type -> connections.tribe.UpdateTribeRequest
+	10, // 17: connections.tribe.TribeService.UpdateTribeAvatar:input_type -> connections.tribe.UpdateTribeAvatarRequest
+	12, // 18: connections.tribe.TribeService.GetTribeByCode:input_type -> connections.tribe.GetTribeByCodeRequest
+	11, // 19: connections.tribe.TribeService.GetTribeShareableLink:input_type -> connections.tribe.GetTribeShareableLinkRequest
+	13, // 20: connections.tribe.TribeService.GetTribes:input_type -> connections.tribe.GetTribesRequest
+	50, // 21: connections.tribe.TribeService.GetAllTribes:input_type -> google.protobuf.Empty
+	14, // 22: connections.tribe.TribeService.GetTribeActivity:input_type -> connections.tribe.GetTribeActivityRequest
+	16, // 23: connections.tribe.TribeService.GetActivities:input_type -> connections.tribe.GetActivitiesRequest
+	29, // 24: connections.tribe.TribeService.SharedTribes:input_type -> connections.tribe.SharedTribesRequest
+	23, // 25: connections.tribe.TribeService.SendInvite:input_type -> connections.tribe.SendInviteRequest
+	24, // 26: connections.tribe.TribeService.AcceptInvite:input_type -> connections.tribe.AcceptInviteRequest
+	25, // 27: connections.tribe.TribeService.DeclineInvite:input_type -> connections.tribe.DeclineInviteRequest
+	26, // 28: connections.tribe.TribeService.ConnectToTribeWithCode:input_type -> connections.tribe.ConnectToTribeWithCodeRequest
+	27, // 29: connections.tribe.TribeService.GetTribesPerUser:input_type -> connections.tribe.GetTribesPerUserRequest
+	32, // 30: connections.tribe.TribeService.GetTribeMembers:input_type -> connections.tribe.GetTribeMembersRequest
+	34, // 31: connections.tribe.TribeService.GetInvites:input_type -> connections.tribe.GetInvitesRequest
+	35, // 32: connections.tribe.TribeService.GetMutualConnections:input_type -> connections.tribe.GetMutualConnectionAmountRequest
+	40, // 33: connections.tribe.TribeService.DisconnectUserFromTribe:input_type -> connections.tribe.DisconnectUserFromTribeRequest
+	37, // 34: connections.tribe.TribeService.DeleteTribeActivity:input_type -> connections.tribe.DeleteTribeActivityRequest
+	38, // 35: connections.tribe.TribeService.CreateTribeActivity:input_type -> connections.tribe.CreateTribeActivityRequest
+	50, // 36: connections.tribe.TribeService.GetFAQ:input_type -> google.protobuf.Empty
+	43, // 37: connections.tribe.TribeService.FetchNumberOfNewConnections:input_type -> connections.tribe.FetchNumberOfNewConnectionsRequest
+	45, // 38: connections.tribe.TribeService.FetchNumberOfTotalConnections:input_type -> connections.tribe.FetchNumberOfTotalConnectionsRequest
+	46, // 39: connections.tribe.TribeService.MarkTribeConnectionAsSeen:input_type -> connections.tribe.MarkTribeConnectionAsSeenRequest
+	18, // 40: connections.tribe.TribeService.GetTribe:output_type -> connections.tribe.GetTribeResponse
+	9,  // 41: connections.tribe.TribeService.CreateTribe:output_type -> connections.tribe.CreateTribeResponse
+	50, // 42: connections.tribe.TribeService.UpdateTribe:output_type -> google.protobuf.Empty
+	50, // 43: connections.tribe.TribeService.UpdateTribeAvatar:output_type -> google.protobuf.Empty
+	19, // 44: connections.tribe.TribeService.GetTribeByCode:output_type -> connections.tribe.GetTribeByCodeResponse
+	20, // 45: connections.tribe.TribeService.GetTribeShareableLink:output_type -> connections.tribe.GetTribeShareableLinkResponse
+	21, // 46: connections.tribe.TribeService.GetTribes:output_type -> connections.tribe.GetTribesResponse
+	22, // 47: connections.tribe.TribeService.GetAllTribes:output_type -> connections.tribe.GetAllTribesResponse
+	15, // 48: connections.tribe.TribeService.GetTribeActivity:output_type -> connections.tribe.GetTribeActivityResponse
+	17, // 49: connections.tribe.TribeService.GetActivities:output_type -> connections.tribe.GetActivitiesResponse
+	31, // 50: connections.tribe.TribeService.SharedTribes:output_type -> connections.tribe.SharedTribesResponse
+	50, // 51: connections.tribe.TribeService.SendInvite:output_type -> google.protobuf.Empty
+	50, // 52: connections.tribe.TribeService.AcceptInvite:output_type -> google.protobuf.Empty
+	50, // 53: connections.tribe.TribeService.DeclineInvite:output_type -> google.protobuf.Empty
+	50, // 54: connections.tribe.TribeService.ConnectToTribeWithCode:output_type -> google.protobuf.Empty
+	30, // 55: connections.tribe.TribeService.GetTribesPerUser:output_type -> connections.tribe.GetTribesPerUserResponse
+	33, // 56: connections.tribe.TribeService.GetTribeMembers:output_type -> connections.tribe.GetTribeMembersResponse
+	41, // 57: connections.tribe.TribeService.GetInvites:output_type -> connections.tribe.GetInvitesResponse
+	36, // 58: connections.tribe.TribeService.GetMutualConnections:output_type -> connections.tribe.GetMutualConnectionAmountResponse
+	50, // 59: connections.tribe.TribeService.DisconnectUserFromTribe:output_type -> google.protobuf.Empty
+	50, // 60: connections.tribe.TribeService.DeleteTribeActivity:output_type -> google.protobuf.Empty
+	39, // 61: connections.tribe.TribeService.CreateTribeActivity:output_type -> connections.tribe.CreateTribeActivityResponse
+	42, // 62: connections.tribe.TribeService.GetFAQ:output_type -> connections.tribe.GetFAQResponse
+	44, // 63: connections.tribe.TribeService.FetchNumberOfNewConnections:output_type -> connections.tribe.FetchNumberOfNewConnectionsResponse
+	47, // 64: connections.tribe.TribeService.FetchNumberOfTotalConnections:output_type -> connections.tribe.FetchNumberOfTotalConnectionsResponse
+	50, // 65: connections.tribe.TribeService.MarkTribeConnectionAsSeen:output_type -> google.protobuf.Empty
+	40, // [40:66] is the sub-list for method output_type
+	14, // [14:40] is the sub-list for method input_type
+	14, // [14:14] is the sub-list for extension type_name
+	14, // [14:14] is the sub-list for extension extendee
+	0,  // [0:14] is the sub-list for field type_name
 }
 
 func init() { file_api_protobuf_spec_connection_tribe_v1_proto_init() }
@@ -3360,7 +3474,7 @@ func file_api_protobuf_spec_connection_tribe_v1_proto_init() {
 			}
 		}
 		file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[16].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*GetTribeResponse); i {
+			switch v := v.(*GetActivitiesRequest); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -3372,7 +3486,7 @@ func file_api_protobuf_spec_connection_tribe_v1_proto_init() {
 			}
 		}
 		file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[17].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*GetTribeByCodeResponse); i {
+			switch v := v.(*GetActivitiesResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -3384,7 +3498,7 @@ func file_api_protobuf_spec_connection_tribe_v1_proto_init() {
 			}
 		}
 		file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[18].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*GetTribeShareableLinkResponse); i {
+			switch v := v.(*GetTribeResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -3396,7 +3510,7 @@ func file_api_protobuf_spec_connection_tribe_v1_proto_init() {
 			}
 		}
 		file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[19].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*GetTribesResponse); i {
+			switch v := v.(*GetTribeByCodeResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -3408,7 +3522,7 @@ func file_api_protobuf_spec_connection_tribe_v1_proto_init() {
 			}
 		}
 		file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[20].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*GetAllTribesResponse); i {
+			switch v := v.(*GetTribeShareableLinkResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -3420,7 +3534,7 @@ func file_api_protobuf_spec_connection_tribe_v1_proto_init() {
 			}
 		}
 		file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[21].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*SendInviteRequest); i {
+			switch v := v.(*GetTribesResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -3432,7 +3546,7 @@ func file_api_protobuf_spec_connection_tribe_v1_proto_init() {
 			}
 		}
 		file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[22].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*AcceptInviteRequest); i {
+			switch v := v.(*GetAllTribesResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -3444,7 +3558,7 @@ func file_api_protobuf_spec_connection_tribe_v1_proto_init() {
 			}
 		}
 		file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[23].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*DeclineInviteRequest); i {
+			switch v := v.(*SendInviteRequest); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -3456,7 +3570,7 @@ func file_api_protobuf_spec_connection_tribe_v1_proto_init() {
 			}
 		}
 		file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[24].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*ConnectToTribeWithCodeRequest); i {
+			switch v := v.(*AcceptInviteRequest); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -3468,7 +3582,7 @@ func file_api_protobuf_spec_connection_tribe_v1_proto_init() {
 			}
 		}
 		file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[25].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*GetTribesPerUserRequest); i {
+			switch v := v.(*DeclineInviteRequest); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -3480,7 +3594,7 @@ func file_api_protobuf_spec_connection_tribe_v1_proto_init() {
 			}
 		}
 		file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[26].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*TribesPerUserResponse); i {
+			switch v := v.(*ConnectToTribeWithCodeRequest); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -3492,7 +3606,7 @@ func file_api_protobuf_spec_connection_tribe_v1_proto_init() {
 			}
 		}
 		file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[27].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*SharedTribesRequest); i {
+			switch v := v.(*GetTribesPerUserRequest); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -3504,7 +3618,7 @@ func file_api_protobuf_spec_connection_tribe_v1_proto_init() {
 			}
 		}
 		file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[28].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*GetTribesPerUserResponse); i {
+			switch v := v.(*TribesPerUserResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -3516,7 +3630,7 @@ func file_api_protobuf_spec_connection_tribe_v1_proto_init() {
 			}
 		}
 		file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[29].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*SharedTribesResponse); i {
+			switch v := v.(*SharedTribesRequest); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -3528,7 +3642,7 @@ func file_api_protobuf_spec_connection_tribe_v1_proto_init() {
 			}
 		}
 		file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[30].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*GetTribeMembersRequest); i {
+			switch v := v.(*GetTribesPerUserResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -3540,7 +3654,7 @@ func file_api_protobuf_spec_connection_tribe_v1_proto_init() {
 			}
 		}
 		file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[31].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*GetTribeMembersResponse); i {
+			switch v := v.(*SharedTribesResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -3552,7 +3666,7 @@ func file_api_protobuf_spec_connection_tribe_v1_proto_init() {
 			}
 		}
 		file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[32].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*GetInvitesRequest); i {
+			switch v := v.(*GetTribeMembersRequest); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -3564,7 +3678,7 @@ func file_api_protobuf_spec_connection_tribe_v1_proto_init() {
 			}
 		}
 		file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[33].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*GetMutualConnectionAmountRequest); i {
+			switch v := v.(*GetTribeMembersResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -3576,7 +3690,7 @@ func file_api_protobuf_spec_connection_tribe_v1_proto_init() {
 			}
 		}
 		file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[34].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*GetMutualConnectionAmountResponse); i {
+			switch v := v.(*GetInvitesRequest); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -3588,7 +3702,7 @@ func file_api_protobuf_spec_connection_tribe_v1_proto_init() {
 			}
 		}
 		file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[35].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*DeleteTribeActivityRequest); i {
+			switch v := v.(*GetMutualConnectionAmountRequest); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -3600,7 +3714,7 @@ func file_api_protobuf_spec_connection_tribe_v1_proto_init() {
 			}
 		}
 		file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[36].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*CreateTribeActivityRequest); i {
+			switch v := v.(*GetMutualConnectionAmountResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -3612,7 +3726,7 @@ func file_api_protobuf_spec_connection_tribe_v1_proto_init() {
 			}
 		}
 		file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[37].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*CreateTribeActivityResponse); i {
+			switch v := v.(*DeleteTribeActivityRequest); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -3624,7 +3738,7 @@ func file_api_protobuf_spec_connection_tribe_v1_proto_init() {
 			}
 		}
 		file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[38].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*DisconnectUserFromTribeRequest); i {
+			switch v := v.(*CreateTribeActivityRequest); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -3636,7 +3750,7 @@ func file_api_protobuf_spec_connection_tribe_v1_proto_init() {
 			}
 		}
 		file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[39].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*GetInvitesResponse); i {
+			switch v := v.(*CreateTribeActivityResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -3648,7 +3762,7 @@ func file_api_protobuf_spec_connection_tribe_v1_proto_init() {
 			}
 		}
 		file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[40].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*GetFAQResponse); i {
+			switch v := v.(*DisconnectUserFromTribeRequest); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -3660,7 +3774,7 @@ func file_api_protobuf_spec_connection_tribe_v1_proto_init() {
 			}
 		}
 		file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[41].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*FetchNumberOfNewConnectionsRequest); i {
+			switch v := v.(*GetInvitesResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -3672,7 +3786,7 @@ func file_api_protobuf_spec_connection_tribe_v1_proto_init() {
 			}
 		}
 		file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[42].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*FetchNumberOfNewConnectionsResponse); i {
+			switch v := v.(*GetFAQResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -3684,7 +3798,7 @@ func file_api_protobuf_spec_connection_tribe_v1_proto_init() {
 			}
 		}
 		file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[43].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*FetchNumberOfTotalConnectionsRequest); i {
+			switch v := v.(*FetchNumberOfNewConnectionsRequest); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -3696,7 +3810,7 @@ func file_api_protobuf_spec_connection_tribe_v1_proto_init() {
 			}
 		}
 		file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[44].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*MarkTribeConnectionAsSeenRequest); i {
+			switch v := v.(*FetchNumberOfNewConnectionsResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -3708,6 +3822,30 @@ func file_api_protobuf_spec_connection_tribe_v1_proto_init() {
 			}
 		}
 		file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[45].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*FetchNumberOfTotalConnectionsRequest); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[46].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*MarkTribeConnectionAsSeenRequest); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_api_protobuf_spec_connection_tribe_v1_proto_msgTypes[47].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*FetchNumberOfTotalConnectionsResponse); i {
 			case 0:
 				return &v.state
@@ -3726,7 +3864,7 @@ func file_api_protobuf_spec_connection_tribe_v1_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: file_api_protobuf_spec_connection_tribe_v1_proto_rawDesc,
 			NumEnums:      0,
-			NumMessages:   46,
+			NumMessages:   48,
 			NumExtensions: 0,
 			NumServices:   1,
 		},
@@ -3761,6 +3899,7 @@ type TribeServiceClient interface {
 	GetTribes(ctx context.Context, in *GetTribesRequest, opts ...grpc.CallOption) (*GetTribesResponse, error)
 	GetAllTribes(ctx context.Context, in *empty.Empty, opts ...grpc.CallOption) (*GetAllTribesResponse, error)
 	GetTribeActivity(ctx context.Context, in *GetTribeActivityRequest, opts ...grpc.CallOption) (*GetTribeActivityResponse, error)
+	GetActivities(ctx context.Context, in *GetActivitiesRequest, opts ...grpc.CallOption) (*GetActivitiesResponse, error)
 	SharedTribes(ctx context.Context, in *SharedTribesRequest, opts ...grpc.CallOption) (*SharedTribesResponse, error)
 	SendInvite(ctx context.Context, in *SendInviteRequest, opts ...grpc.CallOption) (*empty.Empty, error)
 	AcceptInvite(ctx context.Context, in *AcceptInviteRequest, opts ...grpc.CallOption) (*empty.Empty, error)
@@ -3862,6 +4001,15 @@ func (c *tribeServiceClient) GetAllTribes(ctx context.Context, in *empty.Empty, 
 func (c *tribeServiceClient) GetTribeActivity(ctx context.Context, in *GetTribeActivityRequest, opts ...grpc.CallOption) (*GetTribeActivityResponse, error) {
 	out := new(GetTribeActivityResponse)
 	err := c.cc.Invoke(ctx, "/connections.tribe.TribeService/GetTribeActivity", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *tribeServiceClient) GetActivities(ctx context.Context, in *GetActivitiesRequest, opts ...grpc.CallOption) (*GetActivitiesResponse, error) {
+	out := new(GetActivitiesResponse)
+	err := c.cc.Invoke(ctx, "/connections.tribe.TribeService/GetActivities", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -4023,6 +4171,7 @@ type TribeServiceServer interface {
 	GetTribes(context.Context, *GetTribesRequest) (*GetTribesResponse, error)
 	GetAllTribes(context.Context, *empty.Empty) (*GetAllTribesResponse, error)
 	GetTribeActivity(context.Context, *GetTribeActivityRequest) (*GetTribeActivityResponse, error)
+	GetActivities(context.Context, *GetActivitiesRequest) (*GetActivitiesResponse, error)
 	SharedTribes(context.Context, *SharedTribesRequest) (*SharedTribesResponse, error)
 	SendInvite(context.Context, *SendInviteRequest) (*empty.Empty, error)
 	AcceptInvite(context.Context, *AcceptInviteRequest) (*empty.Empty, error)
@@ -4071,6 +4220,9 @@ func (*UnimplementedTribeServiceServer) GetAllTribes(context.Context, *empty.Emp
 }
 func (*UnimplementedTribeServiceServer) GetTribeActivity(context.Context, *GetTribeActivityRequest) (*GetTribeActivityResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetTribeActivity not implemented")
+}
+func (*UnimplementedTribeServiceServer) GetActivities(context.Context, *GetActivitiesRequest) (*GetActivitiesResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetActivities not implemented")
 }
 func (*UnimplementedTribeServiceServer) SharedTribes(context.Context, *SharedTribesRequest) (*SharedTribesResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method SharedTribes not implemented")
@@ -4283,6 +4435,24 @@ func _TribeService_GetTribeActivity_Handler(srv interface{}, ctx context.Context
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(TribeServiceServer).GetTribeActivity(ctx, req.(*GetTribeActivityRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _TribeService_GetActivities_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(GetActivitiesRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(TribeServiceServer).GetActivities(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/connections.tribe.TribeService/GetActivities",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(TribeServiceServer).GetActivities(ctx, req.(*GetActivitiesRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
@@ -4614,6 +4784,10 @@ var _TribeService_serviceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "GetTribeActivity",
 			Handler:    _TribeService_GetTribeActivity_Handler,
+		},
+		{
+			MethodName: "GetActivities",
+			Handler:    _TribeService_GetActivities_Handler,
 		},
 		{
 			MethodName: "SharedTribes",

@@ -106,6 +106,14 @@ message GetTribeActivityResponse {
   repeated TribeActivity activity = 1;
 }
 
+message GetActivitiesRequest {
+  string activity_id = 1;
+}
+
+message GetActivitiesResponse {
+  repeated TribeActivity activity = 1;
+}
+
 message GetTribeResponse {
   Tribe tribe = 1;
 }
@@ -250,6 +258,7 @@ service TribeService {
   rpc GetTribes(GetTribesRequest) returns (GetTribesResponse) {};
   rpc GetAllTribes(google.protobuf.Empty) returns (GetAllTribesResponse) {};
   rpc GetTribeActivity(GetTribeActivityRequest) returns (GetTribeActivityResponse) {};
+  rpc GetActivities(GetActivitiesRequest) returns (GetActivitiesResponse) {};
   rpc SharedTribes(SharedTribesRequest) returns (SharedTribesResponse) {};
   rpc SendInvite(SendInviteRequest) returns (google.protobuf.Empty) {};
   rpc AcceptInvite(AcceptInviteRequest) returns (google.protobuf.Empty) {};
