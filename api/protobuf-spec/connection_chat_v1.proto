@@ -73,7 +73,15 @@ message GetMessagesRequest {
   repeated string ids = 1;
 }
 
+message GetRoomMessagesRequest {
+  repeated string room_id = 1;
+}
+
 message GetMessagesResponse {
+  repeated Message message = 1;
+}
+
+message GetRoomMessagesResponse {
   repeated Message message = 1;
 }
 
@@ -95,5 +103,6 @@ service ChatService {
   rpc MarkMessagesAsSeenUpToDate(MarkMessagesAsSeenUpToDateRequest) returns (google.protobuf.Empty) {};
   rpc GetMessages(GetMessagesRequest) returns (GetMessagesResponse) {};
   rpc GetSupportRooms(google.protobuf.Empty) returns (GetSupportRoomsResponse) {};
+  rpc GetRoomMessages(GetRoomMessagesRequest) returns (GetRoomMessagesResponse) {};
 }
 
