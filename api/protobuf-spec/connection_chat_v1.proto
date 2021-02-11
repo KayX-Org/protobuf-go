@@ -74,7 +74,8 @@ message GetMessagesRequest {
 }
 
 message GetRoomMessagesRequest {
-  repeated string room_id = 1;
+  string room_id = 1;
+  string user_id = 2;
 }
 
 message GetMessagesResponse {
