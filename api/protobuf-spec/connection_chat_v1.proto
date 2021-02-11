@@ -15,6 +15,13 @@ message MessageConnection {
   bool sent_by_user = 3;
 }
 
+
+message RoomConnection {
+  string room_id = 1;
+  string created_by = 2;
+  google.protobuf.Timestamp lastActivity = 3;
+}
+
 message Message {
   string id = 1;
   string room_id = 2;
@@ -70,6 +77,10 @@ message GetMessagesResponse {
   repeated Message message = 1;
 }
 
+message GetSupportRoomsResponse {
+  repeated RoomConnection rooms = 1;
+}
+
 message MarkMessagesAsSeenUpToDateRequest {
   google.protobuf.Timestamp date = 1;
   string room_id = 2;
@@ -83,5 +94,6 @@ service ChatService {
   rpc FetchSupportChatMessages(FetchSupportChatMessagesRequest) returns (FetchSupportChatMessagesResponse) {};
   rpc MarkMessagesAsSeenUpToDate(MarkMessagesAsSeenUpToDateRequest) returns (google.protobuf.Empty) {};
   rpc GetMessages(GetMessagesRequest) returns (GetMessagesResponse) {};
+  rpc GetSupportRooms(google.protobuf.Empty) returns (GetSupportRoomsResponse) {};
 }
 
