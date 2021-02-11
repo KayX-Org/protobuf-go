@@ -16,10 +16,11 @@ message MessageConnection {
 }
 
 
-message RoomConnection {
+message Room {
   string room_id = 1;
   string created_by = 2;
   google.protobuf.Timestamp lastActivity = 3;
+  string type = 4;
 }
 
 message Message {
@@ -48,6 +49,17 @@ message SendSupportChatMessageResponse {
 
 message SendSupportChatMessageRequest {
   string from_user_id = 1;
+  string content = 3;
+  MessageType message_type = 4;
+}
+
+message AnswerSupportChatMessageResponse {
+  string id = 1;
+}
+
+message AnswerSupportChatMessageRequest {
+  string from_user_id = 1;
+  string to_user_id = 2;
   string content = 3;
   MessageType message_type = 4;
 }
@@ -87,7 +99,7 @@ message GetRoomMessagesResponse {
 }
 
 message GetSupportRoomsResponse {
-  repeated RoomConnection rooms = 1;
+  repeated Room rooms = 1;
 }
 
 message MarkMessagesAsSeenUpToDateRequest {
@@ -99,6 +111,7 @@ message MarkMessagesAsSeenUpToDateRequest {
 service ChatService {
   rpc SendChatMessage(SendChatMessageRequest) returns (SendChatMessageResponse) {};
   rpc SendSupportChatMessage(SendSupportChatMessageRequest) returns (SendSupportChatMessageResponse) {};
+  rpc AnswerSupportChatMessage(AnswerSupportChatMessageRequest) returns (AnswerSupportChatMessageResponse) {};
   rpc FetchChatMessages(FetchChatMessagesRequest) returns (FetchChatMessagesResponse) {};
   rpc FetchSupportChatMessages(FetchSupportChatMessagesRequest) returns (FetchSupportChatMessagesResponse) {};
   rpc MarkMessagesAsSeenUpToDate(MarkMessagesAsSeenUpToDateRequest) returns (google.protobuf.Empty) {};
