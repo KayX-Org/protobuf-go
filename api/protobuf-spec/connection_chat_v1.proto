@@ -90,6 +90,10 @@ message GetRoomMessagesRequest {
   string user_id = 2;
 }
 
+message GetSupportRoomsRequest {
+  string user_id = 1;
+}
+
 message GetMessagesResponse {
   repeated Message message = 1;
 }
@@ -116,7 +120,7 @@ service ChatService {
   rpc FetchSupportChatMessages(FetchSupportChatMessagesRequest) returns (FetchSupportChatMessagesResponse) {};
   rpc MarkMessagesAsSeenUpToDate(MarkMessagesAsSeenUpToDateRequest) returns (google.protobuf.Empty) {};
   rpc GetMessages(GetMessagesRequest) returns (GetMessagesResponse) {};
-  rpc GetSupportRooms(google.protobuf.Empty) returns (GetSupportRoomsResponse) {};
+  rpc GetSupportRooms(GetSupportRoomsRequest) returns (GetSupportRoomsResponse) {};
   rpc GetRoomMessages(GetRoomMessagesRequest) returns (GetRoomMessagesResponse) {};
 }
 
