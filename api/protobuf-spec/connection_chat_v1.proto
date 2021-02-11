@@ -83,7 +83,7 @@ message GetMessagesResponse {
 }
 
 message GetRoomMessagesResponse {
-  repeated Message message = 1;
+  repeated MessageConnection connection = 1;
 }
 
 message GetSupportRoomsResponse {
