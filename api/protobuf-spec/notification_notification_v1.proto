@@ -45,6 +45,7 @@ message UpdateFirebaseTokenRequest {
 
 message GetUserNotificationRequest {
   string user_id = 1;
+  string category = 2;
 }
 
 message GetUserNotificationResponse {
