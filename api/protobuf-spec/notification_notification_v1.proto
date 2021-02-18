@@ -4,6 +4,7 @@ package notification.notification;
 option go_package = "notification/notificationpb;notificationpb";
 import "google/protobuf/empty.proto";
 import "google/protobuf/timestamp.proto";
+import "api/protobuf-spec/general.proto";
 
 message Action {
   string name = 1;
@@ -46,6 +47,7 @@ message UpdateFirebaseTokenRequest {
 message GetUserNotificationRequest {
   string user_id = 1;
   string category = 2;
+  general.Pagination pagination = 3;
 }
 
 message GetUserNotificationResponse {
