@@ -27,6 +27,7 @@ message Notification {
 message UserNotificationConnection {
   bool read = 1;
   string notification_id = 2;
+  string cursor = 3;
 }
 
 message SendEmailVerificationRequest {
