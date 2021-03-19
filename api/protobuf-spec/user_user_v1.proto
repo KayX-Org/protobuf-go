@@ -119,6 +119,11 @@ message EmailExistsRequest {
   string email = 1;
 }
 
+
+message ReSendEmailVerificationRequest {
+  string userId = 1;
+}
+
 message VerifyEmailRequest {
   string code = 1;
   string email = 2;
@@ -144,4 +149,5 @@ service UserService{
   rpc VerifyBase64Email(VerifyBase64EmailRequest) returns (google.protobuf.Empty) {};
   rpc UserExists(UserExistsRequest) returns (UserExistsResponse) {};
   rpc EmailExists(EmailExistsRequest) returns (EmailExistsResponse) {};
+  rpc ReSendEmailVerification(ReSendEmailVerificationRequest) returns (google.protobuf.Empty) {};
 }
