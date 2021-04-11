@@ -94,6 +94,10 @@ message GetTribeByCodeRequest {
   string code = 1;
 }
 
+message GetTribeByCodeURLRequest {
+  string code = 1;
+}
+
 message GetTribesRequest {
   repeated string ids = 1;
 }
@@ -119,6 +123,10 @@ message GetTribeResponse {
 }
 
 message GetTribeByCodeResponse {
+  Tribe tribe = 1;
+}
+
+message GetTribeByCodeURLResponse {
   Tribe tribe = 1;
 }
 
@@ -254,6 +262,7 @@ service TribeService {
   rpc UpdateTribe(UpdateTribeRequest) returns (google.protobuf.Empty) {};
   rpc UpdateTribeAvatar(UpdateTribeAvatarRequest) returns (google.protobuf.Empty) {};
   rpc GetTribeByCode(GetTribeByCodeRequest) returns (GetTribeByCodeResponse) {};
+  rpc GetTribeByCodeURL(GetTribeByCodeURLRequest) returns (GetTribeByCodeURLResponse) {};
   rpc GetTribeShareableLink(GetTribeShareableLinkRequest) returns (GetTribeShareableLinkResponse) {};
   rpc GetTribes(GetTribesRequest) returns (GetTribesResponse) {};
   rpc GetAllTribes(google.protobuf.Empty) returns (GetAllTribesResponse) {};
