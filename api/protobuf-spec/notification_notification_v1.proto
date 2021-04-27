@@ -45,6 +45,11 @@ message UpdateFirebaseTokenRequest {
   string user_id = 2;
 }
 
+
+message ResetNotificationCounterRequest {
+  string user_id = 2;
+}
+
 message GetUserNotificationRequest {
   string user_id = 1;
   string category = 2;
@@ -75,6 +80,7 @@ message MarNotificationAsActedRequest {
 }
 
 service NotificationService{
+  rpc ResetNotificationCounter(ResetNotificationCounterRequest) returns (google.protobuf.Empty) {};
   rpc SendEmailVerification(SendEmailVerificationRequest) returns (google.protobuf.Empty) {};
   rpc SendSMSVerification(SendSMSVerificationRequest) returns (google.protobuf.Empty) {};
   rpc UpdateFirebaseToken(UpdateFirebaseTokenRequest) returns (google.protobuf.Empty) {};
