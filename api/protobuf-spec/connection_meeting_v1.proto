@@ -191,12 +191,20 @@ message FetchNumberOfTotalConnectionsRequest {
   string user_id = 1;
 }
 
+message FetchNumberOfTotalVibesSentRequest {
+  string user_id = 1;
+}
+
 message MarkMeetingConnectionAsSeenRequest {
   string user_id = 1;
   string meeting_id = 2;
 }
 
 message FetchNumberOfTotalConnectionsResponse {
+  int32 total = 1;
+}
+
+message FetchNumberOfTotalVibesSentResponse {
   int32 total = 1;
 }
 
@@ -213,6 +221,7 @@ service MeetingService {
   rpc GetUpcomingMeetingBetweenUsers(GetUpcomingMeetingBetweenUsersRequest) returns (GetUpcomingMeetingBetweenUsersResponse) {};
   rpc FetchNumberOfNewConnections(FetchNumberOfNewConnectionsRequest) returns (FetchNumberOfNewConnectionsResponse) {};
   rpc FetchNumberOfTotalConnections(FetchNumberOfTotalConnectionsRequest) returns (FetchNumberOfTotalConnectionsResponse) {};
+  rpc FetchNumberOfTotalVibesSent(FetchNumberOfTotalVibesSentRequest) returns (FetchNumberOfTotalVibesSentResponse) {};
   rpc MarkMeetingConnectionAsSeen(MarkMeetingConnectionAsSeenRequest) returns (google.protobuf.Empty) {};
 
   rpc GetMeetingVibe(GetMeetingVibeRequest) returns (GetMeetingVibeResponse) {};
