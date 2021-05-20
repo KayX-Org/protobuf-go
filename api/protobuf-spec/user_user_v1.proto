@@ -41,6 +41,10 @@ message GetUserRequest {
   string requested = 2;
 }
 
+message CreateUpdateRequest {
+  string update = 1;
+}
+
 message GetUserFromInternalServiceRequest {
   string user_id = 1;
 }
@@ -136,6 +140,7 @@ message VerifyBase64EmailRequest {
 
 service UserService{
   rpc GetUser(GetUserRequest) returns (GetUserResponse) {};
+  rpc CreateUpdate(CreateUpdateRequest) returns (google.protobuf.Empty) {};
   rpc GetUserFromInternalService(GetUserFromInternalServiceRequest) returns (GetUserResponse) {};
   rpc GetUsers(GetUsersRequest) returns (GetUsersResponse) {};
   rpc GetUsersWithRequester(GetUsersWithRequesterRequest) returns (GetUsersResponse) {};
