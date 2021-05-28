@@ -16,6 +16,7 @@ message UserFrequencyResponse {
   float freq = 1;
   int32 percentage = 2;
   string text = 3;
+  float average = 4;
 }
 
 service FrequencyService {
