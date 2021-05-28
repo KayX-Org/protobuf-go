@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+package connections.frequency;
+option go_package = "connections/frequencypb;frequencypb";
+import "google/protobuf/empty.proto";
+
+message AverageFrequencyResponse {
+  float freq = 1;
+}
+
+message UserFrequencyRequest {
+  string user_id = 1;
+}
+
+message UserFrequencyResponse {
+  float freq = 1;
+  int32 percentage = 2;
+  string text = 3;
+}
+
+service FrequencyService {
+  rpc AverageFrequency(google.protobuf.Empty) returns (AverageFrequencyResponse) {};
+  rpc UserFrequency(UserFrequencyRequest) returns (UserFrequencyResponse) {};
+}
+
