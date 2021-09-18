@@ -168,6 +168,11 @@ message GetTribesPerUserRequest {
   general.Pagination pagination = 2;
 }
 
+message GetLeadedTribesRequest {
+  string user_id = 1;
+  general.Pagination pagination = 2;
+}
+
 message TribesPerUserResponse {
   repeated string tribe_id = 1;
 }
@@ -181,8 +186,22 @@ message GetTribesPerUserResponse {
   repeated UserTribeConnection tribes = 1;
 }
 
+message GetLeadedTribesResponse {
+  repeated UserTribeConnection tribes = 1;
+}
+
 message SharedTribesResponse {
   repeated string tribe_ids = 1;
+}
+
+message AddTribeLeaderRequest {
+  string tribe_id = 1;
+  string email = 2;
+}
+
+message RemoveTribeLeaderRequest {
+  string tribe_id = 1;
+  string user_id = 2;
 }
 
 message GetTribeMembersRequest {
@@ -190,7 +209,16 @@ message GetTribeMembersRequest {
   general.Pagination pagination = 2;
 }
 
+message GetTribeLeadersRequest {
+  string tribe_id = 1;
+  general.Pagination pagination = 2;
+}
+
 message GetTribeMembersResponse {
+  repeated TribeUserConnection users = 1;
+}
+
+message GetTribeLeadersResponse {
   repeated TribeUserConnection users = 1;
 }
 
@@ -274,6 +302,10 @@ service TribeService {
   rpc DeclineInvite(DeclineInviteRequest) returns (google.protobuf.Empty) {};
   rpc ConnectToTribeWithCode(ConnectToTribeWithCodeRequest) returns (google.protobuf.Empty) {};
   rpc GetTribesPerUser(GetTribesPerUserRequest) returns (GetTribesPerUserResponse) {};
+  rpc GetLeadedTribes(GetLeadedTribesRequest) returns (GetLeadedTribesResponse) {};
+  rpc GetTribeLeaders(GetTribeLeadersRequest) returns (GetTribeLeadersResponse) {};
+  rpc AddTribeLeader(AddTribeLeaderRequest) returns (google.protobuf.Empty) {};
+  rpc RemoveTribeLeader(RemoveTribeLeaderRequest) returns (google.protobuf.Empty) {};
   rpc GetTribeMembers(GetTribeMembersRequest) returns (GetTribeMembersResponse) {};
   rpc GetInvites(GetInvitesRequest) returns (GetInvitesResponse) {};
   rpc GetMutualConnections(GetMutualConnectionAmountRequest) returns (GetMutualConnectionAmountResponse) {};
