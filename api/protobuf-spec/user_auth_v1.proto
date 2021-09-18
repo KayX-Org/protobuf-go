@@ -47,6 +47,16 @@ message VerifyUpdatedNumberRequest {
   string user_uuid = 2;
 }
 
+message UpdatePasswordRequest {
+  string password = 1;
+  string user_uuid = 2;
+}
+
+message ValidateEmailPasswordRequest {
+  string password = 1;
+  string email = 2;
+}
+
 message SendVerificationCodeResponse {
   bool success = 1;
 }
@@ -78,6 +88,9 @@ service AuthService {
   rpc SendVerificationCodeForRole(SendVerificationCodeForRoleRequest) returns (google.protobuf.Empty) {}
   rpc VerifyCode(VerifyCodeRequest) returns (VerifyCodeResponse) {}
   rpc VerifyUpdatedNumber(VerifyUpdatedNumberRequest) returns (google.protobuf.Empty) {}
+
+  rpc UpdatePassword(UpdatePasswordRequest) returns (google.protobuf.Empty) {}
+  rpc ValidateEmailPassword(ValidateEmailPasswordRequest) returns (google.protobuf.Empty) {}
 
   rpc Logout(LogoutRequest) returns (LogoutResponse) {}
 }
