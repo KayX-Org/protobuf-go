@@ -57,6 +57,12 @@ message ValidateEmailPasswordRequest {
   string email = 2;
 }
 
+
+message ValidateEmailPasswordResponse {
+  string access_token = 1;
+  string refresh_token = 2;
+}
+
 message SendVerificationCodeResponse {
   bool success = 1;
 }
@@ -90,7 +96,7 @@ service AuthService {
   rpc VerifyUpdatedNumber(VerifyUpdatedNumberRequest) returns (google.protobuf.Empty) {}
 
   rpc UpdatePassword(UpdatePasswordRequest) returns (google.protobuf.Empty) {}
-  rpc ValidateEmailPassword(ValidateEmailPasswordRequest) returns (google.protobuf.Empty) {}
+  rpc ValidateEmailPassword(ValidateEmailPasswordRequest) returns (ValidateEmailPasswordResponse) {}
 
   rpc Logout(LogoutRequest) returns (LogoutResponse) {}
 }
