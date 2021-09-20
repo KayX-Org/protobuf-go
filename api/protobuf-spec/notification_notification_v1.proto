@@ -35,6 +35,11 @@ message SendEmailVerificationRequest {
   string code = 2;
 }
 
+message SendPasswordForgotEmailRequest {
+  string email = 1;
+  string token = 2;
+}
+
 message SendSMSVerificationRequest {
   string phone_number = 1;
   string code = 2;
@@ -81,6 +86,7 @@ message MarNotificationAsActedRequest {
 
 service NotificationService{
   rpc ResetNotificationCounter(ResetNotificationCounterRequest) returns (google.protobuf.Empty) {};
+  rpc SendPasswordForgotEmail(SendPasswordForgotEmailRequest) returns (google.protobuf.Empty) {};
   rpc SendEmailVerification(SendEmailVerificationRequest) returns (google.protobuf.Empty) {};
   rpc SendSMSVerification(SendSMSVerificationRequest) returns (google.protobuf.Empty) {};
   rpc UpdateFirebaseToken(UpdateFirebaseTokenRequest) returns (google.protobuf.Empty) {};
