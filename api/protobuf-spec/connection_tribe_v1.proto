@@ -246,6 +246,12 @@ message CreateTribeActivityRequest {
   string plainText = 3;
 }
 
+message UpdateTribeActivityRequest {
+  string id = 1;
+  string richText = 2;
+  string plainText = 3;
+}
+
 message CreateTribeActivityResponse {
   string id = 1;
 }
@@ -312,6 +318,7 @@ service TribeService {
   rpc DisconnectUserFromTribe(DisconnectUserFromTribeRequest) returns (google.protobuf.Empty) {};
   rpc DeleteTribeActivity(DeleteTribeActivityRequest) returns (google.protobuf.Empty) {};
   rpc CreateTribeActivity(CreateTribeActivityRequest) returns (CreateTribeActivityResponse) {};
+  rpc UpdateTribeActivity(UpdateTribeActivityRequest) returns (google.protobuf.Empty) {};
   rpc GetFAQ(google.protobuf.Empty) returns (GetFAQResponse) {};
   rpc FetchNumberOfNewConnections(FetchNumberOfNewConnectionsRequest) returns (FetchNumberOfNewConnectionsResponse) {};
   rpc FetchNumberOfTotalConnections(FetchNumberOfTotalConnectionsRequest) returns (FetchNumberOfTotalConnectionsResponse) {};
