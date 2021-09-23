@@ -38,7 +38,9 @@ message TribeActivity {
   string rich_text = 2;
   string plain_text = 3;
   string tribe_id = 4;
+  string location = 7;
   google.protobuf.Timestamp createdAt = 5;
+  google.protobuf.Timestamp date = 6;
 }
 
 message UserTribeConnection {
