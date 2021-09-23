@@ -244,12 +244,16 @@ message CreateTribeActivityRequest {
   string tribeId = 1;
   string richText = 2;
   string plainText = 3;
+  google.protobuf.Timestamp date = 4;
+  string location = 5;
 }
 
 message UpdateTribeActivityRequest {
   string id = 1;
   string richText = 2;
   string plainText = 3;
+  google.protobuf.Timestamp date = 4;
+  string location = 5;
 }
 
 message CreateTribeActivityResponse {
